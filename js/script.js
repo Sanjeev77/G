@@ -304,7 +304,7 @@ function createProductCard(product) {
 
     return `
         <div class="product-card" data-id="${product.id}">
-            <img src="${product.image}" alt="${product.title}" class="product-image" loading="lazy">
+            <img src="${product.image}" alt="${product.title}" class="product-image" loading="lazy" onclick="showImagePreview('${product.image}', '${product.title}')">
             <div class="product-info">
                 <h3 class="product-title">${product.title}</h3>
                 <div class="product-rating" style="color: #ff9900; margin-bottom: 0.5rem;">
@@ -410,3 +410,51 @@ if ('IntersectionObserver' in window) {
     // Initial observation
     setTimeout(observeImages, 100);
 }
+
+// Image preview functionality
+function showImagePreview(imageSrc, title) {
+    // Create modal if it doesn't exist
+    let modal = document.getElementById('image-preview-modal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'image-preview-modal';
+        modal.className = 'image-preview-modal';
+        modal.innerHTML = `
+            <div class="image-preview-overlay" onclick="closeImagePreview()">
+                <div class="image-preview-container" onclick="event.stopPropagation()">
+                    <button class="image-preview-close" onclick="closeImagePreview()">×</button>
+                    <img class="image-preview-img" src="" alt="">
+                    <div class="image-preview-title"></div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+
+    // Update modal content
+    const img = modal.querySelector('.image-preview-img');
+    const titleEl = modal.querySelector('.image-preview-title');
+
+    img.src = imageSrc;
+    img.alt = title;
+    titleEl.textContent = title;
+
+    // Show modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closeImagePreview() {
+    const modal = document.getElementById('image-preview-modal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeImagePreview();
+    }
+});
