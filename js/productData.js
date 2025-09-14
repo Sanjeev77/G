@@ -21,7 +21,18 @@ const allProductsData = [
         "image": "https://m.media-amazon.com/images/I/71mr6NdQE4L._AC_SX679_.jpg",
         "rating": 4.6,
         "affiliateLink": "https://www.amazon.com/Transformable-Spinners-Sensory-Fingertip-Valentines/dp/B09LMBLYF1/ref=sr_1_1?dib=eyJ2IjoiMSJ9.UBI0TyBZyB2AP776C2M_juAiI1HAziIdmO78uGiaRknFTyaYu5r2CRKqW2kddbOB5xned4vRWKNnKl9vwfwL678HcE5JDkd3EaYlkItUNTRS-UnnQ9oj-j8J_modEOTW0Yp6OQApfFHe9885G4Z3OfiDzQozUwxPyax7Yw4tPiHAtidMyeArbUkkWMLY7TGrzEliMNJHZWUh8fV-ssQ-rUZw8DYJLyGEgp9euVD2u3tvNoBLDssZ4nNKZ1wpQzLcsHljBbOghnWXySauf12VLGHyQaoDACbOT7SC9_NXqSE.tb4FEcjS4MHmJ1QC8OHcIAsetqJwAH_jfnht0UeIjpw&dib_tag=se&keywords=toys&qid=1757864046&refinements=p_36%3A-1000%2Cp_n_g-1004151746091%3A5442388011&rnid=165794011&s=toys-and-games&sr=1-1&th=1&tag=giftonbudget-21",
-        "featured": true
+        "featured": false
+    },
+    {
+        "id": 7004,
+        "title": "Schylling NeeDoh Original - Sensory Fidget Toy - Assorted Colors - Ages 3 to Adult , 1 Count ( Pack of 1)",
+        "price": "$4",
+        "priceValue": 4,
+        "category": "toys-games",
+        "image": "https://m.media-amazon.com/images/I/71iQbLmlBrL._AC_SX679_.jpg",
+        "rating": 4,
+        "affiliateLink": "https://www.amazon.com/Schylling-Stress-Colors-Shipped-Randomly/dp/B076FGVCRH/ref=sr_1_2?dib=eyJ2IjoiMSJ9.UBI0TyBZyB2AP776C2M_juAiI1HAziIdmO78uGiaRknFTyaYu5r2CRKqW2kddbOB5xned4vRWKNnKl9vwfwL678HcE5JDkd3EaYlkItUNTRS-UnnQ9oj-j8J_modEOTW0Yp6OQApfFHe9885G4Z3OfiDzQozUwxPyax7Yw4tPiHAtidMyeArbUkkWMLY7TGrzEliMNJHZWUh8fV-ssQ-rUZw8DYJLyGEgp9euVD2u3tvNoBLDssZ4nNKZ1wpQzLcsHljBbOghnWXySauf12VLGHyQaoDACbOT7SC9_NXqSE.tb4FEcjS4MHmJ1QC8OHcIAsetqJwAH_jfnht0UeIjpw&dib_tag=se&keywords=toys&qid=1757864046&refinements=p_36%3A-1000%2Cp_n_g-1004151746091%3A5442388011&rnid=165794011&s=toys-and-games&sr=1-2&tag=giftonbudget-21",
+        "featured": false
     }
 ];
 

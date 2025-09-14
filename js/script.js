@@ -243,11 +243,11 @@ function applyFiltering() {
             case 'under-10':
                 return product.priceValue < 10;
             case 'under-25':
-                return product.priceValue < 25;
+                return product.priceValue >= 10 && product.priceValue < 25;
             case 'under-50':
-                return product.priceValue < 50;
+                return product.priceValue >= 25 && product.priceValue < 50;
             case 'under-100':
-                return product.priceValue < 100;
+                return product.priceValue >= 50 && product.priceValue < 100;
             default:
                 return true;
         }
@@ -288,9 +288,9 @@ function getCategoryInfo() {
 function getBudgetInfo() {
     const budgetInfoMap = {
         'under-10': { title: 'Under $10', description: 'Budget-friendly options' },
-        'under-25': { title: 'Under $25', description: 'Great value picks' },
-        'under-50': { title: 'Under $50', description: 'Premium quality' },
-        'under-100': { title: 'Under $100', description: 'Top-tier products' }
+        'under-25': { title: '$10 - $25', description: 'Great value picks' },
+        'under-50': { title: '$25 - $50', description: 'Premium quality' },
+        'under-100': { title: '$50 - $100', description: 'Top-tier products' }
     };
     return budgetInfoMap[currentBudget] || { title: '', description: '' };
 }
