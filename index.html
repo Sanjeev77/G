@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Gift Guide - Find Perfect Gifts by Budget</title>
+    <meta name="description" content="Discover amazing gift ideas organized by budget - under $10, $50, $100 and more. Curated Amazon products for every occasion.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="top-header">
+        <div class="container">
+            <h1><i class="fas fa-gift"></i> Gift Finder</h1>
+            <p>Curated products organized by budget to help you find the perfect gift</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Search and Category Section -->
+        <section class="search-category-section">
+            <div class="container">
+                <div class="search-category-controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search" placeholder="Search products..." />
+                    </div>
+                    <div class="category-dropdown">
+                        <label for="category-select">Browse Categories:</label>
+                        <select id="category-select" class="category-selector">
+                            <option value="appliances">Appliances</option>
+                            <option value="arts-crafts-sewing">Arts, Crafts & Sewing</option>
+                            <option value="automotive">Automotive</option>
+                            <option value="baby">Baby</option>
+                            <option value="beauty">Beauty</option>
+                            <option value="books">Books</option>
+                            <option value="collectibles-fine-arts">Collectibles & Fine Arts</option>
+                            <option value="electronics" selected>Electronics</option>
+                            <option value="clothing-shoes-jewelry">Clothing, Shoes & Jewelry</option>
+                            <option value="clothing-related">Clothing related (Baby / Kids / Men / Women)</option>
+                            <option value="gift-cards">Gift Cards</option>
+                            <option value="grocery-gourmet-food">Grocery & Gourmet Food</option>
+                            <option value="handmade">Handmade</option>
+                            <option value="health-personal-care">Health & Personal Care</option>
+                            <option value="home-kitchen">Home & Kitchen</option>
+                            <option value="industrial-scientific">Industrial & Scientific</option>
+                            <option value="kindle-store">Kindle Store</option>
+                            <option value="patio-lawn-garden">Patio, Lawn & Garden</option>
+                            <option value="luggage-travel-gear">Luggage & Travel Gear</option>
+                            <option value="magazine-subscriptions">Magazine Subscriptions</option>
+                            <option value="apps-games">Apps & Games</option>
+                            <option value="movies-tv">Movies & TV</option>
+                            <option value="digital-music-cds-vinyl">Digital Music / CDs & Vinyl</option>
+                            <option value="musical-instruments">Musical Instruments</option>
+                            <option value="office-products">Office Products</option>
+                            <option value="computers">Computers</option>
+                            <option value="pet-supplies">Pet Supplies</option>
+                            <option value="sports-outdoors">Sports & Outdoors</option>
+                            <option value="tools-home-improvement">Tools & Home Improvement</option>
+                            <option value="toys-games">Toys & Games</option>
+                            <option value="video-games">Video Games</option>
+                            <option value="cell-phones-accessories">Cell Phones & Accessories</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Budget Tabs -->
+        <section class="budget-tabs">
+            <div class="container">
+                <div class="budget-navigation">
+                    <button class="budget-btn active" data-budget="under-10">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>Under $10</span>
+                        <small>Budget Finds</small>
+                    </button>
+                    <button class="budget-btn" data-budget="under-25">
+                        <i class="fas fa-gem"></i>
+                        <span>Under $25</span>
+                        <small>Smart Picks</small>
+                    </button>
+                    <button class="budget-btn" data-budget="under-50">
+                        <i class="fas fa-heart"></i>
+                        <span>Under $50</span>
+                        <small>Great Value</small>
+                    </button>
+                    <button class="budget-btn" data-budget="under-100">
+                        <i class="fas fa-star"></i>
+                        <span>Under $100</span>
+                        <small>Premium Picks</small>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="container">
+                <div class="category-info">
+                    <h2 id="category-title">Electronics</h2>
+                    <p id="category-description">Discover the latest in technology and electronic gadgets for every need.</p>
+                </div>
+
+                <div id="products-container" class="product-grid">
+                    <!-- Products will be loaded by JavaScript -->
+                </div>
+
+                <div id="no-results" class="no-results" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <h3>No products found</h3>
+                    <p>Try a different search term or browse another category</p>
+                </div>
+
+                <div class="load-more-container" style="display: none;">
+                    <button id="load-more" class="load-more-btn">Load More Products</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="simple-footer">
+        <div class="container">
+            <p>🔗 This site contains affiliate links. We may earn a commission from purchases made through these links.</p>
+        </div>
+    </footer>
+
+    <script src="js/productData.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
