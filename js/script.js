@@ -167,9 +167,9 @@ const categoryInfo = {
 };
 
 // Initialize the main page
-function initializeMainPage() {
-    // Load all products from the new data structure
-    allProducts = allProductsData;
+async function initializeMainPage() {
+    // Load all products from the JSON file
+    allProducts = await loadProductData();
 
     setupBudgetTabs();
     setupCategorySelector();
@@ -376,9 +376,9 @@ document.addEventListener('click', (e) => {
 });
 
 // Initialize page when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     // Initialize main page functionality
-    initializeMainPage();
+    await initializeMainPage();
 
     // Check for hash to set active category
     const hash = window.location.hash.replace('#', '');
