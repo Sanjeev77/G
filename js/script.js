@@ -335,7 +335,7 @@ function createProductCard(product) {
                 <div class="product-rating" style="color: #ff9900; margin-bottom: 0.5rem;">
                     ${stars} (${product.rating})
                 </div>
-                <div class="product-price">${product.price}</div>
+                <div class="product-price">$${product.price}</div>
                 <a href="${product.affiliateLink}" target="_blank" rel="noopener" class="product-btn">
                     View on Amazon
                 </a>
@@ -691,7 +691,7 @@ function showSearchSuggestions(searchTerm) {
                     <div class="suggestion-details">
                         <div class="suggestion-category">${categoryText}</div>
                         <div class="suggestion-meta">
-                            <span class="suggestion-price">${product.price}</span>
+                            <span class="suggestion-price">$${product.price}</span>
                             <span class="suggestion-budget">${budgetText}</span>
                         </div>
                     </div>
