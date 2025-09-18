@@ -11,23 +11,14 @@
 <body>
     <header class="top-header">
         <div class="container">
-            <h1><i class="fas fa-gift"></i> Gift Finder</h1>
-            <p>Curated products organized by budget to help you find the perfect gift</p>
-        </div>
-    </header>
-
-    <main class="main-content">
-        <!-- Search and Category Section -->
-        <section class="search-category-section">
-            <div class="container">
-                <div class="search-category-controls">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="search" placeholder="Search products..." />
-                    </div>
-                    <div class="category-dropdown">
-                        <label for="category-select">Browse Categories:</label>
-                        <select id="category-select" class="category-selector">
+            <div class="header-content">
+                <div class="logo-section">
+                    <h1><i class="fas fa-star"></i> Gift Finder</h1>
+                </div>
+                <div class="header-search">
+                    <div class="search-container">
+                        <select id="category-select" class="category-dropdown">
+                            <option value="all">All</option>
                             <option value="appliances">Appliances</option>
                             <option value="arts-crafts-sewing">Arts, Crafts & Sewing</option>
                             <option value="automotive">Automotive</option>
@@ -50,7 +41,7 @@
                             <option value="magazine-subscriptions">Magazine Subscriptions</option>
                             <option value="apps-games">Apps & Games</option>
                             <option value="movies-tv">Movies & TV</option>
-                            <option value="digital-music-cds-vinyl">Digital Music / CDs & Vinyl</option>
+                            <option value="digital-music">Digital Music / CDs & Vinyl</option>
                             <option value="musical-instruments">Musical Instruments</option>
                             <option value="office-products">Office Products</option>
                             <option value="computers">Computers</option>
@@ -61,8 +52,22 @@
                             <option value="video-games">Video Games</option>
                             <option value="cell-phones-accessories">Cell Phones & Accessories</option>
                         </select>
+                        <input type="text" id="search" class="search-input" placeholder="Search for products..." />
+                        <button class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">Find the Perfect Gift</h1>
+                <p class="hero-subtitle">Discover curated gift ideas for every occasion and budget. Let's find something amazing!</p>
             </div>
         </section>
 
@@ -73,22 +78,18 @@
                     <button class="budget-btn active" data-budget="under-10">
                         <i class="fas fa-dollar-sign"></i>
                         <span>Under $10</span>
-                        <small>Budget Finds</small>
                     </button>
                     <button class="budget-btn" data-budget="under-25">
                         <i class="fas fa-gem"></i>
                         <span>Under $25</span>
-                        <small>Smart Picks</small>
                     </button>
                     <button class="budget-btn" data-budget="under-50">
                         <i class="fas fa-heart"></i>
                         <span>Under $50</span>
-                        <small>Great Value</small>
                     </button>
                     <button class="budget-btn" data-budget="under-100">
                         <i class="fas fa-star"></i>
                         <span>Under $100</span>
-                        <small>Premium Picks</small>
                     </button>
                 </div>
             </div>
@@ -97,11 +98,6 @@
         <!-- Products Section -->
         <section class="products-section">
             <div class="container">
-                <div class="category-info">
-                    <h2 id="category-title">Electronics</h2>
-                    <p id="category-description">Discover the latest in technology and electronic gadgets for every need.</p>
-                </div>
-
                 <div id="products-container" class="product-grid">
                     <!-- Products will be loaded by JavaScript -->
                 </div>
@@ -110,10 +106,6 @@
                     <i class="fas fa-search"></i>
                     <h3>No products found</h3>
                     <p>Try a different search term or browse another category</p>
-                </div>
-
-                <div class="load-more-container" style="display: none;">
-                    <button id="load-more" class="load-more-btn">Load More Products</button>
                 </div>
             </div>
         </section>

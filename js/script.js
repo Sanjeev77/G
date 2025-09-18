@@ -7,14 +7,14 @@ let currentCategory = 'electronics';
 let currentBudget = 'under-10';
 let allProducts = [];
 
-// DOM Elements
-const searchInput = document.getElementById('search');
-const sortSelect = document.getElementById('sort');
-const productsContainer = document.getElementById('products-container');
-const noResults = document.getElementById('no-results');
-const categoryTitle = document.getElementById('category-title');
-const categoryDescription = document.getElementById('category-description');
-const categorySelect = document.getElementById('category-select');
+// DOM Elements (will be initialized after DOM loads)
+let searchInput;
+let sortSelect;
+let productsContainer;
+let noResults;
+let categoryTitle;
+let categoryDescription;
+let categorySelect;
 
 // Category information
 const categoryInfo = {
@@ -168,15 +168,37 @@ const categoryInfo = {
 
 // Initialize the main page
 function initializeMainPage() {
+    // Initialize DOM elements
+    searchInput = document.getElementById('search');
+    sortSelect = document.getElementById('sort');
+    productsContainer = document.getElementById('products-container');
+    noResults = document.getElementById('no-results');
+    categoryTitle = document.getElementById('category-title');
+    categoryDescription = document.getElementById('category-description');
+    categorySelect = document.getElementById('category-select');
+
     // Load all products from the new data structure
     allProducts = allProductsData;
 
     setupBudgetTabs();
     setupCategorySelector();
 
-    // Start with electronics category and under $10 budget
-    switchCategory('electronics');
-    updateBudgetFilter('under-10');
+    // Load saved state or use defaults
+    const savedCategory = localStorage.getItem('currentCategory') || 'electronics';
+    const savedBudget = localStorage.getItem('currentBudget') || 'under-10';
+
+    // Set the active budget tab
+    const budgetButtons = document.querySelectorAll('.budget-btn');
+    budgetButtons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-budget') === savedBudget) {
+            btn.classList.add('active');
+        }
+    });
+
+    // Start with saved or default category and budget
+    switchCategory(savedCategory);
+    updateBudgetFilter(savedBudget);
 
     setupFilters();
 }
@@ -215,6 +237,9 @@ function setupCategorySelector() {
 function switchCategory(category) {
     currentCategory = category;
 
+    // Save to localStorage
+    localStorage.setItem('currentCategory', category);
+
     // Update category selector
     if (categorySelect) {
         categorySelect.value = category;
@@ -228,14 +253,19 @@ function switchCategory(category) {
 function updateBudgetFilter(budget) {
     currentBudget = budget;
 
+    // Save to localStorage
+    localStorage.setItem('currentBudget', budget);
+
     // Apply combined filtering
     applyFiltering();
 }
 
 // Apply combined category and budget filtering
 function applyFiltering() {
-    // Filter products by category
-    let categoryFiltered = allProducts.filter(product => product.category === currentCategory);
+    // Filter products by category (if not "all")
+    let categoryFiltered = currentCategory === 'all' ?
+        allProducts :
+        allProducts.filter(product => product.category === currentCategory);
 
     // Then filter by budget
     let budgetFiltered = categoryFiltered.filter(product => {
@@ -268,19 +298,14 @@ function applyFiltering() {
 
 // Update page info based on current filters
 function updatePageInfo() {
-    const categoryInfo = getCategoryInfo();
-    const budgetInfo = getBudgetInfo();
-
-    if (categoryTitle) {
-        categoryTitle.textContent = `${categoryInfo.title} ${budgetInfo.title}`;
-    }
-    if (categoryDescription) {
-        categoryDescription.textContent = `${categoryInfo.description} - ${budgetInfo.description}`;
-    }
+    // No category info to update - showing only products
 }
 
 // Get category information
 function getCategoryInfo() {
+    if (currentCategory === 'all') {
+        return { title: 'All Products', description: 'Browse our complete selection of curated products' };
+    }
     return categoryInfo[currentCategory] || { title: 'Products', description: 'Browse our selection' };
 }
 
@@ -303,8 +328,8 @@ function createProductCard(product) {
                  '☆'.repeat(5 - Math.ceil(product.rating));
 
     return `
-        <div class="product-card" data-id="${product.id}">
-            <img src="${product.image}" alt="${product.title}" class="product-image" loading="lazy" onclick="showImagePreview('${product.image}', '${product.title}')">
+        <div class="product-card" data-id="${product.id}" data-affiliate-link="${product.affiliateLink}" onclick="handleProductCardClick(event, '${product.affiliateLink}')" style="cursor: pointer;">
+            <img src="${product.image}" alt="${product.title}" class="product-image" loading="lazy" onclick="handleProductImageClick(event, '${product.affiliateLink}')">
             <div class="product-info">
                 <h3 class="product-title">${product.title}</h3>
                 <div class="product-rating" style="color: #ff9900; margin-bottom: 0.5rem;">
@@ -341,12 +366,99 @@ function setupFilters() {
 
     // Search functionality
     searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase();
-        filteredProducts = currentProducts.filter(product =>
-            product.title.toLowerCase().includes(searchTerm)
-        );
-        renderProducts(filteredProducts);
+        const searchTerm = e.target.value.toLowerCase().trim();
+
+        if (searchTerm === '') {
+            // If search is empty, show current category/budget products
+            hideSearchSuggestions();
+            applyFiltering();
+            return;
+        }
+
+        // Show search suggestions after just 1 character
+        if (searchTerm.length >= 1) {
+            showSearchSuggestions(searchTerm);
+        }
     });
+
+    // Search button functionality
+    const searchButton = document.querySelector('.search-button');
+    if (searchButton) {
+        searchButton.addEventListener('click', () => {
+            performGlobalSearch();
+        });
+    }
+
+    // Enter key functionality for search
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            performGlobalSearch();
+        }
+    });
+
+    // Close suggestions when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.search-container')) {
+            hideSearchSuggestions();
+        }
+    });
+}
+
+// Perform global search across all products
+function performGlobalSearch() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+
+    if (searchTerm === '') {
+        applyFiltering();
+        return;
+    }
+
+    // Search across ALL products regardless of current category filter
+    let categoryFiltered = allProducts;
+
+    const searchResults = categoryFiltered.filter(product =>
+        product.title.toLowerCase().includes(searchTerm)
+    );
+
+    if (searchResults.length > 0) {
+        // Auto-switch to the budget section of the first found product
+        const firstProduct = searchResults[0];
+        const appropriateBudget = getBudgetForProduct(firstProduct);
+
+        if (appropriateBudget !== currentBudget) {
+            switchToBudgetSection(appropriateBudget);
+        }
+
+        // Show search results
+        filteredProducts = searchResults;
+        renderProducts(filteredProducts);
+    } else {
+        // Show no results
+        filteredProducts = [];
+        renderProducts(filteredProducts);
+    }
+
+    hideSearchSuggestions();
+}
+
+// Get appropriate budget section for a product
+function getBudgetForProduct(product) {
+    if (product.priceValue < 10) return 'under-10';
+    if (product.priceValue < 25) return 'under-25';
+    if (product.priceValue < 50) return 'under-50';
+    return 'under-100';
+}
+
+// Switch to a specific budget section
+function switchToBudgetSection(budget) {
+    const budgetButtons = document.querySelectorAll('.budget-btn');
+    budgetButtons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-budget') === budget) {
+            btn.classList.add('active');
+        }
+    });
+    updateBudgetFilter(budget);
 }
 
 
@@ -374,6 +486,7 @@ document.addEventListener('click', (e) => {
         }
     }
 });
+
 
 // Initialize page when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -439,6 +552,48 @@ function showImagePreview(imageSrc, title) {
     img.alt = title;
     titleEl.textContent = title;
 
+    // Force proper sizing with inline styles - remove all constraints
+    const container = modal.querySelector('.image-preview-container');
+    const overlay = modal.querySelector('.image-preview-overlay');
+
+    // Remove all size constraints from container and overlay
+    overlay.style.cssText = `
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        background: rgba(0, 0, 0, 0.9) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        z-index: 10000 !important;
+        padding: 60px 20px !important;
+        box-sizing: border-box !important;
+    `;
+
+    container.style.cssText = `
+        position: relative !important;
+        max-width: calc(100vw - 40px) !important;
+        max-height: calc(100vh - 120px) !important;
+        width: auto !important;
+        height: auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    `;
+
+    img.style.cssText = `
+        max-width: calc(100vw - 40px) !important;
+        max-height: calc(100vh - 120px) !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+        display: block !important;
+        border-radius: 8px !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+    `;
+
     // Show modal
     modal.classList.add('active');
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
@@ -458,3 +613,165 @@ document.addEventListener('keydown', function(e) {
         closeImagePreview();
     }
 });
+
+// Handle product card click
+function handleProductCardClick(event, affiliateLink) {
+    // Don't trigger if clicking on the "View on Amazon" button
+    if (event.target.classList.contains('product-btn') || event.target.closest('.product-btn')) {
+        return;
+    }
+
+    // Open Amazon product page in new tab
+    window.open(affiliateLink, '_blank', 'noopener');
+}
+
+// Handle product image click
+function handleProductImageClick(event, affiliateLink) {
+    // Prevent event bubbling to card click handler
+    event.stopPropagation();
+
+    // Open Amazon product page in new tab
+    window.open(affiliateLink, '_blank', 'noopener');
+}
+
+// Show search suggestions
+function showSearchSuggestions(searchTerm) {
+    // Search across ALL products regardless of current category filter for suggestions
+    let categoryFiltered = allProducts;
+
+    const suggestions = categoryFiltered
+        .filter(product => product.title.toLowerCase().includes(searchTerm))
+        .slice(0, 8); // Limit to 8 suggestions
+
+    if (suggestions.length === 0) {
+        hideSearchSuggestions();
+        return;
+    }
+
+    // Create or get suggestions container
+    let suggestionsContainer = document.getElementById('search-suggestions');
+    if (!suggestionsContainer) {
+        suggestionsContainer = document.createElement('div');
+        suggestionsContainer.id = 'search-suggestions';
+        suggestionsContainer.className = 'search-suggestions';
+
+        const searchContainer = document.querySelector('.search-container');
+        if (searchContainer) {
+            searchContainer.appendChild(suggestionsContainer);
+        } else {
+            return;
+        }
+    }
+
+    // Build suggestions HTML with enhanced preview
+    const suggestionsHTML = suggestions.map(product => {
+        const budget = getBudgetForProduct(product);
+        const budgetText = budget.replace('-', ' ').replace('under', 'Under $');
+        const categoryText = getCategoryDisplayName(product.category);
+        const stars = '★'.repeat(Math.floor(product.rating)) +
+                     (product.rating % 1 >= 0.5 ? '☆' : '') +
+                     '☆'.repeat(5 - Math.ceil(product.rating));
+
+        return `
+            <div class="search-suggestion enhanced-preview" onclick="selectSearchSuggestion('${product.id}', '${budget}')">
+                <div class="suggestion-image-container">
+                    <img src="${product.image}" alt="${product.title}" class="suggestion-image">
+                    <div class="suggestion-quick-view" onclick="event.stopPropagation(); window.open('${product.affiliateLink}', '_blank', 'noopener');">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+                <div class="suggestion-content">
+                    <div class="suggestion-header">
+                        <div class="suggestion-title">${highlightSearchTerm(product.title, searchTerm)}</div>
+                        <div class="suggestion-rating">
+                            <span class="rating-stars">${stars}</span>
+                            <span class="rating-value">(${product.rating})</span>
+                        </div>
+                    </div>
+                    <div class="suggestion-details">
+                        <div class="suggestion-category">${categoryText}</div>
+                        <div class="suggestion-meta">
+                            <span class="suggestion-price">${product.price}</span>
+                            <span class="suggestion-budget">${budgetText}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    suggestionsContainer.innerHTML = suggestionsHTML;
+    suggestionsContainer.style.display = 'block';
+}
+
+// Hide search suggestions
+function hideSearchSuggestions() {
+    const suggestionsContainer = document.getElementById('search-suggestions');
+    if (suggestionsContainer) {
+        suggestionsContainer.style.display = 'none';
+    }
+}
+
+// Highlight search term in suggestion
+function highlightSearchTerm(text, searchTerm) {
+    const regex = new RegExp(`(${searchTerm})`, 'gi');
+    return text.replace(regex, '<mark>$1</mark>');
+}
+
+// Get category display name
+function getCategoryDisplayName(category) {
+    const categoryNames = {
+        'appliances': 'Appliances',
+        'arts-crafts-sewing': 'Arts & Crafts',
+        'automotive': 'Automotive',
+        'baby': 'Baby',
+        'beauty': 'Beauty',
+        'books': 'Books',
+        'collectibles-fine-arts': 'Collectibles',
+        'electronics': 'Electronics',
+        'clothing-shoes-jewelry': 'Fashion',
+        'clothing-related': 'Clothing',
+        'gift-cards': 'Gift Cards',
+        'grocery-gourmet-food': 'Food & Grocery',
+        'handmade': 'Handmade',
+        'health-personal-care': 'Health & Care',
+        'home-kitchen': 'Home & Kitchen',
+        'industrial-scientific': 'Industrial',
+        'kindle-store': 'Kindle Store',
+        'patio-lawn-garden': 'Garden',
+        'luggage-travel-gear': 'Travel',
+        'magazine-subscriptions': 'Magazines',
+        'apps-games': 'Apps & Games',
+        'movies-tv': 'Movies & TV',
+        'digital-music': 'Music',
+        'musical-instruments': 'Instruments',
+        'office-products': 'Office',
+        'computers': 'Computers',
+        'pet-supplies': 'Pet Supplies',
+        'sports-outdoors': 'Sports',
+        'tools-home-improvement': 'Tools',
+        'toys-games': 'Toys & Games',
+        'video-games': 'Video Games',
+        'cell-phones-accessories': 'Mobile'
+    };
+    return categoryNames[category] || 'Products';
+}
+
+// Select a search suggestion
+function selectSearchSuggestion(productId, budget) {
+    // Switch to the appropriate budget section
+    switchToBudgetSection(budget);
+
+    // Find and display the specific product
+    const product = allProducts.find(p => p.id == productId);
+    if (product) {
+        // Update search input with product title
+        searchInput.value = product.title;
+
+        // Show only this product
+        filteredProducts = [product];
+        renderProducts(filteredProducts);
+    }
+
+    hideSearchSuggestions();
+}
