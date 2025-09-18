@@ -647,16 +647,25 @@ body {
     }
 
     .budget-navigation {
-        justify-content: center;
+        display: flex;
         gap: 0.5rem;
-        flex-direction: row;
-        flex-wrap: wrap;
+        overflow-x: auto;
+        padding: 0 0.5rem;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    .budget-navigation::-webkit-scrollbar {
+        display: none;
     }
 
     .budget-btn {
         padding: 0.4rem 0.7rem;
         font-size: 0.75rem;
         flex: 0 0 auto;
+        min-width: max-content;
     }
 
     .product-grid {
