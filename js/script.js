@@ -475,9 +475,30 @@ function performGlobalSearch() {
         return;
     }
 
-    // Search across ALL products regardless of current category filter
-    let categoryFiltered = allProducts;
+    // Start with category filtering
+    let categoryFiltered = currentCategory === 'all' ?
+        allProducts :
+        allProducts.filter(product => product.category === currentCategory);
 
+    // Apply budget filtering if we have a current budget set
+    if (currentBudget && currentBudget !== 'all') {
+        categoryFiltered = categoryFiltered.filter(product => {
+            switch(currentBudget) {
+                case 'under-10':
+                    return product.priceValue < 10;
+                case 'under-25':
+                    return product.priceValue >= 10 && product.priceValue < 25;
+                case 'under-50':
+                    return product.priceValue >= 25 && product.priceValue < 50;
+                case 'under-100':
+                    return product.priceValue >= 50 && product.priceValue < 100;
+                default:
+                    return true;
+            }
+        });
+    }
+
+    // Now search within the filtered products
     const searchResults = categoryFiltered.filter(product =>
         product.title.toLowerCase().includes(searchTerm)
     );
@@ -679,8 +700,28 @@ function handleProductImageClick(event, affiliateLink) {
 
 // Show search suggestions
 function showSearchSuggestions(searchTerm) {
-    // Search across ALL products regardless of current category filter for suggestions
-    let categoryFiltered = allProducts;
+    // Start with category filtering
+    let categoryFiltered = currentCategory === 'all' ?
+        allProducts :
+        allProducts.filter(product => product.category === currentCategory);
+
+    // Apply budget filtering if we have a current budget set
+    if (currentBudget && currentBudget !== 'all') {
+        categoryFiltered = categoryFiltered.filter(product => {
+            switch(currentBudget) {
+                case 'under-10':
+                    return product.priceValue < 10;
+                case 'under-25':
+                    return product.priceValue >= 10 && product.priceValue < 25;
+                case 'under-50':
+                    return product.priceValue >= 25 && product.priceValue < 50;
+                case 'under-100':
+                    return product.priceValue >= 50 && product.priceValue < 100;
+                default:
+                    return true;
+            }
+        });
+    }
 
     const suggestions = categoryFiltered
         .filter(product => product.title.toLowerCase().includes(searchTerm))
