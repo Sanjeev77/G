@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gifts Under $100 - Premium Gifts That Impress</title>
-    <meta name="description" content="Discover premium gifts under $100. Perfect for milestone celebrations and making a lasting impression on important people.">
+    <title>Best Gifts Under $100 - Premium Luxury Gift Ideas | Gift On Budget</title>
+    <meta name="description" content="Discover premium gifts under $100! Perfect for milestone celebrations, anniversaries, and making a lasting impression. Luxury quality products.">
+    <meta name="keywords" content="gifts under $100, premium gifts, luxury gifts, milestone gifts, anniversary gifts, expensive gifts">
+    <meta property="og:title" content="Best Gifts Under $100 - Premium Luxury Gift Ideas">
+    <meta property="og:description" content="Discover premium gifts under $100! Perfect for milestone celebrations and making a lasting impression.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://giftonbudget.com/pages/under-100.html">
+    <link rel="canonical" href="https://giftonbudget.com/pages/under-100.html">
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -13,12 +19,13 @@
         <nav class="navbar">
             <div class="container">
                 <div class="nav-brand">
-                    <h1><i class="fas fa-gift"></i> Gift Guide</h1>
+                    <h1><i class="fas fa-gift"></i> Gift On Budget</h1>
                 </div>
                 <div class="nav-menu">
                     <a href="../index.html" class="nav-link">Home</a>
                     <a href="../index.html#categories" class="nav-link">Categories</a>
                     <a href="under-10.html" class="nav-link">Under $10</a>
+                    <a href="under-25.html" class="nav-link">Under $25</a>
                     <a href="under-50.html" class="nav-link">Under $50</a>
                 </div>
             </div>
@@ -26,11 +33,18 @@
     </header>
 
     <main>
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <div class="container">
+                <a href="../index.html">Home</a> > <span>Gifts Under $100</span>
+            </div>
+        </nav>
+
         <!-- Page Header -->
         <section class="page-header">
             <div class="container">
-                <h1><i class="fas fa-star"></i> Gifts Under $100</h1>
-                <p>Premium gifts that make a lasting impression. Perfect for milestone celebrations and important occasions.</p>
+                <h1><i class="fas fa-star"></i> Under $100 Gift Ideas</h1>
+                <p>Discover amazing gift options under $100, sorted by price from highest to lowest.</p>
             </div>
         </section>
 
@@ -48,7 +62,7 @@
         <!-- Products Section -->
         <section class="products-section">
             <div class="container">
-                <a href="index.html" class="back-link">
+                <a href="../index.html" class="back-link">
                     <i class="fas fa-arrow-left"></i> Back to Categories
                 </a>
                 <div id="products-container" class="product-grid">
@@ -75,11 +89,12 @@
         </div>
     </footer>
 
+    <script src="../js/productData.js"></script>
     <script src="../js/script.js"></script>
     <script>
-        // Initialize page with under-100 category
+        // Initialize page with under-100 budget
         document.addEventListener('DOMContentLoaded', () => {
-            initializeCategoryPage('under-100');
+            initializeBudgetPage('under-100');
         });
     </script>
 </body>

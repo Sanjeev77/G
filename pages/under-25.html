@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Gifts Under $10 - Budget-Friendly Gift Ideas | Gift On Budget</title>
-    <meta name="description" content="Discover amazing gifts under $10! Perfect stocking stuffers, secret Santa gifts, and thoughtful presents that won't break the bank. Curated Amazon products with great reviews.">
-    <meta name="keywords" content="gifts under $10, cheap gifts, budget gifts, stocking stuffers, secret santa gifts, affordable presents">
-    <meta property="og:title" content="Best Gifts Under $10 - Budget-Friendly Gift Ideas">
-    <meta property="og:description" content="Discover amazing gifts under $10! Perfect stocking stuffers and thoughtful presents that won't break the bank.">
+    <title>Best Gifts Under $25 - Great Value Gift Ideas | Gift On Budget</title>
+    <meta name="description" content="Discover amazing gifts under $25! Perfect balance of quality and affordability. Great value presents for birthdays, holidays, and special occasions.">
+    <meta name="keywords" content="gifts under $25, affordable gifts, value gifts, birthday presents, holiday gifts, quality gifts">
+    <meta property="og:title" content="Best Gifts Under $25 - Great Value Gift Ideas">
+    <meta property="og:description" content="Discover amazing gifts under $25! Perfect balance of quality and affordability for any occasion.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://giftonbudget.com/pages/under-10.html">
-    <link rel="canonical" href="https://giftonbudget.com/pages/under-10.html">
+    <meta property="og:url" content="https://giftonbudget.com/pages/under-25.html">
+    <link rel="canonical" href="https://giftonbudget.com/pages/under-25.html">
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -24,7 +24,7 @@
                 <div class="nav-menu">
                     <a href="../index.html" class="nav-link">Home</a>
                     <a href="../index.html#categories" class="nav-link">Categories</a>
-                    <a href="under-25.html" class="nav-link">Under $25</a>
+                    <a href="under-10.html" class="nav-link">Under $10</a>
                     <a href="under-50.html" class="nav-link">Under $50</a>
                     <a href="under-100.html" class="nav-link">Under $100</a>
                 </div>
@@ -36,15 +36,15 @@
         <!-- Breadcrumb -->
         <nav class="breadcrumb">
             <div class="container">
-                <a href="../index.html">Home</a> > <span>Gifts Under $10</span>
+                <a href="../index.html">Home</a> > <span>Gifts Under $25</span>
             </div>
         </nav>
 
         <!-- Page Header -->
         <section class="page-header">
             <div class="container">
-                <h1><i class="fas fa-dollar-sign"></i> Under $10 Gift Ideas</h1>
-                <p>Discover amazing gift options under $10, sorted by price from highest to lowest.</p>
+                <h1><i class="fas fa-gem"></i> Under $25 Gift Ideas</h1>
+                <p>Discover amazing gift options under $25, sorted by price from highest to lowest.</p>
             </div>
         </section>
 
@@ -79,7 +79,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Gift Guide. This site contains affiliate links. We may earn a commission from purchases made through these links.</p>
+                <p>&copy; 2024 Gift On Budget. This site contains affiliate links. We may earn a commission from purchases made through these links.</p>
                 <div class="social-links">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -92,24 +92,9 @@
     <script src="../js/productData.js"></script>
     <script src="../js/script.js"></script>
     <script>
-        // Add error handling and debugging
-        window.addEventListener('error', function(e) {
-            console.error('JavaScript Error:', e.error);
-            document.getElementById('products-container').innerHTML = '<div style="background: red; color: white; padding: 20px;">JavaScript Error: ' + e.message + '</div>';
-        });
-
-        // Initialize page with under-10 budget
+        // Initialize page with under-25 budget
         document.addEventListener('DOMContentLoaded', () => {
-            console.log('DOM loaded, about to initialize...');
-            try {
-                console.log('allProductsData available:', typeof allProductsData);
-                console.log('initializeBudgetPage function available:', typeof initializeBudgetPage);
-                initializeBudgetPage('under-10');
-                console.log('Initialization completed');
-            } catch (error) {
-                console.error('Initialization error:', error);
-                document.getElementById('products-container').innerHTML = '<div style="background: red; color: white; padding: 20px;">Init Error: ' + error.message + '</div>';
-            }
+            initializeBudgetPage('under-25');
         });
     </script>
 </body>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Personal Care - Wellness Products | Gift On Budget</title>
+    <meta name="description" content="Products to support your health, wellness, and personal care needs. Quality health and self-care products.">
+    <meta name="keywords" content="health products, personal care, wellness, self-care, health accessories, medical supplies">
+    <meta property="og:title" content="Health & Personal Care - Wellness Products">
+    <meta property="og:description" content="Products to support your health, wellness, and personal care needs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://giftonbudget.com/pages/health-personal-care.html">
+    <link rel="canonical" href="https://giftonbudget.com/pages/health-personal-care.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1><i class="fas fa-gift"></i> Gift On Budget</h1>
+                </div>
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="../index.html#categories" class="nav-link">Categories</a>
+                    <a href="under-10.html" class="nav-link">Under $10</a>
+                    <a href="under-25.html" class="nav-link">Under $25</a>
+                    <a href="under-50.html" class="nav-link">Under $50</a>
+                    <a href="under-100.html" class="nav-link">Under $100</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <nav class="breadcrumb">
+            <div class="container">
+                <a href="../index.html">Home</a> > <a href="../index.html#categories">Categories</a> > <span>Health & Personal Care</span>
+            </div>
+        </nav>
+
+        <section class="page-header">
+            <div class="container">
+                <h1><i class="fas fa-heart-pulse"></i> Health & Personal Care Products</h1>
+                <p>Browse our complete Health & Personal Care collection, sorted by price from highest to lowest.</p>
+            </div>
+        </section>
+
+        <section class="budget-filter-tabs">
+            <div class="container">
+                <div class="budget-navigation">
+                    <button class="budget-btn active" data-budget="all" onclick="filterCategoryByBudget('all')">
+                        <i class="fas fa-globe"></i>
+                        <span>All Prices</span>
+                    </button>
+                    <button class="budget-btn" data-budget="under-10" onclick="filterCategoryByBudget('under-10')">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>Under $10</span>
+                    </button>
+                    <button class="budget-btn" data-budget="under-25" onclick="filterCategoryByBudget('under-25')">
+                        <i class="fas fa-gem"></i>
+                        <span>Under $25</span>
+                    </button>
+                    <button class="budget-btn" data-budget="under-50" onclick="filterCategoryByBudget('under-50')">
+                        <i class="fas fa-heart"></i>
+                        <span>Under $50</span>
+                    </button>
+                    <button class="budget-btn" data-budget="under-100" onclick="filterCategoryByBudget('under-100')">
+                        <i class="fas fa-star"></i>
+                        <span>Under $100</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="filters">
+            <div class="container">
+                <div class="filter-controls">
+                    <div class="search-box">
+                        <input type="text" id="search" placeholder="Search health & personal care..." />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="container">
+                <a href="../index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Categories
+                </a>
+                <div id="products-container" class="product-grid">
+                </div>
+                <div id="no-results" style="display: none; text-align: center; padding: 3rem;">
+                    <h3>No products found</h3>
+                    <p>Try adjusting your search or filters.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Gift On Budget. This site contains affiliate links. We may earn a commission from purchases made through these links.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/productData.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeCategoryPage('health-personal-care');
+        });
+    </script>
+</body>
+</html>

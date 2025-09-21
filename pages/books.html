@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Gifts Under $10 - Budget-Friendly Gift Ideas | Gift On Budget</title>
-    <meta name="description" content="Discover amazing gifts under $10! Perfect stocking stuffers, secret Santa gifts, and thoughtful presents that won't break the bank. Curated Amazon products with great reviews.">
-    <meta name="keywords" content="gifts under $10, cheap gifts, budget gifts, stocking stuffers, secret santa gifts, affordable presents">
-    <meta property="og:title" content="Best Gifts Under $10 - Budget-Friendly Gift Ideas">
-    <meta property="og:description" content="Discover amazing gifts under $10! Perfect stocking stuffers and thoughtful presents that won't break the bank.">
+    <title>Books - Reading & Literature | Gift On Budget</title>
+    <meta name="description" content="Discover your next great read across all genres and interests. Fiction, non-fiction, educational books, and more.">
+    <meta name="keywords" content="books, reading, literature, fiction, non-fiction, educational books, book gifts">
+    <meta property="og:title" content="Books - Reading & Literature">
+    <meta property="og:description" content="Discover your next great read across all genres and interests.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://giftonbudget.com/pages/under-10.html">
-    <link rel="canonical" href="https://giftonbudget.com/pages/under-10.html">
+    <meta property="og:url" content="https://giftonbudget.com/pages/books.html">
+    <link rel="canonical" href="https://giftonbudget.com/pages/books.html">
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -24,6 +24,7 @@
                 <div class="nav-menu">
                     <a href="../index.html" class="nav-link">Home</a>
                     <a href="../index.html#categories" class="nav-link">Categories</a>
+                    <a href="under-10.html" class="nav-link">Under $10</a>
                     <a href="under-25.html" class="nav-link">Under $25</a>
                     <a href="under-50.html" class="nav-link">Under $50</a>
                     <a href="under-100.html" class="nav-link">Under $100</a>
@@ -33,40 +34,62 @@
     </header>
 
     <main>
-        <!-- Breadcrumb -->
         <nav class="breadcrumb">
             <div class="container">
-                <a href="../index.html">Home</a> > <span>Gifts Under $10</span>
+                <a href="../index.html">Home</a> > <a href="../index.html#categories">Categories</a> > <span>Books</span>
             </div>
         </nav>
 
-        <!-- Page Header -->
         <section class="page-header">
             <div class="container">
-                <h1><i class="fas fa-dollar-sign"></i> Under $10 Gift Ideas</h1>
-                <p>Discover amazing gift options under $10, sorted by price from highest to lowest.</p>
+                <h1><i class="fas fa-book"></i> Books Products</h1>
+                <p>Browse our complete Books collection, sorted by price from highest to lowest.</p>
             </div>
         </section>
 
-        <!-- Filters -->
+        <section class="budget-filter-tabs">
+            <div class="container">
+                <div class="budget-navigation">
+                    <button class="budget-btn active" data-budget="all" onclick="filterCategoryByBudget('all')">
+                        <i class="fas fa-globe"></i>
+                        <span>All Prices</span>
+                    </button>
+                    <button class="budget-btn" data-budget="under-10" onclick="filterCategoryByBudget('under-10')">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>Under $10</span>
+                    </button>
+                    <button class="budget-btn" data-budget="under-25" onclick="filterCategoryByBudget('under-25')">
+                        <i class="fas fa-gem"></i>
+                        <span>Under $25</span>
+                    </button>
+                    <button class="budget-btn" data-budget="under-50" onclick="filterCategoryByBudget('under-50')">
+                        <i class="fas fa-heart"></i>
+                        <span>Under $50</span>
+                    </button>
+                    <button class="budget-btn" data-budget="under-100" onclick="filterCategoryByBudget('under-100')">
+                        <i class="fas fa-star"></i>
+                        <span>Under $100</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <section class="filters">
             <div class="container">
                 <div class="filter-controls">
                     <div class="search-box">
-                        <input type="text" id="search" placeholder="Search products..." />
+                        <input type="text" id="search" placeholder="Search books..." />
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Products Section -->
         <section class="products-section">
             <div class="container">
                 <a href="../index.html" class="back-link">
                     <i class="fas fa-arrow-left"></i> Back to Categories
                 </a>
                 <div id="products-container" class="product-grid">
-                    <!-- Products will be loaded by JavaScript -->
                 </div>
                 <div id="no-results" style="display: none; text-align: center; padding: 3rem;">
                     <h3>No products found</h3>
@@ -79,7 +102,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Gift Guide. This site contains affiliate links. We may earn a commission from purchases made through these links.</p>
+                <p>&copy; 2024 Gift On Budget. This site contains affiliate links. We may earn a commission from purchases made through these links.</p>
                 <div class="social-links">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -92,24 +115,8 @@
     <script src="../js/productData.js"></script>
     <script src="../js/script.js"></script>
     <script>
-        // Add error handling and debugging
-        window.addEventListener('error', function(e) {
-            console.error('JavaScript Error:', e.error);
-            document.getElementById('products-container').innerHTML = '<div style="background: red; color: white; padding: 20px;">JavaScript Error: ' + e.message + '</div>';
-        });
-
-        // Initialize page with under-10 budget
         document.addEventListener('DOMContentLoaded', () => {
-            console.log('DOM loaded, about to initialize...');
-            try {
-                console.log('allProductsData available:', typeof allProductsData);
-                console.log('initializeBudgetPage function available:', typeof initializeBudgetPage);
-                initializeBudgetPage('under-10');
-                console.log('Initialization completed');
-            } catch (error) {
-                console.error('Initialization error:', error);
-                document.getElementById('products-container').innerHTML = '<div style="background: red; color: white; padding: 20px;">Init Error: ' + error.message + '</div>';
-            }
+            initializeCategoryPage('books');
         });
     </script>
 </body>

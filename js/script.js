@@ -3,7 +3,7 @@
 // Global variables
 let currentProducts = [];
 let filteredProducts = [];
-let currentCategory = 'electronics';
+let currentCategory = 'all';
 let currentBudget = 'under-10';
 let allProducts = [];
 
@@ -49,7 +49,7 @@ const categoryInfo = {
         description: 'Car accessories, tools, and parts to keep your vehicle running smoothly.'
     },
     'baby': {
-        title: 'Baby',
+        title: 'Baby Essentials',
         description: 'Everything you need for your little one - from feeding to playtime.'
     },
     'beauty': {
@@ -166,6 +166,61 @@ const categoryInfo = {
     }
 };
 
+// Initialize budget page
+function initializeBudgetPage(budget) {
+    // Initialize DOM elements
+    searchInput = document.getElementById('search');
+    productsContainer = document.getElementById('products-container');
+    noResults = document.getElementById('no-results');
+
+    // Load all products from the data structure
+    allProducts = allProductsData;
+
+    // Set current budget
+    currentBudget = budget;
+    currentCategory = 'all'; // Show all categories for budget page
+
+    // Get filtered products from all categories by budget
+    const filteredProducts = filterAllCategoriesByBudget(budget);
+
+    // Update current products
+    currentProducts = filteredProducts;
+
+    // Render products
+    renderProducts(filteredProducts);
+
+    // Setup filters
+    setupFilters();
+}
+
+// Initialize category page
+function initializeCategoryPage(category) {
+    // Initialize DOM elements
+    searchInput = document.getElementById('search');
+    productsContainer = document.getElementById('products-container');
+    noResults = document.getElementById('no-results');
+
+    // Load all products from the data structure
+    allProducts = allProductsData;
+
+    // Set current category
+    currentCategory = category;
+    currentBudget = 'all'; // Show all price ranges for category page
+
+    // Get products for this category sorted by price
+    const categoryProducts = allProducts.filter(product => product.category === category);
+    categoryProducts.sort((a, b) => b.priceValue - a.priceValue);
+
+    // Update current products
+    currentProducts = categoryProducts;
+
+    // Render products
+    renderProducts(categoryProducts);
+
+    // Setup filters
+    setupFilters();
+}
+
 // Initialize the main page
 function initializeMainPage() {
     // Initialize DOM elements
@@ -180,46 +235,20 @@ function initializeMainPage() {
     // Load all products from the new data structure
     allProducts = allProductsData;
 
-    setupBudgetTabs();
     setupCategorySelector();
 
-    // Load saved state or use defaults
-    const savedCategory = localStorage.getItem('currentCategory') || 'electronics';
-    const savedBudget = localStorage.getItem('currentBudget') || 'under-10';
+    // Check if URL has parameters first, otherwise use saved state or defaults
+    const urlProcessed = initializeFromURL();
 
-    // Set the active budget tab
-    const budgetButtons = document.querySelectorAll('.budget-btn');
-    budgetButtons.forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.getAttribute('data-budget') === savedBudget) {
-            btn.classList.add('active');
-        }
-    });
-
-    // Start with saved or default category and budget
-    switchCategory(savedCategory);
-    updateBudgetFilter(savedBudget);
+    if (!urlProcessed) {
+        // On the main homepage, don't show any products initially
+        // Just show the gift cards for selection
+        hideProductsOnMainPage();
+    }
 
     setupFilters();
 }
 
-// Setup budget tabs
-function setupBudgetTabs() {
-    const budgetButtons = document.querySelectorAll('.budget-btn');
-
-    budgetButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const budget = button.getAttribute('data-budget');
-
-            // Update active budget tab
-            budgetButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            // Update budget filter
-            updateBudgetFilter(budget);
-        });
-    });
-}
 
 // Setup category selector
 function setupCategorySelector() {
@@ -296,6 +325,29 @@ function applyFiltering() {
     renderProducts(filteredProducts);
 }
 
+// Filter products from ALL categories by budget and sort by price (highest to lowest)
+function filterAllCategoriesByBudget(budget) {
+    let budgetFiltered = allProducts.filter(product => {
+        switch(budget) {
+            case 'under-10':
+                return product.priceValue < 10;
+            case 'under-25':
+                return product.priceValue >= 10 && product.priceValue < 25;
+            case 'under-50':
+                return product.priceValue >= 25 && product.priceValue < 50;
+            case 'under-100':
+                return product.priceValue >= 50 && product.priceValue < 100;
+            default:
+                return true;
+        }
+    });
+
+    // Sort by price - highest to lowest
+    budgetFiltered.sort((a, b) => b.priceValue - a.priceValue);
+
+    return budgetFiltered;
+}
+
 // Update page info based on current filters
 function updatePageInfo() {
     // No category info to update - showing only products
@@ -346,18 +398,28 @@ function createProductCard(product) {
 
 // Render products
 function renderProducts(products) {
-    if (!productsContainer) return;
+    console.log('renderProducts called with:', products.length, 'products');
+    console.log('productsContainer:', productsContainer);
+
+    if (!productsContainer) {
+        console.error('Products container not found!');
+        return;
+    }
 
     if (products.length === 0) {
-        productsContainer.style.display = 'none';
+        console.log('No products to display');
+        productsContainer.innerHTML = '<div style="background: orange; color: white; padding: 20px; text-align: center;">No products found for this filter.</div>';
         if (noResults) noResults.style.display = 'block';
         return;
     }
 
+    console.log('Rendering', products.length, 'products');
     productsContainer.style.display = 'grid';
     if (noResults) noResults.style.display = 'none';
 
-    productsContainer.innerHTML = products.map(product => createProductCard(product)).join('');
+    const productCards = products.map(product => createProductCard(product)).join('');
+    console.log('Generated HTML length:', productCards.length);
+    productsContainer.innerHTML = productCards;
 }
 
 // Setup filters for category pages
@@ -421,15 +483,8 @@ function performGlobalSearch() {
     );
 
     if (searchResults.length > 0) {
-        // Auto-switch to the budget section of the first found product
-        const firstProduct = searchResults[0];
-        const appropriateBudget = getBudgetForProduct(firstProduct);
-
-        if (appropriateBudget !== currentBudget) {
-            switchToBudgetSection(appropriateBudget);
-        }
-
-        // Show search results
+        // Show search results sorted by price (highest to lowest)
+        searchResults.sort((a, b) => b.priceValue - a.priceValue);
         filteredProducts = searchResults;
         renderProducts(filteredProducts);
     } else {
@@ -447,18 +502,6 @@ function getBudgetForProduct(product) {
     if (product.priceValue < 25) return 'under-25';
     if (product.priceValue < 50) return 'under-50';
     return 'under-100';
-}
-
-// Switch to a specific budget section
-function switchToBudgetSection(budget) {
-    const budgetButtons = document.querySelectorAll('.budget-btn');
-    budgetButtons.forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.getAttribute('data-budget') === budget) {
-            btn.classList.add('active');
-        }
-    });
-    updateBudgetFilter(budget);
 }
 
 
@@ -724,7 +767,7 @@ function getCategoryDisplayName(category) {
         'appliances': 'Appliances',
         'arts-crafts-sewing': 'Arts & Crafts',
         'automotive': 'Automotive',
-        'baby': 'Baby',
+        'baby': 'Baby Essentials',
         'beauty': 'Beauty',
         'books': 'Books',
         'collectibles-fine-arts': 'Collectibles',
@@ -759,19 +802,279 @@ function getCategoryDisplayName(category) {
 
 // Select a search suggestion
 function selectSearchSuggestion(productId, budget) {
-    // Switch to the appropriate budget section
-    switchToBudgetSection(budget);
-
-    // Find and display the specific product
+    // Find the product
     const product = allProducts.find(p => p.id == productId);
     if (product) {
-        // Update search input with product title
-        searchInput.value = product.title;
-
-        // Show only this product
-        filteredProducts = [product];
-        renderProducts(filteredProducts);
+        // Open the product's Amazon page directly
+        window.open(product.affiliateLink, '_blank', 'noopener');
     }
 
     hideSearchSuggestions();
+}
+
+// Handle gift card clicks
+function handleGiftCardClick(budget) {
+    // Create URL with budget parameter
+    const currentUrl = window.location.origin + window.location.pathname;
+    const newUrl = `${currentUrl}?budget=${budget}&category=all`;
+
+    // Open in new tab
+    window.open(newUrl, '_blank');
+}
+
+// Handle category card clicks
+function handleCategoryCardClick(category) {
+    // Create URL with category parameter
+    const currentUrl = window.location.origin + window.location.pathname;
+    const newUrl = `${currentUrl}?category=${category}`;
+
+    // Open in new tab
+    window.open(newUrl, '_blank');
+}
+
+// Initialize page with URL parameters if present
+function initializeFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const budgetParam = urlParams.get('budget');
+    const categoryParam = urlParams.get('category');
+
+    if (budgetParam && categoryParam) {
+        // Hide the gift cards and categories sections since this is a filtered view
+        const giftCardsSection = document.querySelector('.gift-cards-section');
+        const categoriesSection = document.querySelector('.categories-section');
+        if (giftCardsSection) {
+            giftCardsSection.style.display = 'none';
+        }
+        if (categoriesSection) {
+            categoriesSection.style.display = 'none';
+        }
+
+        // Show products section for filtered view
+        const productsSection = document.querySelector('.products-section');
+        if (productsSection) {
+            productsSection.style.display = 'block';
+        }
+
+        // Update hero section to show current filter
+        updateHeroForFilteredView(budgetParam);
+
+        // Set category to "all" to show products from all categories
+        currentCategory = categoryParam;
+        currentBudget = budgetParam;
+
+        // Save to localStorage
+        localStorage.setItem('currentCategory', categoryParam);
+        localStorage.setItem('currentBudget', budgetParam);
+
+        // Update category selector to show "All"
+        if (categorySelect) {
+            categorySelect.value = categoryParam;
+        }
+
+        // Get filtered and sorted products from all categories
+        const filteredProducts = filterAllCategoriesByBudget(budgetParam);
+
+        // Update current products
+        currentProducts = filteredProducts;
+
+        // Clear search
+        if (searchInput) searchInput.value = '';
+
+        // Render products
+        renderProducts(filteredProducts);
+
+        return true; // Indicates URL params were processed
+    } else if (categoryParam && !budgetParam) {
+        // Handle category-only URLs
+        const giftCardsSection = document.querySelector('.gift-cards-section');
+        const categoriesSection = document.querySelector('.categories-section');
+        if (giftCardsSection) {
+            giftCardsSection.style.display = 'none';
+        }
+        if (categoriesSection) {
+            categoriesSection.style.display = 'none';
+        }
+
+        // Show products section for filtered view
+        const productsSection = document.querySelector('.products-section');
+        if (productsSection) {
+            productsSection.style.display = 'block';
+        }
+
+        // Update hero section for category view
+        updateHeroForCategoryView(categoryParam);
+
+        // Add budget filter tabs for category view
+        addBudgetFilterTabs();
+
+        // Set category
+        currentCategory = categoryParam;
+        currentBudget = 'all'; // Show all price ranges
+
+        // Save to localStorage
+        localStorage.setItem('currentCategory', categoryParam);
+
+        // Update category selector
+        if (categorySelect) {
+            categorySelect.value = categoryParam;
+        }
+
+        // Get products for this category sorted by price
+        const categoryProducts = allProducts.filter(product => product.category === categoryParam);
+        categoryProducts.sort((a, b) => b.priceValue - a.priceValue);
+
+        // Update current products
+        currentProducts = categoryProducts;
+
+        // Clear search
+        if (searchInput) searchInput.value = '';
+
+        // Render products
+        renderProducts(categoryProducts);
+
+        return true; // Indicates URL params were processed
+    }
+
+    return false; // No URL params found
+}
+
+// Update hero section for filtered view
+function updateHeroForFilteredView(budget) {
+    const heroTitle = document.querySelector('.hero-title');
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+
+    if (heroTitle && heroSubtitle) {
+        const budgetText = getBudgetDisplayText(budget);
+        heroTitle.textContent = `${budgetText} Gift Ideas`;
+        heroSubtitle.textContent = `Discover amazing gift options ${budgetText.toLowerCase()}, sorted by price from highest to lowest.`;
+    }
+}
+
+// Update hero section for category view
+function updateHeroForCategoryView(category) {
+    const heroTitle = document.querySelector('.hero-title');
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+
+    if (heroTitle && heroSubtitle) {
+        const categoryText = getCategoryDisplayName(category);
+        heroTitle.textContent = `${categoryText} Products`;
+        heroSubtitle.textContent = `Browse our complete ${categoryText.toLowerCase()} collection, sorted by price from highest to lowest.`;
+    }
+}
+
+// Get display text for budget
+function getBudgetDisplayText(budget) {
+    const budgetMap = {
+        'under-10': 'Under $10',
+        'under-25': 'Under $25',
+        'under-50': 'Under $50',
+        'under-100': 'Under $100'
+    };
+    return budgetMap[budget] || 'Budget';
+}
+
+// Hide products section on main page
+function hideProductsOnMainPage() {
+    const productsSection = document.querySelector('.products-section');
+    if (productsSection) {
+        productsSection.style.display = 'none';
+    }
+
+    // Update hero section for main page
+    const heroTitle = document.querySelector('.hero-title');
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+
+    if (heroTitle && heroSubtitle) {
+        heroTitle.textContent = 'Find the Perfect Gift';
+        heroSubtitle.textContent = 'Choose your budget below to discover curated gift ideas for every occasion!';
+    }
+}
+
+// Add budget filter tabs for category pages
+function addBudgetFilterTabs() {
+    // Check if budget tabs already exist
+    if (document.querySelector('.budget-filter-tabs')) {
+        return;
+    }
+
+    // Create budget tabs section
+    const budgetTabsHTML = `
+        <section class="budget-filter-tabs">
+            <div class="container">
+                <div class="budget-navigation">
+                    <button class="budget-btn active" data-budget="all" onclick="filterCategoryByBudget('all')">
+                        <i class="fas fa-globe"></i>
+                        <span>All Prices</span>
+                    </button>
+                    <button class="budget-btn" data-budget="under-10" onclick="filterCategoryByBudget('under-10')">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>Under $10</span>
+                    </button>
+                    <button class="budget-btn" data-budget="under-25" onclick="filterCategoryByBudget('under-25')">
+                        <i class="fas fa-gem"></i>
+                        <span>Under $25</span>
+                    </button>
+                    <button class="budget-btn" data-budget="under-50" onclick="filterCategoryByBudget('under-50')">
+                        <i class="fas fa-heart"></i>
+                        <span>Under $50</span>
+                    </button>
+                    <button class="budget-btn" data-budget="under-100" onclick="filterCategoryByBudget('under-100')">
+                        <i class="fas fa-star"></i>
+                        <span>Under $100</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    `;
+
+    // Insert budget tabs before products section
+    const productsSection = document.querySelector('.products-section');
+    if (productsSection) {
+        productsSection.insertAdjacentHTML('beforebegin', budgetTabsHTML);
+    }
+}
+
+// Filter category products by budget
+function filterCategoryByBudget(budget) {
+    // Update active budget tab
+    const budgetButtons = document.querySelectorAll('.budget-btn');
+    budgetButtons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-budget') === budget) {
+            btn.classList.add('active');
+        }
+    });
+
+    // Update current budget
+    currentBudget = budget;
+
+    // Get products for current category
+    let categoryProducts = allProducts.filter(product => product.category === currentCategory);
+
+    // Apply budget filter if not "all"
+    if (budget !== 'all') {
+        categoryProducts = categoryProducts.filter(product => {
+            switch(budget) {
+                case 'under-10':
+                    return product.priceValue < 10;
+                case 'under-25':
+                    return product.priceValue >= 10 && product.priceValue < 25;
+                case 'under-50':
+                    return product.priceValue >= 25 && product.priceValue < 50;
+                case 'under-100':
+                    return product.priceValue >= 50 && product.priceValue < 100;
+                default:
+                    return true;
+            }
+        });
+    }
+
+    // Sort by price (highest to lowest)
+    categoryProducts.sort((a, b) => b.priceValue - a.priceValue);
+
+    // Update current products
+    currentProducts = categoryProducts;
+
+    // Render products
+    renderProducts(categoryProducts);
 }
