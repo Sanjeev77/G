@@ -451,6 +451,23 @@ function setupFilters() {
         });
     }
 
+    // Category page search button functionality
+    const categorySearchButton = document.querySelector('.search-btn');
+    if (categorySearchButton) {
+        categorySearchButton.addEventListener('click', () => {
+            if (searchInput) {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                if (searchTerm) {
+                    // Call the same function as Enter key press
+                    performGlobalSearch();
+                } else {
+                    // If search is empty, show all current category/budget products
+                    applyFiltering();
+                }
+            }
+        });
+    }
+
     // Enter key functionality for search
     searchInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {

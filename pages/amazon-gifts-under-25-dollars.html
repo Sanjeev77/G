@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books - Reading & Literature | Gift On Budget</title>
-    <meta name="description" content="Discover your next great read across all genres and interests. Fiction, non-fiction, educational books, and more.">
-    <meta name="keywords" content="books, reading, literature, fiction, non-fiction, educational books, book gifts">
-    <meta property="og:title" content="Books - Reading & Literature">
-    <meta property="og:description" content="Discover your next great read across all genres and interests.">
+    <title>Amazon Gifts Under 25 Dollars - Quality Gift Ideas</title>
+    <meta name="description" content="Find the best Amazon gifts under $25! Curated collection of quality gift ideas and affordable presents from Amazon under 25 dollars with great reviews.">
+    <meta name="keywords" content="amazon gifts under $25, amazon gifts under 25 dollars, affordable amazon gifts, amazon presents under $25, amazon gift ideas under 25, meaningful gifts under $25, teacher appreciation gifts, hostess gifts under 25, thank you gifts, baby shower gifts under 25, graduation gifts, friendship gifts, self care gifts under 25, desk accessories under 25">
+    <meta property="og:title" content="Amazon Gifts Under 25 Dollars - Quality Gift Ideas">
+    <meta property="og:description" content="Find the best Amazon gifts under $25! Quality gift ideas and affordable presents from Amazon under 25 dollars.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://giftonbudget.com/pages/books.html">
-    <link rel="canonical" href="https://giftonbudget.com/pages/books.html">
+    <meta property="og:url" content="https://giftonbudget.com/pages/amazon-gifts-under-25-dollars.html">
+    <link rel="canonical" href="https://giftonbudget.com/pages/amazon-gifts-under-25-dollars.html">
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -24,61 +24,36 @@
                 <div class="nav-menu">
                     <a href="../index.html" class="nav-link">Home</a>
                     <a href="../index.html#categories" class="nav-link">Categories</a>
-                    <a href="under-10.html" class="nav-link">Under $10</a>
-                    <a href="under-25.html" class="nav-link">Under $25</a>
-                    <a href="under-50.html" class="nav-link">Under $50</a>
-                    <a href="under-100.html" class="nav-link">Under $100</a>
+                    <a href="amazon-gifts-under-10-dollars.html" class="nav-link">Under $10</a>
+                    <a href="amazon-gifts-under-50-dollars.html" class="nav-link">Under $50</a>
+                    <a href="amazon-gifts-under-100-dollars.html" class="nav-link">Under $100</a>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
+        <!-- Breadcrumb -->
         <nav class="breadcrumb">
             <div class="container">
-                <a href="../index.html">Home</a> > <a href="../index.html#categories">Categories</a> > <span>Books</span>
+                <a href="../index.html">Home</a> > <span>Gifts Under $25</span>
             </div>
         </nav>
 
+        <!-- Page Header -->
         <section class="page-header">
             <div class="container">
-                <h1><i class="fas fa-book"></i> Books Products</h1>
-                <p>Browse our complete Books collection, sorted by price from highest to lowest.</p>
+                <h1><i class="fas fa-gem"></i> Amazon Gifts Under $25</h1>
+                <p>Discover amazing Amazon gift options under $25, sorted by price from highest to lowest.</p>
             </div>
         </section>
 
-        <section class="budget-filter-tabs">
-            <div class="container">
-                <div class="budget-navigation">
-                    <button class="budget-btn active" data-budget="all" onclick="filterCategoryByBudget('all')">
-                        <i class="fas fa-globe"></i>
-                        <span>All Prices</span>
-                    </button>
-                    <button class="budget-btn" data-budget="under-10" onclick="filterCategoryByBudget('under-10')">
-                        <i class="fas fa-dollar-sign"></i>
-                        <span>Under $10</span>
-                    </button>
-                    <button class="budget-btn" data-budget="under-25" onclick="filterCategoryByBudget('under-25')">
-                        <i class="fas fa-gem"></i>
-                        <span>Under $25</span>
-                    </button>
-                    <button class="budget-btn" data-budget="under-50" onclick="filterCategoryByBudget('under-50')">
-                        <i class="fas fa-heart"></i>
-                        <span>Under $50</span>
-                    </button>
-                    <button class="budget-btn" data-budget="under-100" onclick="filterCategoryByBudget('under-100')">
-                        <i class="fas fa-star"></i>
-                        <span>Under $100</span>
-                    </button>
-                </div>
-            </div>
-        </section>
-
+        <!-- Filters -->
         <section class="filters">
             <div class="container">
                 <div class="filter-controls">
                     <div class="search-box">
-                        <input type="text" id="search" placeholder="Search books..." />
+                        <input type="text" id="search" placeholder="Search products..." />
                         <button type="button" class="search-btn" aria-label="Search">
                             <i class="fas fa-search"></i>
                         </button>
@@ -87,12 +62,14 @@
             </div>
         </section>
 
+        <!-- Products Section -->
         <section class="products-section">
             <div class="container">
                 <a href="../index.html" class="back-link">
                     <i class="fas fa-arrow-left"></i> Back to Categories
                 </a>
                 <div id="products-container" class="product-grid">
+                    <!-- Products will be loaded by JavaScript -->
                 </div>
                 <div id="no-results" style="display: none; text-align: center; padding: 3rem;">
                     <h3>No products found</h3>
@@ -118,8 +95,9 @@
     <script src="../js/productData.js"></script>
     <script src="../js/script.js"></script>
     <script>
+        // Initialize page with under-25 budget
         document.addEventListener('DOMContentLoaded', () => {
-            initializeCategoryPage('books');
+            initializeBudgetPage('under-25');
         });
     </script>
 </body>

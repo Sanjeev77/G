@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Gifts Under 10 Dollars - Best Budget Gift Ideas</title>
+    <meta name="description" content="Find the best Amazon gifts under $10! Curated collection of budget-friendly gift ideas, stocking stuffers, and affordable presents from Amazon under 10 dollars with great reviews.">
+    <meta name="keywords" content="amazon gifts under $10, amazon gifts under 10 dollars, cheap amazon gifts, budget amazon gifts, amazon stocking stuffers under $10, affordable amazon presents, secret santa gifts under $10, white elephant gifts under 10, office gift exchange ideas, stocking stuffers 2024, small gifts for coworkers, cheap birthday gifts, impulse buy gifts, party favor gifts, last minute gifts under 10">
+    <meta property="og:title" content="Amazon Gifts Under 10 Dollars - Best Budget Gift Ideas">
+    <meta property="og:description" content="Find the best Amazon gifts under $10! Curated budget-friendly gift ideas and affordable presents from Amazon under 10 dollars.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://giftonbudget.com/pages/amazon-gifts-under-10-dollars.html">
+    <link rel="canonical" href="https://giftonbudget.com/pages/amazon-gifts-under-10-dollars.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1><i class="fas fa-gift"></i> Gift On Budget</h1>
+                </div>
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="../index.html#categories" class="nav-link">Categories</a>
+                    <a href="amazon-gifts-under-25-dollars.html" class="nav-link">Under $25</a>
+                    <a href="amazon-gifts-under-50-dollars.html" class="nav-link">Under $50</a>
+                    <a href="amazon-gifts-under-100-dollars.html" class="nav-link">Under $100</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <div class="container">
+                <a href="../index.html">Home</a> > <span>Gifts Under $10</span>
+            </div>
+        </nav>
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1><i class="fas fa-dollar-sign"></i> Amazon Gifts Under $10</h1>
+                <p>Discover amazing Amazon gift options under $10, sorted by price from highest to lowest.</p>
+            </div>
+        </section>
+
+        <!-- Filters -->
+        <section class="filters">
+            <div class="container">
+                <div class="filter-controls">
+                    <div class="search-box">
+                        <input type="text" id="search" placeholder="Search products..." />
+                        <button type="button" class="search-btn" aria-label="Search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="container">
+                <a href="../index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Categories
+                </a>
+                <div id="products-container" class="product-grid">
+                    <!-- Products will be loaded by JavaScript -->
+                </div>
+                <div id="no-results" style="display: none; text-align: center; padding: 3rem;">
+                    <h3>No products found</h3>
+                    <p>Try adjusting your search or filters.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Gift Guide. This site contains affiliate links. We may earn a commission from purchases made through these links.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/productData.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        // Add error handling and debugging
+        window.addEventListener('error', function(e) {
+            console.error('JavaScript Error:', e.error);
+            document.getElementById('products-container').innerHTML = '<div style="background: red; color: white; padding: 20px;">JavaScript Error: ' + e.message + '</div>';
+        });
+
+        // Initialize page with under-10 budget
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM loaded, about to initialize...');
+            try {
+                console.log('allProductsData available:', typeof allProductsData);
+                console.log('initializeBudgetPage function available:', typeof initializeBudgetPage);
+                initializeBudgetPage('under-10');
+                console.log('Initialization completed');
+            } catch (error) {
+                console.error('Initialization error:', error);
+                document.getElementById('products-container').innerHTML = '<div style="background: red; color: white; padding: 20px;">Init Error: ' + error.message + '</div>';
+            }
+        });
+    </script>
+</body>
+</html>
