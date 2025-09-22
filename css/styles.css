@@ -791,14 +791,19 @@ a.category-card:focus {
         padding: 1.5rem 1rem;
     }
 
+    .search-category-section {
+        padding: 1.5rem 1rem;
+    }
+
     .filter-controls {
         flex-direction: column;
         align-items: center;
     }
 
     .search-box {
-        width: 100%;
+        width: calc(100% - 2rem);
         max-width: 300px;
+        margin: 0 1rem;
     }
 }
 
@@ -1502,11 +1507,14 @@ a.category-card:focus {
         display: flex;
         gap: 0.5rem;
         overflow-x: auto;
-        padding: 0 0.5rem;
+        padding: 0 1rem;
         scrollbar-width: none;
         -ms-overflow-style: none;
         flex-wrap: nowrap;
         white-space: nowrap;
+        justify-content: flex-start;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .budget-filter-tabs .budget-navigation::-webkit-scrollbar {
@@ -1514,10 +1522,18 @@ a.category-card:focus {
     }
 
     .budget-filter-tabs .budget-btn {
-        padding: 0.4rem 0.7rem;
-        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
         flex: 0 0 auto;
         min-width: max-content;
+        white-space: nowrap;
+        border-radius: 0;
+        margin-right: 0.25rem;
+    }
+
+    .budget-filter-tabs .container {
+        padding: 0 0.5rem;
+        overflow: visible;
     }
 
     .product-grid {
