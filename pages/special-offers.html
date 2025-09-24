@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health & Personal Care - Wellness Products | Gift On Budget</title>
-    <meta name="description" content="Products to support your health, wellness, and personal care needs. Quality health and self-care products.">
-    <meta name="keywords" content="health products, personal care, wellness, self-care, health accessories, medical supplies">
-    <meta property="og:title" content="Health & Personal Care - Wellness Products">
-    <meta property="og:description" content="Products to support your health, wellness, and personal care needs.">
+    <title>Special Offers - Amazing Deals & Discounts | Gift On Budget</title>
+    <meta name="description" content="Discover incredible special offers and limited-time deals on gifts for every budget. Amazing discounts on top-rated products across all categories.">
+    <meta name="keywords" content="special offers, deals, discounts, limited time offers, sale items, clearance, promotions, gift deals, discount gifts">
+    <meta property="og:title" content="Special Offers - Amazing Deals & Discounts">
+    <meta property="og:description" content="Discover incredible special offers and limited-time deals on gifts for every budget.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://giftonbudget.com/pages/health-personal-care.html">
-    <link rel="canonical" href="https://giftonbudget.com/pages/health-personal-care.html">
+    <meta property="og:url" content="https://giftonbudget.com/pages/special-offers.html">
+    <link rel="canonical" href="https://giftonbudget.com/pages/special-offers.html">
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -24,49 +24,52 @@
                 <div class="nav-menu">
                     <a href="../index.html" class="nav-link">Home</a>
                     <a href="../index.html#categories" class="nav-link">Categories</a>
-                    <a href="under-10.html" class="nav-link">Under $10</a>
-                    <a href="under-25.html" class="nav-link">Under $25</a>
-                    <a href="under-50.html" class="nav-link">Under $50</a>
-                    <a href="under-100.html" class="nav-link">Under $100</a>
+                    <a href="amazon-gifts-under-10-dollars.html" class="nav-link">Under $10</a>
+                    <a href="amazon-gifts-under-25-dollars.html" class="nav-link">Under $25</a>
+                    <a href="amazon-gifts-under-50-dollars.html" class="nav-link">Under $50</a>
+                    <a href="amazon-gifts-under-100-dollars.html" class="nav-link">Under $100</a>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
+        <!-- Breadcrumb -->
         <nav class="breadcrumb">
             <div class="container">
-                <a href="../index.html">Home</a> > <a href="../index.html#categories">Categories</a> > <span>Health & Personal Care</span>
+                <a href="../index.html">Home</a> > <span>Special Offers</span>
             </div>
         </nav>
 
+        <!-- Page Header -->
         <section class="page-header">
             <div class="container">
-                <h1><i class="fas fa-heart-pulse"></i> Health & Personal Care Products</h1>
-                <p>Browse our complete Health & Personal Care collection, sorted by price from highest to lowest.</p>
+                <h1><i class="fas fa-tags"></i> Special Offers & Deals</h1>
+                <p>Discover amazing deals and limited-time offers on our best gift items, sorted by price from highest to lowest.</p>
             </div>
         </section>
 
+        <!-- Budget Filter Tabs -->
         <section class="budget-filter-tabs">
             <div class="container">
                 <div class="budget-navigation">
-                    <button class="budget-btn active" data-budget="all" onclick="filterCategoryByBudget('all')">
+                    <button class="budget-btn active" data-budget="all" onclick="filterSpecialOffersByBudget('all')">
                         <i class="fas fa-globe"></i>
                         <span>All Prices</span>
                     </button>
-                    <button class="budget-btn" data-budget="under-10" onclick="filterCategoryByBudget('under-10')">
+                    <button class="budget-btn" data-budget="under-10" onclick="filterSpecialOffersByBudget('under-10')">
                         <i class="fas fa-dollar-sign"></i>
                         <span>Under $10</span>
                     </button>
-                    <button class="budget-btn" data-budget="under-25" onclick="filterCategoryByBudget('under-25')">
+                    <button class="budget-btn" data-budget="under-25" onclick="filterSpecialOffersByBudget('under-25')">
                         <i class="fas fa-gem"></i>
                         <span>Under $25</span>
                     </button>
-                    <button class="budget-btn" data-budget="under-50" onclick="filterCategoryByBudget('under-50')">
+                    <button class="budget-btn" data-budget="under-50" onclick="filterSpecialOffersByBudget('under-50')">
                         <i class="fas fa-heart"></i>
                         <span>Under $50</span>
                     </button>
-                    <button class="budget-btn" data-budget="under-100" onclick="filterCategoryByBudget('under-100')">
+                    <button class="budget-btn" data-budget="under-100" onclick="filterSpecialOffersByBudget('under-100')">
                         <i class="fas fa-star"></i>
                         <span>Under $100</span>
                     </button>
@@ -74,11 +77,12 @@
             </div>
         </section>
 
+        <!-- Filters -->
         <section class="filters">
             <div class="container">
                 <div class="filter-controls">
                     <div class="search-box">
-                        <input type="text" id="search" placeholder="Search health & personal care..." />
+                        <input type="text" id="search" placeholder="Search special offers..." />
                         <button type="button" class="search-btn" aria-label="Search">
                             <i class="fas fa-search"></i>
                         </button>
@@ -87,15 +91,17 @@
             </div>
         </section>
 
+        <!-- Products Section -->
         <section class="products-section">
             <div class="container">
                 <a href="../index.html" class="back-link">
-                    <i class="fas fa-arrow-left"></i> Back to Categories
+                    <i class="fas fa-arrow-left"></i> Back to Home
                 </a>
                 <div id="products-container" class="product-grid">
+                    <!-- Products will be loaded by JavaScript -->
                 </div>
                 <div id="no-results" style="display: none; text-align: center; padding: 3rem;">
-                    <h3>No products found</h3>
+                    <h3>No special offers found</h3>
                     <p>Try adjusting your search or filters.</p>
                 </div>
             </div>
@@ -119,10 +125,26 @@
 
     <script src="../js/productData.js"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/special-offers.js"></script>
     <script>
+        // Initialize page with special offers
         document.addEventListener('DOMContentLoaded', () => {
-            initializeCategoryPage('health-personal-care');
+            initializeSpecialOffersPage();
         });
+
+        // Function to filter special offers by budget
+        function filterSpecialOffersByBudget(budget) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.budget-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Add active class to clicked button
+            document.querySelector(`[data-budget="${budget}"]`).classList.add('active');
+
+            // Filter and display products
+            filterAndDisplaySpecialOffers(budget);
+        }
     </script>
 </body>
 </html>
