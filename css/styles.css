@@ -5,6 +5,47 @@
     box-sizing: border-box;
 }
 
+/* Go to Top Button */
+.go-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.go-to-top:hover {
+    background: #e47911;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.go-to-top.show {
+    display: flex;
+}
+
+@media (max-width: 767px) {
+    .go-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 15px;
+        right: 15px;
+        font-size: 16px;
+    }
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
@@ -2248,23 +2289,29 @@ a.category-card:focus {
 
     .product-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 0 1rem;
+        gap: 0.5rem;
+        padding: 0;
+        max-width: 100vw;
+        margin: 0 auto;
     }
 
     .product-card {
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        min-height: 350px;
-        border-radius: 16px;
-        align-items: stretch;
-        padding: 1.2rem;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        max-width: calc(100vw - 0.8rem) !important;
+        width: calc(100vw - 0.8rem) !important;
+        display: flex !important;
+        flex-direction: row !important;
+        height: auto !important;
+        min-height: 160px !important;
+        border-radius: 12px;
+        align-items: stretch !important;
+        padding: 1rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
         background: white;
         border: 1px solid #f0f0f0;
         transition: all 0.3s ease;
+        gap: 1rem !important;
+        margin: 0.05rem auto !important;
+        position: relative;
     }
 
     .product-card:hover {
@@ -2274,15 +2321,15 @@ a.category-card:focus {
     }
 
     .product-image {
-        width: 100%;
-        height: 180px;
+        width: 150px !important;
+        height: 140px !important;
         object-fit: contain;
-        border-radius: 12px;
-        flex-shrink: 0;
-        margin: 0 0 1rem 0;
+        border-radius: 8px;
+        flex-shrink: 0 !important;
+        margin: 0 !important;
         background: #fafafa;
         border: 1px solid #e9ecef;
-        padding: 12px;
+        padding: 8px;
         transition: transform 0.2s ease;
     }
 
@@ -2291,18 +2338,21 @@ a.category-card:focus {
     }
 
     .product-info {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-width: 0;
-        gap: 0.4rem;
-        text-align: left;
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        min-width: 0 !important;
+        gap: 0.3rem;
+        text-align: left !important;
+        position: relative;
+        height: 140px;
+        padding-bottom: 37px;
     }
 
     .product-title {
-        font-size: 1.1rem;
-        line-height: 1.4;
+        font-size: 0.85rem;
+        line-height: 1.3;
         margin-bottom: 0;
         overflow: hidden;
         display: -webkit-box;
@@ -2310,42 +2360,51 @@ a.category-card:focus {
         -webkit-box-orient: vertical;
         word-wrap: break-word;
         text-overflow: ellipsis;
-        height: 3.08rem;
+        height: 2.21rem;
         color: #2c3e50;
         font-weight: 600;
     }
 
     .product-rating {
-        font-size: 0.95rem;
+        font-size: 0.8rem;
         margin-bottom: 0;
         color: #ff9900;
         font-weight: 500;
         display: flex;
         align-items: center;
-        gap: 0.3rem;
+        gap: 0.2rem;
         justify-content: flex-start;
     }
 
     .product-price {
-        font-size: 1.6rem;
+        font-size: 1.1rem;
         margin-bottom: 0;
         font-weight: 700;
-        color: #e74c3c;
-        margin-top: auto;
+        color: #000000;
         text-align: left;
     }
 
     .product-btn {
-        padding: 14px 24px;
-        font-size: 1rem;
-        width: 100%;
-        align-self: stretch;
-        margin-top: 0.6rem;
-        border-radius: 12px;
+        padding: 8px 12px;
+        font-size: 0.75rem;
+        width: 130px !important;
+        height: 32px;
+        flex-shrink: 0 !important;
+        margin: 0 !important;
+        border-radius: 6px;
         font-weight: 600;
         transition: all 0.2s ease;
         background: #ff9900;
         border: none;
+        white-space: nowrap !important;
+        overflow: visible;
+        text-overflow: unset;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         box-shadow: 0 2px 8px rgba(255, 153, 0, 0.2);
         text-align: center;
     }
@@ -2881,5 +2940,171 @@ a.category-card:focus {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVE AD LAYOUT SYSTEM ===== */
+
+/* Desktop Layout (768px and above) */
+@media (min-width: 768px) {
+    .ads-layout {
+        display: flex;
+        max-width: 1600px;
+        margin: 0 auto;
+        gap: 20px;
+        padding: 0 20px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .left-sidebar,
+    .right-sidebar {
+        width: 160px;
+        flex-shrink: 0;
+        position: sticky;
+        top: 20px;
+        height: fit-content;
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+
+    .main-content {
+        flex: 0 0 1200px;
+        max-width: 1200px;
+        width: 1200px;
+    }
+
+    /* Ensure containers inside main-content maintain original width */
+    .main-content .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Hide mobile ads on desktop */
+    .mobile-ad-top,
+    .mobile-ad-bottom {
+        display: none !important;
+    }
+
+    /* Sidebar ad styling */
+    .left-sidebar .adsbygoogle,
+    .right-sidebar .adsbygoogle {
+        min-height: 600px;
+        margin: 10px 0;
+    }
+}
+
+/* Mobile Layout (below 768px) */
+@media (max-width: 767px) {
+    /* Hide desktop sidebars on mobile */
+    .left-sidebar,
+    .right-sidebar {
+        display: none !important;
+    }
+
+    .ads-layout {
+        display: block;
+    }
+
+    .main-content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Mobile ad containers - match original banner dimensions */
+    .mobile-ad-top,
+    .mobile-ad-bottom {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        background: transparent;
+        border: none;
+        margin: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .mobile-ad-top {
+        margin-bottom: 10px;
+    }
+
+    .mobile-ad-bottom {
+        margin-top: 10px;
+    }
+
+    /* Mobile ad styling - proper horizontal ad dimensions */
+    .mobile-ad-top .adsbygoogle,
+    .mobile-ad-bottom .adsbygoogle {
+        width: 100% !important;
+        height: 90px !important;
+        max-width: 400px;
+        min-height: 50px;
+        max-height: 90px;
+        display: block !important;
+        margin: 0 auto;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    /* Ensure proper responsive behavior for horizontal ads */
+    .mobile-ad-top ins,
+    .mobile-ad-bottom ins {
+        width: 100% !important;
+        height: 90px !important;
+        max-width: 400px !important;
+        display: block !important;
+    }
+
+    /* Ensure main content containers maintain original mobile styling */
+    .main-content .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    /* Remove any extra spacing that might affect layout */
+    .main-content > section:first-child,
+    .main-content > nav:first-child {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    /* Override container padding for products section */
+    .products-section .container {
+        padding: 0 !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+}
+
+/* Extra wide desktop adjustments */
+@media (min-width: 1600px) {
+    .ads-layout {
+        max-width: 1800px;
+    }
+
+    .left-sidebar,
+    .right-sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        max-width: 1200px;
+        width: 1200px;
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .left-sidebar,
+    .right-sidebar {
+        width: 140px;
+    }
+
+    .ads-layout {
+        gap: 15px;
+        padding: 0 15px;
     }
 }

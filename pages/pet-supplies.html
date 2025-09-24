@@ -47,6 +47,38 @@
     </header>
 
     <main>
+        <!-- Mobile Top Ad (visible only on mobile) -->
+        <div class="mobile-ad-top">
+            <!-- Horizontal -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5970109164913530"
+                 data-ad-slot="1469347266"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- Desktop Layout Container -->
+        <div class="ads-layout">
+            <!-- Left Sidebar (desktop only) -->
+            <div class="left-sidebar">
+                <!-- Vertical -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-5970109164913530"
+                     data-ad-slot="3568950891"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
         <nav class="breadcrumb">
             <div class="container">
                 <a href="../index.html">Home</a> > <a href="../index.html#categories">Categories</a> > <span>Pet Supplies</span>
@@ -113,6 +145,36 @@
                 </div>
             </div>
         </section>
+            </div>
+
+            <!-- Right Sidebar (desktop only) -->
+            <div class="right-sidebar">
+                <!-- Vertical -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-5970109164913530"
+                     data-ad-slot="3568950891"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+
+        <!-- Mobile Bottom Ad (visible only on mobile) -->
+        <div class="mobile-ad-bottom">
+            <!-- Horizontal -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5970109164913530"
+                 data-ad-slot="1469347266"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
     </main>
 
     <footer class="simple-footer">
@@ -130,12 +192,34 @@
         </div>
     </footer>
 
+    <!-- Go to Top Button -->
+    <button class="go-to-top" onclick="scrollToTop()" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="../js/productData.js"></script>
     <script src="../js/script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             initializeCategoryPage('pet-supplies');
         });
+
+        // Go to top functionality
+        window.onscroll = function() {
+            const goToTopBtn = document.querySelector('.go-to-top');
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                goToTopBtn.classList.add('show');
+            } else {
+                goToTopBtn.classList.remove('show');
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
     </script>
 </body>
 </html>
