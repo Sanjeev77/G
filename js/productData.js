@@ -1740,28 +1740,6 @@ const allProductsData = [
         "featured": false
     },
     {
-        "id": 7160,
-        "title": "",
-        "price": "",
-        "priceValue": 0,
-        "category": "baby",
-        "image": "",
-        "rating": 4,
-        "affiliateLink": "",
-        "featured": false
-    },
-    {
-        "id": 7161,
-        "title": "",
-        "price": "",
-        "priceValue": 0,
-        "category": "baby",
-        "image": "",
-        "rating": 4,
-        "affiliateLink": "",
-        "featured": false
-    },
-    {
         "id": 7162,
         "title": "Infant Formula Powder for Infants 0-12 Months, Made With Organic Whole Milk, Clean Label Project Certified, Closest-to-Breast Milk Baby Formula Patented Protein Blend, 24 Ounce (Pack of 1)",
         "price": "35.94",
@@ -2045,50 +2023,6 @@ const allProductsData = [
         "image": "https://m.media-amazon.com/images/I/71GLwyImHsL._SL1500_.jpg",
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/4mxEIah",
-        "featured": false
-    },
-    {
-        "id": 7188,
-        "title": "",
-        "price": "",
-        "priceValue": 0,
-        "category": "baby",
-        "image": "",
-        "rating": 4,
-        "affiliateLink": "",
-        "featured": false
-    },
-    {
-        "id": 7189,
-        "title": "Baby Grooming Kit, Infant Safety Care Set with Hair Brush Comb Nail Clipper Nasal Aspirator,Baby Essentials Kit for Newborn Girls Boys",
-        "price": "9.99",
-        "priceValue": 9.99,
-        "category": "baby",
-        "image": "https://m.media-amazon.com/images/I/81hp9HAmsSL._AC_SL1500_.jpg",
-        "rating": 4.7,
-        "affiliateLink": "https://amzn.to/47PhgBL",
-        "featured": false
-    },
-    {
-        "id": 7190,
-        "title": "Baby Grooming Kit, Infant Safety Care Set with Hair Brush Comb Nail Clipper Nasal Aspirator,Baby Essentials Kit for Newborn Girls Boys",
-        "price": "9.99",
-        "priceValue": 9.99,
-        "category": "baby",
-        "image": "https://m.media-amazon.com/images/I/81hp9HAmsSL._AC_SL1500_.jpg",
-        "rating": 4.7,
-        "affiliateLink": "https://amzn.to/42B4VgP",
-        "featured": false
-    },
-    {
-        "id": 7191,
-        "title": "Baby Grooming Kit, Infant Safety Care Set with Hair Brush Comb Nail Clipper Nasal Aspirator,Baby Essentials Kit for Newborn Girls Boys",
-        "price": "55",
-        "priceValue": 55,
-        "category": "baby",
-        "image": "https://m.media-amazon.com/images/I/61pNhutwNFL._AC_SL1256_.jpg",
-        "rating": 4,
-        "affiliateLink": "https://amzn.to/4mkFxTD",
         "featured": false
     }
 ];
