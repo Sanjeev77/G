@@ -1935,11 +1935,11 @@ a.category-card:focus {
     }
 
     .hero-section {
-        padding: 1.5rem 0;
+        padding: 0.8rem 0;
     }
 
     .banner-section {
-        padding: 1rem 0;
+        padding: 0.5rem 0;
     }
 
     .banner-image {
@@ -3021,18 +3021,18 @@ a.category-card:focus {
     .mobile-ad-top,
     .mobile-ad-bottom {
         width: 100%;
-        padding: 2px 0;
+        padding: 1px 0;
         text-align: center;
         background: transparent;
         border: none;
         margin: 0;
         overflow: hidden;
         box-sizing: border-box;
-        max-height: 60px;
+        max-height: 50px;
     }
 
     .mobile-ad-top {
-        margin-bottom: 5px;
+        margin-bottom: 2px;
     }
 
     .mobile-ad-bottom {
