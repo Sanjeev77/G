@@ -1048,7 +1048,7 @@ const specialOffersData = [
         "title": "LEGO HLLWN CAT/MOUSE",
         "price": "49.89",
         "rating": 4.8,
-        "affiliateLink": "https://amzn.to/428oH3ihttps://amzn.to/428oH3i",
+        "affiliateLink": "https://amzn.to/428oH3i",
         "image": "https://m.media-amazon.com/images/I/81enJoxjXiL._AC_SL1500_.jpg",
         "category": "amazon-halloween-deals-gifts-2025",
         "featured": false,
@@ -1154,9 +1154,6 @@ function initializeSpecialOffersPage() {
     // Update SEO meta tags if custom config is available
     updateSEOMetaTags();
 
-    // Update page header content
-    updatePageHeaderContent();
-
     // Get DOM elements
     const productsContainer = document.getElementById('products-container');
     const searchInput = document.getElementById('search');
@@ -1243,44 +1240,6 @@ function updateSEOMetaTags() {
         });
     } else {
         console.log('No custom category configuration found for SEO updates');
-    }
-}
-
-// Update page header content with custom category configuration
-function updatePageHeaderContent() {
-    if (typeof customCategoryConfig !== 'undefined' && customCategoryConfig) {
-        console.log('Updating page header content with custom configuration');
-
-        // Update category name in the header
-        if (customCategoryConfig.name) {
-            const categoryNameElement = document.getElementById('category-name');
-            if (categoryNameElement) {
-                categoryNameElement.textContent = customCategoryConfig.name;
-                console.log('Updated category name to:', customCategoryConfig.name);
-            }
-        }
-
-        // Update page description
-        if (customCategoryConfig.description) {
-            const pageDescriptionElement = document.getElementById('page-description');
-            if (pageDescriptionElement) {
-                pageDescriptionElement.textContent = customCategoryConfig.description;
-                console.log('Updated page description to:', customCategoryConfig.description);
-            }
-        }
-
-        // Update breadcrumb title
-        if (customCategoryConfig.name) {
-            const breadcrumbTitleElement = document.getElementById('breadcrumb-title');
-            if (breadcrumbTitleElement) {
-                breadcrumbTitleElement.textContent = customCategoryConfig.name;
-                console.log('Updated breadcrumb title to:', customCategoryConfig.name);
-            }
-        }
-
-        console.log('Page header content updated successfully');
-    } else {
-        console.log('No custom category configuration found for page header updates');
     }
 }
 

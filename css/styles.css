@@ -3017,35 +3017,36 @@ a.category-card:focus {
         padding: 0;
     }
 
-    /* Mobile ad containers - match original banner dimensions */
+    /* Mobile ad containers - reduced height for better mobile UX */
     .mobile-ad-top,
     .mobile-ad-bottom {
         width: 100%;
-        padding: 10px 0;
+        padding: 2px 0;
         text-align: center;
         background: transparent;
         border: none;
         margin: 0;
         overflow: hidden;
         box-sizing: border-box;
+        max-height: 60px;
     }
 
     .mobile-ad-top {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 
     .mobile-ad-bottom {
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
-    /* Mobile ad styling - proper horizontal ad dimensions */
+    /* Mobile ad styling - reduced height for better mobile experience */
     .mobile-ad-top .adsbygoogle,
     .mobile-ad-bottom .adsbygoogle {
         width: 100% !important;
-        height: 90px !important;
+        height: 50px !important;
         max-width: 400px;
         min-height: 50px;
-        max-height: 90px;
+        max-height: 50px;
         display: block !important;
         margin: 0 auto;
         box-sizing: border-box;
@@ -3056,7 +3057,7 @@ a.category-card:focus {
     .mobile-ad-top ins,
     .mobile-ad-bottom ins {
         width: 100% !important;
-        height: 90px !important;
+        height: 50px !important;
         max-width: 400px !important;
         display: block !important;
     }
