@@ -47,18 +47,15 @@
     </header>
 
     <main>
-        <!-- Mobile Top Ad (visible only on mobile) -->
+        <!-- Mobile Top Ad (responsive horizontal format) -->
         <div class="mobile-ad-top">
-            <!-- Horizontal -->
             <ins class="adsbygoogle"
+                 id="mobile-ad-top"
                  style="display:block"
                  data-ad-client="ca-pub-5970109164913530"
-                 data-ad-slot="1469347266"
+                 data-ad-slot="1469347280"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
         </div>
 
         <!-- Desktop Layout Container -->
@@ -72,9 +69,6 @@
                      data-ad-slot="3568950891"
                      data-ad-format="auto"
                      data-full-width-responsive="true"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
             </div>
 
             <!-- Main Content -->
@@ -162,24 +156,18 @@
                      data-ad-slot="3568950891"
                      data-ad-format="auto"
                      data-full-width-responsive="true"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
             </div>
         </div>
 
-        <!-- Mobile Bottom Ad (visible only on mobile) -->
+        <!-- Mobile Bottom Ad (responsive horizontal format) -->
         <div class="mobile-ad-bottom">
-            <!-- Horizontal -->
             <ins class="adsbygoogle"
+                 id="mobile-ad-bottom"
                  style="display:block"
                  data-ad-client="ca-pub-5970109164913530"
-                 data-ad-slot="1469347266"
+                 data-ad-slot="1469347281"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
         </div>
     </main>
 
@@ -202,6 +190,78 @@
     <button class="go-to-top" onclick="scrollToTop()" title="Go to top">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Clean Single-Point AdSense Initialization -->
+    <script>
+        // Track initialized ads to prevent double initialization
+        const initializedAds = new Set();
+
+        function initializeAdSenseClean() {
+            // Only run once
+            if (window.adsenseInitialized) {
+                return;
+            }
+            window.adsenseInitialized = true;
+            window.adsbygoogle = window.adsbygoogle || [];
+
+            // Initialize mobile ads only on mobile devices
+            if (window.innerWidth <= 768) {
+                const mobileAdTop = document.getElementById('mobile-ad-top');
+                const mobileAdBottom = document.getElementById('mobile-ad-bottom');
+
+                // Initialize top ad
+                if (mobileAdTop && !initializedAds.has('mobile-top')) {
+                    initializedAds.add('mobile-top');
+                    try {
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    } catch (e) {
+                        console.warn('Mobile top ad init failed:', e.message);
+                    }
+                }
+
+                // Initialize bottom ad with delay
+                if (mobileAdBottom && !initializedAds.has('mobile-bottom')) {
+                    setTimeout(function() {
+                        initializedAds.add('mobile-bottom');
+                        try {
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        } catch (e) {
+                            console.warn('Mobile bottom ad init failed:', e.message);
+                        }
+                    }, 100);
+                }
+            } else {
+                // Desktop ads
+                const leftSidebarAd = document.querySelector('.left-sidebar .adsbygoogle');
+                const rightSidebarAd = document.querySelector('.right-sidebar .adsbygoogle');
+
+                if (leftSidebarAd && !initializedAds.has('left-sidebar')) {
+                    initializedAds.add('left-sidebar');
+                    try {
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    } catch (e) {
+                        console.warn('Left sidebar ad init failed:', e.message);
+                    }
+                }
+
+                if (rightSidebarAd && !initializedAds.has('right-sidebar')) {
+                    setTimeout(function() {
+                        initializedAds.add('right-sidebar');
+                        try {
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        } catch (e) {
+                            console.warn('Right sidebar ad init failed:', e.message);
+                        }
+                    }, 100);
+                }
+            }
+        }
+
+        // Single initialization point - DOM ready only
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(initializeAdSenseClean, 500);
+        });
+    </script>
 
     <script src="../js/productData.js"></script>
     <script src="../js/script.js"></script>
