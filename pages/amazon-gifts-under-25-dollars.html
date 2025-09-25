@@ -56,7 +56,11 @@
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
             <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
+                try {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                } catch (e) {
+                    console.warn('AdSense error:', e);
+                }
             </script>
         </div>
 
@@ -72,7 +76,11 @@
                      data-ad-format="auto"
                      data-full-width-responsive="true"></ins>
                 <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
+                    try {
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    } catch (e) {
+                        console.warn('AdSense error:', e);
+                    }
                 </script>
             </div>
 
@@ -134,7 +142,11 @@
                      data-ad-format="auto"
                      data-full-width-responsive="true"></ins>
                 <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
+                    try {
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    } catch (e) {
+                        console.warn('AdSense error:', e);
+                    }
                 </script>
             </div>
         </div>
@@ -149,7 +161,11 @@
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
             <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
+                try {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                } catch (e) {
+                    console.warn('AdSense error:', e);
+                }
             </script>
         </div>
     </main>
@@ -173,6 +189,30 @@
     <button class="go-to-top" onclick="scrollToTop()" title="Go to top">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Global Error Handler for AdSense -->
+    <script>
+        // Prevent AdSense errors from breaking the page
+        window.addEventListener('error', function(e) {
+            if (e.message && e.message.includes('adsbygoogle')) {
+                console.warn('AdSense error caught and suppressed:', e.message);
+                e.preventDefault();
+                return true;
+            }
+        });
+
+        // Override adsbygoogle push to add error handling
+        window.adsbygoogle = window.adsbygoogle || [];
+        const originalPush = window.adsbygoogle.push;
+        window.adsbygoogle.push = function() {
+            try {
+                return originalPush.apply(this, arguments);
+            } catch (e) {
+                console.warn('AdSense push error caught:', e);
+                return null;
+            }
+        };
+    </script>
 
     <script src="../js/productData.js"></script>
     <script src="../js/script.js"></script>

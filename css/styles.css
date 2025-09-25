@@ -1652,6 +1652,10 @@ a.category-card:focus {
         margin: 2rem 0 1rem 0;
     }
 
+    .legal-content p {
+        text-align: left;
+    }
+
     .legal-content section {
         padding: 1rem;
         margin-bottom: 1.5rem;

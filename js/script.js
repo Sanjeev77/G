@@ -174,19 +174,20 @@ function filterCategoryByBudget(budget) {
 
     // Then filter by budget if not 'all'
     if (budget !== 'all') {
-        const budgetRanges = {
-            'under-10': { min: 0, max: 10 },
-            'under-25': { min: 0, max: 25 },
-            'under-50': { min: 0, max: 50 },
-            'under-100': { min: 0, max: 100 }
-        };
-
-        const range = budgetRanges[budget];
-        if (range) {
-            categoryProducts = categoryProducts.filter(product =>
-                product.priceValue >= range.min && product.priceValue <= range.max
-            );
-        }
+        categoryProducts = categoryProducts.filter(product => {
+            switch(budget) {
+                case 'under-10':
+                    return product.priceValue < 10;
+                case 'under-25':
+                    return product.priceValue >= 10 && product.priceValue < 25;
+                case 'under-50':
+                    return product.priceValue >= 25 && product.priceValue < 50;
+                case 'under-100':
+                    return product.priceValue >= 50 && product.priceValue < 100;
+                default:
+                    return true;
+            }
+        });
     }
 
     // Sort by price (highest to lowest)
