@@ -18,6 +18,11 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://www.giftonbudget.com/favicon.ico</loc>
+  <lastmod>2025-09-25T13:22:15+00:00</lastmod>
+  <priority>0.90</priority>
+</url>      
+<url>
   <loc>https://www.giftonbudget.com/pages/special-offers.html</loc>
   <lastmod>2025-09-25T13:22:15+00:00</lastmod>
   <priority>0.80</priority>
@@ -142,6 +147,7 @@
   <lastmod>2025-09-25T13:22:15+00:00</lastmod>
   <priority>0.64</priority>
 </url>
+
 
 
 </urlset>
