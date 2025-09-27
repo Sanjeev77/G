@@ -2,7 +2,7 @@ User-agent: *
 
 Allow: /index.html
 
-Allow: /pages
+Allow: /pages/
 
 Disallow: /*.css$
 
