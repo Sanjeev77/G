@@ -1,16 +1,13 @@
 User-agent: *
-Allow: /
 
-# Sitemap location
-Sitemap: https://yourusername.github.io/repository-name/sitemap.xml
-
-# Allow indexing of main pages
 Allow: /index.html
-Allow: /under-10.html
-Allow: /under-50.html
-Allow: /under-100.html
 
-# Block common non-essential files
+Allow: /pages
+
 Disallow: /*.css$
+
 Disallow: /*.js$
+
 Disallow: /.git/
+
+Sitemap: https://www.giftonbudget.com/sitemap.xml
