@@ -365,3 +365,156 @@ function displayErrorMessage(message) {
         `;
     }
 }
+
+// Global variable for current search results
+let currentSearchResults = [];
+
+// Initialize main page search functionality
+function initializeMainPageSearch() {
+    const searchButton = document.querySelector('.search-button');
+    const searchInput = document.getElementById('search');
+    const categorySelect = document.getElementById('category-select');
+    const backButton = document.getElementById('back-to-main');
+    const mainContent = document.querySelector('.ads-layout');
+    const searchResultsSection = document.getElementById('search-results-section');
+
+    if (!searchButton || !searchInput || !categorySelect) {
+        console.log('Search elements not found on this page');
+        return;
+    }
+
+    // Load products if not loaded
+    if (allProducts.length === 0) {
+        loadProducts();
+    }
+
+    // Search button click
+    searchButton.addEventListener('click', function() {
+        performMainSearch();
+    });
+
+    // Enter key in search input
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            performMainSearch();
+        }
+    });
+
+    // Budget filter buttons
+    const budgetButtons = document.querySelectorAll('#search-results-section .budget-btn');
+    budgetButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const budget = this.getAttribute('data-budget');
+            filterSearchByBudget(budget);
+        });
+    });
+
+    // Back button
+    if (backButton) {
+        backButton.addEventListener('click', function() {
+            searchResultsSection.style.display = 'none';
+            if (mainContent) mainContent.style.display = 'flex';
+            // Hide mobile ads if needed
+            const mobileTop = document.querySelector('.mobile-ad-top');
+            const mobileBottom = document.querySelector('.mobile-ad-bottom');
+            if (mobileTop) mobileTop.style.display = 'block';
+            if (mobileBottom) mobileBottom.style.display = 'block';
+        });
+    }
+
+    function performMainSearch() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const selectedCategory = categorySelect.value;
+
+        let filteredProducts = [...allProducts];
+
+        // Filter by category if not 'all'
+        if (selectedCategory !== 'all') {
+            filteredProducts = filteredProducts.filter(product =>
+                product.category === selectedCategory
+            );
+        }
+
+        // Filter by search term (title or category)
+        if (searchTerm) {
+            filteredProducts = filteredProducts.filter(product =>
+                product.title.toLowerCase().includes(searchTerm) ||
+                product.category.toLowerCase().includes(searchTerm)
+            );
+        }
+
+        // Sort by price (highest to lowest)
+        filteredProducts.sort((a, b) => b.priceValue - a.priceValue);
+
+        // Store current search results
+        currentSearchResults = filteredProducts;
+
+        // Render results
+        renderProducts(filteredProducts);
+
+        // Show search results, hide main content
+        if (mainContent) mainContent.style.display = 'none';
+        searchResultsSection.style.display = 'block';
+
+        // Hide mobile ads
+        const mobileTop = document.querySelector('.mobile-ad-top');
+        const mobileBottom = document.querySelector('.mobile-ad-bottom');
+        if (mobileTop) mobileTop.style.display = 'none';
+        if (mobileBottom) mobileBottom.style.display = 'none';
+
+        // Reset budget filter to 'all'
+        updateSearchBudgetButtons('all');
+    }
+}
+
+// Filter search results by budget
+function filterSearchByBudget(budget) {
+    console.log('Filtering search results by budget:', budget);
+
+    let filteredResults = [...currentSearchResults];
+
+    // Apply budget filter if not 'all'
+    if (budget !== 'all') {
+        filteredResults = filteredResults.filter(product => {
+            switch(budget) {
+                case 'under-10':
+                    return product.priceValue < 10;
+                case 'under-25':
+                    return product.priceValue >= 10 && product.priceValue < 25;
+                case 'under-50':
+                    return product.priceValue >= 25 && product.priceValue < 50;
+                case 'under-100':
+                    return product.priceValue >= 50 && product.priceValue < 100;
+                default:
+                    return true;
+            }
+        });
+    }
+
+    // Sort by price (highest to lowest)
+    filteredResults.sort((a, b) => b.priceValue - a.priceValue);
+
+    console.log(`Found ${filteredResults.length} search results for budget ${budget}`);
+    renderProducts(filteredResults);
+
+    // Update active button
+    updateSearchBudgetButtons(budget);
+}
+
+// Update search budget filter buttons
+function updateSearchBudgetButtons(activeBudget) {
+    const budgetButtons = document.querySelectorAll('#search-results-section .budget-btn');
+    budgetButtons.forEach(button => {
+        const buttonBudget = button.getAttribute('data-budget');
+        if (buttonBudget === activeBudget) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
+}
+
+// Initialize main page search if on index.html
+if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/')) {
+    document.addEventListener('DOMContentLoaded', initializeMainPageSearch);
+}

@@ -331,6 +331,39 @@
             </div>
         </div>
 
+        <!-- Search Results Section (hidden by default) -->
+        <section id="search-results-section" class="search-results-section" style="display: none;">
+            <div class="container">
+                <h2 class="section-title">Search Results</h2>
+                <!-- Budget Filter Tabs -->
+                <div class="budget-filter-tabs">
+                    <div class="budget-navigation">
+                        <button class="budget-btn active" data-budget="all">
+                            <span>All</span>
+                        </button>
+                        <button class="budget-btn" data-budget="under-10">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>Under $10</span>
+                        </button>
+                        <button class="budget-btn" data-budget="under-25">
+                            <i class="fas fa-gem"></i>
+                            <span>Under $25</span>
+                        </button>
+                        <button class="budget-btn" data-budget="under-50">
+                            <i class="fas fa-heart"></i>
+                            <span>Under $50</span>
+                        </button>
+                        <button class="budget-btn" data-budget="under-100">
+                            <i class="fas fa-star"></i>
+                            <span>Under $100</span>
+                        </button>
+                    </div>
+                </div>
+                <div id="products-container"></div>
+                <button id="back-to-main" class="back-button">Back to Main</button>
+            </div>
+        </section>
+
         <!-- Mobile Bottom Ad (compact horizontal format) -->
         <div class="mobile-ad-bottom">
             <ins class="adsbygoogle"
