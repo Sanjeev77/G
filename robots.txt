@@ -1,13 +1,7 @@
 User-agent: *
 
-Allow: /index.html
-
-Allow: /pages/
-
 Disallow: /*.css$
-
 Disallow: /*.js$
-
 Disallow: /.git/
 
 Sitemap: https://www.giftonbudget.com/sitemap.xml
