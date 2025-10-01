@@ -154,7 +154,7 @@ function filterCategoryByBudget(budget) {
         'appliances': 'appliances',
         'baby-essentials': 'baby',
         'electronics': 'electronics',
-        'fashion': 'clothing-shoes-jewelry',
+        'fashion': 'fashion',
         'beauty': 'beauty',
         'automotive': 'automotive',
         'home-kitchen': 'home-kitchen',
@@ -162,7 +162,8 @@ function filterCategoryByBudget(budget) {
         'pet-supplies': 'pet-supplies',
         'sports-outdoors': 'sports-outdoors',
         'toys-games': 'toys-games',
-        'books': 'books'
+        'books': 'books',
+        'diaries': 'diaries'
     };
 
     const category = categoryMap[pageName] || pageName;
