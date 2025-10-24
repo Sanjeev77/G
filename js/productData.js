@@ -7513,6 +7513,50 @@ const allProductsData = [
         "rating": 4.6,
         "affiliateLink": "https://amzn.to/48HBCwX",
         "featured": false
+    },
+    {
+        "id": 7687,
+        "title": "Proctor Silex Double Mini Waffle Maker Machine with 4” Round Non-stick Grids, Makes 2 Personalized Individual Breakfast Keto Chaffles and Hashbrowns, Compact, Black (26102)",
+        "price": "24",
+        "priceValue": 24,
+        "category": "",
+        "image": "https://m.media-amazon.com/images/I/71VwS35f8FL._AC_SL1500_.jpg",
+        "rating": 4,
+        "affiliateLink": "https://amzn.to/47ti4eJ",
+        "featured": false
+    },
+    {
+        "id": 7688,
+        "title": "Proctor Silex Double Mini Waffle Maker Machine with 4” Round Non-stick Grids, Makes 2 Personalized Individual Breakfast Keto Chaffles and Hashbrowns, Compact, Black (26102)",
+        "price": "24",
+        "priceValue": 24,
+        "category": "",
+        "image": "https://m.media-amazon.com/images/I/71VwS35f8FL._AC_SL1500_.jpg",
+        "rating": 4,
+        "affiliateLink": "https://amzn.to/3KT5qgw",
+        "featured": false
+    },
+    {
+        "id": 7689,
+        "title": "Proctor Silex Double Mini Waffle Maker Machine with 4” Round Non-stick Grids, Makes 2 Personalized Individual Breakfast Keto Chaffles and Hashbrowns, Compact, Black (26102)",
+        "price": "24",
+        "priceValue": 24,
+        "category": "",
+        "image": "https://m.media-amazon.com/images/I/71VwS35f8FL._AC_SL1500_.jpg",
+        "rating": 4,
+        "affiliateLink": "https://amzn.to/4qeXMx7",
+        "featured": false
+    },
+    {
+        "id": 7690,
+        "title": "fgdf",
+        "price": "55",
+        "priceValue": 55,
+        "category": "housewarming-gifts",
+        "image": "https://m.media-amazon.com/images/I/71PD7lxn71L._AC_SL1500_.jpg",
+        "rating": 4,
+        "affiliateLink": "https://amzn.to/3JpLbX8",
+        "featured": false
     }
 ];
 

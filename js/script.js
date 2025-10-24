@@ -163,7 +163,29 @@ function filterCategoryByBudget(budget) {
         'sports-outdoors': 'sports-outdoors',
         'toys-games': 'toys-games',
         'books': 'books',
-        'diaries': 'diaries'
+        'diaries': 'diaries',
+        // Gift Categories
+        'housewarming-gifts': 'housewarming-gifts',
+        'anniversary-gifts': 'anniversary-gifts',
+        'retirement-gifts': 'retirement-gifts',
+        'birthday-gifts-for-her': 'birthday-gifts-for-her',
+        'birthday-gifts-for-him': 'birthday-gifts-for-him',
+        'gifts-for-coworkers': 'gifts-for-coworkers',
+        'gifts-for-new-moms': 'gifts-for-new-moms',
+        'bridal-shower-gifts': 'bridal-shower-gifts',
+        'baby-shower-gifts': 'baby-shower-gifts',
+        'flower-delivery': 'flower-delivery',
+        'gift-baskets': 'gift-baskets',
+        'photo-gifts': 'photo-gifts',
+        'gifts-for-boyfriends': 'gifts-for-boyfriends',
+        'gifts-for-girlfriends': 'gifts-for-girlfriends',
+        'gifts-for-moms': 'gifts-for-moms',
+        'gifts-for-dads': 'gifts-for-dads',
+        'gifts-for-grandparents': 'gifts-for-grandparents',
+        'gifts-for-someone-who-has-everything': 'gifts-for-someone-who-has-everything',
+        'gifts-for-couples': 'gifts-for-couples',
+        'gifts-for-best-friends': 'gifts-for-best-friends',
+        'personalized-gifts': 'personalized-gifts'
     };
 
     const category = categoryMap[pageName] || pageName;
@@ -518,4 +540,154 @@ function updateSearchBudgetButtons(activeBudget) {
 // Initialize main page search if on index.html
 if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/')) {
     document.addEventListener('DOMContentLoaded', initializeMainPageSearch);
+    document.addEventListener('DOMContentLoaded', loadSpecialProductIcons);
+    document.addEventListener('DOMContentLoaded', initializeSpecialProductsNavigation);
 }
+
+// Load Special Product Icons for Homepage
+function loadSpecialProductIcons() {
+    console.log('Loading special product icons...');
+
+    const container = document.getElementById('special-products-icons');
+
+    if (!container) {
+        console.log('Special products icons container not found on this page');
+        return;
+    }
+
+    let specialProducts = [];
+
+    // First, try to load from specialProductsData if it exists
+    if (typeof window.specialProductsData !== 'undefined' && window.specialProductsData.length > 0) {
+        console.log('Loading from specialProductsData...');
+        specialProducts = window.specialProductsData;
+    }
+    // Fallback to allProductsData
+    else if (typeof allProductsData !== 'undefined') {
+        console.log('Falling back to allProductsData...');
+
+        // Filter products marked as special/featured or with special offers
+        specialProducts = allProductsData.filter(product =>
+            product.featured === true ||
+            product.specialOffer === true ||
+            product.discount
+        );
+
+        // If no special products found, take top-rated products
+        if (specialProducts.length === 0) {
+            specialProducts = allProductsData
+                .sort((a, b) => b.rating - a.rating)
+                .slice(0, 12);
+        }
+
+        // Limit to 12 products
+        specialProducts = specialProducts.slice(0, 12);
+    }
+    else {
+        console.error('No product data available');
+        container.innerHTML = '<p style="text-align: center; color: #6c757d;">Unable to load products</p>';
+        return;
+    }
+
+    console.log(`Found ${specialProducts.length} special products`);
+
+    if (specialProducts.length === 0) {
+        container.innerHTML = '<p style="text-align: center; color: #6c757d;">No special products available</p>';
+        return;
+    }
+
+    // Generate product icons HTML
+    const iconsHTML = specialProducts.map(product => createSpecialProductIcon(product)).join('');
+    container.innerHTML = iconsHTML;
+
+    console.log('Successfully loaded special product icons');
+}
+
+// Create special product icon HTML
+function createSpecialProductIcon(product) {
+    return `
+        <div class="special-product-item" onclick="window.open('${product.affiliateLink}', '_blank', 'noopener')">
+            <div class="special-product-icon">
+                <img src="${product.image}" alt="${product.title}" loading="lazy">
+            </div>
+            <div class="special-product-name">${product.title}</div>
+            <div class="special-product-price">$${product.price}</div>
+        </div>
+    `;
+}
+
+// Initialize navigation for special products carousel
+function initializeSpecialProductsNavigation() {
+    const leftArrow = document.getElementById('special-products-left');
+    const rightArrow = document.getElementById('special-products-right');
+    const carousel = document.getElementById('special-products-icons');
+
+    if (!leftArrow || !rightArrow || !carousel) {
+        console.log('Navigation elements not found');
+        return;
+    }
+
+    // Scroll amount (adjust based on item width + gap)
+    const scrollAmount = 300;
+
+    // Left arrow click
+    leftArrow.addEventListener('click', () => {
+        carousel.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+
+    // Right arrow click
+    rightArrow.addEventListener('click', () => {
+        carousel.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+
+    // Update arrow states on scroll
+    function updateArrowStates() {
+        const isAtStart = carousel.scrollLeft <= 0;
+        const isAtEnd = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1;
+
+        leftArrow.disabled = isAtStart;
+        rightArrow.disabled = isAtEnd;
+    }
+
+    // Initial state
+    updateArrowStates();
+
+    // Update on scroll
+    carousel.addEventListener('scroll', updateArrowStates);
+
+    // Update on window resize
+    window.addEventListener('resize', updateArrowStates);
+}
+
+// Footer Toggle Functionality for Mobile
+document.addEventListener('DOMContentLoaded', function() {
+    const footerHeadings = document.querySelectorAll('.footer-heading');
+
+    footerHeadings.forEach(heading => {
+        heading.addEventListener('click', function() {
+            // Only toggle on mobile (max-width: 768px)
+            if (window.innerWidth <= 768) {
+                const parentColumn = this.closest('.footer-column');
+                if (parentColumn) {
+                    parentColumn.classList.toggle('active');
+                }
+            }
+        });
+    });
+
+    // Remove active class on desktop resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            const footerColumns = document.querySelectorAll('.footer-column');
+            footerColumns.forEach(column => {
+                column.classList.remove('active');
+            });
+        }
+    });
+});
