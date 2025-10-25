@@ -139,8 +139,14 @@
                             <i class="fas fa-chevron-down"></i>
                         </a>
                         <div class="dropdown-menu">
-                            <div class="dropdown-column">
-                                <div class="dropdown-header">For Occasions</div>
+                            <div class="dropdown-header-wrapper">
+                                <button class="dropdown-close" aria-label="Close dropdown">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="dropdown-content-wrapper">
+                                <div class="dropdown-column">
+                                    <div class="dropdown-header">For Occasions</div>
                                 <a href="pages/housewarming-gifts.html">Housewarming gifts</a>
                                 <a href="pages/anniversary-gifts.html">Anniversary gifts</a>
                                 <a href="pages/retirement-gifts.html">Retirement gifts</a>
@@ -166,6 +172,7 @@
                                 <a href="pages/gifts-for-best-friends.html">Gifts for best friends</a>
                                 <a href="pages/personalized-gifts.html">Personalized gifts</a>
                             </div>
+                            </div>
                         </div>
                     </li>
                     <li class="gift-collection-item dropdown">
@@ -175,8 +182,14 @@
                             <i class="fas fa-chevron-down"></i>
                         </a>
                         <div class="dropdown-menu">
-                            <div class="dropdown-column">
-                                <div class="dropdown-header">Ages 0-6</div>
+                            <div class="dropdown-header-wrapper">
+                                <button class="dropdown-close" aria-label="Close dropdown">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="dropdown-content-wrapper">
+                                <div class="dropdown-column">
+                                    <div class="dropdown-header">Ages 0-6</div>
                                 <a href="pages/gifts-for-newborns.html">Gifts for newborns</a>
                                 <a href="pages/gifts-for-infants.html">Gifts for infants</a>
                                 <a href="pages/gifts-for-1-year-olds.html">Gifts for 1-year-olds</a>
@@ -201,6 +214,7 @@
                                 <a href="pages/outdoor-play-gifts.html">Outdoor play gifts</a>
                                 <a href="pages/creative-diy-kits.html">Creative & DIY kits</a>
                             </div>
+                            </div>
                         </div>
                     </li>
                     <li class="gift-collection-item dropdown">
@@ -210,8 +224,14 @@
                             <i class="fas fa-chevron-down"></i>
                         </a>
                         <div class="dropdown-menu">
-                            <div class="dropdown-column">
-                                <div class="dropdown-header">Tech Gifts</div>
+                            <div class="dropdown-header-wrapper">
+                                <button class="dropdown-close" aria-label="Close dropdown">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="dropdown-content-wrapper">
+                                <div class="dropdown-column">
+                                    <div class="dropdown-header">Tech Gifts</div>
                                 <a href="pages/digital-photo-frames.html">Digital photo frames</a>
                                 <a href="pages/instant-cameras.html">Instant cameras</a>
                                 <a href="pages/instant-photo-printers.html">Instant photo printers</a>
@@ -242,6 +262,7 @@
                                 <a href="pages/experience-gifts.html">Experience gifts</a>
                                 <a href="pages/eco-friendly-gifts.html">Eco-friendly gifts</a>
                                 <a href="pages/luxury-gifts.html">Luxury gifts</a>
+                            </div>
                             </div>
                         </div>
                     </li>
@@ -869,8 +890,9 @@
                 });
             }
 
-            // Mobile dropdown toggle
-            dropdowns.forEach(dropdown => {
+            // Mobile dropdown toggle (ONLY for main navigation, NOT sub-header)
+            const mainNavDropdowns = document.querySelectorAll('.main-nav .dropdown');
+            mainNavDropdowns.forEach(dropdown => {
                 const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
                 if (dropdownToggle) {
                     dropdownToggle.addEventListener('click', function(e) {
@@ -883,14 +905,122 @@
                 }
             });
 
-            // Close mobile menu when clicking outside
+            // Sub-header gift collection dropdowns
+            const subHeaderDropdowns = document.querySelectorAll('.sub-header .gift-collection-item.dropdown');
+            console.log('Found sub-header dropdowns:', subHeaderDropdowns.length);
+
+            // Log initial states
+            subHeaderDropdowns.forEach((dropdown, index) => {
+                console.log(`Dropdown ${index} initial state:`, dropdown.classList.contains('active'));
+            });
+
+            subHeaderDropdowns.forEach(dropdown => {
+                const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+                let isProcessing = false; // Prevent double-firing
+
+                if (dropdownToggle) {
+                    dropdownToggle.addEventListener('click', function(e) {
+                        const timestamp = Date.now();
+                        console.log(`[${timestamp}] Dropdown clicked, window width:`, window.innerWidth);
+
+                        // Only prevent default on mobile
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            e.stopImmediatePropagation();
+
+                            // Prevent double-firing
+                            if (isProcessing) {
+                                console.log('Already processing - ignoring click');
+                                return;
+                            }
+
+                            isProcessing = true;
+                            console.log('Mobile mode - toggling dropdown');
+
+                            const isCurrentlyActive = dropdown.classList.contains('active');
+                            console.log('Current state before toggle:', isCurrentlyActive);
+
+                            // Close other sub-header dropdowns
+                            subHeaderDropdowns.forEach(otherDropdown => {
+                                if (otherDropdown !== dropdown) {
+                                    otherDropdown.classList.remove('active');
+                                }
+                            });
+
+                            // Toggle current dropdown
+                            if (isCurrentlyActive) {
+                                dropdown.classList.remove('active');
+                                console.log('Closing dropdown');
+                            } else {
+                                dropdown.classList.add('active');
+                                console.log('Opening dropdown');
+                            }
+
+                            console.log('Dropdown active state after:', dropdown.classList.contains('active'));
+
+                            // Reset processing flag after a short delay
+                            setTimeout(() => {
+                                isProcessing = false;
+                            }, 300);
+                        }
+                    });
+                }
+
+                // Close dropdown when clicking on a link inside it
+                const dropdownLinks = dropdown.querySelectorAll('.dropdown-menu a');
+                dropdownLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        if (window.innerWidth <= 768) {
+                            dropdown.classList.remove('active');
+                        }
+                    });
+                });
+
+                // Close dropdown when clicking the close button
+                const closeButton = dropdown.querySelector('.dropdown-close');
+                if (closeButton) {
+                    closeButton.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        console.log('Close button clicked');
+                        dropdown.classList.remove('active');
+                    });
+                }
+
+                // Close dropdown when clicking on backdrop (the dropdown item itself, not the menu)
+                dropdown.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        // Only close if clicking on the backdrop (not the menu or toggle)
+                        if (e.target === dropdown && dropdown.classList.contains('active')) {
+                            console.log('Backdrop clicked - closing dropdown');
+                            dropdown.classList.remove('active');
+                        }
+                    }
+                });
+            });
+
+            // Close mobile menu and dropdowns when clicking outside
             document.addEventListener('click', function(e) {
                 if (window.innerWidth <= 768) {
+                    // Close main nav if clicking outside header
                     if (!e.target.closest('.main-header')) {
                         mainNav.classList.remove('active');
                         const icon = mobileMenuToggle.querySelector('i');
                         icon.classList.remove('fa-times');
                         icon.classList.add('fa-bars');
+                    }
+
+                    // Close sub-header dropdowns when clicking outside
+                    const clickedOnDropdownMenu = e.target.closest('.dropdown-menu');
+                    const clickedOnDropdownToggle = e.target.closest('.dropdown-toggle');
+
+                    // Close if clicking outside both the menu and the toggle
+                    if (!clickedOnDropdownMenu && !clickedOnDropdownToggle) {
+                        console.log('Clicking outside dropdown - closing all dropdowns');
+                        subHeaderDropdowns.forEach(dropdown => {
+                            dropdown.classList.remove('active');
+                        });
                     }
                 }
             });
@@ -899,7 +1029,10 @@
             window.addEventListener('resize', function() {
                 if (window.innerWidth > 768) {
                     mainNav.classList.remove('active');
-                    dropdowns.forEach(dropdown => {
+                    mainNavDropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                    subHeaderDropdowns.forEach(dropdown => {
                         dropdown.classList.remove('active');
                     });
                     const icon = mobileMenuToggle.querySelector('i');

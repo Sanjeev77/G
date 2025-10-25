@@ -3,493 +3,1203 @@
 
 const banner1Products = [
     {
-        "title": "Gifts for Him Her Boyfriend Girlfriend Birthday Christmas, To My Love Handmade Crochet Penguin, Wedding Anniversary Valentines Gift for Women Men, Romantic I Love You Gift for Couples Wife Husband",
-        "price": "7.99",
-        "rating": 4.7,
-        "affiliateLink": "https://amzn.to/4oolTIx",
-        "image": "https://m.media-amazon.com/images/I/71PD7lxn71L._AC_SL1500_.jpg",
+        "title": "Canupdog 10.1 WiFi Digital Picture Frame, IPS Touch Screen Smart Cloud Digital Photo Frame with 16GB Storage, Wall Mountable, Auto-Rotate, Share Photos from Anywhere Via App, Email",
+        "price": "49.99",
+        "rating": 4.3,
+        "affiliateLink": "https://amzn.to/4nGKDKV",
+        "image": "https://m.media-amazon.com/images/I/719DSQ27D0L._AC_SL1500_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761237920591
+        "id": 1761408959043
     },
     {
-        "title": "Birthday Gifts for Women,Valentines Galentines Day Gifts for Her Girlfriend,Mothers Day Gifts,Sister Gifts for Sisters,Friendship Gifts,Christmas Stocking Stuffers,Scented Candle Funny Gifts ldeas",
-        "price": "9.99",
-        "rating": 4.7,
-        "affiliateLink": "https://amzn.to/42SQqoZ",
-        "image": "https://m.media-amazon.com/images/I/71V4w9Gkg+L._AC_SL1500_.jpg",
+        "title": "Anne Klein Women's Bangle Watch and Bracelet Set",
+        "price": "50.39",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/43qKZhe",
+        "image": "https://m.media-amazon.com/images/I/71YgRZyaOiL._AC_SX425_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761237944617
+        "id": 1761408939069
     },
     {
-        "title": "Promises From God for Women, Inspirational Scripture Cards to Keep or Share (Boxes of Blessings)",
-        "price": "4.65",
+        "title": "ZAAINA Spa Gift Set for Her - Relaxation Spa Kit for Women, Pampering At Home Bath and Body Self Care Spa Package, Luxury Spa Birthday Gifts for Women (PREMIUM Spa Set w/ Candle)",
+        "price": "69.99",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/47r6pfs",
+        "image": "https://m.media-amazon.com/images/I/711V5TVu9BL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408921771
+    },
+    {
+        "title": "Nextmug - Temperature-Controlled, Self-Heating Coffee Mug (Black - 14 oz.)",
+        "price": "99.95",
+        "rating": 4.2,
+        "affiliateLink": "https://amzn.to/4hvjBVl",
+        "image": "https://m.media-amazon.com/images/I/71D51fALypL._AC_SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408876610
+    },
+    {
+        "title": "THE COMFY Original | Sherpa Lined Microfiber Fleece Wearable Blanket, Oversized Design with Hood and Pocket from Shark Tank",
+        "price": "59.00",
         "rating": 4.8,
-        "affiliateLink": "https://amzn.to/3L28V4k",
-        "image": "https://m.media-amazon.com/images/I/71BTRA7-1mL._SL1200_.jpg",
+        "affiliateLink": "https://amzn.to/4ny4Hiw",
+        "image": "https://m.media-amazon.com/images/I/61TxValItpL._AC_SX679_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761237975654
+        "id": 1761408858078
     },
     {
-        "title": "Stocking Stuffers for Teen Men Women Kids Adults Food Dice Date Night Dice Couples Gifts for Him Her Anniversary Christmas Birthday Wedding Gifts for GrandkidsTeen Men Women Him Her",
+        "title": "Birthday Gifts for Women, Birthday Spa Gift Basket for Women, Luxury Birthday Spa Gift Box with Vit E, Rich Bath Essentials, Diffuser, Candle, Sterling Silver CZ Heart Necklace, 24k Flower Rose & More",
+        "price": "59.99",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/4qtiERj",
+        "image": "https://m.media-amazon.com/images/I/61cAPCWI8WL._SL1126_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408822138
+    },
+    {
+        "title": "Gold Dipped Rose Real 24K Gold Rose, Genuine One of a Kind Rose Hand Dipped in 24K Golden Roses Romantic Gifts for Women in Her Birthday Anniversary Day Mothers Day",
+        "price": "59.99",
+        "rating": 4.7,
+        "affiliateLink": "https://amzn.to/4o2BvB7",
+        "image": "https://m.media-amazon.com/images/I/711fo4kJQHL._AC_SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408801188
+    },
+    {
+        "title": "RENPHO Eyeris 1 Eye Massager with Heat, Eye Mask for Migraine, Smart Sleep Mask for Dry Eyes Relax, Reduce Strain Massage Equipment for Mom Dad Women Men Her Him",
+        "price": "52.99",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/48GKGT0",
+        "image": "https://m.media-amazon.com/images/I/61OFT5If6JS._AC_SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408768705
+    },
+    {
+        "title": "Hike Footwear HF Signature Healthy & Non-Slip Breathable Barefoot Shoes, Flexible Lightweight Daily Wear Walking Shoes Unisex",
+        "price": "69.95",
+        "rating": 4.2,
+        "affiliateLink": "https://amzn.to/4hp30lQ",
+        "image": "https://m.media-amazon.com/images/I/71bWrdta0OL._AC_SX695_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408680388
+    },
+    {
+        "title": "Skechers Women's D'Lites Fresh Start Memory Foam Lace-up Sneaker Fashion",
+        "price": "54.87",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/3JuOyw2",
+        "image": "https://m.media-amazon.com/images/I/61HdqFs9wbL._AC_SX695_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408658043
+    },
+    {
+        "title": "Under Armour Women's Charged Assert 9 Running Shoe",
+        "price": "59.95",
+        "rating": 4.5,
+        "affiliateLink": "https://amzn.to/3JqGfkW",
+        "image": "https://m.media-amazon.com/images/I/51PgLKADR9L._AC_SY695_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408642684
+    },
+    {
+        "title": "MEROKEETY Fall Dresses for Women 2025 Winter Long Sleeve Casual V Neck Tiered Cotton Midi Maxi Dress Pockets",
+        "price": "51.99",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/4hvjglx",
+        "image": "https://m.media-amazon.com/images/I/610XFxb4oNL._AC_SY550_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408627470
+    },
+    {
+        "title": "BTFBM Long Sleeve Fall Dresses for Women 2025 Summer Casual Tie Neck Ruffle Tiered A Line Wedding Guest Short Mini Dress",
+        "price": "50.99",
+        "rating": 4.1,
+        "affiliateLink": "https://amzn.to/48GKnHQ",
+        "image": "https://m.media-amazon.com/images/I/810nrnLo4cL._AC_SX569_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408610912
+    },
+    {
+        "title": "Levi's Women's Type III Jumpsuit",
+        "price": "79.99",
+        "rating": 4.1,
+        "affiliateLink": "https://amzn.to/4qzEXoD",
+        "image": "https://m.media-amazon.com/images/I/41yZ4FTJHYL._AC_SX679_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408594669
+    },
+    {
+        "title": "Hooever Women's Winter Wool Coat Casual Notch Lapel Single-Breasted Peacoat",
+        "price": "53.99",
+        "rating": 4.3,
+        "affiliateLink": "https://amzn.to/3WjCG2Z",
+        "image": "https://m.media-amazon.com/images/I/810nLThzknL._AC_SX569_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408577641
+    },
+    {
+        "title": "MOERDENG Women's Winter Puffer Coat Thicken Fleece Lined Down Jacket Waterproof Faux Fur Detachable Hooded Parka",
+        "price": "69.99",
+        "rating": 4.5,
+        "affiliateLink": "https://amzn.to/3WVlFw5",
+        "image": "https://m.media-amazon.com/images/I/61wHw2le+vL._AC_SY741_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408553228
+    },
+    {
+        "title": "Levi's Women's Original Trucker Jacket (Also Available in Plus)",
+        "price": "53.70",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/3KZy3J0",
+        "image": "https://m.media-amazon.com/images/I/61VFVfNRtJL._AC_SX679_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408531913
+    },
+    {
+        "title": "ALDO Women's Gloadithh Tote Bag",
+        "price": "60.00",
+        "rating": 4.2,
+        "affiliateLink": "https://amzn.to/4qxpJ3w",
+        "image": "https://m.media-amazon.com/images/I/5128FLJYADL._AC_SY695_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408454663
+    },
+    {
+        "title": "Versace Bright Crystal Absolu for Women 3.0 oz Eau de Parfum Spray",
+        "price": "95.00",
+        "rating": 4.7,
+        "affiliateLink": "https://amzn.to/4oAcRrl",
+        "image": "https://m.media-amazon.com/images/I/71+XHlv4lVL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408381450
+    },
+    {
+        "title": "Dolce&Gabbana The One, Eau De Parfum Spray, For Women",
+        "price": "95.00",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/48MCrop",
+        "image": "https://m.media-amazon.com/images/I/71bCVk+xfiL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408339479
+    },
+    {
+        "title": "Yves Saint Laurent OPIUM 3.0 oz EDT Spray NEW in Box for Women",
+        "price": "77.99",
+        "rating": 4.7,
+        "affiliateLink": "https://amzn.to/4qttFlx",
+        "image": "https://m.media-amazon.com/images/I/51yH4+erQgL._SL1000_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408285977
+    },
+    {
+        "title": "Estée Lauder SpellBound Eau de Parfum Spray with Notes of Rose, Apricot & Sandalwood | Perfumes for Women, 1.7 fl oz",
+        "price": "80.00",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/49rgtrc",
+        "image": "https://m.media-amazon.com/images/I/41M00PireXL._SL1000_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408258312
+    },
+    {
+        "title": "Mugler Alien Goddess - Eau de Parfum - Women's Perfume - Floral & Woody - With Bergamot, Jasmine, and Vanilla - Long Lasting Fragrance",
+        "price": "100",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/4oAEGjc",
+        "image": "https://m.media-amazon.com/images/I/61AcOk2swEL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408200497
+    },
+    {
+        "title": "Ariana Grande Cloud Eau de Parfum – Warm Gourmand Fragrance for Women – Women's Perfume with Notes of Lavender, Coconut, Vanilla & Pear",
+        "price": "72.00",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/49lvsTD",
+        "image": "https://m.media-amazon.com/images/I/61Q3ckTbVeL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408158608
+    },
+    {
+        "title": "Billie Eilish Eau de Parfum Spray Perfume for Women, Notes of Sugared Petals, Vanilla & Musk",
+        "price": "58.00",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/4qt93di",
+        "image": "https://m.media-amazon.com/images/I/517gLsq1-7L._SL1000_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408135189
+    },
+    {
+        "title": "Versace Bright Crystal by Versace for Women 6.7 oz Eau de Toilette Spray",
+        "price": "75.94",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/4noH3EO",
+        "image": "https://m.media-amazon.com/images/I/61UdVadaEaL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408112764
+    },
+    {
+        "title": "Moissanite Heart Pendant Necklaces for Women, 925 Sterling Silver Necklace with Birthstone, Ideal Anniversary Present or Birthday Christmas Valentine Mothers Day Jewelry Gifts for Mom Wife Her Girlfriend",
+        "price": "99.98",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/3J1QDzB",
+        "image": "https://m.media-amazon.com/images/I/71NPr8MfMhL._AC_SY695_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408032976
+    },
+    {
+        "title": "Swarovski Infinity Heart Jewelry Collection, Necklaces and Bracelets, Rose Gold & Rhodium Tone Finish, Clear Crystals",
+        "price": "99.48",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/3WjAW9X",
+        "image": "https://m.media-amazon.com/images/I/61RK7cWgY4L._AC_SY535_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761408011183
+    },
+    {
+        "title": "PANDORA Moments Heart Clasp Snake Chain Bracelet - Compatible Moments Charms - Gift for Her - Sterling Silver - With Gift Box",
+        "price": "80.00",
+        "rating": 4.7,
+        "affiliateLink": "https://amzn.to/3J2lM61",
+        "image": "https://m.media-amazon.com/images/I/61Eh9h6aMLL._AC_SY535_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407989664
+    },
+    {
+        "title": "Swarovski Emily Tennis Bracelet Jewelry Collection",
+        "price": "98.30",
+        "rating": 4.5,
+        "affiliateLink": "https://amzn.to/4o79S9Y",
+        "image": "https://m.media-amazon.com/images/I/81NnZmD3JoL._AC_SY535_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407897182
+    },
+    {
+        "title": "Carleen Birthstone Bracelets for Women 925 Sterling Silver Five Heart Station Created Gemstone Tennis Bracelet Jewelry Anniversary Birthday for Wife, 7\"+1.2\" Extender",
+        "price": "68.99",
+        "rating": 4.5,
+        "affiliateLink": "https://amzn.to/4qxoRvK",
+        "image": "https://m.media-amazon.com/images/I/615kuhfUrlL._AC_SY535_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407864880
+    },
+    {
+        "title": "DREAM PAIRS Combat Boots Ankle Booties Lace-up Platform Side Zipper Lug Sole Boots",
+        "price": "33.38",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/3J1QgFd",
+        "image": "https://m.media-amazon.com/images/I/81d6wSs1bSS._AC_SY695_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407646136
+    },
+    {
+        "title": "DREAM PAIRS Women's Lace up Combat Ankle Boots High Chunky Heel Fashion Heeled Booties Shoes",
+        "price": "32.27",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/479tmF6",
+        "image": "https://m.media-amazon.com/images/I/710wxREuuNL._AC_SY695_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407614793
+    },
+    {
+        "title": "ANRABESS Womens 2025 Summer Casual Maxi Dress A line Tiered Flowy Short Sleeve Crewneck T Shirt Beach Travel Long Dresses",
+        "price": "29.99",
+        "rating": 4.3,
+        "affiliateLink": "https://amzn.to/4hsLw8g",
+        "image": "https://m.media-amazon.com/images/I/61X91LqC1JL._AC_SY741_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407592162
+    },
+    {
+        "title": "The Drop Women's @Caralynmirand Ruffle-Neck Tiered Mini Dress",
+        "price": "49.90",
+        "rating": 4,
+        "affiliateLink": "https://amzn.to/478FE0l",
+        "image": "https://m.media-amazon.com/images/I/71YoL83aozL._AC_SX569_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407575102
+    },
+    {
+        "title": "EFAN Womens Hoodies Oversized Sweatshirts Pullover Fleece Sweaters Long Sleeve Winter Fall Outfits Fashion Y2k Clothes",
+        "price": "28.99",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/3J1Q4pt",
+        "image": "https://m.media-amazon.com/images/I/71vXLJ1RaAL._AC_SY741_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407554714
+    },
+    {
+        "title": "Trendy Queen Women's Oversized Cable Knit Crewneck Sweaters",
+        "price": "34.97",
+        "rating": 4.3,
+        "affiliateLink": "https://amzn.to/47mgXfM",
+        "image": "https://m.media-amazon.com/images/I/71l9N09tGUL._AC_SY741_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407533826
+    },
+    {
+        "title": "PRETTYGARDEN Jumpsuits for Women Dressy 2025 Summer Casual Short Sleeve Romper Spring Airport Beach Vacation Travel Outfits",
+        "price": "27.41",
+        "rating": 4.2,
+        "affiliateLink": "https://amzn.to/43Dhskq",
+        "image": "https://m.media-amazon.com/images/I/61qXO5SHc4L._AC_SY741_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407506628
+    },
+    {
+        "title": "luvamia Cargo Jean Overalls for Women Wide Leg Bib Utility Stretchy Denim Jumpsuit Overall Loose 90s Trendy",
+        "price": "33.74",
+        "rating": 4.5,
+        "affiliateLink": "https://amzn.to/47GazBo",
+        "image": "https://m.media-amazon.com/images/I/71VEX831wNL._AC_SX569_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407491237
+    },
+    {
+        "title": "Omoone Women's Oversized Mid Long Denim Jacket Jean Biker Coat",
+        "price": "43.60",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/3WnItV6",
+        "image": "https://m.media-amazon.com/images/I/71TxpQbtdyL._AC_SX569_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407468091
+    },
+    {
+        "title": "Omoone Women's Oversized Mid Long Denim Jacket Jean Biker Coat",
+        "price": "43.60",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/4oFRgOs",
+        "image": "https://m.media-amazon.com/images/I/71ye7MP2+ML._AC_SX569_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407384590
+    },
+    {
+        "title": "Wrangler Authentics womens Stretch Denim Jacket",
+        "price": "39.99",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/4noBHJR",
+        "image": "https://m.media-amazon.com/images/I/913sL+OvALL._AC_SY550_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407365562
+    },
+    {
+        "title": "Conair Double Ceramic Flat Iron, 1-Inch Flat Iron Hair Straightener with Claw Clip, 5 Heat Settings, Extra-Long Floating Plates, White",
+        "price": "23.47",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/43vXE2j",
+        "image": "https://m.media-amazon.com/images/I/61yapk9HHKL._AC_SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407095210
+    },
+    {
+        "title": "Remington Shine Therapy 2 inch Hair Straightener, Flat Iron Infused with Argan Oil & Keratin, Professional Ceramic Flat Iron for Less Frizz, Shiny & Smooth Hot Styling Tools",
+        "price": "37.99",
+        "rating": 4.7,
+        "affiliateLink": "https://amzn.to/4nncq2M",
+        "image": "https://m.media-amazon.com/images/I/7173ywoEuDL._SX679_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407073485
+    },
+    {
+        "title": "Bounce Curl Define EdgeLift Brush, 5-in-1 Tool for Effortlessly Defined Curls, Waves & Coils, Reduces Frizz - Pink",
+        "price": "29.99",
+        "rating": 4.5,
+        "affiliateLink": "https://amzn.to/4nngAHN",
+        "image": "https://m.media-amazon.com/images/I/71HTItCqyRL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407053345
+    },
+    {
+        "title": "LOVEVOOK 40L Travel Backpack for Women & Men, Airline Approved Carry On Luggage with 3 Packing Cubes, TSA Overnight Bags, Waterproof Personal Item Bag, Weekender Essentials Backpacks fits 17\" Laptop",
+        "price": "39.98",
+        "rating": 4.8,
+        "affiliateLink": "https://amzn.to/4hy8Wt0",
+        "image": "https://m.media-amazon.com/images/I/71fYV55XVXL._AC_SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407029436
+    },
+    {
+        "title": "ALDO Women's Greenwald Crossbody Bag",
+        "price": "30.72",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/4o78ZOG",
+        "image": "https://m.media-amazon.com/images/I/61olgs794SL._AC_SY695_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761407009093
+    },
+    {
+        "title": "BOSTANTEN Crossbody Bags for Women Trendy Vegan Leather Hobo Purses Shoulder Handbags With Wide Shoulder Strap",
+        "price": "39.99",
+        "rating": 4.5,
+        "affiliateLink": "https://amzn.to/3JqbIUh",
+        "image": "https://m.media-amazon.com/images/I/8129e6nrVPL._AC_SX679_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761406991813
+    },
+    {
+        "title": "spa luxetique Gift Baskets for Women, Spa Gifts for Women - 10pcs Lavender Sets with Body Lotion, Bubble Bath, Relaxing Bath Sets, Birthday Christmas Gifts for Her",
+        "price": "26.99",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/48GHoz8",
+        "image": "https://m.media-amazon.com/images/I/71hJoMZWELL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761406973584
+    },
+    {
+        "title": "Green Canyon Spa Gift Baskets for Women 11pcs Lavender Bath Gift Sets with Body Lotion,Essential Oil,Spa Gifts for Women,Mothers Day Gift Sets for Her,Bath Sets for Her Gifts",
+        "price": "25.99",
+        "rating": 4.7,
+        "affiliateLink": "https://amzn.to/48I4TYD",
+        "image": "https://m.media-amazon.com/images/I/81ul5McVoEL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761406953460
+    },
+    {
+        "title": "Amazon Essentials Sterling Silver Platinum Plated Infinite Elements Cubic Zirconia Three Stone Ring",
+        "price": "32.70",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/4o9aeNy",
+        "image": "https://m.media-amazon.com/images/I/61Hv5X+X6sL._AC_SY535_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761406929174
+    },
+    {
+        "title": "SOL DE JANEIRO Hair & Body Perfume Mist",
+        "price": "26.00",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/47GxIUf",
+        "image": "https://m.media-amazon.com/images/I/61eXe6NOAuL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761406911857
+    },
+    {
+        "title": "Ard al Zaafaran Pink Blush Shams Al Emarat Khususi, Marshmallow Blush Perfume For Women, Eau de Parfum - 100 ML (3.4 OZ) Romantic & Sweet Arabian Perfume - A Captivating Scent wrapped in Pink Bottle",
+        "price": "36.94",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/4oAlsu5",
+        "image": "https://m.media-amazon.com/images/I/61Okpz2dvbL._SL1080_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761406878116
+    },
+    {
+        "title": "BellaVita Luxury Unisex Cologne Gift Set (4x20ml) | Fragrances Includes Honey OUD, SKAI, FRESH & White OUD | Travel Size Mini Perfumes & Spicy Vanilla Perfume Oil | Unisex Perfume for Women & Men",
+        "price": "26.99",
+        "rating": 4,
+        "affiliateLink": "https://amzn.to/4o61NCm",
+        "image": "https://m.media-amazon.com/images/I/51ElXX5F02L._SL1342_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761406845047
+    },
+    {
+        "title": "Lattafa Yara - Vanilla, Gourmand, Fruity, Floral - Eau de Parfum Long-Lasting Fragrance for Women, 3.40 Ounce / 100 ml",
+        "price": "24.90",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/4o99Z56",
+        "image": "https://m.media-amazon.com/images/I/61QFvUF8ylL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761406806559
+    },
+    {
+        "title": "tarte shape tape concealer – Full-Coverage, Matte Finish for Under Eye, Dark Circles, Fine Lines, Redness & Discoloration, Longwear, Dermatologist-Tested, Vegan, Cruelty-Free",
+        "price": "32.00",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/4oFQHEk",
+        "image": "https://m.media-amazon.com/images/I/61rLGZtb6ZL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761406784322
+    },
+    {
+        "title": "Hair Straightener Brush, TYMO Ring Hair Straightener Comb Straightening Brush for Women with 5 Temps 20s Fast Heating & Dual Voltage, Black",
+        "price": "44.99",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/4qt2nvC",
+        "image": "https://m.media-amazon.com/images/I/711r5qeAFjL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761406761341
+    },
+    {
+        "title": "Curling Iron Hair Crimper Waver - TYMO ROVY Beach Waves Curling Wand, Ionic Deep Waver Hair Curler Tool with Ceramic 3 Barrel for Women, Dual Voltage, Anti-Scald, Easy to Use, Pink, 1.25 Inch",
+        "price": "49.99",
+        "rating": 4.3,
+        "affiliateLink": "https://amzn.to/4qsEl3O",
+        "image": "https://m.media-amazon.com/images/I/61wxmVS3cZL._AC_SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761406741085
+    },
+    {
+        "title": "Kendra Scott Elisa Pendant Necklace for Women, Fashion Jewelry, 14k Gold-Plated",
+        "price": "50.06",
+        "rating": 4.5,
+        "affiliateLink": "https://amzn.to/47HAvwk",
+        "image": "https://m.media-amazon.com/images/I/51dSKjL6BxL._AC_SY675_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761406717057
+    },
+    {
+        "title": "Betsey Johnson Womens Butterfly Charms Layered Necklace",
+        "price": "48.00",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/3LrCmg8",
+        "image": "https://m.media-amazon.com/images/I/71r7eWuCsaL._AC_SY535_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761406692344
+    },
+    {
+        "title": "Miabella 18K Gold Plated 925 Sterling Silver Italian 5mm Mesh Link Chain Bracelet for Women, Made in Italy",
+        "price": "28.90",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/3L72KvW",
+        "image": "https://m.media-amazon.com/images/I/71S2xqaxdWL._AC_SX535_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761406665452
+    },
+    {
+        "title": "CDE Infinity Heart Birthstone Charm Link Bracelet for Women 925 Sterling Silver Adjustable Mother's Day Gift Anniversary Birthday Jewelry for Wife Girlfriend Her",
+        "price": "49.99",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/4o78tAe",
+        "image": "https://m.media-amazon.com/images/I/616q1w9fY7L._AC_SY535_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761406643819
+    },
+    {
+        "title": "Burt's Bees Gifts Ideas - Classics Set, 6 Products in Giftable Tin – Cuticle Cream, Hand Salve, Lip Balm, Res-Q Ointment, Hand Repair and Foot Cream",
+        "price": "22.79",
+        "rating": 4.7,
+        "affiliateLink": "https://amzn.to/4niOttd",
+        "image": "https://m.media-amazon.com/images/I/91xmaxoSw3L._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761405019158
+    },
+    {
+        "title": "FITORY Women's Flat Sandals Fashion Slides With Soft Leather Slippers for Summer Size 6-11",
+        "price": "23.74",
+        "rating": 4.2,
+        "affiliateLink": "https://amzn.to/4nqLLSL",
+        "image": "https://m.media-amazon.com/images/I/61cA2WpKDqL._AC_SY695_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404929159
+    },
+    {
+        "title": "Amazon Essentials Women's Loafer Flat",
+        "price": "22.80",
+        "rating": 4.1,
+        "affiliateLink": "https://amzn.to/4o84Jyt",
+        "image": "https://m.media-amazon.com/images/I/71c1B1MnsgL._AC_SX695_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404910739
+    },
+    {
+        "title": "WEACZZY Women's Summer Short Sleeve Casual Dresses V-Neck Floral Party Dress with Pockets",
+        "price": "19.71",
+        "rating": 4.2,
+        "affiliateLink": "https://amzn.to/4o7GTmz",
+        "image": "https://m.media-amazon.com/images/I/61YKuWHaTuL._AC_SY741_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404888898
+    },
+    {
+        "title": "Hanes womens Ecosmart Full Zip Fleece Hoodie",
+        "price": "13.29",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/4hBcn24",
+        "image": "https://m.media-amazon.com/images/I/7155i6yw6uL._AC_SX679_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404873506
+    },
+    {
+        "title": "Womens Casual Hoodies Crew Neck Long Sleeve Sweatshirts with Pocket Lightweight Pullover Tops",
+        "price": "19.99",
+        "rating": 4.1,
+        "affiliateLink": "https://amzn.to/49iSU3Q",
+        "image": "https://m.media-amazon.com/images/I/61mjcch+QOL._AC_SY741_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404855917
+    },
+    {
+        "title": "Hanes womens Ecosmart Full Zip Fleece Hoodie",
+        "price": "19.00",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/47GvN1Z",
+        "image": "https://m.media-amazon.com/images/I/81d3zkLVikL._AC_SX679_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404839524
+    },
+    {
+        "title": "ANRABESS Women Long Sleeve Shirts Rib Knit Slim Fit Tops Basic Tee 2025 Fall Outfits Casual T-Shirt Underscrubs Layer Clothes",
+        "price": "12.99",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/47CByhb",
+        "image": "https://m.media-amazon.com/images/I/81lkOoE6hHL._AC_SY741_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404823072
+    },
+    {
+        "title": "SOJOS Retro Polarized Aviator Sunglasses Womens Mens Classic 70s Vintage Trendy Square Aviators SJ2174",
+        "price": "15.99",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/4777lqm",
+        "image": "https://m.media-amazon.com/images/I/610AGP3KpDL._AC_SX679_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404804669
+    },
+    {
+        "title": "BUTABY Rectangle Sunglasses for Women Retro Driving Glasses 90’s Vintage Fashion Narrow Square Frame UV400 Protection",
+        "price": "12.79",
+        "rating": 4.5,
+        "affiliateLink": "https://amzn.to/49mwsa7",
+        "image": "https://m.media-amazon.com/images/I/719G6MA0A8L._AC_SX679_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404773355
+    },
+    {
+        "title": "APHISON Trendy Leather Crossbody Purse with Adjustable Strap, Women's Shoulder Handbag",
+        "price": "21.99",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/3Wjxufv",
+        "image": "https://m.media-amazon.com/images/I/81NR0+-zRXL._AC_SY695_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404750662
+    },
+    {
+        "title": "Burt's Bees Christmas Gifts - Tips and Toes Kit, 6 Travel Size Products for Stocking Stuffers - Pomegranate Moisturizing Lip Balm, 2 Hand Creams, Foot Cream, Cuticle Cream, and Hand Salve",
+        "price": "12.59",
+        "rating": 4.7,
+        "affiliateLink": "https://amzn.to/4qmayK9",
+        "image": "https://m.media-amazon.com/images/I/71Bp9dmazkL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404728797
+    },
+    {
+        "title": "PAVOI 14K Gold Plated X Ring Simulated Diamond CZ Criss Cross Ring for Women",
+        "price": "14.95",
+        "rating": 4.2,
+        "affiliateLink": "https://amzn.to/4o2w4lH",
+        "image": "https://m.media-amazon.com/images/I/61H2dPTqMiL._AC_SY535_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404690745
+    },
+    {
+        "title": "PAVOI 14K Gold Plated Cubic Zirconia Twisted Rope Eternity Band for Women",
+        "price": "14.95",
+        "rating": 4.2,
+        "affiliateLink": "https://amzn.to/49mwoqT",
+        "image": "https://m.media-amazon.com/images/I/61mTmLfooFL._AC_SY535_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404668836
+    },
+    {
+        "title": "PAVOI 14K Gold Plated Solid 925 Sterling Silver CZ Simulated Diamond Stackable Ring Eternity Bands for Women",
+        "price": "18.95",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/3LcqAWR",
+        "image": "https://m.media-amazon.com/images/I/61OmckZxTuL._AC_SY675_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404651726
+    },
+    {
+        "title": "BellaVita Luxury Honey Oud Eau de Parfum (3.4 fl. oz.) | Patchouli, Vanilla, Bergamot, Floral & Spicy + Made with Clean & Vegan Essentials Oils + Cruelty Free | Long-Lasting Unisex Fragrance",
+        "price": "19.99",
+        "rating": 3.8,
+        "affiliateLink": "https://amzn.to/3Ltut9W",
+        "image": "https://m.media-amazon.com/images/I/61XWvkm2e1L._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404627847
+    },
+    {
+        "title": "Summer Fridays Tinted Lip Butter Balm - Conditioning Vegan Lip Balm for Instant Moisture, Shine & Hydration - Sheer-Tinted, Soothing Skincare - Pink Sugar (.5 Oz)",
+        "price": "24.00",
+        "rating": 4.7,
+        "affiliateLink": "https://amzn.to/4o97P5u",
+        "image": "https://m.media-amazon.com/images/I/51dfM6rkwXL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404595804
+    },
+    {
+        "title": "All In One Makeup Gift Kit - Ultimate Color Combination - 36 Eyeshadow, 28 Lip Gloss, 3 Blusher, 4 Concealer, 3 Contour Powder, 3 Brushes, 1 Mirror, 74 Colors Palette Set",
+        "price": "13.99",
+        "rating": 4.3,
+        "affiliateLink": "https://amzn.to/4nrClX4",
+        "image": "https://m.media-amazon.com/images/I/71wdXoOiJ2L._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404575085
+    },
+    {
+        "title": "Kitsch Satin Heatless Curling Set – Heatless Curls Overnight with 34\" Hair Curler & 2 Satin Scrunchies – Comfortable Hair Curlers to Sleep In for Frizz-Free, No Heat Damage Styling - Sunset Tie Dye",
+        "price": "12.79",
+        "rating": 4.2,
+        "affiliateLink": "https://amzn.to/47nWjvP",
+        "image": "https://m.media-amazon.com/images/I/81mNloP4u-L._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404556659
+    },
+    {
+        "title": "Tangle Teezer Ultimate Detangler Brush for Wet & Dry Hair, Eliminates Knots & Reduces Breakage for All Hair Types, Millennial Pink",
+        "price": "16.49",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/4oreqsd",
+        "image": "https://m.media-amazon.com/images/I/616CZlucrNL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404534097
+    },
+    {
+        "title": "BERISO 14K Gold/Silver Plated Choker Necklace for Women Shining Dots Station Gold Chain Necklace Beads Sparkle Chain Necklace Link Chain Exquisite Jewelry for women",
+        "price": "12.99",
+        "rating": 4.5,
+        "affiliateLink": "https://amzn.to/4o4ijCV",
+        "image": "https://m.media-amazon.com/images/I/51WyORl7c4L._AC_SY625_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404511439
+    },
+    {
+        "title": "Gold Pearl Necklaces for Women Trendy 14k Gold Plated Dainty Necklace Simple Pearl Drop Single Charm Pendant Necklace Women's Jewelry Best Friend Birthday Gifts Gold Jewelry for Women",
+        "price": "11.99",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/47oNwKa",
+        "image": "https://m.media-amazon.com/images/I/51jJ23nOblL._AC_SY625_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404494249
+    },
+    {
+        "title": "PAVOI 14K Gold Plated Station Necklace - Simulated Diamond BTY Layering Necklaces - Womens CZ Chain",
+        "price": "14.99",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/47oW7MC",
+        "image": "https://m.media-amazon.com/images/I/81VMvfMnd4S._AC_SY625_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404478158
+    },
+    {
+        "title": "Layered Gold Silver Necklaces for Women, Stackable Stack 14K Real Gold Plated Silver Chain Necklace Diamond Circle CZ Layering Pendant Necklaces Trendy Gold Jewelry Set Gifts",
+        "price": "13.99",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/4hs14cr",
+        "image": "https://m.media-amazon.com/images/I/81nk9o8Ll3L._AC_SY625_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404452449
+    },
+    {
+        "title": "Tewiky Dainty 14k Gold Plated/Silver Cubic Zirconia Necklaces for Women, Simple CZ Jewelry Necklaces Trendy Gifts",
+        "price": "14.99",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/4hqqGq9",
+        "image": "https://m.media-amazon.com/images/I/81BaGxYCaAL._AC_SY535_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404423629
+    },
+    {
+        "title": "Fesciory Leather Wrap Bracelets for Women, Boho Leopard Multi-Layer Crystal Beads Cuff Bracelet Jewelry",
+        "price": "11.99",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/3JmXSSA",
+        "image": "https://m.media-amazon.com/images/I/61aDtC7sUnL._AC_SY625_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404398496
+    },
+    {
+        "title": "PAVOI 14K Gold Plated 3mm Cubic Zirconia Classic Tennis Bracelet | Gold Bracelets for Women | Size 6.5-7.5 Inch",
+        "price": "19.95",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/4obuWfJ",
+        "image": "https://m.media-amazon.com/images/I/81GnMgh4ooL._AC_SY675_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404363596
+    },
+    {
+        "title": "18K Gold Plated Clover Lucky Bracelet for Women White/Black/Red/Green Flower Four Leaf Link Bracelets Trendy Jewelry Gifts for Women",
+        "price": "13.97",
+        "rating": 4.3,
+        "affiliateLink": "https://amzn.to/4hCkbjZ",
+        "image": "https://m.media-amazon.com/images/I/61yKzac-YFL._AC_SY535_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404330564
+    },
+    {
+        "title": "DEARMAY Gold Bracelets for Women Waterproof, 14K Gold Plated Jewelry Sets Trendy Thin Dainty Stackable Cuban Link Paperclip Chain Bracelet Pack Fashion Accessories Gifts for Womens",
+        "price": "13.99",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/4oxBxRd",
+        "image": "https://m.media-amazon.com/images/I/61L-pmvIjAL._AC_SY675_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761404298886
+    },
+    {
+        "title": "MBW Gold Bracelets for Women Trendy, Dainty 14K Gold Plated Bracelet Stack Beaded Chain Bracelet Set Thin Small Cute Paperclip Bracelets Fashion Waterproof Jewelry Gift Gold Accessories for Women",
+        "price": "14.99",
+        "rating": 4.3,
+        "affiliateLink": "https://amzn.to/4obmA7R",
+        "image": "https://m.media-amazon.com/images/I/81NeRv5fKKL._AC_SY625_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761398491545
+    },
+    {
+        "title": "Bracelets for Women 14K Gold Silver Plated Ring Bracelet Hand Chain Dainty Evil Eye Heart Clover Daisy Cubic Zirconia Stackable Link Chain Hypoallergenic Body Jewelry Cute Trendy Gifts",
+        "price": "9.99",
+        "rating": 4.1,
+        "affiliateLink": "https://amzn.to/4hxXMo6",
+        "image": "https://m.media-amazon.com/images/I/513IK2gfelL._AC_SY535_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761398579099
+    },
+    {
+        "title": "MBW 14K Silver Plated Bracelets for Women, Dainty Silver Bracelets for Women Set Bracelet Stack Waterproof Jewelry for Women Trendy Minimalist Simple Small Thin Bracelet Set for Women Teen Girls Gift",
+        "price": "12.99",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/4qtgPnw",
+        "image": "https://m.media-amazon.com/images/I/81U3ay+hCpL._AC_SY625_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761398613193
+    },
+    {
+        "title": "Layered Gold Necklaces for Women,Stackable Dainty 14K Gold Silver Plated Trendy Circle Paperclip Chain Pendant Choker Necklace,Simpl Diamond Cross Bow Jewelry Set Gifts for Women",
+        "price": "9.99",
+        "rating": 4.5,
+        "affiliateLink": "https://amzn.to/4oemqN4",
+        "image": "https://m.media-amazon.com/images/I/91+Xwk6EnbL._AC_SY625_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761398789528
+    },
+    {
+        "title": "SmileBelle Pearl Necklaces for Women, Daisy Pearl Choker as Y Shaped Pearls Jewelry Gold Heart Necklace for Anniversary Birthday Gifts White Baroque Necklace as Wedding Jewelry",
         "price": "7.99",
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/4hoK3ja",
+        "image": "https://m.media-amazon.com/images/I/71xuML01nXL._AC_SY625_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761398912190
+    },
+    {
+        "title": "Dainty Layered Choker Necklace Bohemian Turquoise Necklace 14K Gold Plated Dainty Y Pendant Necklace Beach Fashion Pendant Choker",
+        "price": "9.99",
+        "rating": 3.7,
+        "affiliateLink": "https://amzn.to/3Ltmgm8",
+        "image": "https://m.media-amazon.com/images/I/61wllWbqShL._AC_SY625_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761398937003
+    },
+    {
+        "title": "FUNEIA Diamond Necklaces for Women 14K Gold Plated Emerald Birthstone Necklace for Women Mothers Dainty Gold Necklace Blue Green Cubic Zirconia Pendant Necklace Birthday Gifts for Women Jewelry",
+        "price": "9.99",
         "rating": 4.5,
-        "affiliateLink": "https://amzn.to/49e4nSk",
-        "image": "https://m.media-amazon.com/images/I/71-ppDJ6+OL._AC_SL1500_.jpg",
+        "affiliateLink": "https://amzn.to/3L8xv3l",
+        "image": "https://m.media-amazon.com/images/I/51QrvIBTVWL._AC_SY625_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761237998687
+        "id": 1761399081500
     },
     {
-        "title": "JES & JANI Infinity Heart Necklace for Women, Love Heart Pendant with Cubic Zirconia and Infinity Necklace, 925 Sterling Silver Heart Necklace for Girlfriend",
-        "price": "3.80",
-        "rating": 4.3,
-        "affiliateLink": "https://amzn.to/4njcDUm",
-        "image": "https://m.media-amazon.com/images/I/610u-vz9NdL._AC_SY695_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761238022050
-    },
-    {
-        "title": "Custom Picture Frames with Photo, Personalized Photo Frame with Night Light, Customized Picture Frame, Christmas Anniversary Birthday Gifts for Women Men Her Him Girlfriend Boyfriend Couple",
-        "price": "9.90",
-        "rating": 4.6,
-        "affiliateLink": "https://amzn.to/4nlFd7E",
-        "image": "https://m.media-amazon.com/images/I/71PM+amwboL._AC_SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761238045710
-    },
-    {
-        "title": "Shower Steamers Aromatherapy - 8 Pack Shower Bombs with Essential Oils, Birthday Gifts for Women Self Care Relaxation Home SPA Stress Relief, Gifts for Girlfriend Teacher Womens Christmas Gift",
-        "price": "6.99",
-        "rating": 4.3,
-        "affiliateLink": "https://amzn.to/3Wmx3Rz",
-        "image": "https://m.media-amazon.com/images/I/81GheIbkxhL._SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761238066054
-    },
-    {
-        "title": "Custom Music Plaque - Personalized Acrylic Song Plaque/Glass Album Cover/Present for Girlfriend - Customized Music Sign - Long Distance Gifts - Couple Present for Her/Him/Boyfriend",
-        "price": "9.90",
-        "rating": 4.3,
-        "affiliateLink": "https://amzn.to/42R0v5R",
-        "image": "https://m.media-amazon.com/images/I/81cLL5uaIPL._AC_SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761238102259
-    },
-    {
-        "title": "Spotify Decorative Plaque Personalized Gifts, Custom Gifts for Him Her, Customized Picture Frame for Boyfriend Girlfriend Couple Wife Women on Anniversary Birthday",
-        "price": "9.99",
-        "rating": 4.6,
-        "affiliateLink": "https://amzn.to/4qp79ub",
-        "image": "https://m.media-amazon.com/images/I/61byCDL2z4L._AC_SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761238129784
-    },
-    {
-        "title": "Ships Next Day, Custom Blanket with Photo I Love You Girlfriend Boyfriend Gifts, Personalized Blankets Couples Gifts Christmas Blankets Women Gifts",
-        "price": "6.90",
+        "title": "8PCS Hair Clips for Women, Flower Claw Clips for Thick Hair, Non-Slip Hair Accessories with Multi-Styles, Neutral Colors Hair Claw Clips and Variety Pack, Ideal for Girls",
+        "price": "8.79",
         "rating": 4.5,
-        "affiliateLink": "https://amzn.to/4qjj4tn",
-        "image": "https://m.media-amazon.com/images/I/61ORMJ-2k2L._AC_SL1001_.jpg",
+        "affiliateLink": "https://amzn.to/3WUfisZ",
+        "image": "https://m.media-amazon.com/images/I/91b7lLP3n+L._SL1500_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761238149348
+        "id": 1761399237956
     },
     {
-        "title": "Anrkets Two Sided Printing Lover Pillow Cover I Love You Hug This Pillow Until You Can Hug Me, Valentine's Day Birthday Gifts for Girlfriend Cotton Linen Square Decorative Waist Pillowcase 18\"x 18\"",
-        "price": "8.57",
+        "title": "Kitsch French Hair Pins for Women – Elegant & Durable Metal Hair Fork for Updos, Chignon, Bun & Twist Hairstyles, Secure Hold All Day, Comfortable Fit | Ideal Gifts for Women- Gold, 1pc",
+        "price": "7.99",
         "rating": 4.4,
-        "affiliateLink": "https://amzn.to/3WleCNc",
-        "image": "https://m.media-amazon.com/images/I/71zhiN4a74L._AC_SL1364_.jpg",
+        "affiliateLink": "https://amzn.to/3LeUuK9",
+        "image": "https://m.media-amazon.com/images/I/81Tl1jU4t2L._SL1500_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761238168478
+        "id": 1761399262107
     },
     {
-        "title": "UNGENT THEM Pinky Promise Matching Bracelet for Couples Soulmate Man Distance Relationship Gifts for Women Men Him Her…",
-        "price": "9.99",
-        "rating": 4.4,
-        "affiliateLink": "https://amzn.to/4hnxTHv",
-        "image": "https://m.media-amazon.com/images/I/81MGb5CJbqL._AC_SY625_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761238224249
-    },
-    {
-        "title": "UNGENT THEM Pinky Promise Matching Bracelet for Couples Soulmate Man Distance Relationship Gifts for Women Men Him Her…",
-        "price": "9.99",
-        "rating": 4.4,
-        "affiliateLink": "https://amzn.to/48KfvX0",
-        "image": "https://m.media-amazon.com/images/I/71N7C+Uc5-L._AC_SY625_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761238246212
-    },
-    {
-        "title": "Knock Knock What I Love about You Book Fill in the Love Fill-in-the-Blank Gift Journal, 4.5 x 3.25-Inches",
-        "price": "9.25",
+        "title": "Kitsch Ultra-Petite Satin Scrunchies for Women - Softer Than Silk Scrunchies | Hair Ties No Damage for Frizz-Free Sleep | Perfect for Day or Night | Ideal Gifts for Women - Eucalyptus, 6 pcs",
+        "price": "7.99",
         "rating": 4.6,
-        "affiliateLink": "https://amzn.to/4hkQ6Fm",
-        "image": "https://m.media-amazon.com/images/I/71qt-a58-GL._SL1500_.jpg",
+        "affiliateLink": "https://amzn.to/4oupQuK",
+        "image": "https://m.media-amazon.com/images/I/91KlKip+OIL._SL1500_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761238284151
+        "id": 1761399292573
     },
     {
-        "title": "VELENTI® Valentines Day Love Gift For Her, Love Gifts for Her, Him, Her, Mom, Cute Anniversary Wedding Gifts, Christmas, Romantic Gift for Girlfriend & Boyfriend, Wife, Gifts From Husband, I Love You",
+        "title": "Kitsch Mini Claw Clips for Women - Stylish Small Hair Clips for Kids | Stays In Place Without Pulling or Snagging | Durable & Sturdy Plastic | Ideal Gifts for Women - Tortoise & Black, 16 Pcs",
+        "price": "6.39",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/3WTgKvB",
+        "image": "https://m.media-amazon.com/images/I/71gFuZy4w0L._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761399387912
+    },
+    {
+        "title": "essence | Lash Princess False Lash Effect Mascara | Volumizing & Lengthening | Cruelty Free & Paraben Free",
         "price": "4.99",
-        "rating": 4.7,
-        "affiliateLink": "https://amzn.to/4nkc1OA",
-        "image": "https://m.media-amazon.com/images/I/71BlbNqDNgL._AC_SL1500_.jpg",
+        "rating": 4.3,
+        "affiliateLink": "https://amzn.to/3Lcjba1",
+        "image": "https://m.media-amazon.com/images/I/61K6cQhw4EL._SL1500_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761238304918
+        "id": 1761399425771
     },
     {
-        "title": "Hallmark Signature Love Card (Time Flies)",
-        "price": "7.30",
-        "rating": 4.8,
-        "affiliateLink": "https://amzn.to/3WkHdSE",
-        "image": "https://m.media-amazon.com/images/I/71O11tr2JXL._AC_SL1500_.jpg",
+        "title": "BS-MALL Makeup Brush Set 18 Pcs Premium Synthetic Foundation Powder Concealers Eye shadows Blush Makeup Brushes with black case",
+        "price": "8.49",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/4oF6e7b",
+        "image": "https://m.media-amazon.com/images/I/71AEbODrs9L._SL1500_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761238325916
+        "id": 1761399448069
     },
     {
-        "title": "Gifts for Girlfriend, Girlfriend Birthday Gifts Ideas, To My Girl Heart Shaped Acrylic Block, I Love You Presents for Her, Valentines Day Christmas Idea for Her GF Wife",
-        "price": "9.99",
-        "rating": 4.7,
-        "affiliateLink": "https://amzn.to/49hDyww",
-        "image": "https://m.media-amazon.com/images/I/61zDAjYEpBL._AC_SL1500_.jpg",
+        "title": "Al-Rehab Choco Musk Eau de Parfum Spray for Women, 1.65 oz/50 ml",
+        "price": "2.75",
+        "rating": 4.2,
+        "affiliateLink": "https://amzn.to/49jIlNW",
+        "image": "https://m.media-amazon.com/images/I/61cmcKQlUSL._SL1500_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761238402745
+        "id": 1761399474812
     },
     {
-        "title": "eos Natural Shea Lip Balm- Birthday Cake, All-Day Moisture Lip Care Products, 0.14 oz",
-        "price": "3.69",
-        "rating": 4.7,
-        "affiliateLink": "https://amzn.to/477OQlL",
-        "image": "https://m.media-amazon.com/images/I/71Qpu7-BsSL._SL1500_.jpg",
+        "title": "FAXHION Gold Knuckle Rings Set for Women Snake Chain Stacking Ring Vintage BOHO Midi Rings SIze Mixed",
+        "price": "6.99",
+        "rating": 3.7,
+        "affiliateLink": "https://amzn.to/42VTTTI",
+        "image": "https://m.media-amazon.com/images/I/71nuN+mWXzL._AC_SY625_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761238420935
+        "id": 1761399693045
     },
     {
         "title": "Shower Steamers Aromatherapy BLRIET 8 Pack Gifts for Women, Birthday Christmas White Elephant Gifts Stocking Stuffers for Adults Her Mom Him Home Spa Gym Natural Essential Oil Self Care Relaxation",
         "price": "9.99",
-        "rating": 4.4,
-        "affiliateLink": "https://amzn.to/474bLhI",
+        "rating": 4.5,
+        "affiliateLink": "https://amzn.to/478xkxB",
         "image": "https://m.media-amazon.com/images/I/71IeFfOoyNL._AC_SL1280_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761238438365
+        "id": 1761399718188
     },
     {
-        "title": "Cross Necklace for Women 14K Gold Silver Plated Dainty Small Cross Pendant Choker Simple Trendy Cute Cross Charm Chain Necklace Easter Basket Stuffers Baptism Religious Faith Jewelry Gift",
-        "price": "8.44",
-        "rating": 4.6,
-        "affiliateLink": "https://amzn.to/4nlFKGG",
-        "image": "https://m.media-amazon.com/images/I/71WIPOelsRL._AC_SY625_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761238468966
-    },
-    {
-        "title": "MEIRUBY Electric Candle Lighter, Christmas Stocking Stuffers Gifts for Women Mom Men Wife Sister, USB Arc Rechargeable Windproof Long Lighter for Candle BBQ Housewarming Birthday Gifts Idals",
-        "price": "13.99",
+        "title": "Shower Steamers Aromatherapy Birthday Gifts for Women - SWCANDY 8 Pcs Stocking Stuffers White Elephant Gifts for Adults Mom Men Teen Self Care with Natural Essential Oils Relaxation Home SPA Christmas",
+        "price": "7.96",
         "rating": 4.4,
-        "affiliateLink": "https://amzn.to/3IYVSjx",
-        "image": "https://m.media-amazon.com/images/I/61-kUNGSMyL._AC_SL1500_.jpg",
+        "affiliateLink": "https://amzn.to/4houJD4",
+        "image": "https://m.media-amazon.com/images/I/810MBwVTSaL._SL1500_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761238494743
+        "id": 1761399744156
     },
     {
-        "title": "HUONUL Makeup Mirror Vanity Mirror with Lights, 2X, 3X, 10X Magnification, Touch Control, Trifold, White, 9.4\" L x 13.4\" W, Modern Style, Dresser Mount, Bathroom",
-        "price": "23.99",
+        "title": "Small Sling Backpack Crossbody Sling Bag for Women, Chest Bag Daypack Fanny Pack Cross Body Bag for Outdoors Hiking Traveling - Black",
+        "price": "8.45",
+        "rating": 4.3,
+        "affiliateLink": "https://amzn.to/4qqxAzJ",
+        "image": "https://m.media-amazon.com/images/I/71-f8AyrHKL._AC_SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761399889716
+    },
+    {
+        "title": "MAXTOP Small Crossbody Bags for Women Belt Bag Fanny Pack with Adjustable Strap",
+        "price": "8.88",
+        "rating": 4.5,
+        "affiliateLink": "https://amzn.to/4or7Qlv",
+        "image": "https://m.media-amazon.com/images/I/514dbA35PBL._AC_SX679_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761399907957
+    },
+    {
+        "title": "Wet Brush Original Detangler Hair Brush, Amazon Exclusive Aqua- Ultra-Soft IntelliFlex Bristles-Detangling Hairbrush Glides Through Tangles For All Hair Types (Wet Dry & Damaged Hair) - Women & Men",
+        "price": "8.99",
+        "rating": 4.7,
+        "affiliateLink": "https://amzn.to/47HPNRS",
+        "image": "https://m.media-amazon.com/images/I/71r3cbexCGL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761399945639
+    },
+    {
+        "title": "WetBrush Original Detangler Black",
+        "price": "7.02",
+        "rating": 4.7,
+        "affiliateLink": "https://amzn.to/3WRLixU",
+        "image": "https://m.media-amazon.com/images/I/61rewWtNBCL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1761399977356
+    },
+    {
+        "title": "Trendy Queen Womens Oversized Summer T Shirts Plus Size Batwing Cute Casual Tops Short Sleeves Fashion Workout Clothes",
+        "price": "9.99",
         "rating": 4.4,
-        "affiliateLink": "https://amzn.to/4qmG7na",
-        "image": "https://m.media-amazon.com/images/I/51sdlEpzVBL._SL1500_.jpg",
+        "affiliateLink": "https://amzn.to/4oGGwzo",
+        "image": "https://m.media-amazon.com/images/I/61iqz8oNuhL._AC_SY741_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761238682443
+        "id": 1761400000981
     },
     {
-        "title": "LEGO Heart Ornament Building Toy Set - Fun Arts and Crafts Idea for Girls and Boys, Ages 9+ - Gift for Kids - Display on The Wall as Home Decoration - 40638 Visit the LEGO Store",
-        "price": "12.99",
-        "rating": 4.8,
-        "affiliateLink": "https://amzn.to/47JQnxx",
-        "image": "https://m.media-amazon.com/images/I/816191cAjDL._AC_SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761238714623
-    },
-    {
-        "title": "Tewiky Dainty 14k Gold Plated/Silver Cubic Zirconia Necklaces for Women, Simple CZ Jewelry Necklaces Trendy Gifts",
-        "price": "12.59",
-        "rating": 4.4,
-        "affiliateLink": "https://amzn.to/42T8yz0",
-        "image": "https://m.media-amazon.com/images/I/61NyKuhbW+L._AC_SY535_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761238738624
-    },
-    {
-        "title": "6 Pairs 14K Gold Plated Hoop Earrings for Women Lightweight Chunky Hoop Earrings Multipack Hypoallergenic, Thick Open Twisted Huggie Hoops Earring Set Jewelry for Gifts.",
+        "title": "SOJOS Retro Aviator Sunglasses for Women Men,Trendy Rectangle Womens Mens Shades Sun Glasses SJ2202",
         "price": "14.99",
         "rating": 4.5,
-        "affiliateLink": "https://amzn.to/47qX5Z2",
-        "image": "https://m.media-amazon.com/images/I/71LMNHPa2NL._AC_SY625_.jpg",
+        "affiliateLink": "https://amzn.to/4o10zsa",
+        "image": "https://m.media-amazon.com/images/I/51TvnTUISOL._AC_SX679_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761238763220
+        "id": 1761400021888
     },
     {
-        "title": "Romantic & Fun Scratch Off Date Night Ideas Card Game, Perfect Couple Gifts for Her or Him, Couple Gifts for Boyfriend, Girlfriend, Wife, Husband, Engagement, Birthday or Anniversaries",
-        "price": "16.95",
-        "rating": 4.5,
-        "affiliateLink": "https://amzn.to/3WWuKok",
-        "image": "https://m.media-amazon.com/images/I/4112mKNh-zL._AC_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761238784046
-    },
-    {
-        "title": "18K Gold Plated Clover Lucky Bracelet for Women White/Black/Red/Green Flower Four Leaf Link Bracelets Trendy Jewelry Gifts for Women",
-        "price": "11.48",
+        "title": "Trendy Queen Womens Oversized Long Sleeve T Shirts 2025 Basic Crewneck Tee Fall Tops Casual Workout Y2K Clothes",
+        "price": "9.99",
         "rating": 4.3,
-        "affiliateLink": "https://amzn.to/47DFPRt",
-        "image": "https://m.media-amazon.com/images/I/61yKzac-YFL._AC_SY535_.jpg",
+        "affiliateLink": "https://amzn.to/4qzsUaT",
+        "image": "https://m.media-amazon.com/images/I/61+xNskltxL._AC_SY741_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761238803846
+        "id": 1761400044496
     },
     {
-        "title": "LEGO Cherry Blossom Building Toy for Kids, Girls & Boys, Ages 8+ - Artificial Cherry Blossom Decor for Home & Display - Creative Gift Idea for Plant & Flower Lovers - 40725",
-        "price": "15",
-        "rating": 4.8,
-        "affiliateLink": "https://amzn.to/4o8LYeq",
-        "image": "https://m.media-amazon.com/images/I/81RPPKd0bAL._AC_SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761238850730
-    },
-    {
-        "title": "Emotional Support Chicken Nuggets by Relatable, Cuddly Plush Collectibles and Squishy Toys, Cozy Fall Gifts and Fun Trick or Treat Toys, Includes 5 Plushies with Carrying Basket",
-        "price": "14.98",
-        "rating": 4.8,
-        "affiliateLink": "https://amzn.to/3JcECay",
-        "image": "https://m.media-amazon.com/images/I/81m+NVSfqCL._AC_SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761238875339
-    },
-    {
-        "title": "LifeAround2Angels Bath Bombs Gift Set 12 USA made Fizzies, Shea & Coco Butter Dry Skin Moisturize, Perfect for Bubble Spa Bath. Handmade Birthday Mothers day Gifts idea For Her/Him, wife, girlfriend",
-        "price": "23.04",
+        "title": "Gifts for Him Her Boyfriend Girlfriend Birthday Christmas, To My Love Handmade Crochet Penguin, Wedding Anniversary Valentines Gift for Women Men, Romantic I Love You Gift for Couples Wife Husband",
+        "price": "9.99",
         "rating": 4.7,
-        "affiliateLink": "https://amzn.to/4ouIuCz",
-        "image": "https://m.media-amazon.com/images/I/91dSs7Lcs4L._AC_SL1500_.jpg",
+        "affiliateLink": "https://amzn.to/4hpLNsp",
+        "image": "https://m.media-amazon.com/images/I/71PD7lxn71L._AC_SL1500_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761238895511
+        "id": 1761400069713
     },
     {
-        "title": "Birthday Gifts for Women Happy Birthday Gift Baskets for Women Unique Not A Day Over Fabulous Mug Gift ideas Pink Gifts Box Set Presents for Her Friends Mom Sister Wife Coworkers Daughter Aunt Mom",
-        "price": "13.59",
-        "rating": 4.8,
-        "affiliateLink": "https://amzn.to/4nfPKkL",
-        "image": "https://m.media-amazon.com/images/I/71NYYVHoV9L._AC_SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761238934860
-    },
-    {
-        "title": "It's a Date!, 40 Fun and Romantic Scratch Off Date Night Ideas for Him, Her, Girlfriend, Boyfriend, Wife, Husband & Couples, for Men for Women",
-        "price": "16.99",
+        "title": "BEAKEY Makeup Brushes Set, Professional Foundation Eyeshadow Concealer Blush Powder Bronzer Applicator, 2 Blender Sponge with Beauty Paper Case stocking stuffers for women",
+        "price": "7.99",
         "rating": 4.5,
-        "affiliateLink": "https://amzn.to/4orzfmO",
-        "image": "https://m.media-amazon.com/images/I/71zz3xuK7PL._AC_SL1500_.jpg",
+        "affiliateLink": "https://amzn.to/4obv3rE",
+        "image": "https://m.media-amazon.com/images/I/71BFkreZhrL._SL1500_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761238954764
+        "id": 1761400090759
     },
     {
-        "title": "DSS Games The Couples Game That's Actually Fun [Date Night Idea, Relationship Card Game, Newlywed Game, Boo Basket, 2 Players for Adults | Couples Gifts, Gift for Her, Gift for Him]",
-        "price": "14.41",
+        "title": "Maybelline Lash Sensational Sky High Washable Mascara Makeup, Volumizing, Lengthening, Defining, Curling, Multiplying, Buildable Formula, Blackest Black, 1 Count",
+        "price": "8.89",
         "rating": 4.5,
-        "affiliateLink": "https://amzn.to/4hkR5Fy",
-        "image": "https://m.media-amazon.com/images/I/611xkdRuE9L._AC_SL1415_.jpg",
+        "affiliateLink": "https://amzn.to/430oXSq",
+        "image": "https://m.media-amazon.com/images/I/71MQo8pHmBL._SL1500_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761238973949
+        "id": 1761400112211
     },
     {
-        "title": "Happy Anniversary Decorative Stones Rock - Heartwarming You are My Rock Wedding Presents, Inspiring Anniversaries Keepsake for Her, Decorative Accessories Anniversary Present for Him",
-        "price": "12.99",
-        "rating": 4.8,
-        "affiliateLink": "https://amzn.to/4htyO9g",
-        "image": "https://m.media-amazon.com/images/I/71DHpmEej+L._AC_SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761238993964
-    },
-    {
-        "title": "TEEZWONDER Christmas Anniversary Wedding Gifts for Women Men - Long Lasting Vanilla Lavender Candle 10 Oz - Romantic Birthday Gifts for Him Her, Girlfriend Boyfriend Gift Ideas",
-        "price": "16.60",
-        "rating": 4.7,
-        "affiliateLink": "https://amzn.to/4nnjRXr",
-        "image": "https://m.media-amazon.com/images/I/71c9SbIm07L._AC_SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761239012935
-    },
-    {
-        "title": "C & M Personal Gifts A Wise Woman Once Said \"F*ck this sh*t\" Stemless Wine Glass (1 Piece) 17 Ounces, Gag Gifts for Women, Funny Christmas gift, Amazing Laser Engraved tumbler for Ladies, Made in USA",
-        "price": "15.99",
-        "rating": 4.8,
-        "affiliateLink": "https://amzn.to/3IWZAu0",
-        "image": "https://m.media-amazon.com/images/I/51i0ze0y79L._AC_SL1000_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761239031657
-    },
-    {
-        "title": "Gift Baskets for Women, Unique Birthday Gifts for Women, Best Friend Birthday Gift, Inspirational Gift Set Box, Christmas Gifts for Woman Her Teen Girl Sister Friendship- Brighten up Her Day!",
-        "price": "19.99",
-        "rating": 4.8,
-        "affiliateLink": "https://amzn.to/42Tlbu3",
-        "image": "https://m.media-amazon.com/images/I/81Exr1jxleL._AC_SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761239047427
-    },
-    {
-        "title": "40 Date Ideas Card Games for Couples Date Night - Unique Date Deck Scratch Off Cards, Couples Gifts for Boyfriend Girlfriend, Romantic Wedding Anniversaries Newlywed Gifts for Him Husband Wife Bride",
-        "price": "15.95",
+        "title": "e.l.f. Cream Glide Lip Liner, Highly-Pigmented Pencil For Shaping & Sculpting Lips, Semi-Matte Finish, Vegan & Cruelty-Free, Mauve Aside",
+        "price": "3.00",
         "rating": 4.5,
-        "affiliateLink": "https://amzn.to/3L2W4Pg",
-        "image": "https://m.media-amazon.com/images/I/51aRsyBPsGL._AC_SL1500_.jpg",
+        "affiliateLink": "https://amzn.to/4niGtbT",
+        "image": "https://m.media-amazon.com/images/I/519zemKb6NL._SL1500_.jpg",
         "category": "banner-1",
         "featured": false,
-        "id": 1761239065292
-    },
-    {
-        "title": "Gifts for Women, Birthday Gifts for Women, Happy Birthday Gifts Basket, Gift Set for Best Friends Female Sister Mom Wife Her Girlfriend Coworker Bestie Bff",
-        "price": "21.99",
-        "rating": 4.8,
-        "affiliateLink": "https://amzn.to/3L2W8yu",
-        "image": "https://m.media-amazon.com/images/I/91pk5Yuhv7L._AC_SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761239098953
-    },
-    {
-        "title": "XXXFLOWER Plant Terrarium with Wooden Stand, Air Planter Bulb Glass Vase Metal Swivel Holder Retro Tabletop for Hydroponics Home Garden Office Decoration - 3 Bulb Vase",
-        "price": "13.12",
-        "rating": 4.6,
-        "affiliateLink": "https://amzn.to/42SSKwd",
-        "image": "https://m.media-amazon.com/images/I/71GrAWYYDyL._AC_SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761239121534
-    },
-    {
-        "title": "Christmas Gifts for Women, Birthday Gifts for Mom, Wife, Her, Girlfriend, Sister, Bestie - Self Care Spa Gift Baskets for Women, Best Friends, Teacher, Employee Appreciation, Anniversary Gifts",
-        "price": "15.99",
-        "rating": 4.8,
-        "affiliateLink": "https://amzn.to/4quqCd8",
-        "image": "https://m.media-amazon.com/images/I/81+zG5qq3EL._AC_SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761239139413
-    },
-    {
-        "title": "Birthday Gifts for Women, Sending Sunshine Christmas Gifts, Get Well Soon Gifts Basket Care Package Unique Spa Gifts Box with Wine Glasses for Thinking of You Her Sister Best Friend",
-        "price": "21.99",
-        "rating": 4.8,
-        "affiliateLink": "https://amzn.to/4qunMEU",
-        "image": "https://m.media-amazon.com/images/I/71BR6X8tgwL._AC_SL1498_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761239158971
-    },
-    {
-        "title": "UNGENT THEM Matching Couple Ring Bracelets for Boyfriend Girlfriend Husband Wife Valentines Anniversary Birthday Engagement Gifts",
-        "price": "15.99",
-        "rating": 4.5,
-        "affiliateLink": "https://amzn.to/3WlfIbB",
-        "image": "https://m.media-amazon.com/images/I/71qSnXX1rEL._AC_SY625_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761239175640
-    },
-    {
-        "title": "Spa Gifts for Women Bath Gift Baskets Relaxing Spa Self Care Gift for Mom Her Sister Wife Auntie Home Bath Care Package Thank You Gift Birthday Gift for Women Friendship Ideas",
-        "price": "23.99",
-        "rating": 4.7,
-        "affiliateLink": "https://amzn.to/3WQCXKK",
-        "image": "https://m.media-amazon.com/images/I/71yDsmSeRPL._SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761239192170
-    },
-    {
-        "title": "Turandoss Heart Initial Necklace for Women Teen Girls - 18K Gold Plated Letter A-Z Pendant Necklace Dainty Heart Necklaces Tiny Initial Necklaces Birthday Gifts for Women Jewelry",
-        "price": "17.99",
-        "rating": 4.6,
-        "affiliateLink": "https://amzn.to/47qFGQh",
-        "image": "https://m.media-amazon.com/images/I/51oZCuE+OgL._AC_SY535_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761239210157
-    },
-    {
-        "title": "Happy Birthday Gifts for Women,Bath Relaxing Spa Gift Basket for Her, Mom, Sister, Female Friends, Daughter,Unique Wine Gift Set Idea for Women Who Have Everything",
-        "price": "19.99",
-        "rating": 4.8,
-        "affiliateLink": "https://amzn.to/47qIpsN",
-        "image": "https://m.media-amazon.com/images/I/71riEAyTpIL._SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761239225947
-    },
-    {
-        "title": "Shonyin Dainty Heart-felt Infinity Heart Necklace for Mother Daughter Girlfriend Soulmate Grandma Granddaughter Bonus Mom Bonus Daughter Mother-in-law Friend",
-        "price": "15.99",
-        "rating": 4.7,
-        "affiliateLink": "https://amzn.to/48J7ul9",
-        "image": "https://m.media-amazon.com/images/I/91EBsI2i1xL._AC_SY535_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761239253889
+        "id": 1761400127284
     }
 ];
-
-// Banner 1 Configuration (for gift-ideas-for-her and banner-1 pages)
-const banner1Config = {
-    name: "Gift Ideas for Her",
-    description: "Thoughtful and unique gift ideas for every special woman in your life",
-    seoTitle: "Gift Ideas for Her - Elegant & Thoughtful Presents | Gift On Budget",
-    seoDescription: "Explore perfect gift ideas for her. From elegant accessories to personalized treasures, find the ideal present for any woman in your life.",
-    seoKeywords: "gift ideas for her, gifts for women, presents for her, gifts for ladies, women's gifts, female gift ideas, best gifts for her, unique gifts for women"
-};
 
 // Make data available globally
 if (typeof window !== 'undefined') {
     window.banner1Products = banner1Products;
-    window.banner1Config = banner1Config;
 }
 
 // Export for backend use
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { banner1Products, banner1Config };
+    module.exports = { banner1Products };
 }
