@@ -7546,17 +7546,6 @@ const allProductsData = [
         "rating": 4,
         "affiliateLink": "https://amzn.to/4qeXMx7",
         "featured": false
-    },
-    {
-        "id": 7690,
-        "title": "fgdf",
-        "price": "55",
-        "priceValue": 55,
-        "category": "housewarming-gifts",
-        "image": "https://m.media-amazon.com/images/I/71PD7lxn71L._AC_SL1500_.jpg",
-        "rating": 4,
-        "affiliateLink": "https://amzn.to/3JpLbX8",
-        "featured": false
     }
 ];
 
