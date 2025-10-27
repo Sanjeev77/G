@@ -1,14 +1,90 @@
+// ========================================
+// SPECIAL OFFERS DATA - AUTO-GENERATED
+// ========================================
+//
+// HOW TO USE IN YOUR special-offers.html:
+// 1. Copy this file to your frontend/js/ folder
+// 2. Add this script tag to special-offers.html:
+//    <script src="js/special-offers.js"></script>
+// 3. Everything updates automatically on page load!
+//
+// What this file includes:
+// - 98 products
+// - Category Configuration (auto-updates)
+// - Category: Christmas Gifts 2025
+// - Last Updated: 10/26/2025, 2:49:18 PM
+//
+// AUTOMATIC UPDATES ON PAGE LOAD:
+// SEO Meta Tags (uses SEO Settings):
+// ✓ Page Title (SEO Title → Category Name)
+// ✓ Meta Description (SEO Description → Description)
+// ✓ Open Graph Tags (SEO Title/Description → Name/Description)
+//
+// Page Content (visible on page):
+// ✓ Breadcrumb Title (uses Category Name)
+// ✓ H1 Category Name (uses Category Name)
+// ✓ Page Description (uses Description → SEO Description)
+// ========================================
+
 // Special Offers Data - Products with special offers/discounts
 const specialOffersData = [
+    {
+        "title": "Christmas Tree Skirt 48 Inch, Red and Black Buffalo Plaid Xmas Tree Skirt, Winter Christmas Tree Mat for Home Party Holiday Indoor Outdoor Decorations",
+        "price": "9.99",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/42XWH2M",
+        "image": "https://m.media-amazon.com/images/I/91jb-grkCKL._AC_SL1500_.jpg",
+        "category": "christmas-day",
+        "featured": false,
+        "id": 1761469475009,
+        "isCustomCategory": true,
+        "priceValue": 9.99
+    },
+    {
+        "title": "Wooden Christmas Door Wreath for Front Door Sign Snowman Wall Signs Christmas Decoration, Let It Snow Merry Sign Welcome Hanging for Home Wall Decor Xmas Party Outdoor indoor Supply",
+        "price": "3.99",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/43k7p3V",
+        "image": "https://m.media-amazon.com/images/I/81M6ieTt5SL._AC_SL1500_.jpg",
+        "category": "christmas-day",
+        "featured": false,
+        "id": 1761469475511,
+        "isCustomCategory": true,
+        "priceValue": 3.99
+    },
+    {
+        "title": "Merry Christmas Wreaths for Front Door Wood Tree Welcome Hanging Sign Xmas Wall Decor for Indoor Outdoor Home Holiday Porch Decorrations",
+        "price": "12.99",
+        "rating": 4.8,
+        "affiliateLink": "https://amzn.to/47mVvau",
+        "image": "https://m.media-amazon.com/images/I/71Nd8sJSe1L._AC_SL1500_.jpg",
+        "category": "christmas-day",
+        "featured": false,
+        "id": 1761469475715,
+        "isCustomCategory": true,
+        "priceValue": 12.99
+    },
+    {
+        "title": "Handy Laundry, Christmas Wreath Storage Bag - Durable, Tarp Material, Zipper, Sturdy Carry Handles, Pest Protection - Ideal Home, Garage Organization for Seasonal Holiday Wreath Decorations. (30\")",
+        "price": "12.99",
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/4qy3Tgg",
+        "image": "https://m.media-amazon.com/images/I/91pHCod8AfL._AC_SL1500_.jpg",
+        "category": "christmas-day",
+        "featured": false,
+        "id": 1761469475725,
+        "isCustomCategory": true,
+        "priceValue": 12.99
+    },
     {
         "title": "DIYASY Bats Wall Decor, 120 Pcs 3D Bat Halloween Decoration Stickers for Home Decor 4 Size Waterproof Black Spooky Bats for Room Decals",
         "price": "5.67",
         "rating": 4.4,
         "affiliateLink": "https://amzn.to/46C1EPC",
         "image": "https://m.media-amazon.com/images/I/712DvCKKmfL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758701578713,
+        "id": 1761469472047,
         "isCustomCategory": true,
         "priceValue": 5.67
     },
@@ -18,9 +94,9 @@ const specialOffersData = [
         "rating": 4.6,
         "affiliateLink": "https://amzn.to/4ntDeiz",
         "image": "https://m.media-amazon.com/images/I/81MIMkpq4xL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758701620550,
+        "id": 1761469475503,
         "isCustomCategory": true,
         "priceValue": 11.99
     },
@@ -30,9 +106,9 @@ const specialOffersData = [
         "rating": 4.5,
         "affiliateLink": "https://amzn.to/3IEDmMW",
         "image": "https://m.media-amazon.com/images/I/81JCNXXndQL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758701654532,
+        "id": 1761469478783,
         "isCustomCategory": true,
         "priceValue": 8.99
     },
@@ -42,9 +118,9 @@ const specialOffersData = [
         "rating": 4.4,
         "affiliateLink": "https://amzn.to/3Wbf2oZ",
         "image": "https://m.media-amazon.com/images/I/71jomKyE7VL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758701703976,
+        "id": 1761469475531,
         "isCustomCategory": true,
         "priceValue": 7.29
     },
@@ -54,9 +130,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/3KgyePI",
         "image": "https://m.media-amazon.com/images/I/81v6doO4OKL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758701733908,
+        "id": 1761469474106,
         "isCustomCategory": true,
         "priceValue": 9.99
     },
@@ -66,9 +142,9 @@ const specialOffersData = [
         "rating": 4.3,
         "affiliateLink": "https://amzn.to/4gHxoHO",
         "image": "https://m.media-amazon.com/images/I/61vrOoCMqfL._AC_SL1000_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758701767585,
+        "id": 1761469470668,
         "isCustomCategory": true,
         "priceValue": 9.49
     },
@@ -78,9 +154,9 @@ const specialOffersData = [
         "rating": 4.6,
         "affiliateLink": "https://amzn.to/48gOzhp",
         "image": "https://m.media-amazon.com/images/I/91HPs3rG6HL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758701888035,
+        "id": 1761469476053,
         "isCustomCategory": true,
         "priceValue": 6.99
     },
@@ -90,9 +166,9 @@ const specialOffersData = [
         "rating": 4.6,
         "affiliateLink": "https://amzn.to/46yOV07",
         "image": "https://m.media-amazon.com/images/I/71GzQNlWrRL._AC_SX569_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758702056982,
+        "id": 1761469471013,
         "isCustomCategory": true,
         "priceValue": 9.49
     },
@@ -102,9 +178,9 @@ const specialOffersData = [
         "rating": 4.6,
         "affiliateLink": "https://amzn.to/4pELQEm",
         "image": "https://m.media-amazon.com/images/I/71bpzCcNsWL._AC_SL1000_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758702205959,
+        "id": 1761469475795,
         "isCustomCategory": true,
         "priceValue": 5.99
     },
@@ -114,9 +190,9 @@ const specialOffersData = [
         "rating": 4.4,
         "affiliateLink": "https://amzn.to/3VuLSkH",
         "image": "https://m.media-amazon.com/images/I/61f9pzZjQ7L._AC_SL1000_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758702236450,
+        "id": 1761469473792,
         "isCustomCategory": true,
         "priceValue": 3.99
     },
@@ -126,9 +202,9 @@ const specialOffersData = [
         "rating": 4.6,
         "affiliateLink": "https://amzn.to/4nn1e74",
         "image": "https://m.media-amazon.com/images/I/71MjWVrfs2L._SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758702280041,
+        "id": 1761469472904,
         "isCustomCategory": true,
         "priceValue": 7.99
     },
@@ -138,9 +214,9 @@ const specialOffersData = [
         "rating": 4.3,
         "affiliateLink": "https://amzn.to/3Kjupcq",
         "image": "https://m.media-amazon.com/images/I/51kh1vgB9aL._AC_SL1000_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758702315687,
+        "id": 1761469476145,
         "isCustomCategory": true,
         "priceValue": 5.99
     },
@@ -150,9 +226,9 @@ const specialOffersData = [
         "rating": 4.8,
         "affiliateLink": "https://amzn.to/3IAsQq5",
         "image": "https://m.media-amazon.com/images/I/91jU6fvonZL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758702358777,
+        "id": 1761469472714,
         "isCustomCategory": true,
         "priceValue": 7.99
     },
@@ -162,9 +238,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/4pIFFzq",
         "image": "https://m.media-amazon.com/images/I/71xaahFicpL._AC_SL1000_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758702391423,
+        "id": 1761469471860,
         "isCustomCategory": true,
         "priceValue": 11.89
     },
@@ -174,9 +250,9 @@ const specialOffersData = [
         "rating": 4.8,
         "affiliateLink": "https://amzn.to/4njXG5z",
         "image": "https://m.media-amazon.com/images/I/51tINShOhaL._AC_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758702437388,
+        "id": 1761469476011,
         "isCustomCategory": true,
         "priceValue": 7.49
     },
@@ -186,9 +262,9 @@ const specialOffersData = [
         "rating": 4.3,
         "affiliateLink": "https://amzn.to/46iNUui",
         "image": "https://m.media-amazon.com/images/I/81+PYmYocfL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758702468354,
+        "id": 1761469475469,
         "isCustomCategory": true,
         "priceValue": 9.99
     },
@@ -198,9 +274,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/4nKursf",
         "image": "https://m.media-amazon.com/images/I/71vI1FOWMgL._AC_SL1001_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758702494402,
+        "id": 1761469472463,
         "isCustomCategory": true,
         "priceValue": 6.49
     },
@@ -210,9 +286,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/4gHy2VK",
         "image": "https://m.media-amazon.com/images/I/81KJbmTMXbL._SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758702520983,
+        "id": 1761469471232,
         "isCustomCategory": true,
         "priceValue": 4.49
     },
@@ -222,9 +298,9 @@ const specialOffersData = [
         "rating": 4.6,
         "affiliateLink": "https://amzn.to/47TGhM7",
         "image": "https://m.media-amazon.com/images/I/61i0msvtumL._AC_SX679_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758702570396,
+        "id": 1761469476579,
         "isCustomCategory": true,
         "priceValue": 6.99
     },
@@ -234,9 +310,9 @@ const specialOffersData = [
         "rating": 4.5,
         "affiliateLink": "https://amzn.to/4gOjT9h",
         "image": "https://m.media-amazon.com/images/I/61R9kBOU8LL._AC_SL1000_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758702618342,
+        "id": 1761469478547,
         "isCustomCategory": true,
         "priceValue": 6.99
     },
@@ -246,9 +322,9 @@ const specialOffersData = [
         "rating": 4.6,
         "affiliateLink": "https://amzn.to/4nQagcD",
         "image": "https://m.media-amazon.com/images/I/711heOsTsiL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758702666447,
+        "id": 1761469474508,
         "isCustomCategory": true,
         "priceValue": 9.99
     },
@@ -258,9 +334,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/3KkvH6Y",
         "image": "https://m.media-amazon.com/images/I/71-svyKx7cL._AC_SX522_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758702722952,
+        "id": 1761469472348,
         "isCustomCategory": true,
         "priceValue": 9.83
     },
@@ -270,9 +346,9 @@ const specialOffersData = [
         "rating": 4.3,
         "affiliateLink": "https://amzn.to/42JTSC4",
         "image": "https://m.media-amazon.com/images/I/71Tl37Pfx3L._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758702909854,
+        "id": 1761469474945,
         "isCustomCategory": true,
         "priceValue": 9.99
     },
@@ -282,9 +358,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/3Kjx2uP",
         "image": "https://m.media-amazon.com/images/I/718XQ4fwOhL._AC_SY355_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758702957229,
+        "id": 1761469470933,
         "isCustomCategory": true,
         "priceValue": 6.49
     },
@@ -294,9 +370,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/46ioGwa",
         "image": "https://m.media-amazon.com/images/I/81KJbmTMXbL._SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758702988718,
+        "id": 1761469471369,
         "isCustomCategory": true,
         "priceValue": 4.49
     },
@@ -306,9 +382,9 @@ const specialOffersData = [
         "rating": 4.4,
         "affiliateLink": "https://amzn.to/42bCPIZ",
         "image": "https://m.media-amazon.com/images/I/61FQGdK92iL._AC_SX569_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758703065422,
+        "id": 1761469472908,
         "isCustomCategory": true,
         "priceValue": 14.99
     },
@@ -318,9 +394,9 @@ const specialOffersData = [
         "rating": 4.6,
         "affiliateLink": "https://amzn.to/4mzfWGW",
         "image": "https://m.media-amazon.com/images/I/81t5j7P6d8L._AC_SY550_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758703097174,
+        "id": 1761469477046,
         "isCustomCategory": true,
         "priceValue": 9.99
     },
@@ -330,9 +406,9 @@ const specialOffersData = [
         "rating": 4.8,
         "affiliateLink": "https://amzn.to/46vzztf",
         "image": "https://m.media-amazon.com/images/I/810hk5q8iNL._AC_SX679_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758703126512,
+        "id": 1761469470750,
         "isCustomCategory": true,
         "priceValue": 11.99
     },
@@ -342,9 +418,9 @@ const specialOffersData = [
         "rating": 4.3,
         "affiliateLink": "https://amzn.to/4pCrRpZ",
         "image": "https://m.media-amazon.com/images/I/81ZNF5PqjJL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758703159317,
+        "id": 1761469476216,
         "isCustomCategory": true,
         "priceValue": 4.6
     },
@@ -354,9 +430,9 @@ const specialOffersData = [
         "rating": 4.2,
         "affiliateLink": "https://amzn.to/46vzBBn",
         "image": "https://m.media-amazon.com/images/I/813-EPkt4eL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758703289160,
+        "id": 1761469472827,
         "isCustomCategory": true,
         "priceValue": 27.91
     },
@@ -366,9 +442,9 @@ const specialOffersData = [
         "rating": 4.3,
         "affiliateLink": "https://amzn.to/46C38JG",
         "image": "https://m.media-amazon.com/images/I/81lig4HdKpL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758703353213,
+        "id": 1761469474999,
         "isCustomCategory": true,
         "priceValue": 7.99
     },
@@ -378,9 +454,9 @@ const specialOffersData = [
         "rating": 4.4,
         "affiliateLink": "https://amzn.to/3Kn1oMV",
         "image": "https://m.media-amazon.com/images/I/91eCr9rRnfL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758703381380,
+        "id": 1761469471768,
         "isCustomCategory": true,
         "priceValue": 5.75
     },
@@ -390,9 +466,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/3Kn1pQZ",
         "image": "https://m.media-amazon.com/images/I/71dXEEwap1L._AC_SL1001_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758703410813,
+        "id": 1761469472532,
         "isCustomCategory": true,
         "priceValue": 6.49
     },
@@ -402,9 +478,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/4pzsgK1",
         "image": "https://m.media-amazon.com/images/I/71y7GHC4FYL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758703530315,
+        "id": 1761469476741,
         "isCustomCategory": true,
         "priceValue": 9.99
     },
@@ -414,9 +490,9 @@ const specialOffersData = [
         "rating": 4.6,
         "affiliateLink": "https://amzn.to/47YvtMM",
         "image": "https://m.media-amazon.com/images/I/61C9ec9DYrL._AC_SX395_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758703584547,
+        "id": 1761469475296,
         "isCustomCategory": true,
         "priceValue": 7.99
     },
@@ -426,9 +502,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/46yfdzE",
         "image": "https://m.media-amazon.com/images/I/71sanar2PJL._SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758703624413,
+        "id": 1761469473256,
         "isCustomCategory": true,
         "priceValue": 19.69
     },
@@ -438,9 +514,9 @@ const specialOffersData = [
         "rating": 4.4,
         "affiliateLink": "https://amzn.to/3IgoODf",
         "image": "https://m.media-amazon.com/images/I/81VfT+KbVJL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758703731796,
+        "id": 1761469475593,
         "isCustomCategory": true,
         "priceValue": 11.99
     },
@@ -450,9 +526,9 @@ const specialOffersData = [
         "rating": 4.6,
         "affiliateLink": "https://amzn.to/3KpAXpX",
         "image": "https://m.media-amazon.com/images/I/71OPlMw2bcL._SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758703838242,
+        "id": 1761469470665,
         "isCustomCategory": true,
         "priceValue": 14.84
     },
@@ -462,9 +538,9 @@ const specialOffersData = [
         "rating": 4.5,
         "affiliateLink": "https://amzn.to/46CbQYE",
         "image": "https://m.media-amazon.com/images/I/81rO3KemnVL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758703879637,
+        "id": 1761469470655,
         "isCustomCategory": true,
         "priceValue": 24.98
     },
@@ -474,9 +550,9 @@ const specialOffersData = [
         "rating": 4,
         "affiliateLink": "https://amzn.to/3W5MbCA",
         "image": "https://m.media-amazon.com/images/I/71RV8uaAhPL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758703909857,
+        "id": 1761469470168,
         "isCustomCategory": true,
         "priceValue": 15.99
     },
@@ -486,9 +562,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/4nlAXWJ",
         "image": "https://m.media-amazon.com/images/I/81LZc0QcyDL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758703937124,
+        "id": 1761469470584,
         "isCustomCategory": true,
         "priceValue": 19.75
     },
@@ -498,9 +574,9 @@ const specialOffersData = [
         "rating": 4.6,
         "affiliateLink": "https://amzn.to/47ZCn4i",
         "image": "https://m.media-amazon.com/images/I/617bx1VnwXL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758703982275,
+        "id": 1761469476139,
         "isCustomCategory": true,
         "priceValue": 11.95
     },
@@ -510,9 +586,9 @@ const specialOffersData = [
         "rating": 4.5,
         "affiliateLink": "https://amzn.to/4pEGJUU",
         "image": "https://m.media-amazon.com/images/I/71uCNl-4XXL._AC_SL1000_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758704018520,
+        "id": 1761469475221,
         "isCustomCategory": true,
         "priceValue": 24.74
     },
@@ -522,9 +598,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/4nCyAPz",
         "image": "https://m.media-amazon.com/images/I/81PjbNYr56L._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758704063592,
+        "id": 1761469469350,
         "isCustomCategory": true,
         "priceValue": 13.99
     },
@@ -534,9 +610,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/4gMZr8U",
         "image": "https://m.media-amazon.com/images/I/81OB2NPPYoL._SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758704103897,
+        "id": 1761469475401,
         "isCustomCategory": true,
         "priceValue": 16.99
     },
@@ -546,9 +622,9 @@ const specialOffersData = [
         "rating": 4.8,
         "affiliateLink": "https://amzn.to/3Kg9yGZ",
         "image": "https://m.media-amazon.com/images/I/81c89wVUbYL._SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758704131006,
+        "id": 1761469476151,
         "isCustomCategory": true,
         "priceValue": 18.48
     },
@@ -558,9 +634,9 @@ const specialOffersData = [
         "rating": 4.5,
         "affiliateLink": "https://amzn.to/46ippxo",
         "image": "https://m.media-amazon.com/images/I/81VLuMf76RL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758704160089,
+        "id": 1761469470707,
         "isCustomCategory": true,
         "priceValue": 13.99
     },
@@ -570,9 +646,9 @@ const specialOffersData = [
         "rating": 4.1,
         "affiliateLink": "https://amzn.to/46FJ3T3",
         "image": "https://m.media-amazon.com/images/I/71e4jlUTOOL._AC_SL1000_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758704192298,
+        "id": 1761469474125,
         "isCustomCategory": true,
         "priceValue": 13.99
     },
@@ -582,9 +658,9 @@ const specialOffersData = [
         "rating": 4.2,
         "affiliateLink": "https://amzn.to/47UkyDP",
         "image": "https://m.media-amazon.com/images/I/81nvxe7IXeL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758704224860,
+        "id": 1761469475722,
         "isCustomCategory": true,
         "priceValue": 12.28
     },
@@ -594,9 +670,9 @@ const specialOffersData = [
         "rating": 4.8,
         "affiliateLink": "https://amzn.to/4pE8f4I",
         "image": "https://m.media-amazon.com/images/I/51RJH8zeo0L._AC_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758704255618,
+        "id": 1761469469210,
         "isCustomCategory": true,
         "priceValue": 14.99
     },
@@ -606,9 +682,9 @@ const specialOffersData = [
         "rating": 4.5,
         "affiliateLink": "https://amzn.to/4ntFlmv",
         "image": "https://m.media-amazon.com/images/I/61ySVwd516L._AC_SL1001_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758704288698,
+        "id": 1761469476462,
         "isCustomCategory": true,
         "priceValue": 17.99
     },
@@ -618,9 +694,9 @@ const specialOffersData = [
         "rating": 4.4,
         "affiliateLink": "https://amzn.to/3Vuakmb",
         "image": "https://m.media-amazon.com/images/I/6102rnNLJTL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758705564606,
+        "id": 1761469476371,
         "isCustomCategory": true,
         "priceValue": 15.99
     },
@@ -630,9 +706,9 @@ const specialOffersData = [
         "rating": 4.2,
         "affiliateLink": "https://amzn.to/3Kj6tGk",
         "image": "https://m.media-amazon.com/images/I/81Hzeqm036L._AC_SL1200_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758705610196,
+        "id": 1761469473274,
         "isCustomCategory": true,
         "priceValue": 17.99
     },
@@ -642,9 +718,9 @@ const specialOffersData = [
         "rating": 4.5,
         "affiliateLink": "https://amzn.to/4nLIvBS",
         "image": "https://m.media-amazon.com/images/I/81ozhZ7yqrL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758705652628,
+        "id": 1761469474136,
         "isCustomCategory": true,
         "priceValue": 14.22
     },
@@ -654,9 +730,9 @@ const specialOffersData = [
         "rating": 4,
         "affiliateLink": "https://amzn.to/4niFOrw",
         "image": "https://m.media-amazon.com/images/I/713xKwpyfRL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758705679802,
+        "id": 1761469475568,
         "isCustomCategory": true,
         "priceValue": 13.99
     },
@@ -666,9 +742,9 @@ const specialOffersData = [
         "rating": 4.6,
         "affiliateLink": "https://amzn.to/3IbQ0Da",
         "image": "https://m.media-amazon.com/images/I/61eJ1qF3NkL._AC_SY500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758705707733,
+        "id": 1761469476823,
         "isCustomCategory": true,
         "priceValue": 17.99
     },
@@ -678,9 +754,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/3IDtvHe",
         "image": "https://m.media-amazon.com/images/I/81umEfbPA8S._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758705731840,
+        "id": 1761469469660,
         "isCustomCategory": true,
         "priceValue": 9.99
     },
@@ -690,9 +766,9 @@ const specialOffersData = [
         "rating": 4.3,
         "affiliateLink": "https://amzn.to/3W4xTlH",
         "image": "https://m.media-amazon.com/images/I/71Ak1+wMyAL._AC_SX569_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758705769845,
+        "id": 1761469475174,
         "isCustomCategory": true,
         "priceValue": 12.79
     },
@@ -702,9 +778,9 @@ const specialOffersData = [
         "rating": 4.5,
         "affiliateLink": "https://amzn.to/42JVWdi",
         "image": "https://m.media-amazon.com/images/I/81SPyDQmwUL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758705806324,
+        "id": 1761469470859,
         "isCustomCategory": true,
         "priceValue": 15.99
     },
@@ -714,9 +790,9 @@ const specialOffersData = [
         "rating": 4.2,
         "affiliateLink": "https://amzn.to/4nPBH6d",
         "image": "https://m.media-amazon.com/images/I/71n2aJ1tLRL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758705871316,
+        "id": 1761469475850,
         "isCustomCategory": true,
         "priceValue": 18.99
     },
@@ -726,9 +802,9 @@ const specialOffersData = [
         "rating": 4.6,
         "affiliateLink": "https://amzn.to/4mBwYnM",
         "image": "https://m.media-amazon.com/images/I/712IcGa+I4L._AC_SX466_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758705916658,
+        "id": 1761469478899,
         "isCustomCategory": true,
         "priceValue": 16.98
     },
@@ -738,9 +814,9 @@ const specialOffersData = [
         "rating": 4.6,
         "affiliateLink": "https://amzn.to/4nMP871",
         "image": "https://m.media-amazon.com/images/I/714COja66kL._AC_SX522_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758705948845,
+        "id": 1761469474215,
         "isCustomCategory": true,
         "priceValue": 15.99
     },
@@ -750,9 +826,9 @@ const specialOffersData = [
         "rating": 4.4,
         "affiliateLink": "https://amzn.to/42N1bsJ",
         "image": "https://m.media-amazon.com/images/I/71q1Ko8Jz1L._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758705978297,
+        "id": 1761469477535,
         "isCustomCategory": true,
         "priceValue": 9.99
     },
@@ -762,9 +838,9 @@ const specialOffersData = [
         "rating": 4.5,
         "affiliateLink": "https://amzn.to/4nQcYij",
         "image": "https://m.media-amazon.com/images/I/51gA9mQorAL._AC_SY550_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706015229,
+        "id": 1761469476914,
         "isCustomCategory": true,
         "priceValue": 14.99
     },
@@ -774,9 +850,9 @@ const specialOffersData = [
         "rating": 4.8,
         "affiliateLink": "https://amzn.to/4pDjU3V",
         "image": "https://m.media-amazon.com/images/I/813BhuYStTS._AC_SX522_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706047426,
+        "id": 1761469476539,
         "isCustomCategory": true,
         "priceValue": 13.88
     },
@@ -786,9 +862,9 @@ const specialOffersData = [
         "rating": 4.6,
         "affiliateLink": "https://amzn.to/3KDVV4o",
         "image": "https://m.media-amazon.com/images/I/613h5G7FjdL._AC_SX522_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706081332,
+        "id": 1761469474515,
         "isCustomCategory": true,
         "priceValue": 9.99
     },
@@ -798,9 +874,9 @@ const specialOffersData = [
         "rating": 4.8,
         "affiliateLink": "https://amzn.to/48x7TXz",
         "image": "https://m.media-amazon.com/images/I/71+hJ+gdLNL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706128917,
+        "id": 1761469473138,
         "isCustomCategory": true,
         "priceValue": 11.99
     },
@@ -810,9 +886,9 @@ const specialOffersData = [
         "rating": 4.9,
         "affiliateLink": "https://amzn.to/46AKGkS",
         "image": "https://m.media-amazon.com/images/I/71leXNri79L._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706168897,
+        "id": 1761469470882,
         "isCustomCategory": true,
         "priceValue": 23.95
     },
@@ -822,9 +898,9 @@ const specialOffersData = [
         "rating": 4.5,
         "affiliateLink": "https://amzn.to/4pCEPUP",
         "image": "https://m.media-amazon.com/images/I/81LdjiO0rYL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706197290,
+        "id": 1761469473012,
         "isCustomCategory": true,
         "priceValue": 19.96
     },
@@ -834,9 +910,9 @@ const specialOffersData = [
         "rating": 4.8,
         "affiliateLink": "https://amzn.to/4pEIrFO",
         "image": "https://m.media-amazon.com/images/I/71K6JGpNazL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706222486,
+        "id": 1761469477211,
         "isCustomCategory": true,
         "priceValue": 24.99
     },
@@ -846,9 +922,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/4nkcPnt",
         "image": "https://m.media-amazon.com/images/I/71L7n9KMbrL._AC_SL1000_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706255554,
+        "id": 1761469476524,
         "isCustomCategory": true,
         "priceValue": 19.75
     },
@@ -858,9 +934,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/46rv9n6",
         "image": "https://m.media-amazon.com/images/I/719W7Hj-CfL._AC_SX522_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706288031,
+        "id": 1761469469282,
         "isCustomCategory": true,
         "priceValue": 26.99
     },
@@ -870,9 +946,9 @@ const specialOffersData = [
         "rating": 4.3,
         "affiliateLink": "https://amzn.to/3KbdCIG",
         "image": "https://m.media-amazon.com/images/I/61Ar0Qrx8rL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706379466,
+        "id": 1761469475163,
         "isCustomCategory": true,
         "priceValue": 13.95
     },
@@ -882,9 +958,9 @@ const specialOffersData = [
         "rating": 4.5,
         "affiliateLink": "https://amzn.to/46z7AsB",
         "image": "https://m.media-amazon.com/images/I/81hK+PBsQPL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706415301,
+        "id": 1761469477156,
         "isCustomCategory": true,
         "priceValue": 16.99
     },
@@ -894,9 +970,9 @@ const specialOffersData = [
         "rating": 4.3,
         "affiliateLink": "https://amzn.to/46ySCTxhttps://amzn.to/46ySCTx",
         "image": "https://m.media-amazon.com/images/I/91BAGB0aQzL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706445867,
+        "id": 1761469473192,
         "isCustomCategory": true,
         "priceValue": 13.76
     },
@@ -906,9 +982,9 @@ const specialOffersData = [
         "rating": 4.3,
         "affiliateLink": "https://amzn.to/4pIIRLq",
         "image": "https://m.media-amazon.com/images/I/81ZMub3BSML._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706483450,
+        "id": 1761469475874,
         "isCustomCategory": true,
         "priceValue": 24.69
     },
@@ -918,9 +994,9 @@ const specialOffersData = [
         "rating": 4.3,
         "affiliateLink": "https://amzn.to/4mA8CuB",
         "image": "https://m.media-amazon.com/images/I/81hTahfL-7L._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706518951,
+        "id": 1761469478115,
         "isCustomCategory": true,
         "priceValue": 19.99
     },
@@ -930,9 +1006,9 @@ const specialOffersData = [
         "rating": 4.5,
         "affiliateLink": "https://amzn.to/48x8CIh",
         "image": "https://m.media-amazon.com/images/I/61ynbcQDIdL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706546220,
+        "id": 1761469474316,
         "isCustomCategory": true,
         "priceValue": 19.71
     },
@@ -942,9 +1018,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/42C0SRy",
         "image": "https://m.media-amazon.com/images/I/91x4er9PD0L._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706643810,
+        "id": 1761469473863,
         "isCustomCategory": true,
         "priceValue": 18.99
     },
@@ -954,9 +1030,9 @@ const specialOffersData = [
         "rating": 4.8,
         "affiliateLink": "https://amzn.to/3KgMGqY",
         "image": "https://m.media-amazon.com/images/I/81CSoEg-QkL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706674929,
+        "id": 1761469472791,
         "isCustomCategory": true,
         "priceValue": 17.99
     },
@@ -966,9 +1042,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/3VS4Zp3",
         "image": "https://m.media-amazon.com/images/I/81XO1ODGV5L._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706710406,
+        "id": 1761469469203,
         "isCustomCategory": true,
         "priceValue": 24.99
     },
@@ -978,9 +1054,9 @@ const specialOffersData = [
         "rating": 4.3,
         "affiliateLink": "https://amzn.to/4nQUmie",
         "image": "https://m.media-amazon.com/images/I/A1SS0AT53NL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706757306,
+        "id": 1761469476984,
         "isCustomCategory": true,
         "priceValue": 14.99
     },
@@ -990,9 +1066,9 @@ const specialOffersData = [
         "rating": 4.6,
         "affiliateLink": "https://amzn.to/3IbRBJa",
         "image": "https://m.media-amazon.com/images/I/61Xsz1yLEML._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706886507,
+        "id": 1761469473357,
         "isCustomCategory": true,
         "priceValue": 42.29
     },
@@ -1002,9 +1078,9 @@ const specialOffersData = [
         "rating": 4.6,
         "affiliateLink": "https://amzn.to/4pF7EzY",
         "image": "https://m.media-amazon.com/images/I/81lnoGLWfIL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706916923,
+        "id": 1761469473128,
         "isCustomCategory": true,
         "priceValue": 29.99
     },
@@ -1014,9 +1090,9 @@ const specialOffersData = [
         "rating": 4.5,
         "affiliateLink": "https://amzn.to/4nInx6L",
         "image": "https://m.media-amazon.com/images/I/81CA9ESbDrL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706955642,
+        "id": 1761469472339,
         "isCustomCategory": true,
         "priceValue": 26.99
     },
@@ -1026,9 +1102,9 @@ const specialOffersData = [
         "rating": 4.5,
         "affiliateLink": "https://amzn.to/46yi8IC",
         "image": "https://m.media-amazon.com/images/I/71sfUfucrML._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758706987661,
+        "id": 1761469472786,
         "isCustomCategory": true,
         "priceValue": 25.99
     },
@@ -1038,9 +1114,9 @@ const specialOffersData = [
         "rating": 4.3,
         "affiliateLink": "https://amzn.to/42GKiQt",
         "image": "https://m.media-amazon.com/images/I/71P1ozSJAwL._AC_SX522_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758707014233,
+        "id": 1761469475513,
         "isCustomCategory": true,
         "priceValue": 28.99
     },
@@ -1050,9 +1126,9 @@ const specialOffersData = [
         "rating": 4.8,
         "affiliateLink": "https://amzn.to/428oH3i",
         "image": "https://m.media-amazon.com/images/I/81enJoxjXiL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758707066066,
+        "id": 1761469477599,
         "isCustomCategory": true,
         "priceValue": 49.89
     },
@@ -1062,9 +1138,9 @@ const specialOffersData = [
         "rating": 4.4,
         "affiliateLink": "https://amzn.to/4pCvdJB",
         "image": "https://m.media-amazon.com/images/I/41uEZOjiFbL._AC_SX466_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758707089347,
+        "id": 1761469475679,
         "isCustomCategory": true,
         "priceValue": 31.99
     },
@@ -1074,9 +1150,9 @@ const specialOffersData = [
         "rating": 4,
         "affiliateLink": "https://amzn.to/4pEY4wP",
         "image": "https://m.media-amazon.com/images/I/81QogaobZHL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758707121124,
+        "id": 1761469476590,
         "isCustomCategory": true,
         "priceValue": 31.99
     },
@@ -1086,9 +1162,9 @@ const specialOffersData = [
         "rating": 4.8,
         "affiliateLink": "https://amzn.to/46C2X0W",
         "image": "https://m.media-amazon.com/images/I/61eEdH9dbnL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758707159462,
+        "id": 1761469476783,
         "isCustomCategory": true,
         "priceValue": 29.95
     },
@@ -1098,9 +1174,9 @@ const specialOffersData = [
         "rating": 4.7,
         "affiliateLink": "https://amzn.to/3VARlGy",
         "image": "https://m.media-amazon.com/images/I/61Dl8-bls1L._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758707181591,
+        "id": 1761469473319,
         "isCustomCategory": true,
         "priceValue": 27.34
     },
@@ -1110,9 +1186,9 @@ const specialOffersData = [
         "rating": 4,
         "affiliateLink": "https://amzn.to/4nQg6L6",
         "image": "https://m.media-amazon.com/images/I/71cvGVkuuoL._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758707282305,
+        "id": 1761469478850,
         "isCustomCategory": true,
         "priceValue": 32.99
     },
@@ -1122,24 +1198,24 @@ const specialOffersData = [
         "rating": 5,
         "affiliateLink": "https://amzn.to/4njf2zp",
         "image": "https://m.media-amazon.com/images/I/71YKcnx5sML._AC_SL1500_.jpg",
-        "category": "amazon-halloween-deals-gifts-2025",
+        "category": "christmas-day",
         "featured": false,
-        "id": 1758707326889,
+        "id": 1761469472974,
         "isCustomCategory": true,
         "priceValue": 29.99
     }
 ];
 
 // Custom Category Configuration for SEO
+// This automatically updates the <title>, <meta description>, and Open Graph tags
 const customCategoryConfig = {
+    "name": "Christmas Gifts 2025",
+    "slug": "christmas-gifts-2025",
+    "description": "Discover amazing Christmas Gifts 2025 and Secret Santa Gifts items for every budget",
     "enabled": true,
-    "name": "Amazon Halloween Deals & Gifts 2025",
-    "slug": "amazon-halloween-deals-gifts-2025",
-    "description": "Discover amazing halloween deals and best gift items for every budget",
-    "seoTitle": "Halloween Deals & Gifts",
-    "seoDescription": "Shop the best Amazon Halloween deals & gifts 2025 — costumes, décor, party supplies, spooky bundles & last-minute gift ideas. Huge discounts, Prime shipping & limited-time Halloween sale on Amazon!\nAmazon Halloween deals\n\nAmazon Halloween gifts\n\nHalloween deals on Amazon\n\nAmazon Halloween sale\n\ncostumes\n\ndécor\n\nparty supplies\n\nspooky bundles\n\nlast-minute gift ideas\n\nPrime shipping\n\nlimited-time sale",
-    "lastUpdated": "2025-09-24",
-    "isActive": true
+    "seoTitle": "Christmas Gifts 2025",
+    "seoDescription": "christmas gifts  \nchristmas gift ideas  \nchristmas gifts for her  \nchristmas gifts for him  \nchristmas gifts for kids  \nunique christmas gifts  \nfunny christmas gifts  \nbudget christmas gifts  \nlast minute christmas gifts  \nstocking stuffers  \nsecret santa gift ideas  \nsecret santa gifts under $20  \nwhite elephant gift ideas  \ncorporate holiday gifts  \npersonalized christmas gifts  \nchristmas gifts for coworkers  \nchristmas gifts for mom  \nchristmas gifts for dad  \nchristmas gifts for teens  \namazon christmas gifts  \nchristmas gift baskets  \nchristmas present ideas  \nchristmas gifts for men  \nchristmas gifts for women  \nsecret santa gifts  \nholiday gifts christmas  \nchristmas gifts under $50  \nchristmas gifts under $100  \ncustom christmas gifts  \nchristmas gifts for grandparents  \nchristmas gifts for teachers  \nfun secret santa gifts  \nlast minute secret santa  \nstocking stuffers under $10  \nunique secret santa gifts  \nwhite elephant christmas gifts  \nboxed christmas gifts  \ntech christmas gifts  \neco friendly christmas gifts  \nhandmade christmas gifts  \nchristmas gifts for pets  \nchristmas gifts for him under $25  \nchristmas gifts for her under $25  \nsecret santa office gifts  \nsecret santa gift ideas under $10  \nchristmas gifts uk (or ca/us)  \nchristmas gift ideas 2025",
+    "lastUpdated": "2025-10-26T09:19:18.579Z"
 };
 
 // Global variables for special offers page
@@ -1151,8 +1227,9 @@ let filteredSpecialOffers = [];
 function initializeSpecialOffersPage() {
     console.log('Initializing special offers page...');
 
-    // Update SEO meta tags if custom config is available
+    // Update SEO meta tags and page content if custom config is available
     updateSEOMetaTags();
+    updatePageContent();
 
     // Get DOM elements
     const productsContainer = document.getElementById('products-container');
@@ -1205,9 +1282,11 @@ function updateSEOMetaTags() {
     if (typeof customCategoryConfig !== 'undefined' && customCategoryConfig) {
         console.log('Updating SEO meta tags with custom configuration');
 
-        // Update page title
+        // Update page title (browser tab)
         if (customCategoryConfig.seoTitle) {
-            document.title = customCategoryConfig.seoTitle;
+            document.title = customCategoryConfig.seoTitle + ' | Gift On Budget';
+        } else if (customCategoryConfig.name) {
+            document.title = customCategoryConfig.name + ' | Gift On Budget';
         }
 
         // Update meta description
@@ -1216,30 +1295,61 @@ function updateSEOMetaTags() {
             if (metaDescription) {
                 metaDescription.setAttribute('content', customCategoryConfig.seoDescription);
             }
+        } else if (customCategoryConfig.description) {
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+                metaDescription.setAttribute('content', customCategoryConfig.description);
+            }
         }
 
         // Update Open Graph title
-        if (customCategoryConfig.seoTitle) {
+        if (customCategoryConfig.seoTitle || customCategoryConfig.name) {
             const ogTitle = document.querySelector('meta[property="og:title"]');
             if (ogTitle) {
-                ogTitle.setAttribute('content', customCategoryConfig.seoTitle);
+                ogTitle.setAttribute('content', customCategoryConfig.seoTitle || customCategoryConfig.name);
             }
         }
 
         // Update Open Graph description
-        if (customCategoryConfig.seoDescription) {
+        if (customCategoryConfig.seoDescription || customCategoryConfig.description) {
             const ogDescription = document.querySelector('meta[property="og:description"]');
             if (ogDescription) {
-                ogDescription.setAttribute('content', customCategoryConfig.seoDescription);
+                ogDescription.setAttribute('content', customCategoryConfig.seoDescription || customCategoryConfig.description);
             }
         }
 
-        console.log('SEO meta tags updated:', {
-            title: customCategoryConfig.seoTitle,
-            description: customCategoryConfig.seoDescription
-        });
-    } else {
-        console.log('No custom category configuration found for SEO updates');
+        console.log('SEO meta tags updated successfully');
+    }
+}
+
+// Update page content (H1, description, breadcrumb)
+function updatePageContent() {
+    if (typeof customCategoryConfig !== 'undefined' && customCategoryConfig) {
+        console.log('Updating page content elements');
+
+        // Update breadcrumb title
+        const breadcrumbTitle = document.getElementById('breadcrumb-title');
+        if (breadcrumbTitle && customCategoryConfig.name) {
+            breadcrumbTitle.textContent = customCategoryConfig.name;
+        }
+
+        // Update main category name (H1)
+        const categoryNameElement = document.getElementById('category-name');
+        if (categoryNameElement && customCategoryConfig.name) {
+            categoryNameElement.textContent = customCategoryConfig.name;
+        }
+
+        // Update page description (use Description field, not SEO Description)
+        const pageDescription = document.getElementById('page-description');
+        if (pageDescription) {
+            if (customCategoryConfig.description) {
+                pageDescription.textContent = customCategoryConfig.description;
+            } else if (customCategoryConfig.seoDescription) {
+                pageDescription.textContent = customCategoryConfig.seoDescription;
+            }
+        }
+
+        console.log('Page content updated successfully');
     }
 }
 
