@@ -104,8 +104,8 @@ function filterAndDisplayByCategory(category) {
 
     console.log(`Found ${currentProducts.length} products in ${category} category`);
 
-    // Sort by price (highest to lowest)
-    currentProducts.sort((a, b) => b.priceValue - a.priceValue);
+    // Sort by price (lowest to highest)
+    currentProducts.sort((a, b) => a.priceValue - b.priceValue);
 
     // Display products
     renderProducts(currentProducts);
@@ -134,8 +134,8 @@ function handleCategorySearch(category) {
         product.category.toLowerCase().includes(searchTerm)
     );
 
-    // Sort by price (highest to lowest)
-    searchResults.sort((a, b) => b.priceValue - a.priceValue);
+    // Sort by price (lowest to highest)
+    searchResults.sort((a, b) => a.priceValue - b.priceValue);
 
     console.log(`Found ${searchResults.length} search results in ${category}`);
     renderProducts(searchResults);
@@ -177,15 +177,15 @@ function filterCategoryByBudget(budget) {
         'flower-delivery': 'flower-delivery',
         'gift-baskets': 'gift-baskets',
         'photo-gifts': 'photo-gifts',
-        'gifts-for-boyfriends': 'gifts-for-boyfriends',
-        'gifts-for-girlfriends': 'gifts-for-girlfriends',
-        'gifts-for-moms': 'gifts-for-moms',
-        'gifts-for-dads': 'gifts-for-dads',
-        'gifts-for-grandparents': 'gifts-for-grandparents',
-        'gifts-for-someone-who-has-everything': 'gifts-for-someone-who-has-everything',
-        'gifts-for-couples': 'gifts-for-couples',
-        'gifts-for-best-friends': 'gifts-for-best-friends',
-        'personalized-gifts': 'personalized-gifts'
+        'birthday-gifts-for-him': 'birthday-gifts-for-him',
+        'birthday-gifts-for-girlfriends': 'birthday-gifts-for-girlfriends',
+        'birthday-gifts-for-moms': 'birthday-gifts-for-moms',
+        'birthday-gifts-for-dads': 'birthday-gifts-for-dads',
+        'birthday-gifts-for-grandparents': 'birthday-gifts-for-grandparents',
+        'birthday-gifts-for-someone-who-has-everything': 'birthday-gifts-for-someone-who-has-everything',
+        'birthday-gifts-for-couples': 'birthday-gifts-for-couples',
+        'birthday-gifts-for-best-friends': 'birthday-gifts-for-best-friends',
+        'personalized-birthday-gifts': 'personalized-birthday-gifts'
     };
 
     const category = categoryMap[pageName] || pageName;
@@ -213,8 +213,8 @@ function filterCategoryByBudget(budget) {
         });
     }
 
-    // Sort by price (highest to lowest)
-    categoryProducts.sort((a, b) => b.priceValue - a.priceValue);
+    // Sort by price (lowest to highest)
+    categoryProducts.sort((a, b) => a.priceValue - b.priceValue);
 
     console.log(`Found ${categoryProducts.length} products for ${category} with budget ${budget}`);
     renderProducts(categoryProducts);
@@ -264,8 +264,8 @@ function filterAndDisplayProducts(budget) {
         });
     }
 
-    // Sort by price (highest to lowest)
-    filteredProducts.sort((a, b) => b.priceValue - a.priceValue);
+    // Sort by price (lowest to highest)
+    filteredProducts.sort((a, b) => a.priceValue - b.priceValue);
 
     // Store current filtered products
     currentProducts = filteredProducts;
@@ -466,8 +466,8 @@ function initializeMainPageSearch() {
             );
         }
 
-        // Sort by price (highest to lowest)
-        filteredProducts.sort((a, b) => b.priceValue - a.priceValue);
+        // Sort by price (lowest to highest)
+        filteredProducts.sort((a, b) => a.priceValue - b.priceValue);
 
         // Store current search results
         currentSearchResults = filteredProducts;
@@ -514,8 +514,8 @@ function filterSearchByBudget(budget) {
         });
     }
 
-    // Sort by price (highest to lowest)
-    filteredResults.sort((a, b) => b.priceValue - a.priceValue);
+    // Sort by price (lowest to highest)
+    filteredResults.sort((a, b) => a.priceValue - b.priceValue);
 
     console.log(`Found ${filteredResults.length} search results for budget ${budget}`);
     renderProducts(filteredResults);
@@ -630,8 +630,19 @@ function initializeSpecialProductsNavigation() {
     // Scroll amount (adjust based on item width + gap)
     const scrollAmount = 300;
 
+    // Auto-scroll configuration
+    let animationFrameId = null;
+    let isPaused = false;
+    let isManualScrolling = false;
+    let scrollDirection = 1; // 1 for right, -1 for left
+    const scrollSpeed = 0.8; // Pixels per frame (adjusted for smooth, moderate speed)
+    const pauseDuration = 5000; // Pause for 5 seconds on user interaction
+    let lastTimestamp = 0;
+    let manualScrollTimeout = null;
+
     // Left arrow click
     leftArrow.addEventListener('click', () => {
+        pauseAutoScroll();
         carousel.scrollBy({
             left: -scrollAmount,
             behavior: 'smooth'
@@ -640,6 +651,7 @@ function initializeSpecialProductsNavigation() {
 
     // Right arrow click
     rightArrow.addEventListener('click', () => {
+        pauseAutoScroll();
         carousel.scrollBy({
             left: scrollAmount,
             behavior: 'smooth'
@@ -655,14 +667,153 @@ function initializeSpecialProductsNavigation() {
         rightArrow.disabled = isAtEnd;
     }
 
+    // Smooth continuous auto-scroll function using requestAnimationFrame
+    function autoScroll(timestamp) {
+        if (isPaused || isManualScrolling) {
+            animationFrameId = null;
+            return;
+        }
+
+        // Initialize timestamp on first run
+        if (!lastTimestamp) lastTimestamp = timestamp;
+
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        const currentScroll = carousel.scrollLeft;
+
+        // Check if we've reached the end (scrolling right)
+        if (scrollDirection === 1 && currentScroll >= maxScroll - 1) {
+            scrollDirection = -1; // Reverse to left
+        }
+        // Check if we've reached the start (scrolling left)
+        else if (scrollDirection === -1 && currentScroll <= 1) {
+            scrollDirection = 1; // Reverse to right
+        }
+
+        // Direct scrollLeft manipulation for smoothest performance
+        carousel.scrollLeft += scrollSpeed * scrollDirection;
+
+        // Continue the animation loop
+        animationFrameId = requestAnimationFrame(autoScroll);
+    }
+
+    // Start auto-scroll
+    function startAutoScroll() {
+        if (animationFrameId) {
+            cancelAnimationFrame(animationFrameId);
+        }
+        lastTimestamp = 0; // Reset timestamp
+        animationFrameId = requestAnimationFrame(autoScroll);
+    }
+
+    // Stop auto-scroll
+    function stopAutoScroll() {
+        if (animationFrameId) {
+            cancelAnimationFrame(animationFrameId);
+            animationFrameId = null;
+        }
+        lastTimestamp = 0;
+    }
+
+    // Pause auto-scroll temporarily
+    function pauseAutoScroll() {
+        isPaused = true;
+        stopAutoScroll();
+
+        // Resume after pause duration
+        setTimeout(() => {
+            isPaused = false;
+            startAutoScroll();
+        }, pauseDuration);
+    }
+
+    // Pause on hover
+    carousel.addEventListener('mouseenter', () => {
+        pauseAutoScroll();
+    });
+
+    // Pause on touch/click
+    carousel.addEventListener('touchstart', (e) => {
+        pauseAutoScroll();
+    }, { passive: true });
+
+    carousel.addEventListener('click', (e) => {
+        // Only pause if clicking on the carousel itself, not on product links
+        if (!e.target.closest('a')) {
+            pauseAutoScroll();
+        }
+    });
+
+    // Handle manual scroll detection with debouncing
+    let userScrolling = false;
+    carousel.addEventListener('scroll', () => {
+        // Only update arrow states, don't interfere with auto-scroll
+        updateArrowStates();
+    }, { passive: true });
+
+    // Detect user interaction (wheel, touch, trackpad)
+    carousel.addEventListener('wheel', () => {
+        if (!userScrolling) {
+            userScrolling = true;
+            isManualScrolling = true;
+            stopAutoScroll();
+        }
+
+        if (manualScrollTimeout) {
+            clearTimeout(manualScrollTimeout);
+        }
+
+        manualScrollTimeout = setTimeout(() => {
+            userScrolling = false;
+            isManualScrolling = false;
+            if (!isPaused) {
+                startAutoScroll();
+            }
+        }, 1000);
+    }, { passive: true });
+
+    carousel.addEventListener('touchstart', () => {
+        if (!userScrolling) {
+            userScrolling = true;
+            isManualScrolling = true;
+            stopAutoScroll();
+        }
+    }, { passive: true });
+
+    carousel.addEventListener('touchend', () => {
+        if (manualScrollTimeout) {
+            clearTimeout(manualScrollTimeout);
+        }
+
+        manualScrollTimeout = setTimeout(() => {
+            userScrolling = false;
+            isManualScrolling = false;
+            if (!isPaused) {
+                startAutoScroll();
+            }
+        }, 1000);
+    }, { passive: true });
+
     // Initial state
     updateArrowStates();
 
-    // Update on scroll
-    carousel.addEventListener('scroll', updateArrowStates);
+    // Start auto-scroll after a short delay
+    setTimeout(() => {
+        startAutoScroll();
+    }, 1000);
 
     // Update on window resize
     window.addEventListener('resize', updateArrowStates);
+
+    // Pause when tab is not visible
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            stopAutoScroll();
+        } else {
+            if (!isPaused) {
+                startAutoScroll();
+            }
+        }
+    });
 }
 
 // Footer Toggle Functionality for Mobile

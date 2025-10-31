@@ -87,10 +87,127 @@ function updateCategorySEOMetaTags(categorySlug) {
 function loadCategoryProducts(categorySlug) {
     console.log('Loading products for category:', categorySlug);
 
-    // Filter products by category
-    allCategoryProducts = allProductsData.filter(product =>
-        product.category === categorySlug
-    );
+    // Special case: "gift-ideas-for-her" uses banner1Products (category: "banner-1")
+    if (categorySlug === 'gift-ideas-for-her') {
+        if (typeof window.banner1Products !== 'undefined' && window.banner1Products) {
+            console.log('Loading banner1Products for Gift Ideas for Her:', window.banner1Products.length);
+            allCategoryProducts = [...window.banner1Products];
+        } else {
+            console.warn('banner1Products not available - make sure banner-1-data.js is loaded');
+            allCategoryProducts = [];
+        }
+    }
+    // Holiday Gifts - Valentine's Day
+    else if (categorySlug === 'valentines-day-gifts') {
+        if (typeof window.valentinesProducts !== 'undefined' && window.valentinesProducts && window.valentinesProducts.products) {
+            console.log('Loading valentinesProducts:', window.valentinesProducts.products.length);
+            allCategoryProducts = [...window.valentinesProducts.products];
+        } else {
+            console.warn('valentinesProducts not available');
+            allCategoryProducts = [];
+        }
+    }
+    // Holiday Gifts - Mother's Day
+    else if (categorySlug === 'mothers-day-gifts') {
+        if (typeof window.mothersdayProducts !== 'undefined' && window.mothersdayProducts && window.mothersdayProducts.products) {
+            console.log('Loading mothersdayProducts:', window.mothersdayProducts.products.length);
+            allCategoryProducts = [...window.mothersdayProducts.products];
+        } else {
+            console.warn('mothersdayProducts not available');
+            allCategoryProducts = [];
+        }
+    }
+    // Holiday Gifts - Father's Day
+    else if (categorySlug === 'fathers-day-gifts') {
+        if (typeof window.fathersdayProducts !== 'undefined' && window.fathersdayProducts && window.fathersdayProducts.products) {
+            console.log('Loading fathersdayProducts:', window.fathersdayProducts.products.length);
+            allCategoryProducts = [...window.fathersdayProducts.products];
+        } else {
+            console.warn('fathersdayProducts not available');
+            allCategoryProducts = [];
+        }
+    }
+    // Holiday Gifts - Easter
+    else if (categorySlug === 'easter-gifts') {
+        if (typeof window.easterProducts !== 'undefined' && window.easterProducts && window.easterProducts.products) {
+            console.log('Loading easterProducts:', window.easterProducts.products.length);
+            allCategoryProducts = [...window.easterProducts.products];
+        } else {
+            console.warn('easterProducts not available');
+            allCategoryProducts = [];
+        }
+    }
+    // Holiday Gifts - Independence Day
+    else if (categorySlug === 'independence-day-gifts') {
+        if (typeof window.independencedayProducts !== 'undefined' && window.independencedayProducts && window.independencedayProducts.products) {
+            console.log('Loading independencedayProducts:', window.independencedayProducts.products.length);
+            allCategoryProducts = [...window.independencedayProducts.products];
+        } else {
+            console.warn('independencedayProducts not available');
+            allCategoryProducts = [];
+        }
+    }
+    // Holiday Gifts - Thanksgiving
+    else if (categorySlug === 'thanksgiving-gifts') {
+        if (typeof window.thanksgivingProducts !== 'undefined' && window.thanksgivingProducts && window.thanksgivingProducts.products) {
+            console.log('Loading thanksgivingProducts:', window.thanksgivingProducts.products.length);
+            allCategoryProducts = [...window.thanksgivingProducts.products];
+        } else {
+            console.warn('thanksgivingProducts not available');
+            allCategoryProducts = [];
+        }
+    }
+    // Holiday Gifts - Halloween (uses specialOffersData format)
+    else if (categorySlug === 'halloween-gifts') {
+        if (typeof window.halloweenSpecialOffers !== 'undefined' && window.halloweenSpecialOffers) {
+            console.log('Loading halloweenSpecialOffers:', window.halloweenSpecialOffers.length);
+            allCategoryProducts = [...window.halloweenSpecialOffers];
+        } else {
+            console.warn('halloweenSpecialOffers not available');
+            allCategoryProducts = [];
+        }
+    }
+    // Holiday Gifts - Christmas
+    else if (categorySlug === 'christmas-gifts') {
+        if (typeof window.christmasProducts !== 'undefined' && window.christmasProducts && window.christmasProducts.products) {
+            console.log('Loading christmasProducts:', window.christmasProducts.products.length);
+            allCategoryProducts = [...window.christmasProducts.products];
+        } else {
+            console.warn('christmasProducts not available');
+            allCategoryProducts = [];
+        }
+    }
+    // Holiday Gifts - Secret Santa (uses specialOffersData format)
+    else if (categorySlug === 'secret-santa-gifts') {
+        if (typeof window.specialOffersData !== 'undefined' && window.specialOffersData) {
+            console.log('Loading specialOffersData for Secret Santa Gifts:', window.specialOffersData.length);
+            allCategoryProducts = [...window.specialOffersData];
+        } else {
+            console.warn('specialOffersData not available');
+            allCategoryProducts = [];
+        }
+    }
+    // Special case: Include "Gift Ideas for Her" (banner1Products) in "birthday-gifts-for-girlfriends"
+    else if (categorySlug === 'birthday-gifts-for-girlfriends') {
+        // Filter products by category
+        allCategoryProducts = allProductsData.filter(product =>
+            product.category === categorySlug
+        );
+        // Check if banner1Products is available (from gift-ideas-for-her page)
+        if (typeof window.banner1Products !== 'undefined' && window.banner1Products) {
+            console.log('Adding banner1Products (Gift Ideas for Her):', window.banner1Products.length);
+            // Add banner1Products to the beginning
+            allCategoryProducts = [...window.banner1Products, ...allCategoryProducts];
+        } else {
+            console.warn('banner1Products not available - make sure banner-1-data.js is loaded');
+        }
+    }
+    // Default: Filter products by category
+    else {
+        allCategoryProducts = allProductsData.filter(product =>
+            product.category === categorySlug
+        );
+    }
 
     // Ensure all products have priceValue field for filtering
     allCategoryProducts.forEach(product => {
@@ -128,6 +245,9 @@ function filterCategoryByBudget(budget) {
             }
         });
     }
+
+    // Sort by price (lowest to highest)
+    filteredProducts.sort((a, b) => a.priceValue - b.priceValue);
 
     // Update active button
     updateBudgetButtons(budget);
@@ -176,6 +296,7 @@ function handleCategorySearch(event) {
 // Render category products
 function renderCategoryProducts(products) {
     console.log('Rendering category products:', products.length);
+    console.log('Sample product IDs:', products.slice(0, 5).map(p => p.id));
 
     const productsContainer = document.getElementById('products-container');
     const noResults = document.getElementById('no-results');
@@ -199,6 +320,7 @@ function renderCategoryProducts(products) {
     productsContainer.innerHTML = productsHTML;
 
     console.log('Successfully rendered', products.length, 'products');
+    console.log('Total product cards in DOM:', document.querySelectorAll('.product-card').length);
 }
 
 // Create category product card

@@ -86,68 +86,68 @@ const giftCategoryConfigs = {
         seoDescription: "Create meaningful photo gifts that preserve precious memories. From photo books to custom prints, turn your favorite moments into lasting keepsakes.",
         seoKeywords: "photo gifts, personalized photo gifts, custom photo gifts, photo books, photo prints, picture gifts, memory gifts, photo frames, photo albums, personalized picture gifts"
     },
-    'gifts-for-boyfriends': {
-        name: "Gifts for Boyfriends",
-        description: "Show him how much you care with perfect presents",
-        seoTitle: "Gifts for Boyfriends - Show Him How Much You Care | Gift On Budget",
-        seoDescription: "Find the perfect gifts for your boyfriend. Browse unique and thoughtful presents that show him how much he means to you.",
-        seoKeywords: "gifts for boyfriends, boyfriend gifts, gifts for him, birthday gifts for boyfriend, anniversary gifts for boyfriend, romantic gifts for boyfriend, unique boyfriend gifts, thoughtful gifts for boyfriend"
+    'birthday-gifts-for-him': {
+        name: "Birthday Gifts for Him",
+        description: "Show him how much you care with perfect birthday presents",
+        seoTitle: "Birthday Gifts for Him - Perfect Birthday Gifts for Boyfriends | Gift On Budget",
+        seoDescription: "Find the perfect birthday gifts for him and your boyfriend. Browse unique and thoughtful presents that show him how much he means to you on his special day.",
+        seoKeywords: "birthday gifts for him, birthday gifts for boyfriends, boyfriend birthday gifts, birthday presents for him, birthday presents for boyfriend, romantic birthday gifts for him, unique boyfriend birthday gifts, thoughtful birthday gifts for boyfriend, best birthday gifts for him"
     },
-    'gifts-for-girlfriends': {
-        name: "Gifts for Girlfriends",
-        description: "Romantic and thoughtful gifts she'll treasure",
-        seoTitle: "Gifts for Girlfriends - Romantic & Thoughtful Presents | Gift On Budget",
-        seoDescription: "Discover perfect gifts for your girlfriend. From romantic gestures to personalized presents, find something that shows your love and appreciation.",
-        seoKeywords: "gifts for girlfriends, girlfriend gifts, gifts for her, birthday gifts for girlfriend, anniversary gifts for girlfriend, romantic gifts for girlfriend, unique girlfriend gifts, thoughtful gifts for girlfriend"
+    'birthday-gifts-for-girlfriends': {
+        name: "Birthday Gifts for Girlfriends",
+        description: "Romantic and thoughtful birthday gifts she'll treasure",
+        seoTitle: "Birthday Gifts for Girlfriends - Romantic & Thoughtful Presents | Gift On Budget",
+        seoDescription: "Discover perfect birthday gifts for your girlfriend. From romantic gestures to personalized presents, find something that shows your love and appreciation on her special day.",
+        seoKeywords: "birthday gifts for girlfriends, girlfriend birthday gifts, birthday gifts for her, birthday presents for girlfriend, romantic birthday gifts for girlfriend, unique girlfriend birthday gifts, thoughtful birthday gifts for girlfriend, best birthday gifts for girlfriend"
     },
-    'gifts-for-moms': {
-        name: "Gifts for Moms",
-        description: "Show mom your appreciation with heartfelt presents",
-        seoTitle: "Gifts for Moms - Show Your Appreciation | Gift On Budget",
-        seoDescription: "Find heartfelt gifts for mom that show your appreciation. Browse thoughtful presents perfect for Mother's Day, birthdays, or any day you want to say 'I love you.'",
-        seoKeywords: "gifts for moms, gifts for mom, mother's day gifts, mom birthday gifts, presents for mom, gifts for mother, best gifts for mom, unique mom gifts, thoughtful mom gifts"
+    'birthday-gifts-for-moms': {
+        name: "Birthday Gifts for Moms",
+        description: "Show mom your appreciation with heartfelt birthday presents",
+        seoTitle: "Birthday Gifts for Moms - Show Your Appreciation | Gift On Budget",
+        seoDescription: "Find heartfelt birthday gifts for mom that show your appreciation. Browse thoughtful presents perfect for mom's special day to say 'I love you.'",
+        seoKeywords: "birthday gifts for moms, birthday gifts for mom, mom birthday gifts, birthday presents for mom, birthday gifts for mother, best birthday gifts for mom, unique mom birthday gifts, thoughtful mom birthday gifts, mom birthday present ideas"
     },
-    'gifts-for-dads': {
-        name: "Gifts for Dads",
-        description: "Celebrate dad with gifts he'll actually use and love",
-        seoTitle: "Gifts for Dads - Presents He'll Actually Love | Gift On Budget",
-        seoDescription: "Discover practical and unique gifts for dad. From tech gadgets to hobby essentials, find presents perfect for Father's Day, birthdays, or any occasion.",
-        seoKeywords: "gifts for dads, gifts for dad, father's day gifts, dad birthday gifts, presents for dad, gifts for father, best gifts for dad, unique dad gifts, practical dad gifts"
+    'birthday-gifts-for-dads': {
+        name: "Birthday Gifts for Dads",
+        description: "Celebrate dad's birthday with gifts he'll actually use and love",
+        seoTitle: "Birthday Gifts for Dads - Presents He'll Actually Love | Gift On Budget",
+        seoDescription: "Discover practical and unique birthday gifts for dad. From tech gadgets to hobby essentials, find presents perfect for dad's special day.",
+        seoKeywords: "birthday gifts for dads, birthday gifts for dad, dad birthday gifts, birthday presents for dad, birthday gifts for father, best birthday gifts for dad, unique dad birthday gifts, practical dad birthday gifts, dad birthday present ideas"
     },
-    'gifts-for-grandparents': {
-        name: "Gifts for Grandparents",
-        description: "Thoughtful gifts to honor and cherish grandparents",
-        seoTitle: "Gifts for Grandparents - Honor & Cherish Them | Gift On Budget",
-        seoDescription: "Find meaningful gifts for grandparents that show your love and appreciation. Browse thoughtful presents perfect for grandma and grandpa.",
-        seoKeywords: "gifts for grandparents, gifts for grandma, gifts for grandpa, grandparent gifts, gifts for elderly, grandmother gifts, grandfather gifts, sentimental gifts for grandparents"
+    'birthday-gifts-for-grandparents': {
+        name: "Birthday Gifts for Grandparents",
+        description: "Thoughtful birthday gifts to honor and cherish grandparents",
+        seoTitle: "Birthday Gifts for Grandparents - Honor & Cherish Them | Gift On Budget",
+        seoDescription: "Find meaningful birthday gifts for grandparents that show your love and appreciation. Browse thoughtful presents perfect for grandma and grandpa's special day.",
+        seoKeywords: "birthday gifts for grandparents, birthday gifts for grandma, birthday gifts for grandpa, grandparent birthday gifts, birthday gifts for elderly, grandmother birthday gifts, grandfather birthday gifts, sentimental birthday gifts for grandparents"
     },
-    'gifts-for-someone-who-has-everything': {
-        name: "Gifts for Someone Who Has Everything",
-        description: "Unique finds for the person who has it all",
-        seoTitle: "Gifts for Someone Who Has Everything - Unique Finds | Gift On Budget",
-        seoDescription: "Discover unique gifts for the person who has everything. Browse creative and unexpected presents they never knew they needed.",
-        seoKeywords: "gifts for someone who has everything, unique gifts, hard to shop for gifts, creative gifts, unusual gifts, unique present ideas, gifts for people who have everything"
+    'birthday-gifts-for-someone-who-has-everything': {
+        name: "Birthday Gifts for Someone Who Has Everything",
+        description: "Unique birthday finds for the person who has it all",
+        seoTitle: "Birthday Gifts for Someone Who Has Everything - Unique Finds | Gift On Budget",
+        seoDescription: "Discover unique birthday gifts for the person who has everything. Browse creative and unexpected presents they never knew they needed for their special day.",
+        seoKeywords: "birthday gifts for someone who has everything, unique birthday gifts, hard to shop for birthday gifts, creative birthday gifts, unusual birthday gifts, unique birthday present ideas, birthday gifts for people who have everything"
     },
-    'gifts-for-couples': {
-        name: "Gifts for Couples",
-        description: "Perfect presents for celebrating love and togetherness",
-        seoTitle: "Gifts for Couples - Celebrate Love Together | Gift On Budget",
-        seoDescription: "Find perfect gifts for couples that celebrate their relationship. Browse presents ideal for newlyweds, anniversaries, or any couple in your life.",
-        seoKeywords: "gifts for couples, couple gifts, gifts for newlyweds, anniversary gifts for couples, wedding gifts, romantic couple gifts, his and hers gifts, matching couple gifts"
+    'birthday-gifts-for-couples': {
+        name: "Birthday Gifts for Couples",
+        description: "Perfect birthday presents for celebrating love and togetherness",
+        seoTitle: "Birthday Gifts for Couples - Celebrate Love Together | Gift On Budget",
+        seoDescription: "Find perfect birthday gifts for couples that celebrate their relationship. Browse presents ideal for couple birthdays or any special occasion.",
+        seoKeywords: "birthday gifts for couples, couple birthday gifts, birthday gifts for newlyweds, birthday gifts for pairs, romantic couple birthday gifts, his and hers birthday gifts, matching couple birthday gifts, joint birthday gifts"
     },
-    'gifts-for-best-friends': {
-        name: "Gifts for Best Friends",
-        description: "Celebrate friendship with meaningful presents",
-        seoTitle: "Gifts for Best Friends - Celebrate Your Friendship | Gift On Budget",
-        seoDescription: "Discover thoughtful gifts for your best friend. Browse unique presents that celebrate your special bond and show how much they mean to you.",
-        seoKeywords: "gifts for best friends, best friend gifts, friendship gifts, gifts for bff, birthday gifts for best friend, thoughtful friend gifts, unique friendship gifts"
+    'birthday-gifts-for-best-friends': {
+        name: "Birthday Gifts for Best Friends",
+        description: "Celebrate friendship with meaningful birthday presents",
+        seoTitle: "Birthday Gifts for Best Friends - Celebrate Your Friendship | Gift On Budget",
+        seoDescription: "Discover thoughtful birthday gifts for your best friend. Browse unique presents that celebrate your special bond and show how much they mean to you on their birthday.",
+        seoKeywords: "birthday gifts for best friends, best friend birthday gifts, friendship birthday gifts, birthday gifts for bff, birthday presents for best friend, thoughtful friend birthday gifts, unique friendship birthday gifts"
     },
-    'personalized-gifts': {
-        name: "Personalized Gifts",
-        description: "Custom gifts with a personal touch",
-        seoTitle: "Personalized Gifts - Custom Presents with Personal Touch | Gift On Budget",
-        seoDescription: "Create meaningful personalized gifts with custom names, dates, or messages. Browse unique customizable presents perfect for any occasion.",
-        seoKeywords: "personalized gifts, custom gifts, personalized presents, custom name gifts, monogrammed gifts, engraved gifts, customized gifts, personalized gift ideas, unique personalized gifts"
+    'personalized-birthday-gifts': {
+        name: "Personalized Birthday Gifts",
+        description: "Custom birthday gifts with a personal touch",
+        seoTitle: "Personalized Birthday Gifts - Custom Presents with Personal Touch | Gift On Budget",
+        seoDescription: "Create meaningful personalized birthday gifts with custom names, dates, or messages. Browse unique customizable presents perfect for birthday celebrations.",
+        seoKeywords: "personalized birthday gifts, custom birthday gifts, personalized birthday presents, custom name birthday gifts, monogrammed birthday gifts, engraved birthday gifts, customized birthday gifts, personalized birthday gift ideas, unique personalized birthday gifts"
     },
     'birthday-gift-ideas': {
         name: "Birthday Gift Ideas",
@@ -443,6 +443,13 @@ const giftCategoryConfigs = {
         seoTitle: "Luxury Gifts - Premium & High-End Presents | Gift On Budget",
         seoDescription: "Explore luxury gifts for those special occasions. From designer items to premium experiences, find the ultimate splurge-worthy gifts.",
         seoKeywords: "luxury gifts, premium gifts, high-end gifts, luxury presents, expensive gifts, designer gifts"
+    },
+    'secret-santa-gifts': {
+        name: "Secret Santa Gifts",
+        description: "Find perfect Secret Santa gifts for your exchange!",
+        seoTitle: "Secret Santa Gift Ideas - Perfect Gifts for Your Secret Santa Exchange | Gift On Budget",
+        seoDescription: "Discover the perfect Secret Santa gifts for everyone on your list. Budget-friendly gift ideas for coworkers, friends, and family. From under $20 to under $30 options!",
+        seoKeywords: "secret santa gifts, secret santa gift ideas, secret santa presents, office secret santa gifts, secret santa gifts under $20, secret santa gifts under $30, secret santa gifts for coworkers, funny secret santa gifts, unique secret santa gifts, cheap secret santa gifts"
     }
 };
 
