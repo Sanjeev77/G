@@ -86,13 +86,6 @@ const giftCategoryConfigs = {
         seoDescription: "Create meaningful photo gifts that preserve precious memories. From photo books to custom prints, turn your favorite moments into lasting keepsakes.",
         seoKeywords: "photo gifts, personalized photo gifts, custom photo gifts, photo books, photo prints, picture gifts, memory gifts, photo frames, photo albums, personalized picture gifts"
     },
-    'birthday-gifts-for-him': {
-        name: "Birthday Gifts for Him",
-        description: "Show him how much you care with perfect birthday presents",
-        seoTitle: "Birthday Gifts for Him - Perfect Birthday Gifts for Boyfriends | Gift On Budget",
-        seoDescription: "Find the perfect birthday gifts for him and your boyfriend. Browse unique and thoughtful presents that show him how much he means to you on his special day.",
-        seoKeywords: "birthday gifts for him, birthday gifts for boyfriends, boyfriend birthday gifts, birthday presents for him, birthday presents for boyfriend, romantic birthday gifts for him, unique boyfriend birthday gifts, thoughtful birthday gifts for boyfriend, best birthday gifts for him"
-    },
     'birthday-gifts-for-girlfriends': {
         name: "Birthday Gifts for Girlfriends",
         description: "Romantic and thoughtful birthday gifts she'll treasure",

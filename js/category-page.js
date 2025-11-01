@@ -202,6 +202,36 @@ function loadCategoryProducts(categorySlug) {
             console.warn('banner1Products not available - make sure banner-1-data.js is loaded');
         }
     }
+    // Special case: "birthday-gift-ideas" shows ALL birthday-related products
+    else if (categorySlug === 'birthday-gift-ideas') {
+        // Aggregate all birthday-related categories
+        const birthdayCategories = [
+            'birthday-gifts-for-her',
+            'birthday-gifts-for-him',
+            'birthday-gifts-for-boyfriends',
+            'birthday-gifts-for-girlfriends',
+            'birthday-gifts-for-moms',
+            'birthday-gifts-for-dads',
+            'birthday-gifts-for-grandparents',
+            'birthday-gifts-for-someone-who-has-everything',
+            'birthday-gifts-for-couples',
+            'birthday-gifts-for-best-friends',
+            'birthday-gifts-for-coworkers',
+            'birthday-gifts-for-teachers',
+            'personalized-birthday-gifts',
+            'funny-birthday-gifts',
+            'luxury-birthday-gifts',
+            'experience-birthday-gifts',
+            'eco-friendly-birthday-gifts',
+            'last-minute-birthday-gifts'
+        ];
+
+        allCategoryProducts = allProductsData.filter(product =>
+            birthdayCategories.includes(product.category)
+        );
+
+        console.log('Loaded birthday products from categories:', birthdayCategories);
+    }
     // Default: Filter products by category
     else {
         allCategoryProducts = allProductsData.filter(product =>
@@ -325,9 +355,15 @@ function renderCategoryProducts(products) {
 
 // Create category product card
 function createCategoryProductCard(product) {
-    const stars = '★'.repeat(Math.floor(product.rating)) +
-                 (product.rating % 1 >= 0.5 ? '☆' : '') +
-                 '☆'.repeat(5 - Math.ceil(product.rating));
+    // Ensure rating is valid (between 0 and 5)
+    const rating = Math.max(0, Math.min(5, product.rating || 0));
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = (rating % 1) >= 0.5;
+    const emptyStars = 5 - Math.ceil(rating);
+
+    const stars = '★'.repeat(fullStars) +
+                 (hasHalfStar ? '☆' : '') +
+                 '☆'.repeat(emptyStars);
 
     const featuredBadge = product.featured ?
         '<div class="featured-badge">Featured</div>' : '';
@@ -339,7 +375,7 @@ function createCategoryProductCard(product) {
             <div class="product-info">
                 <h3 class="product-title">${product.title}</h3>
                 <div class="product-rating" style="color: #ff9900; margin-bottom: 0.5rem;">
-                    ${stars} (${product.rating})
+                    ${stars} (${rating.toFixed(1)})
                 </div>
                 <div class="product-price">$${product.price}</div>
                 <a href="${product.affiliateLink}" target="_blank" rel="noopener" class="product-btn">
