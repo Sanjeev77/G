@@ -488,7 +488,7 @@ const allProductsData = [
     {
         "id": 7847,
         "title": "Armaf Club De Nuit Intense for Men Eau de Parfum Spray, 6.8 Ounce / 200 ml",
-        "price": "51.",
+        "price": "51",
         "priceValue": 51,
         "category": "birthday-gifts-for-him",
         "image": "https://m.media-amazon.com/images/I/51v-hbrhVHL._SL1088_.jpg",
