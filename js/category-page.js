@@ -147,13 +147,13 @@ function loadCategoryProducts(categorySlug) {
             allCategoryProducts = [];
         }
     }
-    // Holiday Gifts - Thanksgiving
+    // Holiday Gifts - Thanksgiving (uses specialOffersData format)
     else if (categorySlug === 'thanksgiving-gifts') {
-        if (typeof window.thanksgivingProducts !== 'undefined' && window.thanksgivingProducts && window.thanksgivingProducts.products) {
-            console.log('Loading thanksgivingProducts:', window.thanksgivingProducts.products.length);
-            allCategoryProducts = [...window.thanksgivingProducts.products];
+        if (typeof window.thanksgivingSpecialOffers !== 'undefined' && window.thanksgivingSpecialOffers) {
+            console.log('Loading thanksgivingSpecialOffers:', window.thanksgivingSpecialOffers.length);
+            allCategoryProducts = [...window.thanksgivingSpecialOffers];
         } else {
-            console.warn('thanksgivingProducts not available');
+            console.warn('thanksgivingSpecialOffers not available');
             allCategoryProducts = [];
         }
     }

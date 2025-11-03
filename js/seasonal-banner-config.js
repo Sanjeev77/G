@@ -17,12 +17,12 @@ const seasonalBanners = [
         id: 'valentines',
         name: 'Valentine\'s Day Gifts',
         priority: 10,
-        startDate: { month: 1, day: 25 },    // January 25
+        startDate: { month: 1, day: 21 },    // January 21
         endDate: { month: 2, day: 14 },      // February 14
         title: 'Valentine\'s Day Gifts',
         subtitle: 'Show your love with perfect romantic gifts!',
         ctaText: 'Shop Valentine Gifts',
-        link: 'pages/special-offers.html',
+        link: 'pages/valentines-day-gifts.html',
         images: {
             desktop: 'images/banners/valentines-desktop.jpg',
             mobile: 'images/banners/valentines-mobile.jpg'
@@ -33,12 +33,12 @@ const seasonalBanners = [
         id: 'easter',
         name: 'Easter Gifts',
         priority: 10,
-        startDate: { month: 3, day: 20 },    // March 20 (adjust yearly for Easter)
+        startDate: { month: 2, day: 15 },    // February 15
         endDate: { month: 4, day: 20 },      // April 20
         title: 'Easter Gift Collection',
         subtitle: 'Celebrate spring with delightful Easter gifts!',
         ctaText: 'Shop Easter Gifts',
-        link: 'pages/special-offers.html',
+        link: 'pages/easter-gifts.html',
         images: {
             desktop: 'images/banners/easter-desktop.jpg',
             mobile: 'images/banners/easter-mobile.jpg'
@@ -49,12 +49,12 @@ const seasonalBanners = [
         id: 'mothers-day',
         name: 'Mother\'s Day Gifts',
         priority: 10,
-        startDate: { month: 4, day: 25 },    // April 25
+        startDate: { month: 4, day: 21 },    // April 21
         endDate: { month: 5, day: 11 },      // May 11 (2nd Sunday of May)
         title: 'Mother\'s Day Gifts',
         subtitle: 'Show mom how much you care with perfect gifts!',
         ctaText: 'Shop Mother\'s Day',
-        link: 'pages/special-offers.html',
+        link: 'pages/mothers-day-gifts.html',
         images: {
             desktop: 'images/banners/mothersday-desktop.jpg',
             mobile: 'images/banners/mothersday-mobile.jpg'
@@ -65,12 +65,12 @@ const seasonalBanners = [
         id: 'fathers-day',
         name: 'Father\'s Day Gifts',
         priority: 10,
-        startDate: { month: 6, day: 1 },     // June 1
+        startDate: { month: 5, day: 12 },    // May 12
         endDate: { month: 6, day: 15 },      // June 15 (3rd Sunday of June)
         title: 'Father\'s Day Gifts',
         subtitle: 'Find the perfect gift for dad!',
         ctaText: 'Shop Father\'s Day',
-        link: 'pages/special-offers.html',
+        link: 'pages/fathers-day-gifts.html',
         images: {
             desktop: 'images/banners/fathersday-desktop.jpg',
             mobile: 'images/banners/fathersday-mobile.jpg'
@@ -81,12 +81,12 @@ const seasonalBanners = [
         id: 'independence-day',
         name: 'Independence Day Gifts',
         priority: 10,
-        startDate: { month: 6, day: 25 },    // June 25
+        startDate: { month: 6, day: 16 },    // June 16
         endDate: { month: 7, day: 4 },       // July 4
         title: 'Independence Day Gifts',
         subtitle: 'Celebrate freedom with patriotic gifts!',
         ctaText: 'Shop July 4th Gifts',
-        link: 'pages/special-offers.html',
+        link: 'pages/independence-day-gifts.html',
         images: {
             desktop: 'images/banners/independenceday-desktop.jpg',
             mobile: 'images/banners/independenceday-mobile.jpg'
@@ -97,12 +97,12 @@ const seasonalBanners = [
         id: 'halloween',
         name: 'Halloween Gifts',
         priority: 10,
-        startDate: { month: 10, day: 1 },    // October 1
+        startDate: { month: 7, day: 5 },     // July 5
         endDate: { month: 10, day: 31 },     // October 31
         title: 'Halloween Deals & Gifts',
         subtitle: '2025 Amazon\'s top Halloween gifts for everyone on your list!',
         ctaText: 'Shop Halloween Gifts',
-        link: 'pages/special-offers.html',
+        link: 'pages/halloween-gifts.html',
         images: {
             desktop: 'images/banners/halloween-desktop.jpg',
             mobile: 'images/banners/halloween-mobile.jpg'
@@ -113,12 +113,12 @@ const seasonalBanners = [
         id: 'thanksgiving',
         name: 'Thanksgiving Gifts',
         priority: 10,
-        startDate: { month: 11, day: 15 },   // November 15
+        startDate: { month: 11, day: 1 },    // November 1
         endDate: { month: 11, day: 28 },     // November 28 (4th Thursday)
         title: 'Thanksgiving Gifts & Decor',
         subtitle: 'Celebrate gratitude with thoughtful gifts!',
         ctaText: 'Shop Thanksgiving Gifts',
-        link: 'pages/special-offers.html',
+        link: 'pages/thanksgiving-gifts.html',
         images: {
             desktop: 'images/banners/thanksgiving-desktop.jpg',
             mobile: 'images/banners/thanksgiving-mobile.jpg'
@@ -126,42 +126,10 @@ const seasonalBanners = [
         overlayColor: 'rgba(217, 119, 6, 0.2)'  // Autumn orange
     },
     {
-        id: 'christmas',
-        name: 'Christmas Gifts',
-        priority: 15,
-        startDate: { month: 11, day: 29 },   // November 29 (day after Thanksgiving)
-        endDate: { month: 12, day: 25 },     // December 25
-        title: 'Christmas Gift Guide 2025',
-        subtitle: 'Find perfect gifts for everyone on your list!',
-        ctaText: 'Shop Christmas Gifts',
-        link: 'pages/special-offers.html',
-        images: {
-            desktop: 'images/banners/christmas-desktop.jpg',
-            mobile: 'images/banners/christmas-mobile.jpg'
-        },
-        overlayColor: 'rgba(220, 38, 38, 0.2)'  // Red tint
-    },
-    {
-        id: 'new-year',
-        name: 'New Year Gifts',
-        priority: 12,
-        startDate: { month: 12, day: 26 },   // December 26
-        endDate: { month: 1, day: 15 },      // January 15 (crosses year boundary)
-        title: 'New Year Gifts & Celebrations',
-        subtitle: 'Start the year with thoughtful gifts!',
-        ctaText: 'Shop New Year Gifts',
-        link: 'pages/special-offers.html',
-        images: {
-            desktop: 'images/banners/newyear-desktop.jpg',
-            mobile: 'images/banners/newyear-mobile.jpg'
-        },
-        overlayColor: 'rgba(147, 51, 234, 0.2)'  // Purple tint
-    },
-    {
         id: 'secret-santa',
         name: 'Secret Santa Gifts',
-        priority: 13,
-        startDate: { month: 12, day: 1 },    // December 1
+        priority: 10,
+        startDate: { month: 11, day: 29 },   // November 29
         endDate: { month: 12, day: 25 },     // December 25
         title: 'Secret Santa Gift Guide',
         subtitle: 'Find perfect Secret Santa gifts for your exchange!',
@@ -172,6 +140,22 @@ const seasonalBanners = [
             mobile: 'images/banners/secret-santa-mobile.jpg'
         },
         overlayColor: 'rgba(220, 38, 38, 0.2)'  // Red tint
+    },
+    {
+        id: 'new-year',
+        name: 'New Year Gifts',
+        priority: 10,
+        startDate: { month: 12, day: 26 },   // December 26
+        endDate: { month: 1, day: 20 },      // January 20 (crosses year boundary)
+        title: 'New Year Gifts & Celebrations',
+        subtitle: 'Start the year with thoughtful gifts!',
+        ctaText: 'Shop New Year Gifts',
+        link: 'pages/new-year-gifts.html',
+        images: {
+            desktop: 'images/banners/newyear-desktop.jpg',
+            mobile: 'images/banners/newyear-mobile.jpg'
+        },
+        overlayColor: 'rgba(147, 51, 234, 0.2)'  // Purple tint
     }
 ];
 
