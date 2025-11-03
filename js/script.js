@@ -827,6 +827,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 const parentColumn = this.closest('.footer-column');
                 if (parentColumn) {
                     parentColumn.classList.toggle('active');
+
+                    // Toggle the + and - icon
+                    const toggleIcon = this.querySelector('.footer-toggle');
+                    if (toggleIcon) {
+                        toggleIcon.textContent = parentColumn.classList.contains('active') ? '-' : '+';
+                    }
                 }
             }
         });
@@ -838,6 +844,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const footerColumns = document.querySelectorAll('.footer-column');
             footerColumns.forEach(column => {
                 column.classList.remove('active');
+
+                // Reset toggle icons to +
+                const toggleIcon = column.querySelector('.footer-toggle');
+                if (toggleIcon) {
+                    toggleIcon.textContent = '+';
+                }
             });
         }
     });

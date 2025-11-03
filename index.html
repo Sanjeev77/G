@@ -25,6 +25,18 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/new-layout.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Critical CSS to prevent FOUC -->
+    <style>
+        /* Hide footer links initially to prevent flash - except Company section */
+        .footer-column.collapsible .footer-links {
+            display: none !important;
+        }
+        /* Always show Company section links */
+        .footer-left .footer-links {
+            display: flex !important;
+        }
+    </style>
 </head>
 <body>
     <header class="main-header">
@@ -688,7 +700,6 @@
                 <!-- Left Side: Company Section -->
                 <div class="footer-left">
                     <div class="footer-column">
-                        <h3 class="footer-heading">Company</h3>
                         <ul class="footer-links">
                             <li><a href="legal/about-us.html">About Us</a></li>
                             <li><a href="legal/privacy-policy.html">Privacy Policy</a></li>
@@ -930,36 +941,6 @@
             });
         }
 
-        // Enhanced Footer Accordion with Toggle Icons (Desktop + Mobile)
-        document.addEventListener('DOMContentLoaded', function() {
-            const collapsibleColumns = document.querySelectorAll('.footer-column.collapsible');
-
-            collapsibleColumns.forEach(column => {
-                const heading = column.querySelector('.footer-heading');
-                const toggle = column.querySelector('.footer-toggle');
-                const links = column.querySelector('.footer-links');
-
-                if (heading && toggle && links) {
-                    // Initially collapsed on all devices
-                    column.classList.remove('active');
-                    toggle.textContent = '+';
-
-                    heading.addEventListener('click', function() {
-                        const isActive = column.classList.contains('active');
-
-                        if (isActive) {
-                            // Collapse
-                            column.classList.remove('active');
-                            toggle.textContent = '+';
-                        } else {
-                            // Expand
-                            column.classList.add('active');
-                            toggle.textContent = '−';
-                        }
-                    });
-                }
-            });
-        });
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1116,6 +1097,11 @@
             // Close mobile menu and dropdowns when clicking outside
             document.addEventListener('click', function(e) {
                 if (window.innerWidth <= 768) {
+                    // Don't close dropdowns if clicking on footer
+                    if (e.target.closest('.enhanced-footer')) {
+                        return;
+                    }
+
                     // Close main nav if clicking outside header
                     if (!e.target.closest('.main-header')) {
                         mainNav.classList.remove('active');
@@ -1172,6 +1158,82 @@
         } else {
             console.error('Banner Manager not loaded!');
         }
+    </script>
+
+    <!-- Footer Collapse Functionality -->
+    <script>
+        // Enhanced Footer Accordion with Toggle Icons (Desktop + Mobile)
+        (function() {
+            function initFooterCollapse() {
+                console.log('Footer collapse script running...');
+
+                // Add 'loaded' class to body to prevent FOUC
+                document.body.classList.add('footer-loaded');
+
+                const collapsibleColumns = document.querySelectorAll('.footer-column.collapsible');
+                console.log('Found columns:', collapsibleColumns.length);
+
+                if (collapsibleColumns.length === 0) {
+                    console.warn('No collapsible footer columns found');
+                    return;
+                }
+
+                collapsibleColumns.forEach(function(column, index) {
+                    const heading = column.querySelector('.footer-heading');
+                    const toggle = column.querySelector('.footer-toggle');
+                    const links = column.querySelector('.footer-links');
+
+                    console.log('Column', index, ':', {
+                        hasHeading: !!heading,
+                        hasToggle: !!toggle,
+                        hasLinks: !!links
+                    });
+
+                    if (heading && toggle && links) {
+                        // Initially collapsed on all devices
+                        column.classList.remove('active');
+                        toggle.textContent = '+';
+
+                        // Function to handle toggle - Industry standard approach
+                        function handleToggle(e) {
+                            // Prevent default to avoid double-firing on mobile
+                            if (e && e.type === 'touchend') {
+                                e.preventDefault();
+                            }
+
+                            // Simple class toggle - let CSS handle everything
+                            const isActive = column.classList.contains('active');
+                            if (isActive) {
+                                column.classList.remove('active');
+                                toggle.textContent = '+';
+                            } else {
+                                column.classList.add('active');
+                                toggle.textContent = '−';
+                            }
+
+                            // No scroll manipulation needed - browser handles layout naturally
+                            // overflow-anchor: none in CSS prevents scroll jumping
+                        }
+
+                        // Add both click and touch event listeners for cross-device support
+                        heading.addEventListener('click', handleToggle);
+                        heading.addEventListener('touchend', handleToggle, {passive: false});
+
+                        console.log('Event listeners attached to column', index);
+                    }
+                });
+
+                console.log('Footer collapse initialized for', collapsibleColumns.length, 'columns');
+            }
+
+            // Initialize when DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initFooterCollapse);
+            } else {
+                // DOM already loaded
+                initFooterCollapse();
+            }
+        })();
     </script>
 </body>
 </html>

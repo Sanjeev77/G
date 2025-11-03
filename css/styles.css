@@ -198,7 +198,7 @@ body {
     font-weight: 700;
     color: #2c3e50;
     margin-bottom: 1rem;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .hero-subtitle {
@@ -592,11 +592,27 @@ a.category-card:focus {
 
 @media (max-width: 768px) {
     .breadcrumb {
-        padding: 0.75rem 0;
+        padding: 0 0 0 1rem;
+        font-size: 0.8rem;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        min-height: 44px;
     }
 
     .breadcrumb .container {
-        padding-left: 1.5rem;
+        padding: 0.4rem 1.5rem 0.4rem 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        line-height: 1.3;
+        width: 100%;
+        margin: 0;
+    }
+
+    .breadcrumb a {
+        white-space: nowrap;
     }
 }
 
@@ -632,6 +648,7 @@ a.category-card:focus {
     color: #2c3e50;
     margin-bottom: 1rem;
     font-weight: 700;
+    line-height: 1.265;
 }
 
 .page-header h1 i {
@@ -1021,7 +1038,15 @@ a.category-card:focus {
     }
 
     .page-header h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.265;
+    }
+
+    .page-header p {
+        font-size: 0.95rem;
+        max-width: 280px;
+        margin-bottom: 0.5rem;
     }
 
     .page-stats {
@@ -2012,6 +2037,7 @@ footer .footer-content,
 
     .hero-title {
         font-size: 1.8rem;
+        line-height: 111;
     }
 
     .hero-section {
@@ -2342,14 +2368,17 @@ footer .footer-content,
         display: flex;
         gap: 0.5rem;
         overflow-x: auto;
-        padding: 0 1rem;
+        overflow-y: hidden;
+        padding: 0 1rem 0 1rem;
         scrollbar-width: none;
         -ms-overflow-style: none;
         flex-wrap: nowrap;
         white-space: nowrap;
         justify-content: flex-start;
-        width: 100%;
         box-sizing: border-box;
+        /* Make container slightly narrower to force last button to be cut off */
+        width: 94vw;
+        max-width: 94vw;
     }
 
     .budget-filter-tabs .budget-navigation::-webkit-scrollbar {
@@ -2367,8 +2396,8 @@ footer .footer-content,
     }
 
     .budget-filter-tabs .container {
-        padding: 0 0.5rem;
-        overflow: visible;
+        padding: 0;
+        overflow: hidden;
     }
 
     .product-grid {
@@ -3352,11 +3381,28 @@ footer .footer-content,
     padding: 0;
 }
 
+.footer-left .footer-heading {
+    cursor: default !important;
+    pointer-events: none !important;
+}
+
 .footer-left .footer-links {
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
     gap: 0.5rem;
     align-items: flex-start;
+    max-height: none !important;
+    overflow: visible !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Desktop only: Keep single column for footer-left */
+@media (min-width: 768px) {
+    .footer-left .footer-links {
+        display: flex !important;
+        flex-direction: column !important;
+    }
 }
 
 .footer-left .footer-links li {
@@ -3365,6 +3411,13 @@ footer .footer-content,
 
 .footer-left .footer-links a {
     text-align: left;
+}
+
+.footer-right .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
 }
 
 .footer-right .footer-column {
@@ -3386,6 +3439,17 @@ footer .footer-content,
     width: 100%;
 }
 
+/* Prevent scroll anchoring on footer - Industry standard (Material UI pattern) */
+.enhanced-footer {
+    overflow-anchor: none;
+    contain: layout; /* Performance isolation */
+}
+
+.footer-column.collapsible {
+    overflow-anchor: none;
+    contain: layout;
+}
+
 /* Desktop collapsible footer styles */
 .footer-column.collapsible .footer-heading {
     cursor: pointer;
@@ -3393,16 +3457,81 @@ footer .footer-content,
     justify-content: space-between;
     align-items: center;
     user-select: none;
+    pointer-events: auto;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    overflow-anchor: none;
 }
 
+.footer-column.collapsible .footer-heading * {
+    pointer-events: auto;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Prevent FOUC - hide footer links before JS loads */
 .footer-column.collapsible .footer-links {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+    display: none !important;
 }
 
-.footer-column.collapsible.active .footer-links {
-    max-height: 2000px;
+/* Desktop collapsible behavior - Modern Grid Animation (Industry Standard) */
+body.footer-loaded .footer-column.collapsible {
+    display: grid;
+    grid-template-rows: auto 0fr; /* Heading always visible, content collapsed */
+    transition: grid-template-rows 0.3s ease;
+}
+
+body.footer-loaded .footer-column.collapsible.active {
+    grid-template-rows: auto 1fr; /* Heading visible, content expanded */
+}
+
+/* Wrapper for grid animation */
+body.footer-loaded .footer-column.collapsible .footer-links {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    column-gap: 2rem !important;
+    row-gap: 0.5rem !important;
+    overflow: hidden !important; /* Critical for grid animation */
+    min-height: 0; /* Allows grid to collapse to 0 */
+}
+
+/* Smooth opacity transition */
+body.footer-loaded .footer-column.collapsible .footer-links {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Prevent blocking clicks when collapsed */
+}
+
+body.footer-loaded .footer-column.collapsible.active .footer-links {
+    opacity: 1;
+    pointer-events: auto; /* Re-enable clicks when expanded */
+}
+
+/* Responsive column layout for desktop */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Tablets and medium screens - keep 1 column */
+    body.footer-loaded .footer-column.collapsible .footer-links {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (min-width: 1025px) {
+    /* Large desktop screens - use 2 columns */
+    body.footer-loaded .footer-column.collapsible .footer-links {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+/* Show the toggle icon on desktop */
+.footer-toggle {
+    display: inline-block;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 400;
+    transition: transform 0.2s ease;
+    min-width: 20px;
+    text-align: center;
+    cursor: pointer;
 }
 
 .footer-subheading {
@@ -3628,6 +3757,16 @@ footer .footer-content,
 
 /* Mobile View (max-width: 767px) */
 @media (max-width: 767px) {
+    /* Hide scrollbar on mobile */
+    body {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    body::-webkit-scrollbar {
+        display: none;  /* Chrome, Safari and Opera */
+    }
+
     .enhanced-footer {
         padding: 2rem 0 1rem;
     }
@@ -3649,18 +3788,38 @@ footer .footer-content,
     }
 
     .footer-left {
-        order: 1;
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid #34495e;
+        order: 10;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #34495e;
+        border-bottom: none;
+    }
+
+    .footer-left .footer-column .footer-links {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        flex-direction: unset !important;
+        column-gap: 1.5rem !important;
+        row-gap: 0.5rem !important;
+        gap: unset !important;
     }
 
     .footer-right {
-        order: 2;
+        order: 1;
     }
 
     .footer-column.collapsible .footer-heading {
         font-size: 1rem;
+        cursor: pointer;
+        pointer-events: auto !important;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+        user-select: none;
+    }
+
+    .footer-column.collapsible .footer-heading * {
+        pointer-events: auto !important;
+        touch-action: manipulation;
     }
 
     .footer-toggle {
@@ -3668,7 +3827,7 @@ footer .footer-content,
         line-height: 1;
         font-weight: 400;
         transition: transform 0.2s ease;
-        display: inline-block;
+        display: inline-block !important;
         min-width: 20px;
         text-align: center;
     }
@@ -3682,14 +3841,32 @@ footer .footer-content,
         margin: 0.75rem 0 0.5rem;
     }
 
-    .footer-links {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
+    /* Mobile - Grid animation (same as desktop, no special scroll handling) */
+    body.footer-loaded .footer-column.collapsible {
+        display: grid;
+        grid-template-rows: auto 0fr;
+        transition: grid-template-rows 0.3s ease;
     }
 
-    .footer-column.active .footer-links {
-        max-height: 1000px;
+    body.footer-loaded .footer-column.collapsible.active {
+        grid-template-rows: auto 1fr;
+    }
+
+    body.footer-loaded .footer-column.collapsible .footer-links {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        align-items: flex-start !important;
+        overflow: hidden !important;
+        min-height: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    body.footer-loaded .footer-column.collapsible.active .footer-links {
+        opacity: 1;
+        pointer-events: auto;
     }
 
     .footer-links a {
