@@ -54,23 +54,33 @@ function initializeCategoryPage(category) {
     console.log('Initializing category page for:', category);
 
     // Debug: Check if allProductsData exists and log its length
+    const dataSource = typeof allProductsData !== 'undefined' ? allProductsData : window.allProductsData;
     console.log('allProductsData exists:', typeof allProductsData !== 'undefined');
-    if (typeof allProductsData !== 'undefined') {
-        console.log('Total products in allProductsData:', allProductsData.length);
+    console.log('window.allProductsData exists:', typeof window.allProductsData !== 'undefined');
+    console.log('Using data source:', dataSource ? 'Found' : 'Not found');
+
+    if (dataSource) {
+        console.log('Total products in allProductsData:', dataSource.length);
 
         // Debug: Count products by category
         const categoryCounts = {};
-        allProductsData.forEach(product => {
+        dataSource.forEach(product => {
             categoryCounts[product.category] = (categoryCounts[product.category] || 0) + 1;
         });
         console.log('Products by category:', categoryCounts);
     }
 
-    // Ensure allProductsData is available
-    if (typeof allProductsData === 'undefined') {
+    // Ensure allProductsData is available (check both global and window)
+    if (typeof allProductsData === 'undefined' && typeof window.allProductsData === 'undefined') {
         console.error('allProductsData is not available');
         displayErrorMessage('Product data failed to load');
         return;
+    }
+
+    // Use whichever is available
+    if (typeof allProductsData === 'undefined' && typeof window.allProductsData !== 'undefined') {
+        allProductsData = window.allProductsData;
+        console.log('Using window.allProductsData as fallback');
     }
 
     // Get DOM elements

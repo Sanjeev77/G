@@ -3,6 +3,93 @@
 
 const banner1Products = [
     {
+        "title": "Hobo Bags for Women Soft Vegan Leather Shoulder Handbag Slouchy Tote Purses",
+        "price": "28.90",
+        "priceValue": 28.9,
+        "rating": 4.5,
+        "affiliateLink": "https://amzn.to/3JJWMAz",
+        "image": "https://m.media-amazon.com/images/I/81J0t4CljmL._AC_SY695_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1762272993690
+    },
+    {
+        "title": "LILLUSORY Women's Quarter Zip Striped Oversized Sweater 2025 Mock Turtleneck Fall Fashion Outfit",
+        "price": "26.39",
+        "priceValue": 26.39,
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/4qZFHUj",
+        "image": "https://m.media-amazon.com/images/I/712Nli+M-7L._AC_SY741_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1762272981817
+    },
+    {
+        "title": "LILLUSORY Womens Oversized Cardigans Soft Knit Cardigan Sweater with Pockets",
+        "price": "26.99",
+        "priceValue": 26.99,
+        "rating": 4.4,
+        "affiliateLink": "https://amzn.to/3LntCYz",
+        "image": "https://m.media-amazon.com/images/I/81yG-Y7YjCL._AC_SY741_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1762272962624
+    },
+    {
+        "title": "Carhartt Adjustable Waist Pack, Durable, Water Resistant Hip Pack",
+        "price": "32.99",
+        "priceValue": 32.99,
+        "rating": 4.7,
+        "affiliateLink": "https://amzn.to/47npHDF",
+        "image": "https://m.media-amazon.com/images/I/8119vyL8L2L._AC_SX679_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1762272947098
+    },
+    {
+        "title": "Travelon Anti-Theft Classic Mini Shoulder Bag",
+        "price": "34",
+        "priceValue": 34,
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/4nARB3S",
+        "image": "https://m.media-amazon.com/images/I/91i16ejNUaL._AC_SY695_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1762272924524
+    },
+    {
+        "title": "Preserved Roses - Birthday Gifts for Her, Preserved Flower in Glass Dome with Scented, Romantic Gifts for Women, Wife, Girlfriend on Birthday, Anniversary, Thanksgiving Day, Christmas Day-blue",
+        "price": "39.89",
+        "priceValue": 39.89,
+        "rating": 4.7,
+        "affiliateLink": "https://amzn.to/4hQupgU",
+        "image": "https://m.media-amazon.com/images/I/81sjvPI9MyL._AC_SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1762270012044
+    },
+    {
+        "title": "PicturesOnGold.com Custom Name Necklace For Women Personalized Name Necklace in Sterling Silver or Gold Necklace Personalized with any Name or Word",
+        "price": "49.95",
+        "rating": 4.1,
+        "affiliateLink": "https://amzn.to/4qMnGbW",
+        "image": "https://m.media-amazon.com/images/I/81BLd0ALn4L._AC_SY535_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1762252025035
+    },
+    {
+        "title": "TinyName Custom Name Necklace Personalized 18K Gold Plated Nameplate Customized Jewelry Gift for Women",
+        "price": "15.99",
+        "priceValue": 15.99,
+        "rating": 4.5,
+        "affiliateLink": "https://amzn.to/48WOv6H",
+        "image": "https://m.media-amazon.com/images/I/61Xw+U3ngWL._AC_SY535_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1762251985898
+    },
+    {
         "title": "Canupdog 10.1 WiFi Digital Picture Frame, IPS Touch Screen Smart Cloud Digital Photo Frame with 16GB Storage, Wall Mountable, Auto-Rotate, Share Photos from Anywhere Via App, Email",
         "price": "49.99",
         "rating": 4.3,

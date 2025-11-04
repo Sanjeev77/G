@@ -99,8 +99,11 @@ function loadCategoryProducts(categorySlug) {
     }
     // Holiday Gifts - Valentine's Day
     else if (categorySlug === 'valentines-day-gifts') {
-        if (typeof window.valentinesProducts !== 'undefined' && window.valentinesProducts && window.valentinesProducts.products) {
-            console.log('Loading valentinesProducts:', window.valentinesProducts.products.length);
+        if (typeof window.valentinesDayProducts !== 'undefined' && window.valentinesDayProducts && window.valentinesDayProducts.products) {
+            console.log('Loading valentinesDayProducts (new format):', window.valentinesDayProducts.products.length);
+            allCategoryProducts = [...window.valentinesDayProducts.products];
+        } else if (typeof window.valentinesProducts !== 'undefined' && window.valentinesProducts && window.valentinesProducts.products) {
+            console.log('Loading valentinesProducts (old format):', window.valentinesProducts.products.length);
             allCategoryProducts = [...window.valentinesProducts.products];
         } else {
             console.warn('valentinesProducts not available');
@@ -109,21 +112,27 @@ function loadCategoryProducts(categorySlug) {
     }
     // Holiday Gifts - Mother's Day
     else if (categorySlug === 'mothers-day-gifts') {
-        if (typeof window.mothersdayProducts !== 'undefined' && window.mothersdayProducts && window.mothersdayProducts.products) {
-            console.log('Loading mothersdayProducts:', window.mothersdayProducts.products.length);
+        if (typeof window.mothersDayProducts !== 'undefined' && window.mothersDayProducts && window.mothersDayProducts.products) {
+            console.log('Loading mothersDayProducts (new format):', window.mothersDayProducts.products.length);
+            allCategoryProducts = [...window.mothersDayProducts.products];
+        } else if (typeof window.mothersdayProducts !== 'undefined' && window.mothersdayProducts && window.mothersdayProducts.products) {
+            console.log('Loading mothersdayProducts (old format):', window.mothersdayProducts.products.length);
             allCategoryProducts = [...window.mothersdayProducts.products];
         } else {
-            console.warn('mothersdayProducts not available');
+            console.warn('mothersDayProducts not available');
             allCategoryProducts = [];
         }
     }
     // Holiday Gifts - Father's Day
     else if (categorySlug === 'fathers-day-gifts') {
-        if (typeof window.fathersdayProducts !== 'undefined' && window.fathersdayProducts && window.fathersdayProducts.products) {
-            console.log('Loading fathersdayProducts:', window.fathersdayProducts.products.length);
+        if (typeof window.fathersDayProducts !== 'undefined' && window.fathersDayProducts && window.fathersDayProducts.products) {
+            console.log('Loading fathersDayProducts (new format):', window.fathersDayProducts.products.length);
+            allCategoryProducts = [...window.fathersDayProducts.products];
+        } else if (typeof window.fathersdayProducts !== 'undefined' && window.fathersdayProducts && window.fathersdayProducts.products) {
+            console.log('Loading fathersdayProducts (old format):', window.fathersdayProducts.products.length);
             allCategoryProducts = [...window.fathersdayProducts.products];
         } else {
-            console.warn('fathersdayProducts not available');
+            console.warn('fathersDayProducts not available');
             allCategoryProducts = [];
         }
     }
@@ -139,31 +148,46 @@ function loadCategoryProducts(categorySlug) {
     }
     // Holiday Gifts - Independence Day
     else if (categorySlug === 'independence-day-gifts') {
-        if (typeof window.independencedayProducts !== 'undefined' && window.independencedayProducts && window.independencedayProducts.products) {
-            console.log('Loading independencedayProducts:', window.independencedayProducts.products.length);
+        if (typeof window.independenceDayProducts !== 'undefined' && window.independenceDayProducts && window.independenceDayProducts.products) {
+            console.log('Loading independenceDayProducts:', window.independenceDayProducts.products.length);
+            allCategoryProducts = [...window.independenceDayProducts.products];
+        } else if (typeof window.independencedayProducts !== 'undefined' && window.independencedayProducts && window.independencedayProducts.products) {
+            console.log('Loading independencedayProducts (old format):', window.independencedayProducts.products.length);
             allCategoryProducts = [...window.independencedayProducts.products];
         } else {
-            console.warn('independencedayProducts not available');
+            console.warn('independenceDayProducts not available');
             allCategoryProducts = [];
         }
     }
-    // Holiday Gifts - Thanksgiving (uses specialOffersData format)
+    // Holiday Gifts - Thanksgiving (supports both old and new format)
     else if (categorySlug === 'thanksgiving-gifts') {
-        if (typeof window.thanksgivingSpecialOffers !== 'undefined' && window.thanksgivingSpecialOffers) {
-            console.log('Loading thanksgivingSpecialOffers:', window.thanksgivingSpecialOffers.length);
+        if (typeof window.thanksgivingProducts !== 'undefined' && window.thanksgivingProducts && window.thanksgivingProducts.products) {
+            console.log('Loading thanksgivingProducts (new format):', window.thanksgivingProducts.products.length);
+            allCategoryProducts = [...window.thanksgivingProducts.products];
+        } else if (typeof window.thanksgivingSpecialOffers !== 'undefined' && window.thanksgivingSpecialOffers) {
+            console.log('Loading thanksgivingSpecialOffers (old format):', window.thanksgivingSpecialOffers.length);
             allCategoryProducts = [...window.thanksgivingSpecialOffers];
+        } else if (typeof specialOffersData !== 'undefined' && specialOffersData) {
+            console.log('Loading specialOffersData (fallback):', specialOffersData.length);
+            allCategoryProducts = [...specialOffersData];
         } else {
-            console.warn('thanksgivingSpecialOffers not available');
+            console.warn('thanksgivingProducts not available');
             allCategoryProducts = [];
         }
     }
-    // Holiday Gifts - Halloween (uses specialOffersData format)
+    // Holiday Gifts - Halloween (supports both old and new format)
     else if (categorySlug === 'halloween-gifts') {
-        if (typeof window.halloweenSpecialOffers !== 'undefined' && window.halloweenSpecialOffers) {
-            console.log('Loading halloweenSpecialOffers:', window.halloweenSpecialOffers.length);
+        if (typeof window.halloweenProducts !== 'undefined' && window.halloweenProducts && window.halloweenProducts.products) {
+            console.log('Loading halloweenProducts (new format):', window.halloweenProducts.products.length);
+            allCategoryProducts = [...window.halloweenProducts.products];
+        } else if (typeof window.halloweenSpecialOffers !== 'undefined' && window.halloweenSpecialOffers) {
+            console.log('Loading halloweenSpecialOffers (old format):', window.halloweenSpecialOffers.length);
             allCategoryProducts = [...window.halloweenSpecialOffers];
+        } else if (typeof specialOffersData !== 'undefined' && specialOffersData) {
+            console.log('Loading specialOffersData (fallback):', specialOffersData.length);
+            allCategoryProducts = [...specialOffersData];
         } else {
-            console.warn('halloweenSpecialOffers not available');
+            console.warn('halloweenProducts not available');
             allCategoryProducts = [];
         }
     }
@@ -177,13 +201,32 @@ function loadCategoryProducts(categorySlug) {
             allCategoryProducts = [];
         }
     }
-    // Holiday Gifts - Secret Santa (uses specialOffersData format)
+    // Holiday Gifts - New Year
+    else if (categorySlug === 'new-year-gifts') {
+        if (typeof window.newYearProducts !== 'undefined' && window.newYearProducts && window.newYearProducts.products) {
+            console.log('Loading newYearProducts:', window.newYearProducts.products.length);
+            allCategoryProducts = [...window.newYearProducts.products];
+        } else {
+            console.warn('newYearProducts not available');
+            allCategoryProducts = [];
+        }
+    }
+    // Holiday Gifts - Secret Santa (supports both old and new format)
     else if (categorySlug === 'secret-santa-gifts') {
-        if (typeof window.specialOffersData !== 'undefined' && window.specialOffersData) {
+        if (typeof window.secretSantaProducts !== 'undefined' && window.secretSantaProducts && window.secretSantaProducts.products) {
+            console.log('Loading secretSantaProducts (new format):', window.secretSantaProducts.products.length);
+            allCategoryProducts = [...window.secretSantaProducts.products];
+        } else if (typeof window.secretsantaProducts !== 'undefined' && window.secretsantaProducts && window.secretsantaProducts.products) {
+            console.log('Loading secretsantaProducts (new format):', window.secretsantaProducts.products.length);
+            allCategoryProducts = [...window.secretsantaProducts.products];
+        } else if (typeof window.specialOffersData !== 'undefined' && window.specialOffersData) {
             console.log('Loading specialOffersData for Secret Santa Gifts:', window.specialOffersData.length);
             allCategoryProducts = [...window.specialOffersData];
+        } else if (typeof specialOffersData !== 'undefined' && specialOffersData) {
+            console.log('Loading specialOffersData (fallback):', specialOffersData.length);
+            allCategoryProducts = [...specialOffersData];
         } else {
-            console.warn('specialOffersData not available');
+            console.warn('secretSantaProducts not available');
             allCategoryProducts = [];
         }
     }
