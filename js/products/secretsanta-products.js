@@ -27,7 +27,8 @@
 // ========================================
 
 // Special Offers Data - Products with special offers/discounts
-const specialOffersData = [
+// Note: Using var to avoid conflicts when multiple files are loaded
+var specialOffersData = [
     {
         "title": "Carhartt Men's Midweight Signature Sleeve Logo Hooded Sweatshirt",
         "price": "54.99",

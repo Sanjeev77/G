@@ -25,10 +25,11 @@ const independenceDayProducts = {
 window.independenceDayProducts = independenceDayProducts;
 
 // Also export as specialOffersData for backward compatibility with special-offers page
-const specialOffersData = independenceDayProducts.products;
+// Note: Using window assignment to avoid conflicts when multiple files are loaded
+window.specialOffersData = independenceDayProducts.products;
 
 // Custom Category Configuration for SEO (backward compatibility)
-const customCategoryConfig = independenceDayProducts.config;
+window.customCategoryConfig = independenceDayProducts.config;
 
 // Global variables for special offers page
 let allSpecialOffers = [];

@@ -38,10 +38,11 @@ const newYearProducts = {
 window.newYearProducts = newYearProducts;
 
 // Also export as specialOffersData for backward compatibility with special-offers page
-const specialOffersData = newYearProducts.products;
+// Note: Using window assignment to avoid conflicts when multiple files are loaded
+window.specialOffersData = newYearProducts.products;
 
 // Custom Category Configuration for SEO (backward compatibility)
-const customCategoryConfig = newYearProducts.config;
+window.customCategoryConfig = newYearProducts.config;
 
 // Global variables for special offers page
 let allSpecialOffers = [];

@@ -38,10 +38,11 @@ const christmasProducts = {
 window.christmasProducts = christmasProducts;
 
 // Also export as specialOffersData for backward compatibility with special-offers page
-const specialOffersData = christmasProducts.products;
+// Note: Using window assignment to avoid conflicts when multiple files are loaded
+window.specialOffersData = christmasProducts.products;
 
 // Custom Category Configuration for SEO (backward compatibility)
-const customCategoryConfig = christmasProducts.config;
+window.customCategoryConfig = christmasProducts.config;
 
 // Global variables for special offers page
 let allSpecialOffers = [];

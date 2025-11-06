@@ -567,44 +567,27 @@ function loadSpecialProductIcons() {
 
     let specialProducts = [];
 
-    // First, try to load from specialProductsData if it exists
-    if (typeof window.specialProductsData !== 'undefined' && window.specialProductsData.length > 0) {
-        console.log('Loading from specialProductsData...');
-        specialProducts = window.specialProductsData;
-    }
-    // Fallback to allProductsData
-    else if (typeof allProductsData !== 'undefined') {
-        console.log('Falling back to allProductsData...');
-
-        // Filter products marked as special/featured or with special offers
-        specialProducts = allProductsData.filter(product =>
-            product.featured === true ||
-            product.specialOffer === true ||
-            product.discount
-        );
-
-        // If no special products found, take top-rated products
-        if (specialProducts.length === 0) {
-            specialProducts = allProductsData
-                .sort((a, b) => b.rating - a.rating)
-                .slice(0, 12);
+    // Load from Special Products Rotation Manager (automated system)
+    if (typeof window.specialProductsRotationManager !== 'undefined') {
+        console.log('Loading from Special Products Rotation Manager...');
+        try {
+            specialProducts = window.specialProductsRotationManager.init();
+            console.log(`Rotation Manager returned ${specialProducts.length} products`);
+        } catch (error) {
+            console.error('Error loading from Rotation Manager:', error);
         }
-
-        // Limit to 12 products
-        specialProducts = specialProducts.slice(0, 12);
+    } else {
+        console.error('Special Products Rotation Manager not found!');
     }
-    else {
-        console.error('No product data available');
-        container.innerHTML = '<p style="text-align: center; color: #6c757d;">Unable to load products</p>';
+
+    // If no products loaded, show error message
+    if (specialProducts.length === 0) {
+        console.error('No product data available from rotation manager');
+        container.innerHTML = '<p style="text-align: center; color: #6c757d;">Unable to load products. Please refresh the page.</p>';
         return;
     }
 
     console.log(`Found ${specialProducts.length} special products`);
-
-    if (specialProducts.length === 0) {
-        container.innerHTML = '<p style="text-align: center; color: #6c757d;">No special products available</p>';
-        return;
-    }
 
     // Generate product icons HTML
     const iconsHTML = specialProducts.map(product => createSpecialProductIcon(product)).join('');

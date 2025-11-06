@@ -27,7 +27,8 @@
 // ========================================
 
 // Special Offers Data - Products with special offers/discounts
-const specialOffersData = [
+// Note: Using var to avoid conflicts when multiple files are loaded
+var specialOffersData = [
     {
         "title": "DIYASY Bats Wall Decor, 120 Pcs 3D Bat Halloween Decoration Stickers for Home Decor 4 Size Waterproof Black Spooky Bats for Room Decals",
         "price": "5.67",

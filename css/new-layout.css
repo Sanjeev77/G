@@ -854,25 +854,85 @@
     line-height: 1.6;
 }
 
+/* Animated glowing border effect - buy.ca style */
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotate {
+    0% {
+        --angle: 0deg;
+    }
+    100% {
+        --angle: 360deg;
+    }
+}
+
 .hero-cta-btn {
     display: inline-block;
-    padding: 1rem 3rem;
-    background: #f39c12;
-    color: white;
+    padding: 2px;
+    background: none;
+    border: none;
     text-decoration: none;
     border-radius: 50px;
-    font-size: 1.2rem;
+    position: relative;
+    transition: all 0.18s ease-in-out;
+    transform: translate3d(0, 0, 0);
+}
+
+.hero-cta-btn::before,
+.hero-cta-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background-image: conic-gradient(
+        from var(--angle) at 50% 50%,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) 33%,
+        #ffd700 50%,
+        rgba(0, 0, 0, 0) 66%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    animation: rotate 4s infinite linear;
+    z-index: -1;
+}
+
+.hero-cta-btn::before {
+    filter: blur(20px);
+}
+
+.hero-cta-btn::after {
+    filter: blur(0px);
+}
+
+.hero-cta-btn .btn-inner {
+    display: block !important;
+    position: relative;
+    padding: 1rem 3rem !important;
+    border-radius: 50px !important;
+    background: #f39c12 !important;
+    color: white !important;
+    font-size: 1.2rem !important;
     font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+    z-index: 1;
+    transition: all 0.18s ease;
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4) !important;
+    backdrop-filter: blur(10px);
 }
 
 .hero-banner-link:hover .hero-cta-btn {
-    background: #e67e22;
     transform: translateY(-3px);
+}
+
+.hero-banner-link:hover .hero-cta-btn .btn-inner {
+    background: #e67e22;
     box-shadow: 0 6px 20px rgba(243, 156, 18, 0.6);
-    color: white;
-    text-decoration: none;
 }
 
 /* Special Products Icons (Circular with Product Images) */
@@ -1133,7 +1193,7 @@
         margin-bottom: 1.5rem;
     }
 
-    .hero-cta-btn {
+    .hero-cta-btn .btn-inner {
         padding: 0.75rem 2rem;
         font-size: 1rem;
     }
@@ -1307,20 +1367,66 @@
 
 .banner-cta-btn {
     display: inline-block;
-    padding: 0.75rem 2rem;
-    background: #f39c12;
-    color: white;
+    padding: 2px;
+    background: none;
+    border: none;
     text-decoration: none;
     border-radius: 50px;
+    position: relative;
+    transition: all 0.18s ease-in-out;
+    transform: translate3d(0, 0, 0);
+}
+
+.banner-cta-btn::before,
+.banner-cta-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background-image: conic-gradient(
+        from var(--angle) at 50% 50%,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) 33%,
+        #ffd700 50%,
+        rgba(0, 0, 0, 0) 66%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    animation: rotate 4s infinite linear;
+    z-index: -1;
+}
+
+.banner-cta-btn::before {
+    filter: blur(20px);
+}
+
+.banner-cta-btn::after {
+    filter: blur(0px);
+}
+
+.banner-cta-btn .btn-inner {
+    display: block;
+    position: relative;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    background: #f39c12;
+    color: white;
     font-size: 1rem;
     font-weight: 600;
-    transition: all 0.3s ease;
+    z-index: 1;
+    transition: all 0.18s ease;
     box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+    backdrop-filter: blur(10px);
 }
 
 .banner-item:hover .banner-cta-btn {
-    background: #e67e22;
     transform: translateY(-3px);
+}
+
+.banner-item:hover .banner-cta-btn .btn-inner {
+    background: #e67e22;
     box-shadow: 0 6px 20px rgba(243, 156, 18, 0.6);
 }
 
@@ -1355,6 +1461,19 @@
     }
 
     .banner-cta-btn {
+        padding: 1px; /* Reduced glow border thickness for mobile */
+    }
+
+    .banner-cta-btn::before {
+        filter: blur(8px); /* Reduced blur for much thinner glow on mobile */
+    }
+
+    .banner-cta-btn::after {
+        filter: blur(0px);
+        opacity: 0.8; /* Slightly reduce visibility for subtler effect */
+    }
+
+    .banner-cta-btn .btn-inner {
         padding: 0.6rem 1.5rem;
         font-size: 0.9rem;
     }
@@ -1377,7 +1496,7 @@
         font-size: 0.8rem;
     }
 
-    .banner-cta-btn {
+    .banner-cta-btn .btn-inner {
         padding: 0.5rem 1.25rem;
         font-size: 0.85rem;
     }

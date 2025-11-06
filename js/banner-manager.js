@@ -142,7 +142,12 @@ class BannerManager {
         // Update CTA button text
         const ctaBtn = this.bannerSection.querySelector('.hero-cta-btn');
         if (ctaBtn && this.currentBanner.ctaText) {
-            ctaBtn.textContent = this.currentBanner.ctaText;
+            const btnInner = ctaBtn.querySelector('.btn-inner');
+            if (btnInner) {
+                btnInner.textContent = this.currentBanner.ctaText;
+            } else {
+                ctaBtn.textContent = this.currentBanner.ctaText;
+            }
         }
     }
 

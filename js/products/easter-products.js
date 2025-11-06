@@ -25,10 +25,11 @@ const easterProducts = {
 window.easterProducts = easterProducts;
 
 // Also export as specialOffersData for backward compatibility with special-offers page
-const specialOffersData = easterProducts.products;
+// Note: Using window assignment to avoid conflicts when multiple files are loaded
+window.specialOffersData = easterProducts.products;
 
 // Custom Category Configuration for SEO (backward compatibility)
-const customCategoryConfig = easterProducts.config;
+window.customCategoryConfig = easterProducts.config;
 
 // Global variables for special offers page
 let allSpecialOffers = [];

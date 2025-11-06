@@ -25,10 +25,11 @@ const valentinesDayProducts = {
 window.valentinesDayProducts = valentinesDayProducts;
 
 // Also export as specialOffersData for backward compatibility with special-offers page
-const specialOffersData = valentinesDayProducts.products;
+// Note: Using window assignment to avoid conflicts when multiple files are loaded
+window.specialOffersData = valentinesDayProducts.products;
 
 // Custom Category Configuration for SEO (backward compatibility)
-const customCategoryConfig = valentinesDayProducts.config;
+window.customCategoryConfig = valentinesDayProducts.config;
 
 // Global variables for special offers page
 let allSpecialOffers = [];
