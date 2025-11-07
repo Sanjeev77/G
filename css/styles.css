@@ -3102,7 +3102,6 @@ footer .footer-content,
     }
 
     /* Hide mobile ads on desktop */
-    .mobile-ad-top,
     .mobile-ad-bottom {
         display: none !important;
     }
@@ -3134,7 +3133,6 @@ footer .footer-content,
     }
 
     /* Mobile ad containers - compact horizontal layout */
-    .mobile-ad-top,
     .mobile-ad-bottom {
         display: block !important;
         width: 100%;
@@ -3148,16 +3146,11 @@ footer .footer-content,
         box-sizing: border-box;
     }
 
-    .mobile-ad-top {
-        margin-bottom: 3px;
-    }
-
     .mobile-ad-bottom {
         margin-top: 3px;
     }
 
     /* Mobile ad styling - force horizontal banner dimensions */
-    .mobile-ad-top .adsbygoogle,
     .mobile-ad-bottom .adsbygoogle {
         width: 100% !important;
         height: 50px !important;
@@ -3170,7 +3163,6 @@ footer .footer-content,
     }
 
     /* Control iframe and ins elements */
-    .mobile-ad-top ins,
     .mobile-ad-bottom ins {
         width: 100% !important;
         height: 50px !important;
@@ -3178,7 +3170,6 @@ footer .footer-content,
         display: block !important;
     }
 
-    .mobile-ad-top iframe,
     .mobile-ad-bottom iframe {
         width: 100% !important;
         height: 50px !important;
