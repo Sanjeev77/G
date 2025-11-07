@@ -3136,7 +3136,7 @@ footer .footer-content,
     /* Mobile ad containers - compact horizontal layout */
     .mobile-ad-top,
     .mobile-ad-bottom {
-        display: none !important;
+        display: block !important;
         width: 100%;
         padding: 0;
         margin: 0;
