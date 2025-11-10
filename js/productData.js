@@ -15,8 +15,8 @@ const allProductsData = [
     {
         "id": 8359,
         "title": "Lodge 6 Quart Enameled Cast Iron Dutch Oven with Lid – Dual Handles – Oven Safe up to 500° F or on Stovetop - Use to Marinate, Cook, Bake, Refrigerate and Serve – Lilac",
-        "price": "",
-        "priceValue": 0,
+        "price": "99.90",
+        "priceValue": 99.9,
         "category": "birthday-gifts-for-couples",
         "image": "https://m.media-amazon.com/images/I/518-HZmhC2L._AC_.jpg",
         "rating": 4.6,
@@ -609,8 +609,8 @@ const allProductsData = [
     {
         "id": 8304,
         "title": "Gusto Nostro Crystal Wine Glasses Set of 4, 22 Oz Long Stem Modern Wine Glasses for White and Red Wine, Dishwasher Safe, Fancy, Elegant, Large and Tall Wine Glass for Wedding Christmas Anniversary",
-        "price": "",
-        "priceValue": 0,
+        "price": "27.99",
+        "priceValue": 27.99,
         "category": "birthday-gifts-for-couples",
         "image": "https://m.media-amazon.com/images/I/71STQIxU1rL._AC_SL1500_.jpg",
         "rating": 4.6,
@@ -708,8 +708,8 @@ const allProductsData = [
     {
         "id": 8295,
         "title": "Modern Floor Lamp Simple Design with White Shade, Foot Pedal Switch, 60\" Small Tall Lamps for Living Room Bedroom Office Dining Room Kitchen, Black Pole Lamp(Without Bulb)",
-        "price": "",
-        "priceValue": 0,
+        "price": "19.99",
+        "priceValue": 19.99,
         "category": "birthday-gifts-for-couples",
         "image": "https://m.media-amazon.com/images/I/61JlCcuXjeL._AC_SL1500_.jpg",
         "rating": 4.5,
@@ -1258,8 +1258,8 @@ const allProductsData = [
     {
         "id": 8244,
         "title": "UNGENT THEM Pinky Promise Matching Bracelet for Couples Soulmate Man Distance Relationship Gifts for Women Men Him Her",
-        "price": "",
-        "priceValue": 0,
+        "price": "9.99",
+        "priceValue": 9.99,
         "category": "birthday-gifts-for-couples",
         "image": "https://m.media-amazon.com/images/I/71nJW8ZJgzL._AC_SY535_.jpg",
         "rating": 4.4,
