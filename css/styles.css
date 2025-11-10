@@ -58,7 +58,7 @@ body {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
@@ -278,7 +278,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -407,7 +407,7 @@ a.gift-card:focus {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -1397,7 +1397,7 @@ a.category-card:focus {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     padding: 0 1rem;
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -2060,7 +2060,7 @@ footer .footer-content,
         margin-bottom: 1rem;
         object-fit: contain;
         background: white;
-        border: 1px solid #e9ecef;
+        border: none;
     }
 
     .product-title {
@@ -2536,7 +2536,7 @@ footer .footer-content,
         flex-shrink: 0 !important;
         margin: 0 !important;
         background: white;
-        border: 1px solid #e9ecef;
+        border: none;
         padding: 8px;
         transition: transform 0.2s ease;
     }
@@ -3178,13 +3178,13 @@ footer .footer-content,
 
     .main-content {
         flex: 1 1 auto;
-        max-width: 1400px;
+        max-width: 1500px;
         width: 100%;
     }
 
     /* Ensure containers inside main-content maintain original width */
     .main-content .container {
-        max-width: 1400px;
+        max-width: 1500px;
         margin: 0 auto;
         padding: 0 20px;
     }
@@ -3314,12 +3314,12 @@ footer .footer-content,
     }
 
     .main-content {
-        max-width: 1400px;
-        width: 1400px;
+        max-width: 1500px;
+        width: 1500px;
     }
 
     .main-content .container {
-        max-width: 1400px;
+        max-width: 1500px;
     }
 }
 
@@ -3344,7 +3344,7 @@ footer .footer-content,
 }
 
 .search-results-section .container {
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -3427,7 +3427,7 @@ footer .footer-content,
 }
 
 .enhanced-footer .container {
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 2rem;
     text-align: left;
