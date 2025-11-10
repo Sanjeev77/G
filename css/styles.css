@@ -190,7 +190,7 @@ body {
 .hero-section {
     background: #f8f9fa;
     padding: 2.5rem 0;
-    text-align: center;
+    text-align: left;
 }
 
 .hero-title {
@@ -199,14 +199,16 @@ body {
     color: #2c3e50;
     margin-bottom: 1rem;
     line-height: 1.1;
+    padding-left: 3rem;
 }
 
 .hero-subtitle {
     font-size: 1.125rem;
     color: #6c757d;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0;
     line-height: 1.6;
+    padding-left: 3rem;
 }
 
 .main-content {
@@ -267,7 +269,7 @@ body {
 
 .section-subtitle {
     text-align: center;
-    font-size: 1.125rem;
+    font-size: 0.95rem;
     color: #6c757d;
     margin-bottom: 3rem;
 }
@@ -403,7 +405,7 @@ a.gift-card:focus {
 
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     max-width: 1400px;
     margin: 0 auto;
@@ -411,10 +413,8 @@ a.gift-card:focus {
 
 .category-card {
     background: white;
-    border: 2px solid #e9ecef;
-    border-radius: 12px;
-    padding: 1.5rem;
-    text-align: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
@@ -422,6 +422,23 @@ a.gift-card:focus {
     display: block;
     text-decoration: none;
     color: inherit;
+    height: 250px;
+}
+
+.category-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.category-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
 }
 
 .category-card::before {
@@ -431,79 +448,70 @@ a.gift-card:focus {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, transparent 0%, rgba(36, 106, 153, 0.05) 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    background: rgba(0, 0, 0, 0.30);
+    border-radius: 8px;
+    z-index: 1;
 }
 
-.category-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-    border-color: #246a99;
+.category-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 100%);
+    border-radius: 0 0 8px 8px;
+    z-index: 1;
 }
 
-.category-card:hover::before {
-    opacity: 1;
+.category-card-content {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
 }
 
-.category-card:hover .category-card-icon {
-    transform: scale(1.1);
-    color: #246a99;
+.category-card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+    flex: 1;
 }
 
-.category-card-icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #246a99, #1e5780);
+.category-card-arrow {
+    width: 32px;
+    height: 32px;
+    background: #f0f0f0;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1rem;
     transition: all 0.3s ease;
-    position: relative;
-    z-index: 1;
+    flex-shrink: 0;
+    margin-left: 0.5rem;
 }
 
-.category-card-icon i {
-    font-size: 1.5rem;
-    color: white;
+.category-card-arrow i {
+    font-size: 0.875rem;
+    color: #333;
 }
 
-.category-card-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 0.75rem;
-    position: relative;
-    z-index: 1;
-}
-
-.category-card-description {
-    font-size: 0.9rem;
-    color: #6c757d;
-    margin-bottom: 1rem;
-    line-height: 1.4;
-    position: relative;
-    z-index: 1;
-}
-
-.category-card-cta {
+.category-card:hover .category-card-arrow {
     background: #246a99;
-    color: white;
-    padding: 8px 20px;
-    border-radius: 6px;
-    font-weight: 500;
-    font-size: 0.9rem;
-    display: inline-block;
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 1;
 }
 
-.category-card:hover .category-card-cta {
-    background: #1e5780;
-    transform: translateY(-1px);
+.category-card:hover .category-card-arrow i {
+    color: white;
 }
 
 /* Ensure category card link styling doesn't interfere */
@@ -825,7 +833,7 @@ a.category-card:focus {
 .product-grid {
     display: grid !important;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 1.5rem;
     width: 100%;
     visibility: visible !important;
@@ -1055,7 +1063,7 @@ a.category-card:focus {
 
     .product-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     .filters {
@@ -1387,7 +1395,7 @@ a.category-card:focus {
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 1rem;
     padding: 0 1rem;
     max-width: 1400px;
     margin: 0 auto;
@@ -1614,13 +1622,15 @@ footer .footer-content,
 }
 
 .legal-content h1 {
-    color: #2c3e50;
+    color: #fff;
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 3px solid #f39c12;
+    margin-bottom: 2.5rem;
     text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
 .legal-content h2 {
@@ -1667,17 +1677,63 @@ footer .footer-content,
 
 .faq-item {
     background: white;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    padding: 0;
+    margin-bottom: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     border-left: 4px solid #3498db;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item.accordion .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    background: white;
+    transition: background 0.3s ease;
+}
+
+.faq-item.accordion .faq-question:hover {
+    background: #f8f9fa;
 }
 
 .faq-item h3 {
     color: #2c3e50;
-    margin-bottom: 1rem;
-    font-weight: 600;
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.1rem;
+    flex: 1;
+}
+
+.faq-icon {
+    color: #3498db;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    margin-left: 1rem;
+}
+
+.faq-item.accordion.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 1.5rem;
+}
+
+.faq-item.accordion.active .faq-answer {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.faq-answer p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
 }
 
 .faq-section {
@@ -1685,13 +1741,17 @@ footer .footer-content,
 }
 
 .faq-section h2 {
-    background: #3498db;
-    color: white;
-    padding: 1rem 1.5rem;
-    margin: 2rem -1.5rem 1.5rem -1.5rem;
-    border-radius: 8px 8px 0 0;
-    font-size: 1.3rem;
-    border-left: none;
+    color: #667eea;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 3rem 0 2rem 0;
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(135deg, #f0f4ff 0%, #e8edff 100%);
+    border-radius: 12px;
+    border-left: 6px solid #667eea;
+    box-shadow: 0 3px 12px rgba(102, 126, 234, 0.15);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .back-link {
@@ -1737,7 +1797,8 @@ footer .footer-content,
     }
 
     .legal-content h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        padding: 1.5rem 1rem;
     }
 
     .legal-content h2 {
@@ -1754,14 +1815,31 @@ footer .footer-content,
         margin-bottom: 1.5rem;
     }
 
-    .faq-item {
+    .faq-item.accordion .faq-question {
         padding: 1rem;
     }
 
+    .faq-item h3 {
+        font-size: 1rem;
+    }
+
+    .faq-icon {
+        font-size: 1rem;
+    }
+
+    .faq-answer {
+        padding: 0 1rem;
+    }
+
+    .faq-item.accordion.active .faq-answer {
+        padding: 0 1rem 1rem 1rem;
+    }
+
     .faq-section h2 {
-        margin: 1.5rem -1rem 1rem -1rem;
-        padding: 0.75rem 1rem;
-        font-size: 1.1rem;
+        margin: 2rem 0 1.5rem 0;
+        padding: 1rem 1rem;
+        font-size: 1.3rem;
+        border-left-width: 5px;
     }
 }
 
@@ -1920,12 +1998,12 @@ footer .footer-content,
     }
 
     .categories-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 1.5rem;
     }
 
     .category-card {
-        padding: 1.25rem;
+        padding: 0;
     }
 
     .category-card-icon {
@@ -1965,7 +2043,7 @@ footer .footer-content,
 
     .product-grid {
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        gap: 1.5rem;
+        gap: 1rem;
         padding: 0 1rem;
     }
 
@@ -2333,10 +2411,27 @@ footer .footer-content,
     .categories-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+        padding: 0 1rem;
     }
 
     .category-card {
-        padding: 1rem;
+        padding: 0;
+    }
+
+    .category-card-content {
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        padding: 0.6rem 0.75rem;
+    }
+
+    .category-card-arrow {
+        width: 28px;
+        height: 28px;
+    }
+
+    .category-card-arrow i {
+        font-size: 0.75rem;
     }
 
     .category-card-icon {
@@ -2402,15 +2497,15 @@ footer .footer-content,
 
     .product-grid {
         grid-template-columns: 1fr;
-        gap: 0.5rem;
-        padding: 0;
+        gap: 0.3rem;
+        padding: 0 0.5rem;
         max-width: 100vw;
         margin: 0 auto;
     }
 
     .product-card {
-        max-width: calc(100vw - 0.8rem) !important;
-        width: calc(100vw - 0.8rem) !important;
+        max-width: 100% !important;
+        width: 100% !important;
         display: flex !important;
         flex-direction: row !important;
         height: auto !important;
@@ -3097,7 +3192,7 @@ footer .footer-content,
     /* Product Grid - 4 columns on desktop */
     .product-grid {
         grid-template-columns: repeat(4, 1fr) !important;
-        gap: 2rem;
+        gap: 1rem;
         padding: 0 1rem;
     }
 
