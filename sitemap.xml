@@ -8,19 +8,24 @@
 <!-- Homepage -->
 <url>
   <loc>https://www.giftonbudget.com/</loc>
-  <lastmod>2025-10-25T09:00:00+00:00</lastmod>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.giftonbudget.com/index.html</loc>
-  <lastmod>2025-10-25T09:00:00+00:00</lastmod>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
   <priority>0.95</priority>
 </url>
 
 <!-- Special Offers & Budget Categories -->
 <url>
   <loc>https://www.giftonbudget.com/pages/special-offers.html</loc>
-  <lastmod>2025-10-25T09:00:00+00:00</lastmod>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/cfda-awards-2025-celebrity-looks.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
@@ -133,6 +138,81 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://www.giftonbudget.com/pages/birthday-gifts-for-moms.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/birthday-gifts-for-dads.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/birthday-gifts-for-best-friends.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/birthday-gifts-for-girlfriends.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/birthday-gifts-for-couples.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/birthday-gifts-for-coworkers.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/birthday-gifts-for-grandparents.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/birthday-gifts-for-teachers.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/birthday-gifts-for-someone-who-has-everything.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/funny-birthday-gifts.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/personalized-birthday-gifts.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/last-minute-birthday-gifts.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/luxury-birthday-gifts.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/experience-birthday-gifts.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/eco-friendly-birthday-gifts.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://www.giftonbudget.com/pages/bridal-shower-gifts.html</loc>
   <lastmod>2025-10-25T09:00:00+00:00</lastmod>
   <priority>0.80</priority>
@@ -143,42 +223,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.giftonbudget.com/pages/gifts-for-best-friends.html</loc>
-  <lastmod>2025-10-25T09:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.giftonbudget.com/pages/gifts-for-boyfriends.html</loc>
-  <lastmod>2025-10-25T09:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.giftonbudget.com/pages/gifts-for-couples.html</loc>
-  <lastmod>2025-10-25T09:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://www.giftonbudget.com/pages/gifts-for-coworkers.html</loc>
-  <lastmod>2025-10-25T09:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.giftonbudget.com/pages/gifts-for-dads.html</loc>
-  <lastmod>2025-10-25T09:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.giftonbudget.com/pages/gifts-for-girlfriends.html</loc>
-  <lastmod>2025-10-25T09:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.giftonbudget.com/pages/gifts-for-grandparents.html</loc>
-  <lastmod>2025-10-25T09:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.giftonbudget.com/pages/gifts-for-moms.html</loc>
   <lastmod>2025-10-25T09:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -208,11 +253,6 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.giftonbudget.com/pages/gifts-for-someone-who-has-everything.html</loc>
-  <lastmod>2025-10-25T09:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://www.giftonbudget.com/pages/housewarming-gifts.html</loc>
   <lastmod>2025-10-25T09:00:00+00:00</lastmod>
   <priority>0.80</priority>
@@ -220,6 +260,58 @@
 <url>
   <loc>https://www.giftonbudget.com/pages/retirement-gifts.html</loc>
   <lastmod>2025-10-25T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<!-- Holiday Gifts -->
+<url>
+  <loc>https://www.giftonbudget.com/pages/christmas-gifts.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/valentines-day-gifts.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/mothers-day-gifts.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/fathers-day-gifts.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/easter-gifts.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/halloween-gifts.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/thanksgiving-gifts.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/new-year-gifts.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/independence-day-gifts.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.giftonbudget.com/pages/secret-santa-gifts.html</loc>
+  <lastmod>2025-11-11T09:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
@@ -393,11 +485,6 @@
 </url>
 <url>
   <loc>https://www.giftonbudget.com/pages/outdoor-play-gifts.html</loc>
-  <lastmod>2025-10-25T09:00:00+00:00</lastmod>
-  <priority>0.75</priority>
-</url>
-<url>
-  <loc>https://www.giftonbudget.com/pages/personalized-gifts.html</loc>
   <lastmod>2025-10-25T09:00:00+00:00</lastmod>
   <priority>0.75</priority>
 </url>
