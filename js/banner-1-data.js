@@ -820,16 +820,6 @@ const banner1Products = [
         "id": 1761404750662
     },
     {
-        "title": "Burt's Bees Christmas Gifts - Tips and Toes Kit, 6 Travel Size Products for Stocking Stuffers - Pomegranate Moisturizing Lip Balm, 2 Hand Creams, Foot Cream, Cuticle Cream, and Hand Salve",
-        "price": "12.59",
-        "rating": 4.7,
-        "affiliateLink": "https://amzn.to/4qmayK9",
-        "image": "https://m.media-amazon.com/images/I/71Bp9dmazkL._SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761404728797
-    },
-    {
         "title": "PAVOI 14K Gold Plated X Ring Simulated Diamond CZ Criss Cross Ring for Women",
         "price": "14.95",
         "rating": 4.2,
@@ -1090,56 +1080,6 @@ const banner1Products = [
         "id": 1761399262107
     },
     {
-        "title": "Kitsch Ultra-Petite Satin Scrunchies for Women - Softer Than Silk Scrunchies | Hair Ties No Damage for Frizz-Free Sleep | Perfect for Day or Night | Ideal Gifts for Women - Eucalyptus, 6 pcs",
-        "price": "7.99",
-        "rating": 4.6,
-        "affiliateLink": "https://amzn.to/4oupQuK",
-        "image": "https://m.media-amazon.com/images/I/91KlKip+OIL._SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761399292573
-    },
-    {
-        "title": "Kitsch Mini Claw Clips for Women - Stylish Small Hair Clips for Kids | Stays In Place Without Pulling or Snagging | Durable & Sturdy Plastic | Ideal Gifts for Women - Tortoise & Black, 16 Pcs",
-        "price": "6.39",
-        "rating": 4.6,
-        "affiliateLink": "https://amzn.to/3WTgKvB",
-        "image": "https://m.media-amazon.com/images/I/71gFuZy4w0L._SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761399387912
-    },
-    {
-        "title": "essence | Lash Princess False Lash Effect Mascara | Volumizing & Lengthening | Cruelty Free & Paraben Free",
-        "price": "4.99",
-        "rating": 4.3,
-        "affiliateLink": "https://amzn.to/3Lcjba1",
-        "image": "https://m.media-amazon.com/images/I/61K6cQhw4EL._SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761399425771
-    },
-    {
-        "title": "BS-MALL Makeup Brush Set 18 Pcs Premium Synthetic Foundation Powder Concealers Eye shadows Blush Makeup Brushes with black case",
-        "price": "8.49",
-        "rating": 4.6,
-        "affiliateLink": "https://amzn.to/4oF6e7b",
-        "image": "https://m.media-amazon.com/images/I/71AEbODrs9L._SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761399448069
-    },
-    {
-        "title": "Al-Rehab Choco Musk Eau de Parfum Spray for Women, 1.65 oz/50 ml",
-        "price": "2.75",
-        "rating": 4.2,
-        "affiliateLink": "https://amzn.to/49jIlNW",
-        "image": "https://m.media-amazon.com/images/I/61cmcKQlUSL._SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761399474812
-    },
-    {
         "title": "FAXHION Gold Knuckle Rings Set for Women Snake Chain Stacking Ring Vintage BOHO Midi Rings SIze Mixed",
         "price": "6.99",
         "rating": 3.7,
@@ -1148,26 +1088,6 @@ const banner1Products = [
         "category": "banner-1",
         "featured": false,
         "id": 1761399693045
-    },
-    {
-        "title": "Shower Steamers Aromatherapy BLRIET 8 Pack Gifts for Women, Birthday Christmas White Elephant Gifts Stocking Stuffers for Adults Her Mom Him Home Spa Gym Natural Essential Oil Self Care Relaxation",
-        "price": "9.99",
-        "rating": 4.5,
-        "affiliateLink": "https://amzn.to/478xkxB",
-        "image": "https://m.media-amazon.com/images/I/71IeFfOoyNL._AC_SL1280_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761399718188
-    },
-    {
-        "title": "Shower Steamers Aromatherapy Birthday Gifts for Women - SWCANDY 8 Pcs Stocking Stuffers White Elephant Gifts for Adults Mom Men Teen Self Care with Natural Essential Oils Relaxation Home SPA Christmas",
-        "price": "7.96",
-        "rating": 4.4,
-        "affiliateLink": "https://amzn.to/4houJD4",
-        "image": "https://m.media-amazon.com/images/I/810MBwVTSaL._SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761399744156
     },
     {
         "title": "Small Sling Backpack Crossbody Sling Bag for Women, Chest Bag Daypack Fanny Pack Cross Body Bag for Outdoors Hiking Traveling - Black",
@@ -1188,26 +1108,6 @@ const banner1Products = [
         "category": "banner-1",
         "featured": false,
         "id": 1761399907957
-    },
-    {
-        "title": "Wet Brush Original Detangler Hair Brush, Amazon Exclusive Aqua- Ultra-Soft IntelliFlex Bristles-Detangling Hairbrush Glides Through Tangles For All Hair Types (Wet Dry & Damaged Hair) - Women & Men",
-        "price": "8.99",
-        "rating": 4.7,
-        "affiliateLink": "https://amzn.to/47HPNRS",
-        "image": "https://m.media-amazon.com/images/I/71r3cbexCGL._SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761399945639
-    },
-    {
-        "title": "WetBrush Original Detangler Black",
-        "price": "7.02",
-        "rating": 4.7,
-        "affiliateLink": "https://amzn.to/3WRLixU",
-        "image": "https://m.media-amazon.com/images/I/61rewWtNBCL._SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761399977356
     },
     {
         "title": "Trendy Queen Womens Oversized Summer T Shirts Plus Size Batwing Cute Casual Tops Short Sleeves Fashion Workout Clothes",
@@ -1248,36 +1148,6 @@ const banner1Products = [
         "category": "banner-1",
         "featured": false,
         "id": 1761400069713
-    },
-    {
-        "title": "BEAKEY Makeup Brushes Set, Professional Foundation Eyeshadow Concealer Blush Powder Bronzer Applicator, 2 Blender Sponge with Beauty Paper Case stocking stuffers for women",
-        "price": "7.99",
-        "rating": 4.5,
-        "affiliateLink": "https://amzn.to/4obv3rE",
-        "image": "https://m.media-amazon.com/images/I/71BFkreZhrL._SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761400090759
-    },
-    {
-        "title": "Maybelline Lash Sensational Sky High Washable Mascara Makeup, Volumizing, Lengthening, Defining, Curling, Multiplying, Buildable Formula, Blackest Black, 1 Count",
-        "price": "8.89",
-        "rating": 4.5,
-        "affiliateLink": "https://amzn.to/430oXSq",
-        "image": "https://m.media-amazon.com/images/I/71MQo8pHmBL._SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761400112211
-    },
-    {
-        "title": "e.l.f. Cream Glide Lip Liner, Highly-Pigmented Pencil For Shaping & Sculpting Lips, Semi-Matte Finish, Vegan & Cruelty-Free, Mauve Aside",
-        "price": "3.00",
-        "rating": 4.5,
-        "affiliateLink": "https://amzn.to/4niGtbT",
-        "image": "https://m.media-amazon.com/images/I/519zemKb6NL._SL1500_.jpg",
-        "category": "banner-1",
-        "featured": false,
-        "id": 1761400127284
     }
 ];
 

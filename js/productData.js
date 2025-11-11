@@ -2,17 +2,6 @@
 // All products with category and price information
 const allProductsData = [
     {
-        "id": 8361,
-        "title": "Waterproof Two Wheeler Cover for Bajaj Pulsar 125 Neon Bs6 Bike | UV Proof, Heat Resistant & All Weather Protection | Black & Yellow Piping Color | Durable & Triple Stitched",
-        "price": "299",
-        "priceValue": 299,
-        "category": "automotive",
-        "image": "https://m.media-amazon.com/images/I/71Mkxhdhx-L._SL1500_.jpg",
-        "rating": 4,
-        "affiliateLink": "https://amzn.to/4ozyl89",
-        "featured": false
-    },
-    {
         "id": 8360,
         "title": "AW BRIDAL 2Pcs His and Hers Terry Cloth Robes for Couples, Mr and Mrs Hooded Matching Robe Set, Wedding Engagement Gifts",
         "price": "78.99",
