@@ -12,9 +12,9 @@ class BlogListing {
     init() {
         this.loadBlogs();
         this.setupEventListeners();
-        this.populateCategories();
-        this.populateTags();
-        this.renderFeaturedPost();
+        // this.populateCategories(); // Categories disabled
+        // this.populateTags(); // Tags disabled
+        // this.renderFeaturedPost(); // Featured post disabled
         this.renderBlogs();
     }
 
@@ -96,8 +96,10 @@ class BlogListing {
 
         if (section && container) {
             section.style.display = 'block';
+            // Use direct URL if available, otherwise fall back to slug-based URL
+            const blogUrl = featuredBlog.url || `post.html?slug=${featuredBlog.slug}`;
             container.innerHTML = `
-                <a href="post.html?slug=${featuredBlog.slug}" class="featured-blog-link">
+                <a href="${blogUrl}" class="featured-blog-link">
                     ${featuredBlog.featuredImage ? `
                         <div class="featured-blog-image">
                             <img src="${featuredBlog.featuredImage}" alt="${featuredBlog.title}">
@@ -137,9 +139,12 @@ class BlogListing {
 
         if (emptyState) emptyState.style.display = 'none';
 
-        container.innerHTML = paginatedBlogs.map(blog => `
+        container.innerHTML = paginatedBlogs.map(blog => {
+            // Use direct URL if available, otherwise fall back to slug-based URL
+            const blogUrl = blog.url || `post.html?slug=${blog.slug}`;
+            return `
             <article class="blog-card">
-                <a href="post.html?slug=${blog.slug}" class="blog-card-link">
+                <a href="${blogUrl}" class="blog-card-link">
                     ${blog.featuredImage ? `
                         <div class="blog-card-image">
                             <img src="${blog.featuredImage}" alt="${blog.title}">
@@ -165,7 +170,8 @@ class BlogListing {
                     </div>
                 </a>
             </article>
-        `).join('');
+        `;
+        }).join('');
 
         this.renderPagination();
     }
