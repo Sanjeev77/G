@@ -28,8 +28,26 @@ class BlogListing {
     setupEventListeners() {
         // Search
         const searchInput = document.getElementById('blogSearch');
+        const searchButton = document.getElementById('searchButton');
+
         if (searchInput) {
+            // Real-time search as user types
             searchInput.addEventListener('input', (e) => this.handleSearch(e.target.value));
+
+            // Search on Enter key press
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    this.handleSearch(searchInput.value);
+                }
+            });
+        }
+
+        // Search button click
+        if (searchButton && searchInput) {
+            searchButton.addEventListener('click', () => {
+                this.handleSearch(searchInput.value);
+            });
         }
 
         // Category filter
