@@ -27,132 +27,122 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
     <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
         .blog-post-container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 40px 20px;
             background: #fff;
         }
 
-        .blog-post-header {
+        .blog-header {
             text-align: center;
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 2px solid #f0f0f1;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
         }
 
-        .blog-post-header h1 {
+        .blog-header h1 {
+            font-size: 2.5em;
             color: #232f3f;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 15px;
             line-height: 1.3;
         }
 
-        .blog-post-meta {
+        .blog-meta {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            color: #777;
-            font-size: 0.95rem;
-            margin-top: 1rem;
+            gap: 25px;
+            color: #666;
+            font-size: 0.95em;
+            margin-top: 20px;
         }
 
-        .blog-post-meta span {
+        .blog-meta span {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 8px;
         }
 
-        .blog-post-meta i {
+        .blog-meta i {
             color: #ff9900;
         }
 
-        .featured-image {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 12px;
-            margin: 2rem auto;
-            display: block;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .blog-content {
-            color: #333;
-            font-size: 1.1rem;
+        .blog-intro {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 40px;
             line-height: 1.8;
         }
 
-        .blog-content p {
-            margin-bottom: 1.5rem;
+        .blog-intro p {
+            margin-bottom: 15px;
         }
 
-        .blog-content h2 {
-            color: #232f3f;
-            font-size: 1.8rem;
-            margin: 2.5rem 0 1.5rem 0;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #ff9900;
-        }
-
-        .gift-item {
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .gift-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-        }
-
-        .gift-number {
-            display: inline-block;
-            background: linear-gradient(135deg, #ff9900 0%, #e47911 100%);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .gift-content {
+        .gift-card {
             display: flex;
-            gap: 2rem;
-            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gift-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+        }
+
+        .gift-card-wrapper {
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         .gift-image {
-            flex-shrink: 0;
-            width: 250px;
+            flex: 0 0 250px;
             height: 250px;
-            border-radius: 8px;
             overflow: hidden;
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background: #f8f9fa;
         }
 
         .gift-image img {
             width: 100%;
             height: 100%;
             object-fit: contain;
+            transition: transform 0.3s ease;
         }
 
-        .gift-details {
+        .gift-card:hover .gift-image img {
+            transform: scale(1.05);
+        }
+
+        .gift-content {
             flex: 1;
             display: flex;
             flex-direction: column;
+        }
+
+        .gift-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff9900 0%, #e47911 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            width: fit-content;
         }
 
         .gift-title {
@@ -172,15 +162,37 @@
             text-align: left;
         }
 
-        .gift-price {
-            font-size: 1.5em;
-            color: #ff9900;
-            font-weight: bold;
-            margin-bottom: 15px;
+        .gift-description p {
             text-align: left;
         }
 
-        .gift-cta {
+        .gift-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 15px;
+            border-top: 1px solid #ecf0f1;
+            text-align: left;
+        }
+
+        .gift-price {
+            font-size: 1.8em;
+            color: #ff9900;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .gift-rating {
+            color: #f39c12;
+            font-size: 0.95em;
+            text-align: left;
+        }
+
+        .gift-rating i {
+            margin-right: 3px;
+        }
+
+        .shop-button {
             display: inline-block;
             background: linear-gradient(135deg, #ff9900 0%, #e47911 100%);
             color: white;
@@ -190,50 +202,65 @@
             font-weight: 600;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(255, 153, 0, 0.3);
+        }
+
+        .shop-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 153, 0, 0.4);
+            background: linear-gradient(135deg, #e47911 0%, #ff9900 100%);
+        }
+
+        .blog-conclusion {
+            margin-top: 60px;
+            padding: 40px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8eaed 100%);
+            border-radius: 12px;
             text-align: center;
         }
 
-        .gift-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 153, 0, 0.4);
-        }
-
-        .conclusion {
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            margin-top: 3rem;
-            border-left: 4px solid #ff9900;
-        }
-
-        .conclusion h2 {
+        .blog-conclusion h2 {
             color: #232f3f;
-            margin-top: 0;
-            border: none;
-            padding: 0;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .blog-conclusion p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
         }
 
         @media (max-width: 768px) {
             .blog-post-container {
-                padding: 1rem;
+                padding: 20px;
+                margin: 20px;
             }
 
-            .blog-post-header h1 {
-                font-size: 1.8rem;
+            .blog-header h1 {
+                font-size: 1.8em;
             }
 
-            .blog-post-meta {
+            .blog-meta {
                 flex-direction: column;
-                gap: 0.5rem;
+                gap: 10px;
             }
 
-            .gift-content {
+            .gift-card {
                 flex-direction: column;
+                gap: 20px;
+                padding: 20px;
             }
 
             .gift-image {
                 width: 100%;
                 height: 200px;
+            }
+
+            .gift-footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
             }
         }
     </style>
@@ -281,190 +308,248 @@
             <div class="main-content">
                 <div class="blog-post-container">
                     <!-- Blog Post Header -->
-                    <div class="blog-post-header">
+                    <div class="blog-header">
                         <h1>10 Best Birthday Gifts for Boyfriends (All from Amazon)</h1>
-                        <div class="blog-post-meta">
+                        <div class="blog-meta">
                             <span><i class="fas fa-calendar"></i> January 13, 2025</span>
                             <span><i class="fas fa-user"></i> Gift On Budget Team</span>
                             <span><i class="fas fa-clock"></i> 8 min read</span>
                         </div>
                     </div>
 
-                    <!-- Blog Content -->
-                    <div class="blog-content">
+                    <!-- Blog Intro -->
+                    <div class="blog-intro">
                         <p>Finding the perfect birthday gift for your boyfriend can feel like a challenge, especially when you want to show him how much you care. Whether he's into tech, fashion, fitness, or grooming, Amazon has something special for every type of guy. We've curated this list of 10 amazing birthday gifts that he'll actually love and use—all available with fast shipping and great prices!</p>
 
                         <p>From high-quality accessories to practical everyday items, these gifts strike the perfect balance between thoughtful and useful. Let's dive into our top picks for 2025!</p>
+                    </div>
 
-                        <h2>Our Top 10 Birthday Gift Picks for Him</h2>
-
-                        <!-- Gift 1 -->
-                        <div class="gift-item">
-                            <span class="gift-number">1</span>
-                            <div class="gift-content">
-                                <div class="gift-image">
-                                    <img src="https://m.media-amazon.com/images/I/61j1jrAGuiL._SL1000_.jpg" alt="Versace Eros Cologne">
-                                </div>
-                                <div class="gift-details">
-                                    <h3 class="gift-title">Versace Eros Eau de Toilette</h3>
-                                    <p class="gift-description">Make his birthday unforgettable with this iconic masculine fragrance. Versace Eros combines fresh mint, Italian lemon, and warm vanilla for a captivating scent that's perfect for any occasion. The 3.4 oz bottle is elegantly designed and will last for months. This luxury cologne shows you know his style and appreciate the finer things. It's consistently rated as one of the best men's fragrances on Amazon with thousands of 5-star reviews.</p>
+                    <!-- Gift 1 -->
+                    <a href="https://amzn.to/49CCMKC" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+                    <div class="gift-card">
+                        <div class="gift-image">
+                            <img src="https://m.media-amazon.com/images/I/61j1jrAGuiL._SL1000_.jpg" alt="Versace Eros Cologne">
+                        </div>
+                        <div class="gift-content">
+                            <span class="gift-number">#1 Most Romantic</span>
+                            <h3 class="gift-title">Versace Eros Eau de Toilette</h3>
+                            <p class="gift-description">Make his birthday unforgettable with this iconic masculine fragrance. Versace Eros combines fresh mint, Italian lemon, and warm vanilla for a captivating scent that's perfect for any occasion. The 3.4 oz bottle is elegantly designed and will last for months. This luxury cologne shows you know his style and appreciate the finer things. It's consistently rated as one of the best men's fragrances on Amazon with thousands of 5-star reviews.</p>
+                            <div class="gift-footer">
+                                <div>
                                     <div class="gift-price">$59.34</div>
-                                    <a href="https://amzn.to/49CCMKC" class="gift-cta" target="_blank" rel="noopener">View on Amazon</a>
+                                    <div class="gift-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        4.7/5
+                                    </div>
                                 </div>
+                                <span class="shop-button">View on Amazon <i class="fas fa-arrow-right"></i></span>
                             </div>
                         </div>
+                    </div>
+                    </a>
 
-                        <!-- Gift 2 -->
-                        <div class="gift-item">
-                            <span class="gift-number">2</span>
-                            <div class="gift-content">
-                                <div class="gift-image">
-                                    <img src="https://m.media-amazon.com/images/I/818lBoWqXtL._AC_SX522_.jpg" alt="Fossil Grant Watch">
-                                </div>
-                                <div class="gift-details">
-                                    <h3 class="gift-title">Fossil Men's Grant Chronograph Watch</h3>
-                                    <p class="gift-description">This stunning stainless steel and leather watch combines classic style with modern functionality. The chronograph features three sub-dials and a date window, all housed in a sophisticated brown leather band. It's the perfect accessory for work, dates, or special occasions. Fossil is known for their quality craftsmanship, and this watch is built to last. He'll think of you every time he checks the time!</p>
+                    <!-- Gift 2 -->
+                    <a href="https://amzn.to/3JxvBZM" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+                    <div class="gift-card">
+                        <div class="gift-image">
+                            <img src="https://m.media-amazon.com/images/I/818lBoWqXtL._AC_SX522_.jpg" alt="Fossil Grant Watch">
+                        </div>
+                        <div class="gift-content">
+                            <span class="gift-number">#2 Best Classic Watch</span>
+                            <h3 class="gift-title">Fossil Men's Grant Chronograph Watch</h3>
+                            <p class="gift-description">This stunning stainless steel and leather watch combines classic style with modern functionality. The chronograph features three sub-dials and a date window, all housed in a sophisticated brown leather band. It's the perfect accessory for work, dates, or special occasions. Fossil is known for their quality craftsmanship, and this watch is built to last. He'll think of you every time he checks the time!</p>
+                            <div class="gift-footer">
+                                <div>
                                     <div class="gift-price">$117.00</div>
-                                    <a href="https://amzn.to/3JxvBZM" class="gift-cta" target="_blank" rel="noopener">View on Amazon</a>
+                                    <div class="gift-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        4.7/5
+                                    </div>
                                 </div>
+                                <span class="shop-button">View on Amazon <i class="fas fa-arrow-right"></i></span>
                             </div>
                         </div>
+                    </div>
+                    </a>
 
-                        <!-- Gift 3 -->
-                        <div class="gift-item">
-                            <span class="gift-number">3</span>
-                            <div class="gift-content">
-                                <div class="gift-image">
-                                    <img src="https://m.media-amazon.com/images/I/51bRSWrEc7S._AC_SL1500_.jpg" alt="Beats Studio Buds">
-                                </div>
-                                <div class="gift-details">
-                                    <h3 class="gift-title">Beats Studio Buds - True Wireless Earbuds</h3>
-                                    <p class="gift-description">Upgrade his audio experience with these premium wireless earbuds featuring active noise cancellation. The Beats Studio Buds deliver powerful, balanced sound and work seamlessly with both iPhone and Android devices. The IPX4 rating means they're sweat and water resistant—perfect for workouts or commutes. With up to 8 hours of listening time and a sleek charging case, he'll enjoy his favorite music, podcasts, and calls all day long.</p>
+                    <!-- Gift 3 -->
+                    <a href="https://amzn.to/3Je3cId" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+                    <div class="gift-card">
+                        <div class="gift-image">
+                            <img src="https://m.media-amazon.com/images/I/51bRSWrEc7S._AC_SL1500_.jpg" alt="Beats Studio Buds">
+                        </div>
+                        <div class="gift-content">
+                            <span class="gift-number">#3 Top Tech Pick</span>
+                            <h3 class="gift-title">Beats Studio Buds - True Wireless Earbuds</h3>
+                            <p class="gift-description">Upgrade his audio experience with these premium wireless earbuds featuring active noise cancellation. The Beats Studio Buds deliver powerful, balanced sound and work seamlessly with both iPhone and Android devices. The IPX4 rating means they're sweat and water resistant—perfect for workouts or commutes. With up to 8 hours of listening time and a sleek charging case, he'll enjoy his favorite music, podcasts, and calls all day long.</p>
+                            <div class="gift-footer">
+                                <div>
                                     <div class="gift-price">$89.95</div>
-                                    <a href="https://amzn.to/3Je3cId" class="gift-cta" target="_blank" rel="noopener">View on Amazon</a>
+                                    <div class="gift-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        4.2/5
+                                    </div>
                                 </div>
+                                <span class="shop-button">View on Amazon <i class="fas fa-arrow-right"></i></span>
                             </div>
                         </div>
+                    </div>
+                    </a>
 
-                        <!-- Gift 4 -->
-                        <div class="gift-item">
-                            <span class="gift-number">4</span>
-                            <div class="gift-content">
-                                <div class="gift-image">
-                                    <img src="https://m.media-amazon.com/images/I/61H9t3DXhZL._AC_SX679_.jpg" alt="Levi's Trucker Jacket">
-                                </div>
-                                <div class="gift-details">
-                                    <h3 class="gift-title">Levi's Men's Original Trucker Jacket</h3>
-                                    <p class="gift-description">A timeless classic that never goes out of style! This iconic denim jacket from Levi's is perfect for layering and works with virtually any outfit. Made from premium denim with signature styling details, it's durable, comfortable, and gets better with age. Whether he's dressing up for a night out or keeping it casual on weekends, this jacket will become his go-to piece. It's a wardrobe staple he'll wear for years to come.</p>
-                                    <div class="gift-price">$62.65</div>
-                                    <a href="https://amzn.to/4oM7NjN" class="gift-cta" target="_blank" rel="noopener">View on Amazon</a>
-                                </div>
-                            </div>
+                    
+</a>
+ 6 -->
+                    <div class="gift-card">
+                        <div class="gift-image">
+                            <img src="https://m.media-amazon.com/images/I/91lQGiLkUcL._AC_SX679_.jpg" alt="Carhartt Leather Wallet">
                         </div>
-
-                        <!-- Gift 5 -->
-                        <div class="gift-item">
-                            <span class="gift-number">5</span>
-                            <div class="gift-content">
-                                <div class="gift-image">
-                                    <img src="https://m.media-amazon.com/images/I/81KtwuuBJwL._AC_SX679_.jpg" alt="Carhartt Sweatshirt">
-                                </div>
-                                <div class="gift-details">
-                                    <h3 class="gift-title">Carhartt Rain Defender Quarter-Zip Sweatshirt</h3>
-                                    <p class="gift-description">Keep him warm and comfortable with this heavyweight Carhartt sweatshirt. It features water-repellent technology, making it perfect for outdoor activities or unpredictable weather. The quarter-zip design offers versatility and style, while the loose fit ensures all-day comfort. Carhartt is renowned for quality construction and durability, so this sweatshirt will withstand countless wears and washes. It's practical, stylish, and built to last.</p>
-                                    <div class="gift-price">$69.99</div>
-                                    <a href="https://amzn.to/4qETmQm" class="gift-cta" target="_blank" rel="noopener">View on Amazon</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Gift 6 -->
-                        <div class="gift-item">
-                            <span class="gift-number">6</span>
-                            <div class="gift-content">
-                                <div class="gift-image">
-                                    <img src="https://m.media-amazon.com/images/I/91lQGiLkUcL._AC_SX679_.jpg" alt="Carhartt Leather Wallet">
-                                </div>
-                                <div class="gift-details">
-                                    <h3 class="gift-title">Carhartt Men's Durable Oil Tan Leather Wallet</h3>
-                                    <p class="gift-description">Upgrade his everyday carry with this premium leather wallet from Carhartt. Made from oil-tanned leather that develops a rich patina over time, it's both practical and stylish. The wallet features multiple card slots, a secure ID window, and a spacious bill compartment. It's slim enough to fit comfortably in his pocket while holding everything he needs. This is the kind of quality gift that gets better with age and shows you care about the details.</p>
+                        <div class="gift-content">
+                            <span class="gift-number">#6 Daily Essential</span>
+                            <h3 class="gift-title">Carhartt Men's Durable Oil Tan Leather Wallet</h3>
+                            <p class="gift-description">Upgrade his everyday carry with this premium leather wallet from Carhartt. Made from oil-tanned leather that develops a rich patina over time, it's both practical and stylish. The wallet features multiple card slots, a secure ID window, and a spacious bill compartment. It's slim enough to fit comfortably in his pocket while holding everything he needs. This is the kind of quality gift that gets better with age and shows you care about the details.</p>
+                            <div class="gift-footer">
+                                <div>
                                     <div class="gift-price">$42.99</div>
-                                    <a href="https://amzn.to/3Jnk6nH" class="gift-cta" target="_blank" rel="noopener">View on Amazon</a>
+                                    <div class="gift-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        4.7/5
+                                    </div>
                                 </div>
+                                <a href="https://amzn.to/3Jnk6nH" class="shop-button" target="_blank" rel="noopener">View on Amazon <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Gift 7 -->
-                        <div class="gift-item">
-                            <span class="gift-number">7</span>
-                            <div class="gift-content">
-                                <div class="gift-image">
-                                    <img src="https://m.media-amazon.com/images/I/81Z+K3ry4fS._AC_SL1500_.jpg" alt="Wood Phone Docking Station">
-                                </div>
-                                <div class="gift-details">
-                                    <h3 class="gift-title">TESLYAR Wood Phone Docking Station</h3>
-                                    <p class="gift-description">Help him stay organized with this handsome wooden desk organizer. It features dedicated slots for his phone, watch, wallet, keys, and other essentials—all in one stylish station. Made from quality wood with a beautiful bourbon brown finish, it looks great on a nightstand or desk. This thoughtful gift shows you want to make his daily routine easier while adding a touch of sophistication to his space.</p>
+                    
+<a href="https://amzn.to/3LhUObi" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+<div class="gift-card">
+                        <div class="gift-image">
+                            <img src="https://m.media-amazon.com/images/I/81Z+K3ry4fS._AC_SL1500_.jpg" alt="Wood Phone Docking Station">
+                        </div>
+                        <div class="gift-content">
+                            <span class="gift-number">#7 Organization Hero</span>
+                            <h3 class="gift-title">TESLYAR Wood Phone Docking Station</h3>
+                            <p class="gift-description">Help him stay organized with this handsome wooden desk organizer. It features dedicated slots for his phone, watch, wallet, keys, and other essentials—all in one stylish station. Made from quality wood with a beautiful bourbon brown finish, it looks great on a nightstand or desk. This thoughtful gift shows you want to make his daily routine easier while adding a touch of sophistication to his space.</p>
+                            <div class="gift-footer">
+                                <div>
                                     <div class="gift-price">$39.80</div>
-                                    <a href="https://amzn.to/3LhUObi" class="gift-cta" target="_blank" rel="noopener">View on Amazon</a>
+                                    <div class="gift-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        4.7/5
+                                    </div>
                                 </div>
+                                <a href="https://amzn.to/3LhUObi" class="shop-button" target="_blank" rel="noopener">View on Amazon <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Gift 8 -->
-                        <div class="gift-item">
-                            <span class="gift-number">8</span>
-                            <div class="gift-content">
-                                <div class="gift-image">
-                                    <img src="https://m.media-amazon.com/images/I/51ztoy2W0iL._AC_SL1500_.jpg" alt="STANLEY Quencher Tumbler">
-                                </div>
-                                <div class="gift-details">
-                                    <h3 class="gift-title">STANLEY Quencher H2.0 Tumbler 30 oz</h3>
-                                    <p class="gift-description">This viral STANLEY tumbler has taken the world by storm, and for good reason! The 30 oz capacity is perfect for staying hydrated throughout the day, and the advanced insulation keeps drinks cold for 11 hours or hot for 7 hours. It fits in car cup holders, includes a reusable straw, and features a leak-resistant lid. Whether he's at the gym, office, or on the road, this durable stainless steel tumbler will quickly become his constant companion.</p>
+                    
+<a href="https://amzn.to/3LiUfOf" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+<div class="gift-card">
+                        <div class="gift-image">
+                            <img src="https://m.media-amazon.com/images/I/51ztoy2W0iL._AC_SL1500_.jpg" alt="STANLEY Quencher Tumbler">
+                        </div>
+                        <div class="gift-content">
+                            <span class="gift-number">#8 Viral Favorite</span>
+                            <h3 class="gift-title">STANLEY Quencher H2.0 Tumbler 30 oz</h3>
+                            <p class="gift-description">This viral STANLEY tumbler has taken the world by storm, and for good reason! The 30 oz capacity is perfect for staying hydrated throughout the day, and the advanced insulation keeps drinks cold for 11 hours or hot for 7 hours. It fits in car cup holders, includes a reusable straw, and features a leak-resistant lid. Whether he's at the gym, office, or on the road, this durable stainless steel tumbler will quickly become his constant companion.</p>
+                            <div class="gift-footer">
+                                <div>
                                     <div class="gift-price">$35.00</div>
-                                    <a href="https://amzn.to/3LiUfOf" class="gift-cta" target="_blank" rel="noopener">View on Amazon</a>
+                                    <div class="gift-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        4.7/5
+                                    </div>
                                 </div>
+                                <a href="https://amzn.to/3LiUfOf" class="shop-button" target="_blank" rel="noopener">View on Amazon <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Gift 9 -->
-                        <div class="gift-item">
-                            <span class="gift-number">9</span>
-                            <div class="gift-content">
-                                <div class="gift-image">
-                                    <img src="https://m.media-amazon.com/images/I/81naTg9Yn3L._AC_SX679_.jpg" alt="Champion Fleece Hoodie">
-                                </div>
-                                <div class="gift-details">
-                                    <h3 class="gift-title">Champion Men's Fleece Script Logo Hoodie</h3>
-                                    <p class="gift-description">You can never go wrong with a cozy hoodie! This Champion fleece hoodie combines comfort, quality, and style at an unbeatable price. The soft fleece interior keeps him warm on chilly days, while the classic logo adds athletic appeal. It's perfect for lounging at home, running errands, or casual hangouts. Available in multiple colors, you can choose his favorite or pick one that matches his style. It's practical, comfortable, and a gift he'll reach for again and again.</p>
+                    
+<a href="https://amzn.to/439ERKb" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+<div class="gift-card">
+                        <div class="gift-image">
+                            <img src="https://m.media-amazon.com/images/I/81naTg9Yn3L._AC_SX679_.jpg" alt="Champion Fleece Hoodie">
+                        </div>
+                        <div class="gift-content">
+                            <span class="gift-number">#9 Comfort King</span>
+                            <h3 class="gift-title">Champion Men's Fleece Script Logo Hoodie</h3>
+                            <p class="gift-description">You can never go wrong with a cozy hoodie! This Champion fleece hoodie combines comfort, quality, and style at an unbeatable price. The soft fleece interior keeps him warm on chilly days, while the classic logo adds athletic appeal. It's perfect for lounging at home, running errands, or casual hangouts. Available in multiple colors, you can choose his favorite or pick one that matches his style. It's practical, comfortable, and a gift he'll reach for again and again.</p>
+                            <div class="gift-footer">
+                                <div>
                                     <div class="gift-price">$38.50</div>
-                                    <a href="https://amzn.to/439ERKb" class="gift-cta" target="_blank" rel="noopener">View on Amazon</a>
+                                    <div class="gift-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        4.7/5
+                                    </div>
                                 </div>
+                                <a href="https://amzn.to/439ERKb" class="shop-button" target="_blank" rel="noopener">View on Amazon <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Gift 10 -->
-                        <div class="gift-item">
-                            <span class="gift-number">10</span>
-                            <div class="gift-content">
-                                <div class="gift-image">
-                                    <img src="https://m.media-amazon.com/images/I/81pjQ8JUtYL._AC_SY575_.jpg" alt="Canvas Messenger Bag">
-                                </div>
-                                <div class="gift-details">
-                                    <h3 class="gift-title">Gootium Canvas Messenger Bag</h3>
-                                    <p class="gift-description">For the guy who's always on the go, this vintage-style canvas messenger bag is both functional and fashionable. It features multiple compartments for his laptop, tablet, books, and other essentials, with a padded laptop sleeve for protection. The durable canvas construction with leather accents gives it a rugged, timeless look that improves with age. Whether he's commuting to work, heading to class, or traveling, this versatile bag has him covered.</p>
+                    
+<a href="https://amzn.to/47RVCfx" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+<div class="gift-card">
+                        <div class="gift-image">
+                            <img src="https://m.media-amazon.com/images/I/81pjQ8JUtYL._AC_SY575_.jpg" alt="Canvas Messenger Bag">
+                        </div>
+                        <div class="gift-content">
+                            <span class="gift-number">#10 Travel Essential</span>
+                            <h3 class="gift-title">Gootium Canvas Messenger Bag</h3>
+                            <p class="gift-description">For the guy who's always on the go, this vintage-style canvas messenger bag is both functional and fashionable. It features multiple compartments for his laptop, tablet, books, and other essentials, with a padded laptop sleeve for protection. The durable canvas construction with leather accents gives it a rugged, timeless look that improves with age. Whether he's commuting to work, heading to class, or traveling, this versatile bag has him covered.</p>
+                            <div class="gift-footer">
+                                <div>
                                     <div class="gift-price">$37.99</div>
-                                    <a href="https://amzn.to/47RVCfx" class="gift-cta" target="_blank" rel="noopener">View on Amazon</a>
+                                    <div class="gift-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        4.5/5
+                                    </div>
                                 </div>
+                                <a href="https://amzn.to/47RVCfx" class="shop-button" target="_blank" rel="noopener">View on Amazon <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Conclusion -->
-                        <div class="conclusion">
-                            <h2>Make His Birthday Unforgettable</h2>
-                            <p>Shopping for your boyfriend's birthday doesn't have to be stressful. Whether you choose a luxury cologne, a practical wallet, or a tech gadget, the most important thing is that your gift comes from the heart. These 10 Amazon picks offer something for every personality and interest, all at reasonable prices with the convenience of fast shipping.</p>
-                            <p>Remember, the best gifts show that you pay attention to his interests and needs. Consider his hobbies, style, and daily routine when making your final choice. No matter which gift you select from this list, he's sure to feel appreciated and loved on his special day!</p>
-                            <p><strong>Ready to make his birthday amazing? Click on any of the products above to get started with your Amazon shopping today!</strong></p>
-                        </div>
+                    <!-- Conclusion -->
+                    <div class="blog-conclusion">
+                        <h2>Make His Birthday Unforgettable</h2>
+                        <p>Shopping for your boyfriend's birthday doesn't have to be stressful. Whether you choose a luxury cologne, a practical wallet, or a tech gadget, the most important thing is that your gift comes from the heart. These 10 Amazon picks offer something for every personality and interest, all at reasonable prices with the convenience of fast shipping.</p>
+                        <p>Remember, the best gifts show that you pay attention to his interests and needs. Consider his hobbies, style, and daily routine when making your final choice. No matter which gift you select from this list, he's sure to feel appreciated and loved on his special day!</p>
+                        <p><strong>Ready to make his birthday amazing? Click on any of the products above to get started with your Amazon shopping today!</strong></p>
                     </div>
                 </div>
             </div>
@@ -654,6 +739,25 @@
             crossorigin="anonymous"></script>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <!-- Make entire gift cards clickable -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const giftCards = document.querySelectorAll('.gift-card');
+            giftCards.forEach(card => {
+                const link = card.querySelector('.shop-button');
+                if (link && link.href) {
+                    card.style.cursor = 'pointer';
+                    card.addEventListener('click', function(e) {
+                        // Don't navigate if clicking the button itself
+                        if (!e.target.closest('.shop-button')) {
+                            window.open(link.href, '_blank');
+                        }
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>

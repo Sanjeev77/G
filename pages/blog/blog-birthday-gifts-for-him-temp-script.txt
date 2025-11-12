@@ -1,0 +1,18 @@
+    <script>
+        // Make entire gift cards clickable
+        document.addEventListener('DOMContentLoaded', function() {
+            const giftCards = document.querySelectorAll('.gift-card');
+            giftCards.forEach(card => {
+                const link = card.querySelector('.shop-button');
+                if (link && link.href) {
+                    card.style.cursor = 'pointer';
+                    card.addEventListener('click', function(e) {
+                        // Don't navigate if clicking the button itself
+                        if (!e.target.closest('.shop-button')) {
+                            window.open(link.href, '_blank');
+                        }
+                    });
+                }
+            });
+        });
+    </script>

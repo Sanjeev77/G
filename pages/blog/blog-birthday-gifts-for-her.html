@@ -423,7 +423,7 @@
                                 </div>
                             </div>
                             <a href="https://amzn.to/4hQupgU" class="shop-button" target="_blank" rel="nofollow">
-                                Shop Now <i class="fas fa-arrow-right"></i>
+                                View on Amazon <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -453,7 +453,7 @@
                                 </div>
                             </div>
                             <a href="https://amzn.to/4qMnGbW" class="shop-button" target="_blank" rel="nofollow">
-                                Shop Now <i class="fas fa-arrow-right"></i>
+                                View on Amazon <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -483,7 +483,7 @@
                                 </div>
                             </div>
                             <a href="https://amzn.to/47r6pfs" class="shop-button" target="_blank" rel="nofollow">
-                                Shop Now <i class="fas fa-arrow-right"></i>
+                                View on Amazon <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -513,7 +513,7 @@
                                 </div>
                             </div>
                             <a href="https://amzn.to/4nGKDKV" class="shop-button" target="_blank" rel="nofollow">
-                                Shop Now <i class="fas fa-arrow-right"></i>
+                                View on Amazon <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -543,7 +543,7 @@
                                 </div>
                             </div>
                             <a href="https://amzn.to/4oAcRrl" class="shop-button" target="_blank" rel="nofollow">
-                                Shop Now <i class="fas fa-arrow-right"></i>
+                                View on Amazon <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -573,7 +573,7 @@
                                 </div>
                             </div>
                             <a href="https://amzn.to/43qKZhe" class="shop-button" target="_blank" rel="nofollow">
-                                Shop Now <i class="fas fa-arrow-right"></i>
+                                View on Amazon <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -603,7 +603,7 @@
                                 </div>
                             </div>
                             <a href="https://amzn.to/4o2BvB7" class="shop-button" target="_blank" rel="nofollow">
-                                Shop Now <i class="fas fa-arrow-right"></i>
+                                View on Amazon <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -633,7 +633,7 @@
                                 </div>
                             </div>
                             <a href="https://amzn.to/4ny4Hiw" class="shop-button" target="_blank" rel="nofollow">
-                                Shop Now <i class="fas fa-arrow-right"></i>
+                                View on Amazon <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -663,7 +663,7 @@
                                 </div>
                             </div>
                             <a href="https://amzn.to/4qtiERj" class="shop-button" target="_blank" rel="nofollow">
-                                Shop Now <i class="fas fa-arrow-right"></i>
+                                View on Amazon <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -693,7 +693,7 @@
                                 </div>
                             </div>
                             <a href="https://amzn.to/48GKGT0" class="shop-button" target="_blank" rel="nofollow">
-                                Shop Now <i class="fas fa-arrow-right"></i>
+                                View on Amazon <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -1005,6 +1005,25 @@
                 initFooterCollapse();
             }
         })();
+    </script>
+
+    <script>
+        // Make entire gift cards clickable
+        document.addEventListener('DOMContentLoaded', function() {
+            const giftCards = document.querySelectorAll('.gift-card');
+            giftCards.forEach(card => {
+                const link = card.querySelector('.shop-button');
+                if (link && link.href) {
+                    card.style.cursor = 'pointer';
+                    card.addEventListener('click', function(e) {
+                        // Don't navigate if clicking the button itself
+                        if (!e.target.closest('.shop-button')) {
+                            window.open(link.href, '_blank');
+                        }
+                    });
+                }
+            });
+        });
     </script>
 
 </body>
