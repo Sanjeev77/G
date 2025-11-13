@@ -3,6 +3,60 @@
 
 const banner1Products = [
     {
+        "title": "Birthday Gifts for Women Men, Unique Birthday Gift Ideas for Her, Friends, Coworkers, Colleague, 32\" Bronze Wind Chimes",
+        "price": "29.99",
+        "priceValue": 29.99,
+        "rating": 4.8,
+        "affiliateLink": "https://amzn.to/4nVoWqm",
+        "image": "https://m.media-amazon.com/images/I/814pVjDCWJL._AC_SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1762965383837
+    },
+    {
+        "title": "ASELFAD Morse Code Bracelets for Women, Funny Birthday Gifts, Best Friend Friendship Gifts",
+        "price": "11.98",
+        "priceValue": 11.98,
+        "rating": 4.7,
+        "affiliateLink": "https://amzn.to/3JZnFAC",
+        "image": "https://m.media-amazon.com/images/I/8103Pt2JA8L._AC_SY535_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1762965332447
+    },
+    {
+        "title": "YSense Winter Scarf for Women, Fashion Long Plaid Scarves Warm Big Tartan Blanket Wrap Shawl Ladies Gifts",
+        "price": "12.88",
+        "rating": 4.6,
+        "affiliateLink": "httpshttps://amzn.to/3JwBgiV://amzn.to/3JtPq4k",
+        "image": "https://m.media-amazon.com/images/I/61UmneMivlL._AC_SX679_.jpg",
+        "category": "custom-category",
+        "featured": false,
+        "id": 1762965291626
+    },
+    {
+        "title": "Ottolenghi: The Cookbook",
+        "price": "12.51",
+        "priceValue": 12.51,
+        "rating": 4.7,
+        "affiliateLink": "https://amzn.to/4hYvQtx",
+        "image": "https://m.media-amazon.com/images/I/91CHle-BmAL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1762965254572
+    },
+    {
+        "title": "Half Baked Harvest Quick & Cozy: A Cookbook",
+        "price": "19.26",
+        "priceValue": 19.26,
+        "rating": 4.6,
+        "affiliateLink": "https://amzn.to/3LANaJe",
+        "image": "https://m.media-amazon.com/images/I/91HYZYX6YTL._SL1500_.jpg",
+        "category": "banner-1",
+        "featured": false,
+        "id": 1762965234563
+    },
+    {
         "title": "Hobo Bags for Women Soft Vegan Leather Shoulder Handbag Slouchy Tote Purses",
         "price": "28.90",
         "priceValue": 28.9,
