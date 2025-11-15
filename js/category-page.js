@@ -341,8 +341,14 @@ function filterCategoryByBudget(budget) {
         });
     }
 
-    // Sort by price (lowest to highest)
-    filteredProducts.sort((a, b) => a.priceValue - b.priceValue);
+    // Sort products based on filter type
+    if (budget === 'all') {
+        // All Prices: Sort by rating (highest to lowest)
+        filteredProducts.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    } else {
+        // Budget filters: Sort by price (highest to lowest)
+        filteredProducts.sort((a, b) => b.priceValue - a.priceValue);
+    }
 
     // Update active button
     updateBudgetButtons(budget);
@@ -403,8 +409,14 @@ function filterBirthdayByCategory(category) {
         });
     }
 
-    // Sort by price (lowest to highest)
-    filteredProducts.sort((a, b) => a.priceValue - b.priceValue);
+    // Sort products based on filter type
+    if (currentBudgetFilter === 'all') {
+        // All Prices: Sort by rating (highest to lowest)
+        filteredProducts.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    } else {
+        // Budget filters: Sort by price (highest to lowest)
+        filteredProducts.sort((a, b) => b.priceValue - a.priceValue);
+    }
 
     // Update active button
     updateCategoryButtons(category);
