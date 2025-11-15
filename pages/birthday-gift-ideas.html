@@ -118,6 +118,30 @@
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
+                    <div class="category-dropdown-wrapper">
+                        <label for="categoryFilter">
+                            <i class="fas fa-filter"></i> Filter by Recipient
+                        </label>
+                        <select id="categoryFilter" onchange="filterByCategory(this.value)">
+                            <option value="all">All Categories</option>
+                            <option value="birthday-gifts-for-her">For Her</option>
+                            <option value="birthday-gifts-for-him">For Him</option>
+                            <option value="birthday-gifts-for-moms">For Moms</option>
+                            <option value="birthday-gifts-for-dads">For Dads</option>
+                            <option value="birthday-gifts-for-grandparents">For Grandparents</option>
+                            <option value="birthday-gifts-for-someone-who-has-everything">Has Everything</option>
+                            <option value="birthday-gifts-for-couples">For Couples</option>
+                            <option value="birthday-gifts-for-best-friends">Best Friends</option>
+                            <option value="birthday-gifts-for-coworkers">Coworkers</option>
+                            <option value="birthday-gifts-for-teachers">Teachers</option>
+                            <option value="personalized-birthday-gifts">Personalized</option>
+                            <option value="funny-birthday-gifts">Funny Gifts</option>
+                            <option value="luxury-birthday-gifts">Luxury</option>
+                            <option value="experience-birthday-gifts">Experience</option>
+                            <option value="eco-friendly-birthday-gifts">Eco-Friendly</option>
+                            <option value="last-minute-birthday-gifts">Last-Minute</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </section>
@@ -170,10 +194,10 @@
                 <div class="footer-left">
                     <div class="footer-column">
                         <ul class="footer-links">
-                            <li><a href="../legal/about-us.html">About Us</a></li>
-                            <li><a href="../legal/privacy-policy.html">Privacy Policy</a></li>
-                            <li><a href="../legal/terms-of-service.html">Terms of Service</a></li>
-                            <li><a href="../legal/faq.html">FAQ</a></li>
+                            <li><a href="../about-us.html">About Us</a></li>
+                            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="../terms-of-service.html">Terms of Service</a></li>
+                            <li><a href="../faq.html">FAQ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -346,6 +370,14 @@
             // Call the category page function
             if (typeof window.filterCategoryByBudget === 'function') {
                 window.filterCategoryByBudget(budget);
+            }
+        }
+
+        // Function to filter by category (called from HTML onchange)
+        function filterByCategory(category) {
+            // Call the category page function
+            if (typeof window.filterBirthdayByCategory === 'function') {
+                window.filterBirthdayByCategory(category);
             }
         }
     </script>
