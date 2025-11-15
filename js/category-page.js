@@ -3,6 +3,8 @@
 
 let allCategoryProducts = [];
 let currentCategoryProducts = [];
+let currentBudgetFilter = 'all';
+let currentCategoryFilter = 'all';
 
 // Initialize category page
 function initializeCategoryPage() {
@@ -249,7 +251,6 @@ function loadCategoryProducts(categorySlug) {
     else if (categorySlug === 'birthday-gift-ideas') {
         // Aggregate all birthday-related categories
         const birthdayCategories = [
-            'birthday-gifts-for-her',
             'birthday-gifts-for-him',
             'birthday-gifts-for-boyfriends',
             'birthday-gifts-for-girlfriends',
@@ -269,11 +270,23 @@ function loadCategoryProducts(categorySlug) {
             'last-minute-birthday-gifts'
         ];
 
+        // Get products from regular categories
         allCategoryProducts = allProductsData.filter(product =>
             birthdayCategories.includes(product.category)
         );
 
+        // Add "For Her" products from banner-1-data.js
+        if (typeof window.banner1Products !== 'undefined') {
+            // Mark banner1Products with the correct category for filtering
+            const forHerProducts = window.banner1Products.map(product => ({
+                ...product,
+                category: 'birthday-gifts-for-her'
+            }));
+            allCategoryProducts = [...allCategoryProducts, ...forHerProducts];
+        }
+
         console.log('Loaded birthday products from categories:', birthdayCategories);
+        console.log('Total birthday products including "For Her":', allCategoryProducts.length);
     }
     // Default: Filter products by category
     else {
@@ -298,7 +311,16 @@ function loadCategoryProducts(categorySlug) {
 function filterCategoryByBudget(budget) {
     console.log('Filtering category products by budget:', budget);
 
+    currentBudgetFilter = budget;
+
     let filteredProducts = [...allCategoryProducts];
+
+    // Apply category filter first (for birthday-gift-ideas page)
+    if (currentCategoryFilter !== 'all') {
+        filteredProducts = filteredProducts.filter(product =>
+            product.category === currentCategoryFilter
+        );
+    }
 
     // Apply budget filter
     if (budget !== 'all') {
@@ -340,6 +362,68 @@ function updateBudgetButtons(activeBudget) {
     buttons.forEach(button => {
         const buttonBudget = button.getAttribute('data-budget');
         if (buttonBudget === activeBudget) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
+}
+
+// Filter birthday gifts by category (for birthday-gift-ideas page)
+function filterBirthdayByCategory(category) {
+    console.log('Filtering birthday products by category:', category);
+
+    currentCategoryFilter = category;
+
+    let filteredProducts = [...allCategoryProducts];
+
+    // Apply category filter (if not 'all')
+    if (category !== 'all') {
+        filteredProducts = filteredProducts.filter(product =>
+            product.category === category
+        );
+    }
+
+    // Apply current budget filter
+    if (currentBudgetFilter !== 'all') {
+        filteredProducts = filteredProducts.filter(product => {
+            const price = product.priceValue;
+            switch(currentBudgetFilter) {
+                case 'under-10':
+                    return price < 10;
+                case 'under-25':
+                    return price >= 10 && price < 25;
+                case 'under-50':
+                    return price >= 25 && price < 50;
+                case 'under-100':
+                    return price >= 50 && price < 100;
+                default:
+                    return true;
+            }
+        });
+    }
+
+    // Sort by price (lowest to highest)
+    filteredProducts.sort((a, b) => a.priceValue - b.priceValue);
+
+    // Update active button
+    updateCategoryButtons(category);
+
+    // Store current filtered products
+    currentCategoryProducts = filteredProducts;
+
+    console.log('Filtered products:', filteredProducts.length);
+
+    // Render the products
+    renderCategoryProducts(filteredProducts);
+}
+
+// Update category button active state
+function updateCategoryButtons(activeCategory) {
+    const buttons = document.querySelectorAll('.category-btn');
+    buttons.forEach(button => {
+        const buttonCategory = button.getAttribute('data-category');
+        if (buttonCategory === activeCategory) {
             button.classList.add('active');
         } else {
             button.classList.remove('active');
@@ -414,16 +498,22 @@ function createCategoryProductCard(product) {
     return `
         <div class="product-card ${product.featured ? 'featured-product' : ''}" data-id="${product.id}" data-affiliate-link="${product.affiliateLink}" onclick="handleProductCardClick(event, '${product.affiliateLink}')" style="cursor: pointer;">
             ${featuredBadge}
-            <img src="${product.image}" alt="${product.title}" class="product-image" loading="lazy" onclick="handleProductImageClick(event, '${product.affiliateLink}')">
+            <div class="product-image-wrapper">
+                <img src="${product.image}" alt="${product.title}" class="product-image" loading="lazy" onclick="handleProductImageClick(event, '${product.affiliateLink}')">
+            </div>
             <div class="product-info">
-                <h3 class="product-title">${product.title}</h3>
-                <div class="product-rating" style="color: #ff9900; margin-bottom: 0.5rem;">
-                    ${stars} (${rating.toFixed(1)})
+                <div class="product-price-rating-wrapper">
+                    <div class="product-price">$${product.price}</div>
+                    <div class="product-rating" style="color: #ff9900;">
+                        ${stars} (${rating.toFixed(1)})
+                    </div>
+                    <h3 class="product-title">${product.title}</h3>
                 </div>
-                <div class="product-price">$${product.price}</div>
-                <a href="${product.affiliateLink}" target="_blank" rel="noopener" class="product-btn">
-                    View on Amazon
-                </a>
+                <div class="product-hover-content">
+                    <a href="${product.affiliateLink}" target="_blank" rel="noopener" class="product-btn">
+                        View on Amazon
+                    </a>
+                </div>
             </div>
         </div>
     `;
@@ -459,8 +549,9 @@ function displayErrorMessage(message) {
     }
 }
 
-// Make filterCategoryByBudget available globally for HTML onclick handlers
+// Make functions available globally for HTML onclick handlers
 window.filterCategoryByBudget = filterCategoryByBudget;
+window.filterBirthdayByCategory = filterBirthdayByCategory;
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', initializeCategoryPage);
