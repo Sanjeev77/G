@@ -274,6 +274,16 @@ function filterAndDisplayProducts(budget) {
         });
     }
 
+    // Deduplicate products by image URL (keep first occurrence)
+    const seen = new Set();
+    filteredProducts = filteredProducts.filter(product => {
+        if (seen.has(product.image)) {
+            return false; // Skip duplicate
+        }
+        seen.add(product.image);
+        return true; // Keep first occurrence
+    });
+
     // Sort by price (lowest to highest)
     filteredProducts.sort((a, b) => a.priceValue - b.priceValue);
 
@@ -475,6 +485,16 @@ function initializeMainPageSearch() {
                 product.category.toLowerCase().includes(searchTerm)
             );
         }
+
+        // Deduplicate products by image URL (keep first occurrence)
+        const seen = new Set();
+        filteredProducts = filteredProducts.filter(product => {
+            if (seen.has(product.image)) {
+                return false; // Skip duplicate
+            }
+            seen.add(product.image);
+            return true; // Keep first occurrence
+        });
 
         // Sort by price (lowest to highest)
         filteredProducts.sort((a, b) => a.priceValue - b.priceValue);

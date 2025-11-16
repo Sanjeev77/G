@@ -246,8 +246,8 @@ const allProductsData = [
     {
         "id": 8379,
         "title": "Personalized Chef Hat with Custom Name! Adjustable Kitchen Accessory for Mom, Dad, Cooking Chef Hat for Men & Women,Baker Hat",
-        "price": "",
-        "priceValue": 0,
+        "price": "9.90",
+        "priceValue": 9.9,
         "category": "birthday-gifts-for-grandparents",
         "image": "https://m.media-amazon.com/images/I/51p9UeaTqlL._AC_SX679_.jpg",
         "rating": 4.3,
@@ -5955,8 +5955,8 @@ const allProductsData = [
     {
         "id": 7854,
         "title": "Fitbit Inspire 3 Health &-Fitness-Tracker with Stress Management, Workout Intensity, Sleep Tracking, 24/7 Heart Rate and more, Midnight Zen/Black One Size (S & L Bands Included)",
-        "price": "95",
-        "priceValue": 95,
+        "price": "92.12",
+        "priceValue": 92.12,
         "category": "birthday-gifts-for-him",
         "image": "https://m.media-amazon.com/images/I/51CtR+quteL._AC_SL1200_.jpg",
         "rating": 4.3,
@@ -13523,8 +13523,8 @@ const allProductsData = [
     {
         "id": 7531,
         "title": "Fitbit Inspire 3 Health &-Fitness-Tracker with Stress Management, Workout Intensity, Sleep Tracking, 24/7 Heart Rate and more, Midnight Zen/Black One Size (S & L Bands Included)",
-        "price": "79.95",
-        "priceValue": 79.95,
+        "price": "92.12",
+        "priceValue": 92.12,
         "category": "fashion",
         "image": "https://m.media-amazon.com/images/I/51CtR+quteL._AC_SL1200_.jpg",
         "rating": 4.3,

@@ -171,23 +171,6 @@
     min-width: 180px;
 }
 
-.category-dropdown-wrapper::after {
-    content: '\f078';
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    position: absolute;
-    right: 0.7rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #2c3e50;
-    font-size: 0.7rem;
-    transition: transform 0.3s ease;
-    pointer-events: none;
-}
-
-.category-dropdown-wrapper:has(select:focus)::after {
-    transform: translateY(-50%) rotate(180deg);
-}
 
 .category-dropdown {
     padding: 0.65rem 1.75rem 0.65rem 0.75rem;
@@ -294,11 +277,6 @@
         min-width: 80px;
         font-size: 0.75rem;
         padding: 0.65rem 1.5rem 0.65rem 0.5rem;
-    }
-
-    .category-dropdown-wrapper::after {
-        right: 0.4rem;
-        font-size: 0.6rem;
     }
 
     .main-nav {
