@@ -335,6 +335,8 @@ function filterCategoryByBudget(budget) {
                     return price >= 25 && price < 50;
                 case 'under-100':
                     return price >= 50 && price < 100;
+                case 'premium':
+                    return price >= 100;
                 default:
                     return true;
             }
@@ -373,6 +375,16 @@ function updateBudgetButtons(activeBudget) {
             button.classList.remove('active');
         }
     });
+
+    // Toggle premium filter class on products container to hide ratings
+    const productsContainer = document.getElementById('products-container');
+    if (productsContainer) {
+        if (activeBudget === 'premium') {
+            productsContainer.classList.add('premium-filter-active');
+        } else {
+            productsContainer.classList.remove('premium-filter-active');
+        }
+    }
 }
 
 // Filter birthday gifts by category (for birthday-gift-ideas page)
@@ -403,6 +415,8 @@ function filterBirthdayByCategory(category) {
                     return price >= 25 && price < 50;
                 case 'under-100':
                     return price >= 50 && price < 100;
+                case 'premium':
+                    return price >= 100;
                 default:
                     return true;
             }
@@ -515,7 +529,7 @@ function createCategoryProductCard(product) {
             </div>
             <div class="product-info">
                 <div class="product-price-rating-wrapper">
-                    <div class="product-price">$${product.price}</div>
+                    <div class="product-price">${product.price}</div>
                     <div class="product-rating" style="color: #ff9900;">
                         ${stars} (${rating.toFixed(1)})
                     </div>

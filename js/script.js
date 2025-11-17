@@ -217,6 +217,8 @@ function filterCategoryByBudget(budget) {
                     return product.priceValue >= 25 && product.priceValue < 50;
                 case 'under-100':
                     return product.priceValue >= 50 && product.priceValue < 100;
+                case 'premium':
+                    return product.priceValue >= 100;
                 default:
                     return true;
             }
@@ -244,6 +246,16 @@ function updateBudgetButtons(activeBudget) {
             button.classList.remove('active');
         }
     });
+
+    // Toggle premium filter class on products container to hide ratings
+    const productsContainer = document.getElementById('products-container');
+    if (productsContainer) {
+        if (activeBudget === 'premium') {
+            productsContainer.classList.add('premium-filter-active');
+        } else {
+            productsContainer.classList.remove('premium-filter-active');
+        }
+    }
 }
 
 // Filter and display products based on budget
@@ -268,6 +280,8 @@ function filterAndDisplayProducts(budget) {
                     return product.priceValue >= 25 && product.priceValue < 50;
                 case 'under-100':
                     return product.priceValue >= 50 && product.priceValue < 100;
+                case 'premium':
+                    return product.priceValue >= 100;
                 default:
                     return true;
             }
@@ -538,6 +552,8 @@ function filterSearchByBudget(budget) {
                     return product.priceValue >= 25 && product.priceValue < 50;
                 case 'under-100':
                     return product.priceValue >= 50 && product.priceValue < 100;
+                case 'premium':
+                    return product.priceValue >= 100;
                 default:
                     return true;
             }
@@ -565,6 +581,16 @@ function updateSearchBudgetButtons(activeBudget) {
             button.classList.remove('active');
         }
     });
+
+    // Toggle premium filter class on products container to hide ratings
+    const productsContainer = document.getElementById('products-container');
+    if (productsContainer) {
+        if (activeBudget === 'premium') {
+            productsContainer.classList.add('premium-filter-active');
+        } else {
+            productsContainer.classList.remove('premium-filter-active');
+        }
+    }
 }
 
 // Initialize main page search if on index.html
