@@ -172,8 +172,8 @@ function createBannerProductCard(product) {
                 </div>
                 ` : ''}
                 <div class="product-price-section">
-                    <div class="product-price">$${product.price}</div>
-                    ${product.originalPrice ? `<div class="original-price">$${product.originalPrice}</div>` : ''}
+                    <div class="product-price">${product.price}</div>
+                    ${product.originalPrice ? `<div class="original-price">${product.originalPrice}</div>` : ''}
                 </div>
                 <a href="${product.affiliateLink}" target="_blank" rel="noopener noreferrer" class="product-btn">
                     View on Amazon

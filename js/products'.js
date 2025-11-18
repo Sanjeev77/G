@@ -1405,10 +1405,10 @@ function createSpecialOfferCard(product) {
 
     // Only show original price if it exists
     const originalPriceDisplay = product.originalPrice ?
-        `<span class="original-price">$${product.originalPrice}</span>` : '';
+        `<span class="original-price">${product.originalPrice}</span>` : '';
 
     // Use appropriate class for price styling
-    const priceClass = product.originalPrice ? 'current-price' : 'product-price';
+    const priceClass = product.originalPrice ? 'current-price' : 'current-price';
 
     return `
         <div class="product-card ${specialOfferBadge ? 'special-offer-card' : ''}" data-id="${product.id}" data-affiliate-link="${product.affiliateLink}" onclick="handleProductCardClick(event, '${product.affiliateLink}')" style="cursor: pointer;">
@@ -1421,7 +1421,7 @@ function createSpecialOfferCard(product) {
                 </div>
                 <div class="${originalPriceDisplay ? 'product-price' : 'product-price'}">
                     ${originalPriceDisplay}
-                    <span class="${priceClass}">$${product.price}</span>
+                    <span class="${priceClass}">${product.price}</span>
                 </div>
                 <a href="${product.affiliateLink}" target="_blank" rel="noopener" class="product-btn">
                     View on Amazon

@@ -369,10 +369,10 @@ function createProductCard(product) {
 
     // Handle original price display
     const originalPriceDisplay = product.originalPrice ?
-        `<span class="original-price">$${product.originalPrice}</span>` : '';
+        `<span class="original-price">${product.originalPrice}</span>` : '';
 
     // Use appropriate class for price styling
-    const priceClass = product.originalPrice ? 'current-price' : 'product-price';
+    const priceClass = product.originalPrice ? 'current-price' : 'current-price';
 
     return `
         <div class="product-card ${specialOfferBadge ? 'special-offer-card' : ''}" data-id="${product.id}" data-affiliate-link="${product.affiliateLink}" onclick="handleProductCardClick(event, '${product.affiliateLink}')" style="cursor: pointer;">
@@ -385,7 +385,7 @@ function createProductCard(product) {
                 </div>
                 <div class="product-price">
                     ${originalPriceDisplay}
-                    <span class="${priceClass}">$${product.price}</span>
+                    <span class="${priceClass}">${product.price}</span>
                 </div>
                 <a href="${product.affiliateLink}" target="_blank" rel="noopener" class="product-btn">
                     View on Amazon
@@ -650,7 +650,7 @@ function createSpecialProductIcon(product) {
                 <img src="${product.image}" alt="${product.title}" loading="lazy">
             </div>
             <div class="special-product-name">${product.title}</div>
-            <div class="special-product-price">$${product.price}</div>
+            <div class="special-product-price">${product.price}</div>
         </div>
     `;
 }
