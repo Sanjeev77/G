@@ -134,7 +134,7 @@ const seasonalBanners = [
         title: 'Christmas Gifts & Deals',
         subtitle: 'Find perfect gifts for everyone on your list!',
         ctaText: 'Shop Christmas Gifts',
-        link: 'pages/christmas-gifts.html',
+        link: 'pages/secret-santa-gifts.html',
         images: {
             desktop: 'images/banners/christmas-desktop.jpg',
             mobile: 'images/banners/christmas-mobile.jpg'
