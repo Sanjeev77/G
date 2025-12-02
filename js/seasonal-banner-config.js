@@ -126,18 +126,18 @@ const seasonalBanners = [
         overlayColor: 'rgba(217, 119, 6, 0.2)'  // Autumn orange
     },
     {
-        id: 'secret-santa',
-        name: 'Secret Santa Gifts',
+        id: 'christmas',
+        name: 'Christmas Gifts',
         priority: 10,
         startDate: { month: 11, day: 29 },   // November 29
         endDate: { month: 12, day: 25 },     // December 25
-        title: 'Secret Santa Gift Guide',
-        subtitle: 'Find perfect Secret Santa gifts for your exchange!',
-        ctaText: 'Shop Secret Santa Gifts',
-        link: 'pages/secret-santa-gifts.html',
+        title: 'Christmas Gifts & Deals',
+        subtitle: 'Find perfect gifts for everyone on your list!',
+        ctaText: 'Shop Christmas Gifts',
+        link: 'pages/christmas-gifts.html',
         images: {
-            desktop: 'images/banners/secret-santa-desktop.jpg',
-            mobile: 'images/banners/secret-santa-mobile.jpg'
+            desktop: 'images/banners/christmas-desktop.jpg',
+            mobile: 'images/banners/christmas-mobile.jpg'
         },
         overlayColor: 'rgba(220, 38, 38, 0.2)'  // Red tint
     },
