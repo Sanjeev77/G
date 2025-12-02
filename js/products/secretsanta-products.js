@@ -1005,7 +1005,7 @@ var specialOffersData = [
 
 // Custom Category Configuration for SEO
 // This automatically updates the <title>, <meta description>, and Open Graph tags
-const customCategoryConfig = {
+var customCategoryConfig = {
     "name": "Secret Santa Gifts",
     "slug": "secret-santa-gifts",
     "description": "Discover the perfect Secret Santa gifts for everyone on your list. Find budget-friendly gift ideas for men, women, coworkers, and friends under $20 and $30. Make your Secret Santa exchange memorable!",
@@ -1016,9 +1016,9 @@ const customCategoryConfig = {
 };
 
 // Global variables for special offers page
-let allSpecialOffers = [];
-let currentSpecialOffers = [];
-let filteredSpecialOffers = [];
+var allSpecialOffers = [];
+var currentSpecialOffers = [];
+var filteredSpecialOffers = [];
 
 // Initialize special offers page
 function initializeSpecialOffersPage() {
@@ -1293,7 +1293,8 @@ function handleProductImageClick(event, affiliateLink) {
 
 // Make available globally for category pages
 if (typeof window !== 'undefined') {
-    window.specialOffersData = specialOffersData;
+    window.secretSantaProducts = specialOffersData;  // Unique name to avoid conflicts
+    window.specialOffersData = specialOffersData;     // Legacy support
 }
 
 // Export for use in main script

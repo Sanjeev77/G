@@ -1161,7 +1161,7 @@ var specialOffersData = [
 
 // Custom Category Configuration for SEO
 // This automatically updates the <title>, <meta description>, and Open Graph tags
-const customCategoryConfig = {
+var customCategoryConfig = {
     "name": "Halloween Gifts",
     "slug": "halloween-gifts",
     "description": "",

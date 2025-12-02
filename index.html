@@ -365,9 +365,9 @@
         <section class="hero-banner-new" data-banner-id="default">
             <a href="pages/special-offers.html" class="hero-banner-link">
                 <picture class="hero-banner-picture">
-                    <source media="(max-width: 768px)" srcset="images/banner-mobile.jpg">
-                    <source media="(min-width: 769px)" srcset="images/banner-desktop.jpg">
-                    <img src="images/banner-desktop.jpg" alt="Special Offers" class="hero-banner-img">
+                    <source media="(max-width: 768px)" srcset="images/banners/christmas-mobile.jpg">
+                    <source media="(min-width: 769px)" srcset="images/banners/christmas-desktop.jpg">
+                    <img src="images/banners/christmas-desktop.jpg" alt="Special Offers" class="hero-banner-img">
                 </picture>
                 <div class="hero-overlay">
                     <div class="container">
@@ -476,6 +476,46 @@
                             </div>
                         </div>
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2 class="section-title">Be the First to <br> Know the Best Gifts</h2>                    
+                    <form id="newsletter-form" class="newsletter-form" method="POST" action="https://11afd6fd.sibforms.com/serve/MUIFAA1jBAMcQkp3tduOWfZ9egYdZUV_dvoGeAJ_DhB3bs86KusA20luSUPWEo12G43D50xRePRHGy_MsSbBv5RIwvfmt8UqkarRkKXzscWtBpwqH_fYIkdlO6zehpN6RHjCAR-JSqRgbPq9UVFEsQvzY_d2YzMmDbSSulVXLmjcT0sHC-u1cCcE-Kv-dVpwgHBjvIthDsgLYyxv4g==" target="newsletter-iframe">
+                        <div class="form-group">
+                            <input
+                                type="email"
+                                id="newsletter-email"
+                                name="EMAIL"
+                                placeholder="Your email address..."
+                                required
+                                class="newsletter-input"
+                                aria-label="Email address"
+                            />
+                            <button type="submit" class="newsletter-btn">
+                                <span class="btn-text">Subscribe</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="newsletter-message" id="newsletter-message"></div>
+
+                        <!-- Brevo required hidden fields -->
+                        <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none">
+                        <input type="hidden" name="locale" value="en">
+                        <input type="hidden" name="html_type" value="simple">
+                    </form>
+
+                    <!-- Hidden iframe for form submission (avoids page navigation) -->
+                    <iframe name="newsletter-iframe" style="display:none;"></iframe>
+
+                    <p class="newsletter-privacy">
+                        <i class="fas fa-lock"></i> We respect your privacy. Unsubscribe at any time.
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                    </p>
                 </div>
             </div>
         </section>
@@ -835,21 +875,16 @@
 
     <script src="js/script.js"></script>
 
+    <!-- Newsletter Form Handler -->
+    <script src="js/newsletter.js"></script>
+
     <!-- Lottie Animation Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 
     <!-- Lottie Animation Data -->
     <script>
         // Paste your box animation JSON data here
-        const boxAnimationData =
-
-
-
-        // ADD YOUR JSON DATA HERE - Paste the entire contents of "box animation.json" file here
-
-
-
-        ;
+        // const boxAnimationData = {}; // Uncomment and add animation data if needed
     </script>
 
     <!-- Lottie Animation Initialization -->

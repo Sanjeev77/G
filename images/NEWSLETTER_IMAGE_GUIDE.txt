@@ -1,0 +1,104 @@
+====================================
+NEWSLETTER BACKGROUND IMAGE GUIDE
+====================================
+
+CURRENT FILE NEEDED:
+--------------------
+File name: newsletter-bg.jpg
+Location: /images/newsletter-bg.jpg
+
+This file is referenced in your CSS but doesn't exist yet.
+Until you add your image, the newsletter section will show with a gradient background.
+
+
+RECOMMENDED IMAGE SPECIFICATIONS:
+---------------------------------
+• Dimensions: 1920px × 600px (minimum)
+• Format: JPG or PNG
+• File size: Under 500KB (optimized for web)
+• Orientation: Horizontal/Landscape
+• Style: Gift boxes, celebrations, festive occasions
+
+
+SUGGESTED IMAGE THEMES:
+------------------------
+✓ Gift boxes with ribbons and bows
+✓ Celebration confetti background
+✓ Festive holiday decorations
+✓ Shopping bags and presents
+✓ Colorful abstract patterns
+✓ Birthday party theme
+✓ Seasonal occasions (mix of holidays)
+
+
+WHERE TO GET FREE IMAGES:
+--------------------------
+1. Unsplash (unsplash.com)
+   - Search: "gift boxes", "celebration", "presents"
+
+2. Pexels (pexels.com)
+   - Search: "gift background", "party", "festive"
+
+3. Pixabay (pixabay.com)
+   - Search: "presents", "birthday", "celebration background"
+
+
+HOW TO ADD YOUR IMAGE:
+-----------------------
+1. Download or create your image
+2. Optimize it (use tinypng.com to compress)
+3. Rename it to: newsletter-bg.jpg
+4. Place it in: /images/ folder (same location as this file)
+5. Refresh your website - the image will appear!
+
+
+CURRENT CSS SETTINGS:
+---------------------
+• Image will cover the entire section
+• Centered positioning
+• Parallax scroll effect (fixed attachment)
+• Purple/pink gradient overlay (85% opacity)
+• Pattern overlay for texture
+
+
+TO CHANGE IMAGE NAME:
+---------------------
+If you want to use a different filename:
+1. Open: css/styles.css
+2. Find line 431: background-image: url('../images/newsletter-bg.jpg');
+3. Replace 'newsletter-bg.jpg' with your filename
+4. Save and refresh
+
+
+TO ADJUST OVERLAY DARKNESS:
+---------------------------
+If your image is too dark or too bright:
+1. Open: css/styles.css
+2. Find line 449: rgba(102, 126, 234, 0.85)
+3. Change 0.85 to:
+   - 0.7 for lighter overlay (more image visible)
+   - 0.9 for darker overlay (better text contrast)
+
+
+TIPS FOR BEST RESULTS:
+-----------------------
+• Choose images with empty space in the center for text
+• Avoid busy patterns that compete with text
+• Bright, colorful images work well with the overlay
+• Test on mobile devices - image will scale
+• Consider seasonal images you can rotate monthly
+
+
+EXAMPLE IMAGE SEARCHES:
+-----------------------
+→ "colorful gift boxes background"
+→ "celebration party flat lay"
+→ "birthday presents top view"
+→ "festive confetti background"
+→ "wrapped gifts on pink background"
+
+
+NEED HELP?
+----------
+The section will work fine with just the gradient until you add an image.
+The purple gradient will show as the default background.

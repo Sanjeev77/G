@@ -16,7 +16,7 @@ class SpecialProductsRotationManager {
             'thanksgiving': 'thanksgivingProducts',
             'secret-santa': 'specialOffersData', // Legacy format
             'secretsanta': 'specialOffersData', // Legacy format (alternative ID)
-            'christmas': 'christmasProducts',
+            'christmas': 'secretSantaProducts', // Use Secret Santa products for Christmas banner
             'new-year': 'newYearProducts',
             'newyear': 'newYearProducts', // Alternative ID
             'valentines': 'valentinesDayProducts',

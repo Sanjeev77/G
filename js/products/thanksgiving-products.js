@@ -1017,9 +1017,9 @@ window.specialOffersData = thanksgivingProducts.products;
 window.customCategoryConfig = thanksgivingProducts.config;
 
 // Global variables for special offers page
-let allSpecialOffers = [];
-let currentSpecialOffers = [];
-let filteredSpecialOffers = [];
+var allSpecialOffers = [];
+var currentSpecialOffers = [];
+var filteredSpecialOffers = [];
 
 // Initialize special offers page
 function initializeSpecialOffersPage() {

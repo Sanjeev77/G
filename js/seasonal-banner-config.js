@@ -160,6 +160,7 @@ const seasonalBanners = [
 ];
 
 // Default banner (shown when no seasonal banner is active)
+// Using Halloween banner as fallback since all seasons have custom banners
 const defaultBanner = {
     id: 'default',
     name: 'Special Offers',
@@ -168,8 +169,8 @@ const defaultBanner = {
     ctaText: 'Shop Special Gifts',
     link: 'pages/special-offers.html',
     images: {
-        desktop: 'images/banner-desktop.jpg',    // Your current images
-        mobile: 'images/banner-mobile.jpg'
+        desktop: 'images/banners/halloween-desktop.jpg',
+        mobile: 'images/banners/halloween-mobile.jpg'
     },
     overlayColor: 'rgba(0, 0, 0, 0.3)'
 };

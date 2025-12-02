@@ -1,0 +1,197 @@
+====================================
+NEWSLETTER MOBILE BACKGROUND IMAGE GUIDE
+====================================
+
+MOBILE FILE NEEDED:
+--------------------
+File name: newsletter-bg-mobile.jpg
+Location: /images/newsletter-bg-mobile.jpg
+
+This is the mobile version of your newsletter banner.
+The desktop uses: newsletter-bg.jpg
+The mobile uses: newsletter-bg-mobile.jpg
+
+
+RECOMMENDED MOBILE IMAGE SPECIFICATIONS:
+-----------------------------------------
+• Dimensions: 800px × 1200px (portrait/vertical orientation)
+• Format: JPG or PNG
+• File size: Under 300KB (optimized for mobile)
+• Orientation: VERTICAL/PORTRAIT (opposite of desktop)
+• Style: Gift boxes, celebrations - mobile optimized
+
+
+WHY SEPARATE MOBILE IMAGE?
+---------------------------
+✓ Desktop image is horizontal (landscape)
+✓ Mobile screens are vertical (portrait)
+✓ Desktop image looks stretched/weird on mobile
+✓ Mobile needs tighter composition
+✓ Text placement differs on mobile vs desktop
+
+
+MOBILE DESIGN TIPS:
+-------------------
+• Keep important elements in the CENTER
+• Text area should be in middle or top third
+• Avoid busy patterns behind text area
+• Leave space for form elements (input + button)
+• Consider vertical gift box arrangements
+• Test on actual mobile device (iPhone, Android)
+
+
+MOBILE LAYOUT (TOP TO BOTTOM):
+-------------------------------
+1. Title: "Be the First to Know the Best Gifts"
+2. Email input field
+3. Subscribe button
+4. Privacy text
+
+^ All elements stack vertically on mobile
+
+
+SUGGESTED MOBILE IMAGE THEMES:
+-------------------------------
+✓ Vertical arrangement of gift boxes
+✓ Top-down view of presents
+✓ Celebration confetti (vertical flow)
+✓ Gift tower/stack
+✓ Portrait-oriented festive background
+✓ Solid color top half, decorative bottom half
+
+
+WHERE TO CREATE/FIND MOBILE IMAGES:
+------------------------------------
+1. Canva (canva.com)
+   - Create custom design: 800x1200px
+   - Search templates: "Mobile banner", "Vertical poster"
+   - Add gift box elements vertically
+
+2. Unsplash/Pexels (crop to vertical)
+   - Download horizontal image
+   - Crop to vertical using photo editor
+   - Focus on center portion
+
+3. Adobe Express (express.adobe.com)
+   - Free mobile banner templates
+   - Customize with gift themes
+
+
+CURRENT CSS SETTINGS (MOBILE):
+-------------------------------
+• background-size: cover (fills entire mobile screen)
+• Background will cover full width and height
+• No gradient overlay (pure image)
+• Text is white with shadow for readability
+• Elements stack vertically
+
+
+MOBILE SCREEN SIZES TO TEST:
+-----------------------------
+• iPhone SE: 375px width
+• iPhone 12/13/14: 390px width
+• iPhone 14 Pro Max: 430px width
+• Samsung Galaxy: 360px - 412px width
+• Tablets: 768px width
+
+
+HOW TO ADD YOUR MOBILE IMAGE:
+------------------------------
+1. Create or download a vertical/portrait image
+2. Optimize it for web (use tinypng.com)
+3. Resize to recommended dimensions (800x1200px)
+4. Rename it to: newsletter-bg-mobile.jpg
+5. Place it in: /images/ folder (same as desktop image)
+6. Test on mobile device or browser mobile view (F12)
+
+
+TO CHANGE MOBILE IMAGE NAME:
+-----------------------------
+If you want to use a different filename:
+1. Open: css/styles.css
+2. Find line 626: background-image: url('../images/newsletter-bg-mobile.jpg');
+3. Replace 'newsletter-bg-mobile.jpg' with your filename
+4. Save and refresh on mobile
+
+
+DESKTOP vs MOBILE COMPARISON:
+------------------------------
+Desktop (newsletter-bg.jpg):
+  • Horizontal/landscape
+  • 1920px × 600px
+  • Elements side-by-side
+  • background-size: contain
+
+Mobile (newsletter-bg-mobile.jpg):
+  • Vertical/portrait
+  • 800px × 1200px
+  • Elements stacked
+  • background-size: cover
+
+
+COLOR OVERLAY (OPTIONAL):
+--------------------------
+If your mobile image is too busy and text is hard to read, you can add a dark overlay:
+
+1. Open: css/styles.css
+2. Find the mobile media query (around line 622)
+3. Add after background-image:
+   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/newsletter-bg-mobile.jpg');
+
+This adds a 40% dark overlay. Adjust 0.4 to:
+  • 0.3 for lighter overlay
+  • 0.5 for darker overlay
+
+
+QUICK DESIGN OPTION IN CANVA:
+------------------------------
+1. Go to Canva.com
+2. Create custom size: 800 x 1200 px
+3. Add background:
+   - Gradient (purple/pink to match desktop)
+   - Or solid color
+4. Add elements:
+   - Gift box graphics from Canva library
+   - Arrange vertically (top and bottom)
+   - Leave center area empty for text/form
+5. Download as JPG
+6. Name it: newsletter-bg-mobile.jpg
+7. Upload to /images/ folder
+
+
+TESTING CHECKLIST:
+------------------
+- [ ] Image displays on mobile (test with F12 mobile view)
+- [ ] Text is readable over the image
+- [ ] Form elements fit within the screen
+- [ ] No horizontal scrolling
+- [ ] Image doesn't look pixelated
+- [ ] File size is optimized (under 300KB)
+- [ ] Test on actual iPhone/Android device
+
+
+FALLBACK:
+---------
+If you don't add a mobile image:
+  • The desktop image (newsletter-bg.jpg) will be used
+  • It may look stretched or awkward
+  • But the form will still work
+
+
+NEED HELP?
+----------
+The mobile background will automatically switch when screen width is below 768px.
+Desktop users will see: newsletter-bg.jpg
+Mobile users will see: newsletter-bg-mobile.jpg
+
+
+EXAMPLE MOBILE IMAGE SEARCHES:
+-------------------------------
+→ "vertical gift boxes background"
+→ "portrait celebration background"
+→ "mobile banner gifts"
+→ "vertical presents festive"
+→ "phone wallpaper gifts"
+
+
+Remember: Mobile screens are small! Keep designs simple and text areas clear.
